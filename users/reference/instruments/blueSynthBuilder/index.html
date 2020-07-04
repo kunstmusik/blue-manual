@@ -1796,12 +1796,12 @@ due to the text-based nature of instruments. I've found that:</p>
 </li>
 </ul>
 <p>Going completely graphical for the building of instruments, in the case
-of systems like Max/PD/jMax or Reaktor, I've found that the
-instrument's design no longer become apparent when viewing complicated
-patches. On the other hand, using completely textual systems such as
-Csound or C++ coding, the design of the instrument has a degree of
-transparency, while the configuration of the parameters of the
-instrument becomes difficult to understand and invites less exploration.</p>
+of systems like Max/PD/jMax or Reaktor, I've found that the instrument's
+design no longer become apparent when viewing complicated patches. On
+the other hand, using completely textual systems such as Csound or C++
+coding, the design of the instrument has a degree of transparency, while
+the configuration of the parameters of the instrument becomes difficult
+to understand and invites less exploration.</p>
 <p>Using systems like MacCsound's widgets or Blue's BlueSynthBuilder, one
 is able to use graphical elements where they excel, in showing
 configuration of an instrument and for manipulation of values, while
@@ -1822,9 +1822,8 @@ of Csound instrument code or have to modify the instrument UI at all.</p>
 <p>The Interface editor has two modes:</p>
 <p><img alt="" src="../../../../images/bsb_interface_edit.png" /></p>
 <p>The user can add interface elements and modify their properties using
-the property sheet on the right. To enable edit mode, click on the
-"Edit Enabled" checkbox in the upper right of the BSB instrument
-editor.</p>
+the property sheet on the right. To enable edit mode, click on the "Edit
+Enabled" checkbox in the upper right of the BSB instrument editor.</p>
 <p>Once the edit mode is enabled, right clicking in the main panel will
 show a popup menu of available UI widgets for your instrument. After
 selecting and inserting a widget, clicking on the widget will hilight it
@@ -1839,17 +1838,33 @@ found on the right side bottom to tidy up the UI.</p>
 <p>When in edit mode, you can modify the Grid Settings by using the
 properties editor on the right-hand side. This allows you set the
 following values:</p>
-<p>Property       Description</p>
-<hr />
-<dl>
-<dt>Grid Style     Affects the visual style of the Grid. Options are NONE, DOT, or LINE.</dt>
-<dt>  Snap Enabled   Affects whether adding, pasting, and dragging of BSBObjects in the editor will snap to the grid.</dt>
-<dt>  Width          Sets the width of each grid box. Defaults to 15 pixels.</dt>
-<dt>  Height         Sets the height of each grid box. Defaults to 15 pixels.</dt>
-<dd>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid Style</td>
+<td>Affects the visual style of the Grid. Options are NONE, DOT, or LINE.</td>
+</tr>
+<tr>
+<td>Snap Enabled</td>
+<td>Affects whether adding, pasting, and dragging of BSBObjects in the editor will snap to the grid.</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>Sets the width of each grid box. Defaults to 15 pixels.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>Sets the height of each grid box. Defaults to 15 pixels.</td>
+</tr>
+</tbody>
+</table>
 <p>Grid Settings</p>
-</dd>
-</dl>
 <p><img alt="" src="../../../../images/bsb_interface_use.png" /></p>
 <p>Once in usage mode, users can configure the instrument by working with
 the UI widgets: rotating knobs, moving sliders, etc. The values of the
@@ -1862,8 +1877,8 @@ use the values from the widgets, use the replacement key of the widget
 within \&lt; >'s, and that value will be replaced when the instrument is
 generated (the replacement key is usually the objectName of the object;
 see table below).</p>
-<p>For example, if there's a knob with an objectName of <em>amplitude</em> and
-the value is set to 0.5, the following instrument code:</p>
+<p>For example, if there's a knob with an objectName of <em>amplitude</em> and the
+value is set to 0.5, the following instrument code:</p>
 <pre><code>iamp    = &lt;amplitude&gt; * 0dbfs
 aout    vco2 iamp, 440
 
@@ -1900,8 +1915,10 @@ will go from the instrument to the mixer. If the always-on code is
 enabled, the signal generated from the main instrument code will be
 intercepted and read by the always-on instrument. To facilitate this
 feature, there is Blue pseudo-opcode called blueMixerIn:</p>
-<pre><code>asig1 [, asig2...] blueMixerIn
+<pre><code>asig1 [, asig2...] blueMixerIn        
+
 </code></pre>
+
 <p>The always-on code should then do processing code, then write out to
 blueMixerOut.</p>
 <p>To note, BSB widget values work perfectly fine when used within
@@ -1909,29 +1926,93 @@ always-on code.</p>
 <h4 id="widget_values">Widget Values</h4>
 <p>The following lists what values the widgets will emit when generating
 instruments:</p>
-<p>Widget                     Replacement Key                           Value</p>
-<hr />
-<dl>
-<dt>Knob                       objectName                                float value from knob</dt>
-<dt>  Horizontal Slider          objectName                                float value from slider</dt>
-<dt>  Horizontal Slider Bank     objectName_sliderNum (for each slider)   float value from slider</dt>
-<dt>  Vertical Slider            objectName                                float value from slider</dt>
-<dt>  Vertical Slider Bank       objectName_sliderNum (for each slider)   float value from slider</dt>
-<dt>  Label                      none                                      none</dt>
-<dt>  Checkbox                   objectName                                1 or 0, depending on if checked or not</dt>
-<dt>  Dropdown List              objectName                                Generates index of selected item when item is made automatable, or uses value from user-assigned Dropdown List</dt>
-<dt>  SubChannel Dropdown List   objectName                                Value from Dropdown List that is a named subchannel from the Blue Mixer</dt>
-<dt>  XY Controller              objectNameX, objectNameY                  X and Y value</dt>
-<dt>  LineObject                 objectName_lineName (for each line)      list of values from line (can be comma separated, with or without leading 0.0 X value, and x values can be generated either in absolute or relative terms)</dt>
-<dt>  Text Field                 objectName                                Value from text field (compile-time only).</dt>
-<dt>  File Selector              objectName                                If stringChannelEnabled is selected, outputs a Csound string variable (S-var) that can be updated at runtime if API is enabled, if stringChannelEnabled is set to off, outputs as a string (without quotes) at compilation time</dt>
-<dt>  Value                      objectName                                Generates using its default value or values from automation. Widget is only visible during edit mode.</dt>
-<dd>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>Replacement Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knob</td>
+<td>objectName</td>
+<td>float value from knob</td>
+</tr>
+<tr>
+<td>Horizontal Slider</td>
+<td>objectName</td>
+<td>float value from slider</td>
+</tr>
+<tr>
+<td>Horizontal Slider Bank</td>
+<td>objectName_sliderNum (for each slider)</td>
+<td>float value from slider</td>
+</tr>
+<tr>
+<td>Vertical Slider</td>
+<td>objectName</td>
+<td>float value from slider</td>
+</tr>
+<tr>
+<td>Vertical Slider Bank</td>
+<td>objectName_sliderNum (for each slider)</td>
+<td>float value from slider</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Checkbox</td>
+<td>objectName</td>
+<td>1 or 0, depending on if checked or not</td>
+</tr>
+<tr>
+<td>Dropdown List</td>
+<td>objectName</td>
+<td>Generates index of selected item when item is made automatable, or uses value from user-assigned Dropdown List</td>
+</tr>
+<tr>
+<td>SubChannel Dropdown List</td>
+<td>objectName</td>
+<td>Value from Dropdown List that is a named subchannel from the Blue Mixer</td>
+</tr>
+<tr>
+<td>XY Controller</td>
+<td>objectNameX, objectNameY</td>
+<td>X and Y value</td>
+</tr>
+<tr>
+<td>LineObject</td>
+<td>objectName_lineName (for each line)</td>
+<td>list of values from line (can be comma separated, with or without leading 0.0 X value, and x values can be generated either in absolute or relative terms)</td>
+</tr>
+<tr>
+<td>Text Field</td>
+<td>objectName</td>
+<td>Value from text field (compile-time only).</td>
+</tr>
+<tr>
+<td>File Selector</td>
+<td>objectName</td>
+<td>If stringChannelEnabled is selected, outputs a Csound string variable (S-var) that can be updated at runtime if API is enabled, if stringChannelEnabled is set to off, outputs as a string (without quotes) at compilation time</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>objectName</td>
+<td>Generates using its default value or values from automation. Widget is only visible during edit mode.</td>
+</tr>
+</tbody>
+</table>
 <p>Widget Values</p>
-</dd>
-</dl>
 <ul>
-<li>For the Label object, you are able to style the font using the widget properties. Previous versions of Blue allowed styling using html tags but this is no longer supported.</li>
+<li>For the Label object, you are able to style the label by using HTML.
+    To use this feature, when setting the text of the label, enter the
+    HTML label within \&lt;html> tags, such as "\&lt;html>\&lt;font
+    size="+1">My Label\&lt;/font>\&lt;/html>".</li>
 </ul>
 <h3 id="groups">Groups</h3>
 <p>Widgets may be organized into Groups that provide titled border around
@@ -1951,9 +2032,9 @@ x/y coordinates or other configuration for the widget, only the value.</p>
 <p>You can add presets and folders of presets using the presets menu in the
 upper left of the BSB editor. Each menu has an option for adding a
 folder or adding a preset to it. You can also manage presets by using
-the "Manage Presets" button. This will open up a dialog with a tree
-view of your presets, allowing you to rename the presets and folders, as
-well as reorganize by dragging and dropping. You can remove presets and
+the "Manage Presets" button. This will open up a dialog with a tree view
+of your presets, allowing you to rename the presets and folders, as well
+as reorganize by dragging and dropping. You can remove presets and
 folders here by right-clicking and selecting the remove option. Changes
 in the dialog are not committed until you press the save button, so if
 you close the window or cancel, you're old settings will be still in
@@ -1969,22 +2050,29 @@ This is required because when using the Csound API, the signal will need
 to be k-rate to allow for live modification of the value when rendering.</p>
 <p>More information on paramenter automation can be found
 <a href="#parameterAutomation">here</a>.</p>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>In 0.124.3, a change was made that breaks backwards compatibility.
-Previously, if a BSBObject was set to have "Automation Allowed" but
-was not itself automated, it would compile as a constant in the
-generated CSD. As of 0.124.3, if a widget is made to allow automation,
-the Csound code that uses the widget value must accept a k-rate signal,
-whether the API is used or not.</p>
-<p>If you have a project that rendered fine before 0.124.3 but afterwards
+
+</div>
+
+In 0.124.3, a change was made that breaks backwards compatibility.
+Previously, if a BSBObject was set to have "Automation Allowed" but was
+not itself automated, it would compile as a constant in the generated
+CSD. As of 0.124.3, if a widget is made to allow automation, the Csound
+code that uses the widget value must accept a k-rate signal, whether the
+API is used or not.
+
+If you have a project that rendered fine before 0.124.3 but afterwards
 can not render due to problems with Csound complaining that "k-rate
-signals not allowed", then you will need to either set the widget to
-not allow automation or change the Csound code so that it will work with
-the generated k-rate signal.
-:::</p>
+signals not allowed", then you will need to either set the widget to not
+allow automation or change the Csound code so that it will work with the
+generated k-rate signal.
+
+</div>
+
 <h3 id="randomization">Randomization</h3>
 <p>Since 0.117.0, users are able to randomize values for widgets in a
 BlueSynthBuilder instrument. To use, first choose which widgets are set
