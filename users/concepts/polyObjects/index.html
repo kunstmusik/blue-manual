@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -769,6 +769,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         PolyObjects
@@ -784,6 +786,8 @@
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1618,6 +1622,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -1698,9 +1704,8 @@
                   
                 
                 
-                  <h1>PolyObjects</h1>
-                
-                <h2 id="introduction">Introduction</h2>
+                <h1 id="_1"></h1>
+<h2 id="introduction">Introduction</h2>
 <p>PolyObjects are, in my opinion, one of the most powerful tools in blue.
 They provide encapsulation of any grouping of SoundObjects, any way you
 like, into one logical SoundObject. Once encapsulated, the rest of
@@ -1742,20 +1747,20 @@ PolyObject).</p>
 <p>You can see which container you are currently editing by looking at the
 buttons just underneath the tabs for "score," "orchestra," etc. When
 you're editing the main score, there will only be one button there
-called "root;" you're editing the root container. When you're
-editing a PolyObject called "Group A," you'll see two buttons;
-"root" and "Group A." Pressing any of these buttons will change the
-view to edit that container.</p>
+called "root;" you're editing the root container. When you're editing a
+PolyObject called "Group A," you'll see two buttons; "root" and "Group
+A." Pressing any of these buttons will change the view to edit that
+container.</p>
 <p>Once a PolyObject has been created, you can add and arrange SoundObject
 on it just like you do in the main score. Each PolyObject is going to
 have its own Snap and Time Display settings too, so you may want to set
 those accordingly. Add SoundLayers just as you would in the main score
 too.</p>
-<p>After you've added all of the notes you wish to the PolyObject, click
-on the "root" button and feel free to move the PolyObject around in
-the main score, just as you would any other SoundObject. Add
-NoteProcessors too, or alter the Time Behavior; these changes, in turn,
-will be applied to the contents of the PolyObject.</p>
+<p>After you've added all of the notes you wish to the PolyObject, click on
+the "root" button and feel free to move the PolyObject around in the
+main score, just as you would any other SoundObject. Add NoteProcessors
+too, or alter the Time Behavior; these changes, in turn, will be applied
+to the contents of the PolyObject.</p>
 <h2 id="advanced">Advanced</h2>
 <p>Before tackling some of the more advanced concepts of PolyObjects, a
 couple of clarifications must be made. When this document refers to
@@ -1776,13 +1781,13 @@ and the notes within it will shrink as well.</p>
 <p>There are a couple of easy ways to make sure that the sounds you place
 in a PolyObject remain to scale in the parent container, or the root
 score. One method is to right-click on the PolyObject itself and click
-"Set Subjective Time to Objective Time." This will change the length
-of the PolyObject to be equal to the beat at the end of the last
+"Set Subjective Time to Objective Time." This will change the length of
+the PolyObject to be equal to the beat at the end of the last
 SoundObject within it. In other words, it will expand or contract to the
 actual total length of all of the notes within it. The other method is
 to change the Time Behavior of the PolyObject to None. Blue will not do
-any processing of the length of the notes within the PolyObject;
-they'll just be played exactly the way they are in the PolyObject.</p>
+any processing of the length of the notes within the PolyObject; they'll
+just be played exactly the way they are in the PolyObject.</p>
 <p>There are advantages and disadvantages to each method. The first is good
 because it allows one to see the actual length of the PolyObject within
 the main score, but you have to remember to click "Set Subjective Time
@@ -1919,23 +1924,23 @@ five instead of two, because five is the beat at which the last note
 plays in the looped sequence.</p>
 <p>As mentioned previously, PolyObjects can contain other PolyObjects. The
 thing to remember when doing this is that each PolyObject's settings,
-NoteProcessor's, etc. are local to itself. For blue, the notes
-generated from a PolyObject SoundObject are the same as the ones
-generated from a GenericScore or any other type of SoundObject, and can
-be manipulated in the same way.</p>
+NoteProcessor's, etc. are local to itself. For blue, the notes generated
+from a PolyObject SoundObject are the same as the ones generated from a
+GenericScore or any other type of SoundObject, and can be manipulated in
+the same way.</p>
 <h2 id="best_practices">Best Practices</h2>
-<p>Let's say you're making a PolyObject with lots of regular notes whose
-p4 field represents the pitch. At some point you also want to insert a
-note that affects something a bit more irregular, like the phase of the
-other notes, and its p4 field represents, say, the amount of variance in
-the phase. It would be prudent to separate that irregular note away from
-the notes in this PolyObject in order to keep your expectations about
-the p-field of the PolyObject as a whole consistent. Without the
-irregular note, you can safely say that p4 of PolyObject X (or whatever
-its called) represents the pitch of all of the notes it contains.
-However, with that extra note in it, p4 has no consistent meaning in
-PolyObject X, and you can't safely apply NoteProcessors to it that
-affect that p-field.</p>
+<p>Let's say you're making a PolyObject with lots of regular notes whose p4
+field represents the pitch. At some point you also want to insert a note
+that affects something a bit more irregular, like the phase of the other
+notes, and its p4 field represents, say, the amount of variance in the
+phase. It would be prudent to separate that irregular note away from the
+notes in this PolyObject in order to keep your expectations about the
+p-field of the PolyObject as a whole consistent. Without the irregular
+note, you can safely say that p4 of PolyObject X (or whatever its
+called) represents the pitch of all of the notes it contains. However,
+with that extra note in it, p4 has no consistent meaning in PolyObject
+X, and you can't safely apply NoteProcessors to it that affect that
+p-field.</p>
 <p>Co-reliant notes, in this case, would be notes that rely on each other
 to make their sound. For instance, if you had a group of notes that fed
 their output to a zak channel, then another note to process and play
@@ -1968,14 +1973,14 @@ its length in the composition. Remember to use "Set Subjective Time to
 Objective Time" as needed.</p>
 <h2 id="debugging">Debugging</h2>
 <p>When things don't work out the way you expected them too (and they
-won't), a great tool to use to help track down the problem is the
-"Test" button. This button renders the i-statements that any given
-SoundObject will generate, and it comes in very useful with PolyObjects.
-So, if you've got a PolyObject that won't render when you Test it,
-drill down into it and test its constituent notes, Testing and drilling
-down into its sub-PolyObjects as well. You'll eventually find the
-cause. Examine NoteProcessors and the Time Behaviors of each
-SoundObject; these can be common culprits with sound problems too.</p>
+won't), a great tool to use to help track down the problem is the "Test"
+button. This button renders the i-statements that any given SoundObject
+will generate, and it comes in very useful with PolyObjects. So, if
+you've got a PolyObject that won't render when you Test it, drill down
+into it and test its constituent notes, Testing and drilling down into
+its sub-PolyObjects as well. You'll eventually find the cause. Examine
+NoteProcessors and the Time Behaviors of each SoundObject; these can be
+common culprits with sound problems too.</p>
 <p>If one follows the best practice "Group co-reliant notes together into
 PolyObjects," this also makes it easier to debug problems. You can
 isolate PolyObjects in the main score easily by soloing that SoundLayer,

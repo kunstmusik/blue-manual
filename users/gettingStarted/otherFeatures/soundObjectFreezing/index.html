@@ -1599,17 +1599,18 @@ versions will be more polished.</p>
     FrozenSoundObject. The FrozenSoundObject keeps a copy of the
     original soundObject (for unfreezing), as well as shows the name of
     the frozen wav file, the original soundObject's duration, and the
-    frozen wav file's duration (not necessarily the same, as is the
-    case if using global reverb, for example).</p>
+    frozen wav file's duration (not necessarily the same, as is the case
+    if using global reverb, for example).</p>
 </li>
 <li>
 <p>When you do a render of the entire piece now, the frozen sound
     object generates a very simple wav playing csound instrument that
     will play the rendered wav file as-is. The instrument looks
     something like:</p>
-<pre><code>aout1, aout2    diskin    p4         
-                outs      aout1, aout2
-</code></pre>
+<p>``` 
+aout1, aout2    diskin    p4       <br />
+                outs      aout1, aout2 </p>
+<p>```</p>
 <p>and the FrozenSoundObject only generates a single note that has the
 start-time, the duration of the frozen wav file, and the name of the
 file. This will end up playing the soundFile exactly as if the SCO
@@ -1618,6 +1619,10 @@ routing to global sound processing, as if you had any of these
 effects originally, the would be generated as part of the frozen
 file.</p>
 </li>
+</ol>
+<!-- end list -->
+
+<ul>
 <li>
 <p>You can select multiple soundObjects and batch freeze and unfreeze
     -the generated wav file may be longer than the original soundObject,
@@ -1640,14 +1645,14 @@ file.</p>
 <li>
 <p>All sound output from instruments go directly out or piped
     through always-on instruments, that most likely should take
-    advantage of the \&lt;total_dur> variable, as well as the new
-    \&lt;processing_start> variable (more about this when I release,
+    advantage of the &lt;total_dur> variable, as well as the new
+    &lt;processing_start> variable (more about this when I release,
     but together with freezing, this lets you set the start time of
     always-on instruments to the first time where non-frozen
     soundObjects occur, so if the first half of your piece is frozen
-    and you're unfrozen stuff is in the second half, you don't
-    need always on instruments to be turned on until the second half
-    as the first half is routed to outs</p>
+    and you're unfrozen stuff is in the second half, you don't need
+    always on instruments to be turned on until the second half as
+    the first half is routed to outs</p>
 </li>
 </ul>
 </li>
@@ -1670,7 +1675,7 @@ file.</p>
 <p>Freezing SoundObjects uses the same settings as found in the
     project's Disk Render settings (e.g., sr, ksmps, 0dbfs).</p>
 </li>
-</ol>
+</ul>
                 
               
               

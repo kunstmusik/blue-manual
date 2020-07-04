@@ -15,7 +15,7 @@
     
     
       
-        <title>programScripts - Blue Manual</title>
+        <title>Program Scripts - Blue Manual</title>
       
     
     
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              programScripts
+              Program Scripts
             
           </span>
         </div>
@@ -1565,11 +1565,11 @@ Blue application classes, the user has a great deal of freedom to make
 very customized scripts to aid in their work.</p>
 <p><strong>Managing and Using Scripts</strong></p>
 <p>Scripts are created and organized from the Script Library, available
-from the "Script->Manage Script Library" menu option. A dialog
-appears with a tree on the left and a script editor on the right. To
-create a script or script category, right click on a folder node on the
-tree and select the appropriate option. To edit the names of either of
-these, double-click the name on the tree. Clicking on a script node will
+from the "Script->Manage Script Library" menu option. A dialog appears
+with a tree on the left and a script editor on the right. To create a
+script or script category, right click on a folder node on the tree and
+select the appropriate option. To edit the names of either of these,
+double-click the name on the tree. Clicking on a script node will
 populate the editor on the right. Here you can add a short description
 (used as the tool tip text for the script), the code for the script, and
 comments. You can also export scripts to files and import them from
@@ -1588,64 +1588,66 @@ execute that Script.</p>
 <p>The following variables are pre-defined by the time your script runs and
 are useful variables which you will most likely use. They are also shown
 as default text on any new script for reference.</p>
-<dl>
-<dt>blueData</dt>
-<dd>
-<p>reference to the current blue project's BlueData class</p>
-</dd>
-<dt>selectedSoundObjects</dt>
-<dd>
-<p>array of soundObjects currently selected on the timeline</p>
-</dd>
-<dt>userConfigDir</dt>
-<dd>
-<p>location of the user's .blue settings directory</p>
-</dd>
-<dt>blueLibDir</dt>
-<dd>
-<p>location of blue's lib directory</p>
-</dd>
-<dt>blueProjectDir</dt>
-<dd>
-<p>directory of the current Blue project</p>
-</dd>
-</dl>
+<ul>
+<li>
+<p>blueData<br />
+    reference to the current blue project's BlueData class</p>
+</li>
+<li>
+<p>selectedSoundObjects<br />
+    array of soundObjects currently selected on the timeline</p>
+</li>
+<li>
+<p>userConfigDir<br />
+    location of the user's .blue settings directory</p>
+</li>
+<li>
+<p>blueLibDir<br />
+    location of blue's lib directory</p>
+</li>
+<li>
+<p>blueProjectDir<br />
+    directory of the current Blue project</p>
+</li>
+</ul>
 <p><strong>ScriptingUtils</strong></p>
 <p>Included with Blue is a python file named ScriptingUtils.py that
 contains useful utility functions.</p>
-<dl>
-<dt>alert(message)</dt>
-<dd>
-<p>Shows message to user using dialog, much like JavaScript alert
-message</p>
-</dd>
-<dt>info(message)</dt>
-<dd>
-<p>Shows message to user but uses dialog with scrollable text area.
-Useful for showing large amounts of text or text with tabbed
-formatting.</p>
-</dd>
-<dt>infoTabs(message, title)</dt>
-<dd>
-<p>Like the info function, but messages are added as tabs to a central
-tabbed pane in an information Dialog. Each call to infoTabs will add
-a new tab with the title given and the contents of the tab will be a
-scrollable textarea with the message. Tabs can be removed by right
-clicking a tab and selecting remove from the popup menu.</p>
-</dd>
-<dt>objectInfo(object)</dt>
-<dd>
-<p>Lists methods and properties for an object. This is especially
-helpful when editing a script and either not knowing or having
-forgotten the properties of an object, you can show what they are
-using this function. Information will be shown in the same manner as
-the info function.</p>
-</dd>
-</dl>
+<ul>
+<li>
+<p>alert(message)<br />
+    Shows message to user using dialog, much like JavaScript alert
+    message</p>
+</li>
+<li>
+<p>info(message)<br />
+    Shows message to user but uses dialog with scrollable text area.
+    Useful for showing large amounts of text or text with tabbed
+    formatting.</p>
+</li>
+<li>
+<p>infoTabs(message, title)<br />
+    Like the info function, but messages are added as tabs to a central
+    tabbed pane in an information Dialog. Each call to infoTabs will add
+    a new tab with the title given and the contents of the tab will be a
+    scrollable textarea with the message. Tabs can be removed by right
+    clicking a tab and selecting remove from the popup menu.</p>
+</li>
+<li>
+<p>objectInfo(object)<br />
+    Lists methods and properties for an object. This is especially
+    helpful when editing a script and either not knowing or having
+    forgotten the properties of an object, you can show what they are
+    using this function. Information will be shown in the same manner as
+    the info function.</p>
+</li>
+</ul>
 <p>To use the ScriptingUtils, use an import statement like this at the top
 of your script:</p>
 <pre><code>from ScriptingUtils import *
+
 </code></pre>
+
 <p><strong>Example Scripts</strong></p>
 <p>The following script scales the time of the selected soundObjects by
 multiplying the startTime and duration of each soundObject by a value
@@ -1653,16 +1655,17 @@ given by the user.</p>
 <pre><code>from javax.swing import JOptionPane
 from ScriptingUtils import *
 
-retVal = JOptionPane.showInputDialog("Enter Time Factor for Stretch", 1.0)
+retVal = JOptionPane.showInputDialog(&quot;Enter Time Factor for Stretch&quot;, 1.0)
 
 try:
   val = float(retVal)
   for i in selectedSoundObjects:
     i.startTime *= val
     i.subjectiveDuration *= val
-  alert("Scaled start time and duration of objects by value %f"%val)
+  alert(&quot;Scaled start time and duration of objects by value %f&quot;%val)
 except:
-  alert("Value entered was not a floating point number")
+  alert(&quot;Value entered was not a floating point number&quot;)
+
 </code></pre>
                 
               

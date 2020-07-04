@@ -15,7 +15,7 @@
     
     
       
-        <title>createEncapsulatedInstruments - Blue Manual</title>
+        <title>Create Encapsulated Instruments - Blue Manual</title>
       
     
     
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              createEncapsulatedInstruments
+              Create Encapsulated Instruments
             
           </span>
         </div>
@@ -1573,7 +1573,7 @@ there are often things like ftables and User-Defined Opcodes which an
 instrument depends on to function which are defined outside of the
 instrument. In blue, consideration has been taken to allow users to
 encapsulate required dependencies with instruments while offering
-efficient generation of dependencies (i.e. reusing tables and UDO\'s
+efficient generation of dependencies (i.e. reusing tables and UDO's
 which are identical).</p>
 <h2 id="best_practices_common_to_all_instruments">Best Practices Common to All Instruments</h2>
 <p>The following are techniques to use which are applicable to all
@@ -1582,39 +1582,39 @@ Instrument types in blue.</p>
 <p>There are a few ways to handle ftable dependencies and the choice of
 which way to go will depend on how optimized you would like to have
 everything at runtime.</p>
-<dl>
-<dt>f-statements in global SCO</dt>
-<dd>
-<p>...</p>
-</dd>
-<dt>ftgen in conjunction with once blocks</dt>
-<dd>
-<p>...</p>
-</dd>
-<dt>ftgen in global ORC</dt>
-<dd>
-<p>...</p>
-</dd>
-<dt>ftgen within instruments</dt>
-<dd>
-<p>...</p>
-</dd>
-</dl>
+<ul>
+<li>
+<p>f-statements in global SCO<br />
+    ...</p>
+</li>
+<li>
+<p>ftgen in conjunction with once blocks<br />
+    ...</p>
+</li>
+<li>
+<p>ftgen in global ORC<br />
+    ...</p>
+</li>
+<li>
+<p>ftgen within instruments<br />
+    ...</p>
+</li>
+</ul>
 <p><strong>User-Defined Opcodes</strong></p>
 <p>Csound instruments often depend on User-Defined Opcodes. It is
-recommended that UDO\'s that an instrument depends on be packaged with
-the blue Instrument using the Instrument\'s UDO list. This allows for
-the user to copy and paste instruments between projects as well as share
-them on blueShare and all the required UDO\'s will be included with the
+recommended that UDO's that an instrument depends on be packaged with
+the blue Instrument using the Instrument's UDO list. This allows for the
+user to copy and paste instruments between projects as well as share
+them on blueShare and all the required UDO's will be included with the
 instrument. UDO generation from instruments is optimized so that if two
-UDO\'s are found that functionally match (same intypes, outtypes, and
+UDO's are found that functionally match (same intypes, outtypes, and
 code body), the second one will not be generated. If different matching
-UDO\'s are found or if two differently named but functionally equivalent
-UDO\'s are found, blue will automatically handle renaming references to
-the UDO\'s using unique names. By doing this, the user can be confident
+UDO's are found or if two differently named but functionally equivalent
+UDO's are found, blue will automatically handle renaming references to
+the UDO's using unique names. By doing this, the user can be confident
 that the generated code is optimized and that if there are any name
 clashes that blue will automatically handle any problems for you so you
-don\'t have to do it yourself.</p>
+don't have to do it yourself.</p>
 <h2 id="best_practices_for_bluesynthbuilder">Best Practices for BlueSynthBuilder</h2>
 <p><strong>Subchannels</strong></p>
                 

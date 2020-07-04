@@ -1702,29 +1702,29 @@ instruments, applying pre- and post-fader effects, and routing and
 mixing of signals through subchannels.</p>
 <h2 id="architecture">Architecture</h2>
 <p>The Mixer system has three panel sections:</p>
-<dl>
-<dt>Channels</dt>
-<dd>
-<p>Channels are auto-created and bound to Instrument ID's in the
-Orchestra for a Project. In the Mixer Dialog they are located in the
-first section on the left within a splitpane that separates them
-from the SubChannels. Channels can be set to route to either
-SubChannels or directly to the Master Channel.</p>
-</dd>
-<dt>SubChannels</dt>
-<dd>
-<p>SubChannels are user-created and are located in the center section
-of the Mixer Dialog, on the right side of the splitpane. Channels
-can be set to route to SubChannels, and SubChannels can route into
-other SubChannels or out to the Master Channel.</p>
-</dd>
-<dt>Master Channel</dt>
-<dd>
-<p>The Master Channel is located on the right side of the Mixer Dialog.
-There is only one master Channel per project which all channel and
-subchannel signals ultimately route through.</p>
-</dd>
-</dl>
+<ul>
+<li>
+<p>Channels<br />
+    Channels are auto-created and bound to Instrument ID's in the
+    Orchestra for a Project. In the Mixer Dialog they are located in the
+    first section on the left within a splitpane that separates them
+    from the SubChannels. Channels can be set to route to either
+    SubChannels or directly to the Master Channel.</p>
+</li>
+<li>
+<p>SubChannels<br />
+    SubChannels are user-created and are located in the center section
+    of the Mixer Dialog, on the right side of the splitpane. Channels
+    can be set to route to SubChannels, and SubChannels can route into
+    other SubChannels or out to the Master Channel.</p>
+</li>
+<li>
+<p>Master Channel<br />
+    The Master Channel is located on the right side of the Mixer Dialog.
+    There is only one master Channel per project which all channel and
+    subchannel signals ultimately route through.</p>
+</li>
+</ul>
 <p>Each channel allows for applying effects to the incoming signal either
 pre- or post-fader.</p>
 <h2 id="using_the_mixer">Using the Mixer</h2>
@@ -1750,8 +1750,8 @@ in the Orchestra allows for the case where users have set multiple
 instruments to the same instrument ID but only having one which is
 enabled. If you then disable one and then enable another instrument to
 test out different instruments with the same musical note data, the
-mixer channel's settings will be maintained for the new instrument as
-it is bound by ID.</p>
+mixer channel's settings will be maintained for the new instrument as it
+is bound by ID.</p>
 <p>Channels in themselves can not be created or removed directly by the
 user, but are automatically added or removed depending on how how
 instruments are added and removed from the project's orchestra. For
@@ -1764,8 +1764,8 @@ instrument that is changing ID's), the bound mixer channel is simply
 reassigned to the new ID and maintains its settings.</p>
 <p>Subchannels are added by right-clicking with in the SubChannels area and
 choosing "Add SubChannel" from the popup menu. To remove a subchannel
-right-click the channel strip to be removed and select "Remove" from
-the popup menu.</p>
+right-click the channel strip to be removed and select "Remove" from the
+popup menu.</p>
 <p>At the bottom of every Channel and SubChannel strip is an output
 dropdown box to choose where to route that Chanel's audio to. For
 SubChannels, they can only route to other SubChannels which lead to the
@@ -1785,8 +1785,10 @@ having to worry about the code details of setting up a Mixer system
 themselves in Csound code.</p>
 <p>There is also a subChannel form of blueMixerOut available that is able
 to target a subchannel by name. This form is used in the following way:</p>
-<pre><code>      blueMixerOut "subChannelName", asig1, asig2 [, asig3...]
+<pre><code>      blueMixerOut &quot;subChannelName&quot;, asig1, asig2 [, asig3...]
+
 </code></pre>
+
 <p>Using this form, the asig signals will be mixed into the subChannel
 given by name. This form is available to use within Instruments but is
 also very useful to use when working Sound SoundObjects and AudioFile
@@ -1856,13 +1858,19 @@ Opcodes(i.e. one can add a setksmps line at the top of the code area).
 Values from the widgets follow the same principles as BlueSynthBuilder,
 and code completion for opcodes (ctrl-space) and BSB widgets
 (ctrl-shift-space) work within the code editor.</p>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>Blue currently expects Effects to have nchnls number of channels in and
+
+</div>
+
+Blue currently expects Effects to have nchnls number of channels in and
 out where nchnls is the number set by the project.
-:::</p>
+
+</div>
+
 <h2 id="other_notes">Other Notes</h2>
 <ul>
 <li>The Extra Render Time option in the Mixer dialog allows the user to
@@ -1908,8 +1916,8 @@ code that is along that path. The rules for optimization are as follows:</p>
 </li>
 <li>
 <p>If SubChannel has no signal inputs (whether it's from another
-    Channel's out channel, a Send, or dependency from code that uses
-    the subChannel form of blueMixerOut), do not generate anything for
+    Channel's out channel, a Send, or dependency from code that uses the
+    subChannel form of blueMixerOut), do not generate anything for
     channel.</p>
 </li>
 </ul>

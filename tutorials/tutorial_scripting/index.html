@@ -1561,12 +1561,12 @@
 which SoundObjects are placed. these SoundObjects are basically lists of
 notes, grouped as a single perceived object. These can be as simple as a
 single note, or a group of notes one might handle as a "motive", the
-"bassline for the A phrase", "the results of an predetermined matrix
-of sounds and silences through 28 flippings of coins", or "the
-stochastic group motion of migrating birds mapped to 17 instruments that
-produce variable timbres", etc. but underneath it all, regardless of
-what SoundObject you use, ultimately the SoundObject will produce notes
-in which blue will add to the running score and output to a .CSD file.</p>
+"bassline for the A phrase", "the results of an predetermined matrix of
+sounds and silences through 28 flippings of coins", or "the stochastic
+group motion of migrating birds mapped to 17 instruments that produce
+variable timbres", etc. but underneath it all, regardless of what
+SoundObject you use, ultimately the SoundObject will produce notes in
+which blue will add to the running score and output to a .CSD file.</p>
 <p>Seen this way, blue represents a sort of visual note-generator
 scheduling system. when blue was earlier on in it's development, I
 realized that in creating blue, I created a simple generic temporal
@@ -1625,8 +1625,8 @@ me to explore ideas rapidly, creating objects and functions which follow
 the models of my musical work, and which also serve as possible
 prototypes to new SoundObjects which I may later decide to create in
 Java and add to blue.</p>
-<p>From my own experience, I'd highly recommend to anyone that they learn
-a little bit about scripting and how to use it to achieve their musical
+<p>From my own experience, I'd highly recommend to anyone that they learn a
+little bit about scripting and how to use it to achieve their musical
 goals, as I've found the experience highly liberating and musically
 rewarding .</p>
 <h1 id="why_use_scripting">Why Use Scripting?</h1>
@@ -1677,22 +1677,22 @@ they could produce.</p>
 build in a more generic fashion for everyone to else to use in blue,
 adding to the compositional possibilities.</p>
 <p>In the past, I've also built simple functions to do a very specific
-task, like "add a value to all p4's of all notes". Something like
-this could be the case where you have a simple task that might be
-monotonous and you could probably achieve your goal much more quickly by
-a little script. (For example, I want to generate a test file for my
-orchestra and all it has are notes lasting two seconds duration, whose
-start times are every three seconds; something like this could be done
-in maybe 6-10 lines of script, regardless of the size of the orchestra.)</p>
+task, like "add a value to all p4's of all notes". Something like this
+could be the case where you have a simple task that might be monotonous
+and you could probably achieve your goal much more quickly by a little
+script. (For example, I want to generate a test file for my orchestra
+and all it has are notes lasting two seconds duration, whose start times
+are every three seconds; something like this could be done in maybe 6-10
+lines of script, regardless of the size of the orchestra.)</p>
 <p>Those are some of my reasons for the use of script for musical work, and
 I'm sure others have their own reasons. In the end, it's up to you to
 evaluate your situation and see if it will aid in your work or not.</p>
 <h1 id="scripting_and_blue">Scripting and blue</h1>
 <p>Every once in a while someone releases a new program for score
-generation, a utility they've decided to make for their own benefit
-that they've graciously shared with the community. Often, these musical
-tools are exclusive in their use, meaning they're good for their use,
-but are difficult to integrate with other work.</p>
+generation, a utility they've decided to make for their own benefit that
+they've graciously shared with the community. Often, these musical tools
+are exclusive in their use, meaning they're good for their use, but are
+difficult to integrate with other work.</p>
 <p>For example: say you're working on a piece and want to use an external
 score generator to generate a score to add to your piece. now, in
 experimenting, you might have to:</p>
@@ -1729,13 +1729,12 @@ the tedious work to blue to handle.</p>
 language. Now that you've finished it, you want to start working with
 it. but say you want to also do standard csound scores along with your
 scripts; having to do the two in the single scripting environment might
-not be optimal, as you would constantly have to use "print()"
-functions or use note objects, when it might just be easier to write
-"i1 0 1 2 3 4 5" and work with that for some of your work, and use
-your libraries for others. In this case, blue can handle that in that
-you can call your libraries you've developed and script the parts you
-want to script within blue, as well handle all of the standard csound
-score type work.</p>
+not be optimal, as you would constantly have to use "print()" functions
+or use note objects, when it might just be easier to write "i1 0 1 2 3 4
+5" and work with that for some of your work, and use your libraries for
+others. In this case, blue can handle that in that you can call your
+libraries you've developed and script the parts you want to script
+within blue, as well handle all of the standard csound score type work.</p>
 <p>Within blue there are currently two main objects for scripting, the
 Python SoundObject and the external SoundObject. The external
 SoundObject runs scripts outside of blue and brings the results back
@@ -1782,12 +1781,13 @@ script.</p>
 commandline to run on that script. technically, when blue is in the
 score generating pass and comes to an external SoundObject, the external
 SoundObject writes your script to a temp file, then runs the commandline
-given, either swapping "\$infile" with the name of the temporary file
+given, either swapping “$infile” with the name of the temporary file
 generated, or appending the name of the temporary file to the end of the
-commandline if no "\$infile" is found.</p>
+commandline if no “$infile” is found.</p>
 <p>Let's say you're writing a simple perl script:</p>
-<pre><code> print "i1 0 2 3 4 5\n"
+<pre><code> print &quot;i1 0 2 3 4 5\n&quot;
 </code></pre>
+
 <p>and you for your commandline you use:</p>
 <pre><code>perl
 </code></pre>
@@ -1798,8 +1798,8 @@ commandline if no "\$infile" is found.</p>
 SoundObject, what will happen is that:</p>
 <ol>
 <li>
-<p>Your script will get written to a temp file (for this example,
-    let's say it's "/tmp/temp4253.txt")</p>
+<p>Your script will get written to a temp file (for this example, let's
+    say it's "/tmp/temp4253.txt")</p>
 </li>
 <li>
 <p>blue executes the commandline given with that temp file.</p>
@@ -1843,12 +1843,12 @@ way so that no matter what you generate within the block, the generated
 notes will start at the start of the SoundObject and will last the
 duration of the SoundObject.</p>
 <p>Now, any script that has a commandline that can execute on a file will
-work with blue. so, as another example, let's say you want to use
-Python and you're using the pmask library. You have both of these
-installed on your system and you know they work fine because you've
-tested them outside of blue. Now, let's say you wrote the following
-Python script (which really, was written by Hans Mikelson as a an
-example for using pmask, taken from the CSound Magazine):</p>
+work with blue. so, as another example, let's say you want to use Python
+and you're using the pmask library. You have both of these installed on
+your system and you know they work fine because you've tested them
+outside of blue. Now, let's say you wrote the following Python script
+(which really, was written by Hans Mikelson as a an example for using
+pmask, taken from the CSound Magazine):</p>
 <pre><code>from pmask import *
 
 
@@ -1876,8 +1876,7 @@ frequency,  index, panorama, amplitude)
 </code></pre>
 <p>and you tested it outside of blue and it worked fine. Well, now you
 could create an external SoundObject in blue, paste in this script, set
-the commandline to "python", and now have the notes imported into
-blue.</p>
+the commandline to "python", and now have the notes imported into blue.</p>
 <p>Let's try a non-scripting example now and use Mark Williamson's drum
 pattern scoring utility to generate a drum pattern(available at
 http://www.junklight.com). Mark's utility is itself a perl script, but
@@ -1940,15 +1939,14 @@ following commandline:</p>
 <p>I ran the test button and got... nothing! I got alot of exceptions
 printed to the console. Running the drum script outside of blue, I saw
 that by default, some logging information was being printed (the name of
-the infile and input). Modifying mark's perl script a bit to comment
-out those two print statements, I reran the script within blue and...
+the infile and input). Modifying mark's perl script a bit to comment out
+those two print statements, I reran the script within blue and...
 success! The generated output from mark's script successfully was
 rebrought back into blue.</p>
 <p>Score generation programs can either print out to stdout or write out to
-a file. If writing out to a file, care must be taken to use the
-\$outfile parameter of the External SoundObject so that after the
-external program finishes, blue will know to grab the file's contents
-back into blue.</p>
+a file. If writing out to a file, care must be taken to use the $outfile
+parameter of the External SoundObject so that after the external program
+finishes, blue will know to grab the file's contents back into blue.</p>
 <h1 id="python_soundobject">Python SoundObject</h1>
 <p>The Python SoundObject is a Python-only scripting SoundObject which uses
 the Jython Python interpreter (more information about this all-Java
@@ -2016,9 +2014,9 @@ set of libraries, and you might not have all of the features of standard
 Python available, why use the Python SoundObject at all?</p>
 <p>Now, just to let you know, I use exclusively the Python SoundObject when
 I'm doing Python scripts in blue. I haven't come across any of the
-standard libraries I've needed that were't included with Jython, and
-if it's a sign of anything, Maurizio Umberto Puxeddu's pmask library
-works fine with the PythonObject.</p>
+standard libraries I've needed that were't included with Jython, and if
+it's a sign of anything, Maurizio Umberto Puxeddu's pmask library works
+fine with the PythonObject.</p>
 <p>One of the things I used to do is keep an installation of blue on a zip
 disk, including my work. The nice thing about this was that I was able
 to take this disk and work off it while at work on a windows machine, as
@@ -2067,10 +2065,12 @@ my generators.</p>
         print "do something with a and b which are instances of Yo()"
 </code></pre>
 <p>while my second PythonObject has script like:</p>
-<pre><code>generator1 = Yo()
+<pre><code>
+generator1 = Yo()
 generator2 = Yo()
 generator3 = Yo()
 </code></pre>
+
 <p>while all other PythonObjects in my piece have a minimal amount of
 script, something like:</p>
 <pre><code>generator1.generateNotes(input1, input2, input3)
@@ -2079,13 +2079,13 @@ script, something like:</p>
 I'm currently in the middle of working on the piece, I'm finding that
 first PythonObject getting a bit big, so I'm thinking i'll split that
 into different PythonObjects, which I can visually see labeled on the
-timeline by changing their names to something like "generator
-classes", "generator utility functions", "constants", etc. and
-probably in the future, as I get to finishing this piece, I'll probably
-take all of these class definitions and make a library of Python code
-out of it and just have it installed into my PythonLib directory. But
-having the way it is now I've found to be very convenient in
-development as it's easy to find all of my code.</p>
+timeline by changing their names to something like "generator classes",
+"generator utility functions", "constants", etc. and probably in the
+future, as I get to finishing this piece, I'll probably take all of
+these class definitions and make a library of Python code out of it and
+just have it installed into my PythonLib directory. But having the way
+it is now I've found to be very convenient in development as it's easy
+to find all of my code.</p>
 <p>Note: the execution order of blue is top-down per soundLayer, meaning it
 will process all SoundObjects in the first soundLayer, and if it finds a
 polyObject, it will go down into that and process the first soundLayer,
@@ -2106,8 +2106,8 @@ that deal with class definitions and initialization or just pressing the
 interpreted and entered into the jython interpreter's memory.</p>
 <p>Because of this alone, I find I use the Python SoundObject more than I
 do using the external SoundObject. if I was to use the external
-SoundObject and wanted work an even remotely similar manner, I'd have
-to come up with some strange hack to maybe write script in one external
+SoundObject and wanted work an even remotely similar manner, I'd have to
+come up with some strange hack to maybe write script in one external
 object have the execution of that object write that script into a file
 which would have to be reimported into other scripts. not a horrible
 hack, but enough for me to want to avoid, especially when it's not
@@ -2135,8 +2135,9 @@ function that depends on duration, maybe if it has less duration it
 produces notes with louder amplitude and than if it has a longer
 duration.</p>
 <p>Let's say you're writing a simple Python script:</p>
-<pre><code> score = "i1 0 2 3 4 5\n"
+<pre><code> score = &quot;i1 0 2 3 4 5\n&quot;
 </code></pre>
+
 <ol>
 <li>
 <p>the first thing blue does is clear the</p>
@@ -2177,16 +2178,18 @@ mentioned above in <a href="#caseUsingPython">simplesect_title</a>)</p>
 <p>For the following example, I will make a very simple score generator
 that produces as many notes as I give as an argument. the entire code
 for the script is:</p>
-<pre><code>def generateNotes(numOfNotes):
-    scoreText = ""
+<pre><code>
+def generateNotes(numOfNotes):
+    scoreText = &quot;&quot;
 
     for i in range(numOfNotes):
-        scoreText += "i1 " + str(i) + " 2 3 4 5\n"
+        scoreText += &quot;i1 &quot; + str(i) + &quot; 2 3 4 5\n&quot;
 
     return scoreText
 
 score = generateNotes(10)
 </code></pre>
+
 <p>The function I made,</p>
 <pre><code>generateNotes(numOfNotes)
 </code></pre>
@@ -2195,7 +2198,8 @@ wanted it to generate 10 notes, and if I printed out the above</p>
 <pre><code>generateNotes(10)
 </code></pre>
 <p>, I would have gotten the result:</p>
-<pre><code>i1 0 2 3 4 5 
+<pre><code>
+i1 0 2 3 4 5 
 i1 1 2 3 4 5
 i1 2 2 3 4 5
 i1 3 2 3 4 5
@@ -2206,6 +2210,7 @@ i1 7 2 3 4 5
 i1 8 2 3 4 5
 i1 9 2 3 4 5
 </code></pre>
+
 <p>This text string above is returned by the</p>
 <pre><code>generateNotes()
 </code></pre>
@@ -2275,14 +2280,13 @@ along with blue, if you happen to be carrying your work around with you.
 I think that this ability would be fantastic for the external
 SoundObject. already i have a method that returns the absolute path to
 the lib directory of blue; with this, I think it should be possible that
-before blue runs any script, it could look for a
-"\&lt;BLUE_SCRIPT_LIB>" constant of some sort and do a text replace to
-put in the absolute path to the lib directory. that way, you could do
-something like:</p>
+before blue runs any script, it could look for a "&lt;BLUE_SCRIPT_LIB>"
+constant of some sort and do a text replace to put in the absolute path
+to the lib directory. that way, you could do something like:</p>
 <pre><code>from &lt;BLUE_SCRIPT_LIB&gt;.myLibrary import *
 </code></pre>
 <p>as well as use a commandline like:</p>
-<p>perl \&lt;BLUE_SCRIPT_LIB>/myLibrary/myProgram -input \$infile</p>
+<p>perl &lt;BLUE_SCRIPT_LIB>/myLibrary/myProgram -input $infile</p>
 <p>Which would make the library accessible from any system. the nice thing
 about something like this is that I could then include other people's
 script libraries and programs as part of the blue release, or other
@@ -2300,8 +2304,8 @@ it is on the new computer.)</p>
 <p>This would be fantastic, to find a Java text component that I can swap
 in that would handle things like syntax-hilighting of different
 languages, maybe has some kind of help system for syntax and references,
-etc. I haven't found one I could easily use or modify yet, but
-hopefully something will come along.</p>
+etc. I haven't found one I could easily use or modify yet, but hopefully
+something will come along.</p>
 <h1 id="final_thoughts">Final Thoughts</h1>
 <p>As time goes on, I'm sure there will be alot of additions to blue to
 help aid scripting and the use of other score generating programs within

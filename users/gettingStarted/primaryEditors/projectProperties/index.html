@@ -1563,137 +1563,146 @@
                 <h1 id="project_properties">Project Properties</h1>
 <p>Project Properties</p>
 <p><img alt="" src="../../../../images/projectProperties.png" /></p>
-<dl>
-<dt>sr</dt>
-<dd>
-<p>sr to use when rendering in real-time. Value defaults to value set
-in Program Options.</p>
-</dd>
-<dt>ksmps</dt>
-<dd>
-<p>ksmps to use when rendering in real-time. Value defaults to value
-set in Program Options.</p>
-</dd>
-<dt>nchnls</dt>
-<dd>
-<p>nchnls to use when rendering in real-time. Value defaults to value
-set in Program Options.</p>
-</dd>
-<dt>0dbfs</dt>
-<dd>
-<p>The checkbox sets whether 0dbfs is used at all in the project. If
-enabled, the value will be assigned to the value in the textfield.
-The default for the value is set ing Program Options, as well as if
-0dbfs is enabled by default or not.</p>
-</dd>
-<dt>Devices</dt>
-<dd>
-<p>Devices to use when rendering in real-time (Audio In/Out, MIDI
-In/Out). The value of the device is dependent on the values set on
-the Program Options. By delegating the value to use to what is set
-on the Program Options, the project does not have to store settings
-which are hardware dependent, so projects can be easily moved from
-one computer to the next.</p>
+<ul>
+<li>
+<p>sr<br />
+    sr to use when rendering in real-time. Value defaults to value set
+    in Program Options.</p>
+</li>
+<li>
+<p>ksmps<br />
+    ksmps to use when rendering in real-time. Value defaults to value
+    set in Program Options.</p>
+</li>
+<li>
+<p>nchnls<br />
+    nchnls to use when rendering in real-time. Value defaults to value
+    set in Program Options.</p>
+</li>
+<li>
+<p>0dbfs<br />
+    The checkbox sets whether 0dbfs is used at all in the project. If
+    enabled, the value will be assigned to the value in the textfield.
+    The default for the value is set ing Program Options, as well as if
+    0dbfs is enabled by default or not.</p>
+</li>
+<li>
+<p>Devices<br />
+    Devices to use when rendering in real-time (Audio In/Out, MIDI
+    In/Out). The value of the device is dependent on the values set on
+    the Program Options. By delegating the value to use to what is set
+    on the Program Options, the project does not have to store settings
+    which are hardware dependent, so projects can be easily moved from
+    one computer to the next.</p>
 <p>For example, if your project is set to use "Audio Out", one system
 may use a value of "-+rtaudio=alsa -o dac:hw:0,0" while another
 system may use a value of "-+rtaudio=winmme -o dac2". The project
-only needs to be set to use "Audio Out" and when the project goes
-to render, the settings set for that system's audio out will be
-used.</p>
-</dd>
-<dt>Message Level</dt>
-<dd>
-<p>Enables what kind of messages Csound should report. The values
-default to what is set in Program Options.</p>
-</dd>
-<dt>Advanced Settings</dt>
-<dd>
-<p>Extra flags to append to the commandline that might not be covered
-by options in the UI. Pressing the [?] button will open the
-documentation for the Csound command flags.</p>
-<p>If "Complete Override" is enabled, the value given in the
-"Advanced Settings" textbox will be used as given and no other
-values set from the UI will be used. Projects prior to 0.106.0 will
-have their commandline settings copied to here and the "Complete
-Override" section will be enabled. When this setting is enabled,
-the commandline should set the call to the Csound executable to use
-and the flags to use but with the name of the CSD left out as it
-will automatically be appended to by Blue. An example of a
-commandline to use here with "Complete Override" is:</p>
-<pre><code>            csound -Wdo dac
-</code></pre>
-</dd>
-<dt>sr</dt>
-<dd>
-<p>sr to use when rendering to disk. Value defaults to value set in
-Program Options.</p>
-</dd>
-<dt>ksmps</dt>
-<dd>
-<p>ksmps to use when rendering to disk. Value defaults to value set in
-Program Options.</p>
-</dd>
-<dt>nchnls</dt>
-<dd>
-<p>nchnls to use when rendering to disk. Value defaults to value set in
-Program Options.</p>
-</dd>
-<dt>0dbfs</dt>
-<dd>
-<p>The checkbox sets whether 0dbfs is used at all in the project when
-rendering to disk. If enabled, the value will be assigned to the
-value in the textfield. The default for the value is set ing Program
-Options, as well as if 0dbfs is enabled by default or not.</p>
-</dd>
-<dt>Filename</dt>
-<dd>
-<p>Name to use for the rendered sound file. If a value is not given,
-Blue will ask on each render what to name the file and where to
-render it to.</p>
+only needs to be set to use "Audio Out" and when the project goes to
+render, the settings set for that system's audio out will be used.</p>
+</li>
+<li>
+<p>Message Level<br />
+    Enables what kind of messages Csound should report. The values
+    default to what is set in Program Options.</p>
+</li>
+<li>
+<p>Advanced Settings<br />
+    Extra flags to append to the commandline that might not be covered
+    by options in the UI. Pressing the [?] button will open the
+    documentation for the Csound command flags.</p>
+<p>If "Complete Override" is enabled, the value given in the "Advanced
+Settings" textbox will be used as given and no other values set from
+the UI will be used. Projects prior to 0.106.0 will have their
+commandline settings copied to here and the "Complete Override"
+section will be enabled. When this setting is enabled, the
+commandline should set the call to the Csound executable to use and
+the flags to use but with the name of the CSD left out as it will
+automatically be appended to by Blue. An example of a commandline to
+use here with "Complete Override" is:</p>
+<p>``` 
+            csound -Wdo dac</p>
+<p>```</p>
+</li>
+</ul>
+<!-- end list -->
+
+<ul>
+<li>
+<p>sr<br />
+    sr to use when rendering to disk. Value defaults to value set in
+    Program Options.</p>
+</li>
+<li>
+<p>ksmps<br />
+    ksmps to use when rendering to disk. Value defaults to value set in
+    Program Options.</p>
+</li>
+<li>
+<p>nchnls<br />
+    nchnls to use when rendering to disk. Value defaults to value set in
+    Program Options.</p>
+</li>
+<li>
+<p>0dbfs<br />
+    The checkbox sets whether 0dbfs is used at all in the project when
+    rendering to disk. If enabled, the value will be assigned to the
+    value in the textfield. The default for the value is set ing Program
+    Options, as well as if 0dbfs is enabled by default or not.</p>
+</li>
+<li>
+<p>Filename<br />
+    Name to use for the rendered sound file. If a value is not given,
+    Blue will ask on each render what to name the file and where to
+    render it to.</p>
 <p>If the "Ask on Render" is enabled, Blue will always ask on each
 render what to name the file and where to render it to. This is
 useful to enable if temporarily rendering parts of a project or if
 the project is only meant to be used to render small sound samples.</p>
-</dd>
-<dt>Message Level</dt>
-<dd>
-<p>Enables what kind of messages Csound should report. The values
-default to what is set in Program Options.</p>
-</dd>
-<dt>Advanced Settings</dt>
-<dd>
-<p>Extra flags to append to the commandline that might not be covered
-by options in the UI. Pressing the [?] button will open the
-documentation for the Csound command flags.</p>
-<p>If "Complete Override" is enabled, the value given in the
-"Advanced Settings" textbox will be used as given and no other
-values set from the UI will be used. Projects prior to 0.106.0 will
-have their commandline settings copied to here and the "Complete
-Override" section will be enabled. When this setting is enabled,
-the commandline should set the call to the Csound executable to use
-and the flags to use but with the name of the CSD left out as it
-will automatically be appended to by Blue. An example of a
-commandline to use here with "Complete Override" is:</p>
-<pre><code>            csound -Wdo mySoundFile.wav
-</code></pre>
-</dd>
-<dt>Title</dt>
-<dd>
-<p>Title for this project. For general information purposes; is also
-used when generating header comments in CSD.</p>
-</dd>
-<dt>Author</dt>
-<dd>
-<p>Author for this project. Defaults to value set in Program Options.
-For general information purposes; is also used when generating
-header comments in CSD.</p>
-</dd>
-<dt>Notes</dt>
-<dd>
-<p>Notes for this project. For general information purposes; is also
-used when generating header comments in CSD.</p>
-</dd>
-</dl>
+</li>
+<li>
+<p>Message Level<br />
+    Enables what kind of messages Csound should report. The values
+    default to what is set in Program Options.</p>
+</li>
+<li>
+<p>Advanced Settings<br />
+    Extra flags to append to the commandline that might not be covered
+    by options in the UI. Pressing the [?] button will open the
+    documentation for the Csound command flags.</p>
+<p>If "Complete Override" is enabled, the value given in the "Advanced
+Settings" textbox will be used as given and no other values set from
+the UI will be used. Projects prior to 0.106.0 will have their
+commandline settings copied to here and the "Complete Override"
+section will be enabled. When this setting is enabled, the
+commandline should set the call to the Csound executable to use and
+the flags to use but with the name of the CSD left out as it will
+automatically be appended to by Blue. An example of a commandline to
+use here with "Complete Override" is:</p>
+<p>``` 
+            csound -Wdo mySoundFile.wav</p>
+<p>```</p>
+</li>
+</ul>
+<!-- end list -->
+
+<ul>
+<li>
+<p>Title<br />
+    Title for this project. For general information purposes; is also
+    used when generating header comments in CSD.</p>
+</li>
+<li>
+<p>Author<br />
+    Author for this project. Defaults to value set in Program Options.
+    For general information purposes; is also used when generating
+    header comments in CSD.</p>
+</li>
+<li>
+<p>Notes<br />
+    Notes for this project. For general information purposes; is also
+    used when generating header comments in CSD.</p>
+</li>
+</ul>
                 
               
               

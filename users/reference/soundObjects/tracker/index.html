@@ -1571,13 +1571,13 @@ the support for microtonal scales using Scala scale files as well as
 support for Csound's Tied-Notes feature.</p>
 <p>The interface consists of three main areas: the top tool bar, the main
 tracking area, and the track properties editor.</p>
-<p>The top tool bar has a "+" button which adds new tracks to the
-Tracker, a Steps entry widget to enter in the number of steps the
-Tracker should have, a toggle for using Keyboard Note mode (see below
-for more information), an Octave entry widget to determine the relative
-octave for the Keyboard Note mode, a Test button to see what the
-generated score will be for the Tracker, as well as a help button that
-opens up a quick reference sheet for keyboard shortcuts.</p>
+<p>The top tool bar has a "+" button which adds new tracks to the Tracker,
+a Steps entry widget to enter in the number of steps the Tracker should
+have, a toggle for using Keyboard Note mode (see below for more
+information), an Octave entry widget to determine the relative octave
+for the Keyboard Note mode, a Test button to see what the generated
+score will be for the Tracker, as well as a help button that opens up a
+quick reference sheet for keyboard shortcuts.</p>
 <p>The main tracking area is where all of the score work is done to enter
 and modify notes. More information about note entry and modification is
 available below in the section "Entering in Notes".</p>
@@ -1587,71 +1587,70 @@ editor initially loads it will be collapsed. To open up the track
 properties, at least one track needs to be added to the tracker. Once
 one track exists, click the small button above the right scroll bar to
 open and close the track editor properties. More information on using
-the properties editor follows below in the section "Settings Things
-Up".</p>
+the properties editor follows below in the section "Settings Things Up".</p>
 <p>When the Tracker Object is edited it is completely blank. To start,
 click the "+" button to add as many tracks as you would like to use.
 After adding the number of tracks you'd like to use you will need to
 configure the track to work with your Csound instruments. Open up the
-track properties editor using the "\&lt;" toggle button above the right
+track properties editor using the "&lt;" toggle button above the right
 scroll bar. Afterwards, select a track by clicking the name panel above
 a track. Selecting a track will populate the track properties editor as
-well as hilight the name panel with a green border. A track's
-properties consist of a Name, Note Template, Instrument ID, and Columns;
+well as hilight the name panel with a green border. A track's properties
+consist of a Name, Note Template, Instrument ID, and Columns;
 descriptions of the values are listed below.</p>
-<dl>
-<dt>Name</dt>
-<dd>
-<p>The name property is used only for reference; editing the name
-changes the title shown on the name panel and is for the user's
-reference.</p>
-</dd>
-<dt>Note Template</dt>
-<dd>
-<p>The note template is used when generating the notes for the track.
-Items in the template that are within \&lt; and > tags will be
-replaced by values either from the Tracker (START and DUR), the
-Instrument ID (INSTR_ID) or values from the columns, using the
-column's name as a key (i.e. if a column is called "space", when
-generating a note for the track, any value in the space column will
-replace the \&lt;space> text in the note template). Note templates
-will generally follow the form "i \&lt;INSTR_ID> \&lt;START> \&lt;DUR>"
-and then have tag keys for each column for the track.</p>
-</dd>
-<dt>Instrument</dt>
-<dd>
-<p>Instrument name or number to be used when replacing \&lt;INSTR_ID> in
-Note template strings.</p>
-</dd>
-<dt>Columns</dt>
-<dd>
-<p>Each track has a minimum of one configurable column (the tied-note
-is a feature of all tracks and is not a part of this editor) and is
-user-configurable to add as many columns as the user needs for the
-values to use in their notes for their instruments. Columns are
-added and removed using the Columns table and can be organized by
-pushing up and down in the table which will move their order left
-and right in the main tracking area. To edit the name of the Column,
-use the Columns table to edit the name of the column.</p>
+<ul>
+<li>
+<p>Name<br />
+    The name property is used only for reference; editing the name
+    changes the title shown on the name panel and is for the user's
+    reference.</p>
+</li>
+<li>
+<p>Note Template<br />
+    The note template is used when generating the notes for the track.
+    Items in the template that are within &lt; and > tags will be
+    replaced by values either from the Tracker (START and DUR), the
+    Instrument ID (INSTR_ID) or values from the columns, using the
+    column's name as a key (i.e. if a column is called "space", when
+    generating a note for the track, any value in the space column will
+    replace the &lt;space> text in the note template). Note templates
+    will generally follow the form "i &lt;INSTR_ID> &lt;START> &lt;DUR>"
+    and then have tag keys for each column for the track.</p>
+</li>
+<li>
+<p>Instrument<br />
+    Instrument name or number to be used when replacing &lt;INSTR_ID> in
+    Note template strings.</p>
+</li>
+<li>
+<p>Columns<br />
+    Each track has a minimum of one configurable column (the tied-note
+    is a feature of all tracks and is not a part of this editor) and is
+    user-configurable to add as many columns as the user needs for the
+    values to use in their notes for their instruments. Columns are
+    added and removed using the Columns table and can be organized by
+    pushing up and down in the table which will move their order left
+    and right in the main tracking area. To edit the name of the Column,
+    use the Columns table to edit the name of the column.</p>
 <p>Each Column also has a type. The type information is used by the
 tracker when entering data to verify that the data being input is of
 that column's type, as well as used when using shortcuts to
 manipulate data in that column.</p>
-<dl>
-<dt>PCH</dt>
-<dd>
-<p>Csound PCH format. Entering data will verify that data is in the
-octave.pitch format. Using the increment and decrement value
-shortcuts will propertly add or subtract one to pitch value,
-i.e. incrementing the value of 8.11 will result in 9.00.</p>
-</dd>
-<dt>Blue PCH</dt>
-<dd>
-<p>The Blue PCH format is like the Csound PCH format except that
-the pitch part is always a whole number integer and is the scale
-degree of the selected Scale. A valid value in Csound PCH such
-as 8.01 is not valid in Blue PCH as 01 is not an integer (the
-equivalent in Blue PCH would be 8.1).</p>
+<ul>
+<li>
+<p>PCH<br />
+    Csound PCH format. Entering data will verify that data is in the
+    octave.pitch format. Using the increment and decrement value
+    shortcuts will propertly add or subtract one to pitch value,
+    i.e. incrementing the value of 8.11 will result in 9.00.</p>
+</li>
+<li>
+<p>Blue PCH<br />
+    The Blue PCH format is like the Csound PCH format except that
+    the pitch part is always a whole number integer and is the scale
+    degree of the selected Scale. A valid value in Csound PCH such
+    as 8.01 is not valid in Blue PCH as 01 is not an integer (the
+    equivalent in Blue PCH would be 8.1).</p>
 <p>Using Blue PCH allows for using Scala scale files to do
 microtonal tracking. To choose a Scala scale, use the "..."
 button to open up a file selector to choose a Scala scale.
@@ -1669,29 +1668,29 @@ with Blue PCH.</p>
 <p>Using Blue PCH, data will be verified on entry and
 increment/decrement value options will work in the same way as
 for PCH.</p>
-</dd>
-<dt>MIDI</dt>
-<dd>
-<p>MIDI will limit the values entered to whole number integers from
-0-127. Using the increment and decrement value shortcuts will
-add or subtract 1 to the value.</p>
-</dd>
-<dt>String</dt>
-<dd>
-<p>The String type allows the user to input any value they want. No
-verification is done on entry and the increment/decrement value
-shortcuts will have no effect.</p>
-</dd>
-<dt>Number</dt>
-<dd>
-<p>The Number format will limit the values entered to only numbers.
-Values can be further restricted to a given range as well as to
-only use whole number integers. Using the increment and
-decrement value shortcuts will add or subtract 1 to the value.</p>
-</dd>
-</dl>
-</dd>
-</dl>
+</li>
+<li>
+<p>MIDI<br />
+    MIDI will limit the values entered to whole number integers from
+    0-127. Using the increment and decrement value shortcuts will
+    add or subtract 1 to the value.</p>
+</li>
+<li>
+<p>String<br />
+    The String type allows the user to input any value they want. No
+    verification is done on entry and the increment/decrement value
+    shortcuts will have no effect.</p>
+</li>
+<li>
+<p>Number<br />
+    The Number format will limit the values entered to only numbers.
+    Values can be further restricted to a given range as well as to
+    only use whole number integers. Using the increment and
+    decrement value shortcuts will add or subtract 1 to the value.</p>
+</li>
+</ul>
+</li>
+</ul>
 <p>Entering in data into the tracker is much like entering data into any
 other table, though learning the keyboard shortcuts will vastly speed up
 entering and modifying data. To begin click anywhere on a track where
@@ -1736,70 +1735,272 @@ section).</p>
 mode. To change the octave, use either the spinner control on the top
 tool bar or use the keyboard shortcuts ctrl-shift-up or ctrl-shift-down.
 By default, the base octave starts at middle-c.</p>
-<p>Shortcuts          Description</p>
-<hr />
-<dl>
-<dt>ctrl-space         clear or duplicate previous note</dt>
-<dt>  ctrl-shift-space   set or clear OFF note</dt>
-<dt>  ctrl-up            increment value</dt>
-<dt>  ctrl-down          decrement value</dt>
-<dt>  ctrl-t             toggle note tie</dt>
-<dt>  ctrl-x             cut selected notes</dt>
-<dt>  ctrl-c             copy selected notes</dt>
-<dt>  ctrl-v             paste notes from copy buffer</dt>
-<dt>  insert             insert blank note into currently selected row, notes in current row and after are shifted down; if notes are at end are shifted off they are lost</dt>
-<dt>  del                delete selected note(s), move selection to next row after current selection</dt>
-<dt>  shift-backspace    delete selected notes, notes after selected notes are shifted up to fill in place where deleted notes were, empty notes appended to end</dt>
-<dt>  ctrl-k             toggle keyboard notes mode</dt>
-<dt>  ctrl-shift-up      raise keyboard octave by one</dt>
-<dt>  ctrl-shift-down    lower keyboard octave by one</dt>
-<dd>
+<table>
+<thead>
+<tr>
+<th>Shortcuts</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl-space</td>
+<td>clear or duplicate previous note</td>
+</tr>
+<tr>
+<td>ctrl-shift-space</td>
+<td>set or clear OFF note</td>
+</tr>
+<tr>
+<td>ctrl-up</td>
+<td>increment value</td>
+</tr>
+<tr>
+<td>ctrl-down</td>
+<td>decrement value</td>
+</tr>
+<tr>
+<td>ctrl-t</td>
+<td>toggle note tie</td>
+</tr>
+<tr>
+<td>ctrl-x</td>
+<td>cut selected notes</td>
+</tr>
+<tr>
+<td>ctrl-c</td>
+<td>copy selected notes</td>
+</tr>
+<tr>
+<td>ctrl-v</td>
+<td>paste notes from copy buffer</td>
+</tr>
+<tr>
+<td>insert</td>
+<td>insert blank note into currently selected row, notes in current row and after are shifted down; if notes are at end are shifted off they are lost</td>
+</tr>
+<tr>
+<td>del</td>
+<td>delete selected note(s), move selection to next row after current selection</td>
+</tr>
+<tr>
+<td>shift-backspace</td>
+<td>delete selected notes, notes after selected notes are shifted up to fill in place where deleted notes were, empty notes appended to end</td>
+</tr>
+<tr>
+<td>ctrl-k</td>
+<td>toggle keyboard notes mode</td>
+</tr>
+<tr>
+<td>ctrl-shift-up</td>
+<td>raise keyboard octave by one</td>
+</tr>
+<tr>
+<td>ctrl-shift-down</td>
+<td>lower keyboard octave by one</td>
+</tr>
+</tbody>
+</table>
 <p>Keyboard Shortcuts</p>
-</dd>
-</dl>
-<p>Shortcut   PCh Value   Blue PCH Value   MIDI Value</p>
-<hr />
-<dl>
-<dt>z          8.00        8.0              60</dt>
-<dt>  s          8.01        8.1              61</dt>
-<dt>  x          8.02        8.2              62</dt>
-<dt>  d          8.03        8.3              63</dt>
-<dt>  c          8.04        8.4              64</dt>
-<dt>  v          8.05        8.5              65</dt>
-<dt>  g          8.06        8.6              66</dt>
-<dt>  b          8.07        8.7              67</dt>
-<dt>  h          8.08        8.8              68</dt>
-<dt>  n          8.09        8.9              69</dt>
-<dt>  j          8.10        8.10             70</dt>
-<dt>  m          8.11        8.11             71</dt>
-<dt>  q          9.00        9.0              72</dt>
-<dt>  2          9.01        9.1              73</dt>
-<dt>  w          9.02        9.2              74</dt>
-<dt>  3          9.03        9.3              75</dt>
-<dt>  e          9.04        9.4              76</dt>
-<dt>  r          9.05        9.5              77</dt>
-<dt>  5          9.06        9.6              78</dt>
-<dt>  t          9.07        9.7              79</dt>
-<dt>  6          9.08        9.8              80</dt>
-<dt>  y          9.09        9.9              81</dt>
-<dt>  7          9.10        9.10             82</dt>
-<dt>  u          9.11        9.11             83</dt>
-<dt>  i          10.00       10.0             84</dt>
-<dt>  9          10.01       10.1             85</dt>
-<dt>  o          10.02       10.2             86</dt>
-<dt>  0          10.03       10.3             87</dt>
-<dt>  p          10.04       10.4             88</dt>
-<dd>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>PCh Value</th>
+<th>Blue PCH Value</th>
+<th>MIDI Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>z</td>
+<td>8.00</td>
+<td>8.0</td>
+<td>60</td>
+</tr>
+<tr>
+<td>s</td>
+<td>8.01</td>
+<td>8.1</td>
+<td>61</td>
+</tr>
+<tr>
+<td>x</td>
+<td>8.02</td>
+<td>8.2</td>
+<td>62</td>
+</tr>
+<tr>
+<td>d</td>
+<td>8.03</td>
+<td>8.3</td>
+<td>63</td>
+</tr>
+<tr>
+<td>c</td>
+<td>8.04</td>
+<td>8.4</td>
+<td>64</td>
+</tr>
+<tr>
+<td>v</td>
+<td>8.05</td>
+<td>8.5</td>
+<td>65</td>
+</tr>
+<tr>
+<td>g</td>
+<td>8.06</td>
+<td>8.6</td>
+<td>66</td>
+</tr>
+<tr>
+<td>b</td>
+<td>8.07</td>
+<td>8.7</td>
+<td>67</td>
+</tr>
+<tr>
+<td>h</td>
+<td>8.08</td>
+<td>8.8</td>
+<td>68</td>
+</tr>
+<tr>
+<td>n</td>
+<td>8.09</td>
+<td>8.9</td>
+<td>69</td>
+</tr>
+<tr>
+<td>j</td>
+<td>8.10</td>
+<td>8.10</td>
+<td>70</td>
+</tr>
+<tr>
+<td>m</td>
+<td>8.11</td>
+<td>8.11</td>
+<td>71</td>
+</tr>
+<tr>
+<td>q</td>
+<td>9.00</td>
+<td>9.0</td>
+<td>72</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9.01</td>
+<td>9.1</td>
+<td>73</td>
+</tr>
+<tr>
+<td>w</td>
+<td>9.02</td>
+<td>9.2</td>
+<td>74</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9.03</td>
+<td>9.3</td>
+<td>75</td>
+</tr>
+<tr>
+<td>e</td>
+<td>9.04</td>
+<td>9.4</td>
+<td>76</td>
+</tr>
+<tr>
+<td>r</td>
+<td>9.05</td>
+<td>9.5</td>
+<td>77</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9.06</td>
+<td>9.6</td>
+<td>78</td>
+</tr>
+<tr>
+<td>t</td>
+<td>9.07</td>
+<td>9.7</td>
+<td>79</td>
+</tr>
+<tr>
+<td>6</td>
+<td>9.08</td>
+<td>9.8</td>
+<td>80</td>
+</tr>
+<tr>
+<td>y</td>
+<td>9.09</td>
+<td>9.9</td>
+<td>81</td>
+</tr>
+<tr>
+<td>7</td>
+<td>9.10</td>
+<td>9.10</td>
+<td>82</td>
+</tr>
+<tr>
+<td>u</td>
+<td>9.11</td>
+<td>9.11</td>
+<td>83</td>
+</tr>
+<tr>
+<td>i</td>
+<td>10.00</td>
+<td>10.0</td>
+<td>84</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10.01</td>
+<td>10.1</td>
+<td>85</td>
+</tr>
+<tr>
+<td>o</td>
+<td>10.02</td>
+<td>10.2</td>
+<td>86</td>
+</tr>
+<tr>
+<td>0</td>
+<td>10.03</td>
+<td>10.3</td>
+<td>87</td>
+</tr>
+<tr>
+<td>p</td>
+<td>10.04</td>
+<td>10.4</td>
+<td>88</td>
+</tr>
+</tbody>
+</table>
 <p>Keyboard Note Mode</p>
-</dd>
-</dl>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 For More Information
-:::</p>
-<p>See the tracker.blue example file in the blue/examples/soundObjects
+
+</div>
+
+See the tracker.blue example file in the blue/examples/soundObjects
 folder.
-:::</p>
+
+</div>
                 
               
               

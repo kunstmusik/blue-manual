@@ -1728,10 +1728,10 @@ macOS users, download the macOS zip file which contains Blue.app. You
 can double-click the Application to run, as well as copy it to your
 Applications folder to install it.</p>
 <p>For Linux and Windows users, download the appropriate zip file and unzip
-it. Inside of the bin folder you will see a "blue" script for Linux or
-a "blue64.exe" file for use on Windows. (A 32-bit version,
-"blue.exe", is also included for those using an older version of
-Csound that is compiled for 32-bit Windows.)</p>
+it. Inside of the bin folder you will see a "blue" script for Linux or a
+"blue64.exe" file for use on Windows. (A 32-bit version, "blue.exe", is
+also included for those using an older version of Csound that is
+compiled for 32-bit Windows.)</p>
 <p>Note: After starting Blue, you may want to explore the example projects
 and pieces found in the Blue/example folder (or right-click and explore
 contents of Blue.app/example if on OSX).</p>
@@ -1760,8 +1760,8 @@ file.</p>
 <p>The benefit to this mode of Csound usage is that it is easier to switch
 out your version of Csound or use multiple versions of Csound on the
 same computer. It is also a little more stable than using the API in
-that if Csound crashes for some reason, it won't take down Blue with
-it. Also, it may be more performant to use the command-line mode. These
+that if Csound crashes for some reason, it won't take down Blue with it.
+Also, it may be more performant to use the command-line mode. These
 benefits however need to be weighed against the benefits of using the
 API, which is described below.</p>
 <p>To use the command-line version, one needs to set up the Csound
@@ -1776,28 +1776,35 @@ rendering and composing, it is the preferred method of using Blue with
 Csound. Blue should work out-of-the-box with the API if Csound is
 installed using the installers provided on Github, or installed via a
 package manager if on Linux.</p>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>Blue currently only works with the API if the version of Csound used is
+
+</div>
+
+Blue currently only works with the API if the version of Csound used is
 compiled using 64-bit doubles. (The float version is not supported when
 using the API.) There are technical difficulties in supporting two
 different versions of Csound API in the same build and it is not known
 if or when the float build will be supported. For users interested in
 using the float build of Csound with Blue, you will need to run Blue
-using the command-line Csound mode.</p>
-<p>Additionally, the architecture that Csound is compiled for must match
+using the command-line Csound mode.
+
+Additionally, the architecture that Csound is compiled for must match
 the architecture of the Java runtime you are using. For example, on
-Windows, Csound is currently only built for x86_64/amd64 CPU (i.e.
+Windows, Csound is currently only built for x86\_64/amd64 CPU (i.e.
 64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
 will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
 an issue as Csound is compiled as a universal binary for both i386 and
-x86_64. On Linux, it is likely that the version of Csound you
+x86\_64. On Linux, it is likely that the version of Csound you
 install/compile and the Java Runtime that you install will likely be the
 same, but if the API does not show as available it may be something to
 check.
-:::</p>
+
+</div>
+
 <p>Blue uses the CsoundJNI Java binding for Csound. This requires that Blue
 can find your installed version of Csound but is configured to do so for
 standard Csound installations. If the API is not enabled when starting
@@ -1811,8 +1818,10 @@ blue/etc/blue.conf file to tell Blue where to find the csound64.dll. For
 example, if the directory where csound64.dll is located is in
 c:\myCsound, open up blue/etc/blue.conf and modify the default so that
 it contains:</p>
-<pre><code>default_options="--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound"
+<pre><code>default_options=&quot;--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound&quot;
+
 </code></pre>
+
 <p>Linux users should install a doubles version of Csound. The version of
 Csound found in package repositories should be one compiled for doubles.
 After installing Csound, modify the blue/bin/blue file. Search for the

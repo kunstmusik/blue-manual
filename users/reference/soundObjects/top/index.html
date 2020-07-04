@@ -1562,26 +1562,26 @@
 <p>Sound Objects are objects on the score timeline that are primarily
 responsible for generating score data.</p>
 <p>The following are properties that all SoundObjects share.</p>
-<dl>
-<dt>Name</dt>
-<dd>
-<p>Name of the Soundobject</p>
-</dd>
-<dt>Subjective Duration</dt>
-<dd>
-<p>The duration of the soundObject on the timeline (versus the duration
-of the generated score within the soundObject, which may be
-different). How the duration relates to the generated score contents
-is controlled by the "Time Behavior" property.</p>
-</dd>
-<dt>End Time</dt>
-<dd>
-<p>Read-Only property that shows the end-time of the soundObject</p>
-</dd>
-<dt>Time Behavior</dt>
-<dd>
-<p>Selects how subjective time should be used on a soundObject. Options
-are:</p>
+<ul>
+<li>
+<p>Name<br />
+    Name of the Soundobject</p>
+</li>
+<li>
+<p>Subjective Duration<br />
+    The duration of the soundObject on the timeline (versus the duration
+    of the generated score within the soundObject, which may be
+    different). How the duration relates to the generated score contents
+    is controlled by the "Time Behavior" property.</p>
+</li>
+<li>
+<p>End Time<br />
+    Read-Only property that shows the end-time of the soundObject</p>
+</li>
+<li>
+<p>Time Behavior<br />
+    Selects how subjective time should be used on a soundObject. Options
+    are:</p>
 <ol>
 <li>
 <p>Scale - The default option, stretches generated score to last
@@ -1597,8 +1597,8 @@ are:</p>
     duration of the soundObject's score.)</p>
 </li>
 </ol>
-</dd>
-</dl>
+</li>
+</ul>
 <p>Sound Objects generate notes in the following manner:</p>
 <ul>
 <li>
@@ -1627,6 +1627,10 @@ such as the AudioFile SoundObject, FrozenObject, the LineObject, and the
 ZakLineObject. For those soundObjects, if render is started within the
 middle of one of those, you will hear audio and have control signals
 generated from the correct place and time.</p>
+<p>AUDIOFILEOBJECT CECILIAMODULE COMMENT CLOJUREOBJECT EXTERNAL
+GENERICSCORE INSTANCE JMASK LINEOBJECT OBJECTBUILDER PATTERNOBJECT
+PIANOROLL POLYOBJECT PYTHONOBJECT JAVASCRIPTOBJECT SOUND TRACKER
+ZAKLINEOBJECT</p>
                 
               
               

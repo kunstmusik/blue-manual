@@ -15,7 +15,7 @@
     
     
       
-        <title>appendixB - Blue Manual</title>
+        <title>Breaks in Backwards Compatibility - Blue Manual</title>
       
     
     
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              appendixB
+              Breaks in Backwards Compatibility
             
           </span>
         </div>
@@ -1545,28 +1545,22 @@
                 
                 <h1 id="breaks_in_backwards_compatibility">Breaks in Backwards Compatibility</h1>
 <p>This section logs any breaks in backwards compatibility.</p>
-<dl>
-<dt>+---------+-----------------------------------------------------------+</dt>
-<dt>| Version | Description                                               |</dt>
-<dt>+=========+===========================================================+</dt>
-<dt>| 0.124.3 | Previously, if a BSBObject was set to have \"Automation   |</dt>
-<dt>|         | Allowed\" but was not itself automated, it would compile  |</dt>
-<dt>|         | as a constant in the generated CSD. As of 0.124.3, if a   |</dt>
-<dt>|         | widget is made to allow automation, the Csound code that  |</dt>
-<dt>|         | uses the widget value must accept a k-rate signal,        |</dt>
-<dt>|         | whether the API is used or not.                           |</dt>
-<dt>|         |                                                           |</dt>
-<dt>|         | If you have a project that rendered fine before 0.124.3   |</dt>
-<dt>|         | but afterwards can not render due to problems with Csound |</dt>
-<dt>|         | complaining that \"k-rate signals not allowed\", then you |</dt>
-<dt>|         | will need to either set the problematic widgets to not    |</dt>
-<dt>|         | allow automation or change the Csound code so that it     |</dt>
-<dt>|         | will work with the generated k-rate signal.               |</dt>
-<dt>+---------+-----------------------------------------------------------+</dt>
-<dd>
-<p>Compatibility Breaks</p>
-</dd>
-</dl>
+<table>
+<caption>Compatibility Breaks</caption>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.124.3</td>
+<td><p>Previously, if a BSBObject was set to have "Automation Allowed" but was not itself automated, it would compile as a constant in the generated CSD. As of 0.124.3, if a widget is made to allow automation, the Csound code that uses the widget value must accept a k-rate signal, whether the API is used or not.</p>
+<p>If you have a project that rendered fine before 0.124.3 but afterwards can not render due to problems with Csound complaining that "k-rate signals not allowed", then you will need to either set the problematic widgets to not allow automation or change the Csound code so that it will work with the generated k-rate signal.</p></td>
+</tr>
+</tbody>
+</table>
                 
               
               

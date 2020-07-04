@@ -1736,34 +1736,34 @@ second, though work continues to expand its usefulness in both regards.</p>
 <p>Blue Live is designed to work with the rest of your Blue project file.
 When Blue Live is turned on, the Blue project generates everything from
 the project except for the Score generated from the Score timeline. The
-Global Score text will be used, but instead of \&lt;TOTAL_DUR> being
+Global Score text will be used, but instead of &lt;TOTAL_DUR> being
 calculated from the score timeline, a default value of 3600 is used.
 This allows your notes that would be used for effects instruments to run
 for 3600 seconds (this size can be modified; please make a request if
 desired).</p>
 <p>The main toolbar has four buttons for Blue Live:</p>
-<dl>
-<dt>BlueLive</dt>
-<dd>
-<p>Toggle button that stops and starts BlueLive</p>
-</dd>
-<dt>Recompile</dt>
-<dd>
-<p>If BlueLive is running, this button will cause Blue to recompile the
-CSD from your project and restart BlueLive. This is useful if you
-modify your orchestra code and want to quickly recompile and
-continue working with BlueLive.</p>
-</dd>
-<dt>All Notes Off</dt>
-<dd>
-<p>Turns off any score notes that are actively playing</p>
-</dd>
-<dt>MIDI Input</dt>
-<dd>
-<p>Toggle button that turns on and off the configured MIDI devices
-setup in Program Options (discussed further below).</p>
-</dd>
-</dl>
+<ul>
+<li>
+<p>BlueLive<br />
+    Toggle button that stops and starts BlueLive</p>
+</li>
+<li>
+<p>Recompile<br />
+    If BlueLive is running, this button will cause Blue to recompile the
+    CSD from your project and restart BlueLive. This is useful if you
+    modify your orchestra code and want to quickly recompile and
+    continue working with BlueLive.</p>
+</li>
+<li>
+<p>All Notes Off<br />
+    Turns off any score notes that are actively playing</p>
+</li>
+<li>
+<p>MIDI Input<br />
+    Toggle button that turns on and off the configured MIDI devices
+    setup in Program Options (discussed further below).</p>
+</li>
+</ul>
 <p>The primary Blue Live window is available from the Window Menu, or by
 using the ctrl-8 shortcut. The Blue Live window has three main tabs: the
 Live Space, the SCO Pad, and Options. These will be discussed int he
@@ -1783,19 +1783,19 @@ state. Enabled objects are highlighted in orange and are the
 SoundObjects that are triggered when multi-trigger or repeat is used.</p>
 <p>Once a SoundObject is added to the Live Space, it can be triggered in
 one of two ways:</p>
-<dl>
-<dt>Single Trigger</dt>
-<dd>
-<p>Trigger the contents of the currently selected SoundObject. This is
-done by using the keyboard shortcut ctrl-T (cmd-T on OSX).</p>
-</dd>
-<dt>Multi Trigger</dt>
-<dd>
-<p>Triggers the contents of the currently enabled SoundObjects. This is
-done either by using the Trigger button, or using the keyboard
-shortcut ctrl-shift-T (cmd-shift-T on OSX).</p>
-</dd>
-</dl>
+<ul>
+<li>
+<p>Single Trigger<br />
+    Trigger the contents of the currently selected SoundObject. This is
+    done by using the keyboard shortcut ctrl-T (cmd-T on OSX).</p>
+</li>
+<li>
+<p>Multi Trigger<br />
+    Triggers the contents of the currently enabled SoundObjects. This is
+    done either by using the Trigger button, or using the keyboard
+    shortcut ctrl-shift-T (cmd-shift-T on OSX).</p>
+</li>
+</ul>
 <p>Triggering a soundObject will take the score generated from it and pass
 it immediately to the active Csound instance for BlueLive (BlueLive must
 be running for this to work). Scores are always generated with Time
@@ -1818,22 +1818,34 @@ next repeat trigger.</p>
 BlueLive is enabled, you can select code within the Live Code tab and
 use the "ctrl-e" (cmd-e on OSX) shortcut to evaluate the code in the
 running Csound instance.</p>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>When rendering for BlueLive, Blue will define a BLUE_LIVE orchestra and
+
+</div>
+
+When rendering for BlueLive, Blue will define a BLUE\_LIVE orchestra and
 score macro. This allows you to write conditional code (e.g., in the
 Global Orchestra or Global Score tabs for your project) that will run
-only when BLUE_LIVE is defined. (This can be checked using #ifdef's.)
-:::</p>
+only when BLUE\_LIVE is defined. (This can be checked using \#ifdef's.)
+
+</div>
+
 <h2 id="sco_pad">SCO Pad</h2>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>This feature will likely be removed in a future release.
-:::</p>
+
+</div>
+
+This feature will likely be removed in a future release.
+
+</div>
+
 <p>This is an experimental feature to record MIDI input in a manner similar
 to to notation programs (press keys, then press 4 for a quarter note, 8
 for and 8th note, etc.). This feature requires MIDI Input to be turned
@@ -1844,22 +1856,22 @@ it contains options for modifying the commandline string used when
 running BlueLive. For most users, these modification will not be
 necessary and the default commandline used will be sufficient.</p>
 <h2 id="working_with_midi">Working with MIDI</h2>
-<p>Blue's MIDI system, when enabled, will listen to configured MIDI
-devices for notes, map the key and velocity, and generate Csound notes
-to achieve MIDI-like note-on and note-off type behavior. This allows
+<p>Blue's MIDI system, when enabled, will listen to configured MIDI devices
+for notes, map the key and velocity, and generate Csound notes to
+achieve MIDI-like note-on and note-off type behavior. This allows
 working with a MIDI keyboard in realtime with your project instruments
 without modifying your instruments specifically for MIDI. This also
 means that when Blue's MIDI system is enabled, Csound MIDI processing
 should be disabled for your project.</p>
 <p>To configure what MIDI devices to use, go to the program Options
-settings (on OSX it is the application's Preferences, on other
-platofrms it is the Options menu item in the Tools menu) and under
-"Blue", go to MIDI. There you will see a list of MIDI devices
-connected to your computer. If you connected a device after starting
-Blue, you can rescan to find your MIDI device. In this window you will
-configure what MIDI devices you want to use with Blue, but these devices
-will not be opened for listening until you enable MIDI Input on the
-BlueLive toolbar in the main application.</p>
+settings (on OSX it is the application's Preferences, on other platofrms
+it is the Options menu item in the Tools menu) and under "Blue", go to
+MIDI. There you will see a list of MIDI devices connected to your
+computer. If you connected a device after starting Blue, you can rescan
+to find your MIDI device. In this window you will configure what MIDI
+devices you want to use with Blue, but these devices will not be opened
+for listening until you enable MIDI Input on the BlueLive toolbar in the
+main application.</p>
 <p>Once you have configured what devices to use with Blue, return to the
 main program and enable MIDI input using the "MIDI Input" button, then
 start BlueLive. At this point, when MIDI notes are played, Blue will

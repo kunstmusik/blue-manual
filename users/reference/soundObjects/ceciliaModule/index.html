@@ -15,7 +15,7 @@
     
     
       
-        <title>ceciliaModule - Blue Manual</title>
+        <title>CeciliaModule - Blue Manual</title>
       
     
     
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              ceciliaModule
+              CeciliaModule
             
           </span>
         </div>
@@ -1545,14 +1545,20 @@
                 
                 <h1 id="ceciliamodule">CeciliaModule</h1>
 <p>Accepts NoteProcessors: no, Supports TimeBehavior: no</p>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>This SoundObject is unfinished and not enabled for normal use. This
+
+</div>
+
+This SoundObject is unfinished and not enabled for normal use. This
 information is left here for the future if the module is ever finished
 and reenabled.
-:::</p>
+
+</div>
+
 <p>The CeciliaModule is a soundObject that is meant to be compatible with
 modules for the program Cecilia
 (http://www.sourceforge.net/projects/cecilia), created by Alexandre
@@ -1567,22 +1573,26 @@ they do not interfere with other instances of the same module.</p>
 <p>Cecilia modules require at least one modification before they are able
 to run in Blue, and also must adhere to a few more constraints of
 design.</p>
-<p><strong>Appending "ftable" in Instrument Definitions.</strong></p>
-<p>Instruments are required to append the word "ftable" before any number
+<p><strong>Appending “ftable” in Instrument Definitions.</strong></p>
+<p>Instruments are required to append the word “ftable” before any number
 that is meant to be an ftable. For example:</p>
 <pre><code>        instr 1
 
         aout oscil 10000, 440, 1
 
         out aout, aout endin
+
 </code></pre>
+
 <p>would have to become:</p>
 <pre><code>        instr 1
 
         aout oscil 10000, 440, ftable1
 
         out aout, aout endin
+
 </code></pre>
+
 <p>The purpose of this is so that Blue will know what ftable references
 will need to be updated when Blue reassigns ftable numbers.</p>
                 

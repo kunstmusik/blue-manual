@@ -1563,14 +1563,40 @@
                 <h1 id="blue_variables">Blue Variables</h1>
 <p>Blue treats special text as special Blue variables. Below is a list of
 those variables.</p>
-<p>Variable                      Value</p>
-<hr />
-<p>\&lt;TOTAL_DUR>                Duration of the generated score from the timeline (Available in Global SCO text area.)
-  \&lt;INSTR_ID>                 Replaces with instrumentId; if the instrument is a named instrument, value is quoted. Generally used when creating notes.(Available within instruments and some SoundObjects.)
-  \&lt;INSTR_NAME>               Replaces with instrumentId; if the instrument is a named instrument, the value is not quoted. Generally used when working with ORC code to give a variable a unique ID, i.e. "gk_var\&lt;INSTR_NAME>".(Available within instruments and some SoundObjects.)
-  \&lt;RENDER_START>             The start time of rendering. Does not take into account time warping of score. (Available in Global SCO text area.)
-  \&lt;RENDER_START_ABSOLUTE>   The start time of rendering. Takes into account time warping of score. (Available in Global SCO text area.)
-  \&lt;PROCESSING_START>         The time value when always-on effects instruments need to start. Calculated as the time value of the first soundObject that is not a FrozenSoundObject or Comment. (Available in Global SCO text area.)</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;TOTAL_DUR></td>
+<td>Duration of the generated score from the timeline (Available in Global SCO text area.)</td>
+</tr>
+<tr>
+<td>&lt;INSTR_ID></td>
+<td>Replaces with instrumentId; if the instrument is a named instrument, value is quoted. Generally used when creating notes.(Available within instruments and some SoundObjects.)</td>
+</tr>
+<tr>
+<td>&lt;INSTR_NAME></td>
+<td>Replaces with instrumentId; if the instrument is a named instrument, the value is not quoted. Generally used when working with ORC code to give a variable a unique ID, i.e. "gk_var&lt;INSTR_NAME>".(Available within instruments and some SoundObjects.)</td>
+</tr>
+<tr>
+<td>&lt;RENDER_START></td>
+<td>The start time of rendering. Does not take into account time warping of score. (Available in Global SCO text area.)</td>
+</tr>
+<tr>
+<td>&lt;RENDER_START_ABSOLUTE></td>
+<td>The start time of rendering. Takes into account time warping of score. (Available in Global SCO text area.)</td>
+</tr>
+<tr>
+<td>&lt;PROCESSING_START></td>
+<td>The time value when always-on effects instruments need to start. Calculated as the time value of the first soundObject that is not a FrozenSoundObject or Comment. (Available in Global SCO text area.)</td>
+</tr>
+</tbody>
+</table>
                 
               
               

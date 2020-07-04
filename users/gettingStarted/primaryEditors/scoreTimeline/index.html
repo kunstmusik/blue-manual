@@ -1656,21 +1656,27 @@ the left part of the Score).</p>
 <p>A Score is divided into Layer Groups. Each Layer Group has a
 user-interface for the main timeline area, as well as a header interface
 that shows on the left-hand side. The header area usually shows
-meta-information and controls for each of the Layer Group's layers,
-such as layer name, muting, soloing, and other features.</p>
+meta-information and controls for each of the Layer Group's layers, such
+as layer name, muting, soloing, and other features.</p>
 <p>By using the Score Manager Dialog, you can add as many Layer Groups as
 you like, as well as many layers to each group as you like. You can also
 push up and down Layer Groups to reorganize them. The same
 add/remove/push up/push down actions are also available for Layers
 within a Layer Group.</p>
-<p>::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::</p>
-<p>Add/Remove/Push Up/Push Down for layers is also available while working
+
+</div>
+
+Add/Remove/Push Up/Push Down for layers is also available while working
 in the main score area by right-clicking the Layer panels on the right
 and selecting the options from the popup menu.
-:::</p>
+
+</div>
+
 <p>Also, all LayerGroups support having <a href="#noteProcessors">NoteProcessors</a>
 used with them. Using a NoteProcessor on a LayerGroup will affect all
 notes generated within that LayerGroup. Editing the LayerGroup's
@@ -1717,10 +1723,10 @@ will allow you to change the duration of the SoundObject. (Note you can
 only resize one SoundObject at a time.)</p>
 <p>If you have a single SoundObject selected, you can edit the properties
 of the SoundObject by using the SoundObject Property Window. This window
-can be opened from the menu "Windows -> Sound Object Properties" or
-by using the shortcut "F3". From this window you can change the name
-of the SoundObject, its start time and subjective duration, as well as
-add and remove NoteProcessors (if the SoundObject supports it).</p>
+can be opened from the menu "Windows -> Sound Object Properties" or by
+using the shortcut "F3". From this window you can change the name of the
+SoundObject, its start time and subjective duration, as well as add and
+remove NoteProcessors (if the SoundObject supports it).</p>
 <p>To edit a SoundObject, select a single SoundObject and open the
 SoundObject Editor window. You can also double-click a SoundObject,
 which will set the editor for the SoundObject in the Editor window as
@@ -1839,27 +1845,27 @@ Crossfades</a>.</p>
 </ul>
 </li>
 </ul>
-<p>The PolyObject bar (shown above with only one PolyObject, "root")
-shows what PolyObject you are currently editing. if you were to add a
+<p>The PolyObject bar (shown above with only one PolyObject, "root") shows
+what PolyObject you are currently editing. if you were to add a
 PolyObject named "phrase 1" to the main timeline shown above, then
 double click that PolyObject to edit it, the PolyObject bar would have
 two buttons on it, one for "root", and one for "phrase 1". you would
-then be editing "phrase 1"'s timeline. by clicking on the "root"
-button of the timeline, you would then return out of the PolyObject's
-timeline and back in the root's timeline.</p>
+then be editing "phrase 1"'s timeline. by clicking on the "root" button
+of the timeline, you would then return out of the PolyObject's timeline
+and back in the root's timeline.</p>
 <p>Below the polyObject bar on the left, you will see the soundLayer
 editor. here you can change the name of the soundLayer, as well as mute
 the layer (all soundObject's on muted layers will not be used to
 generate notes when creating .CSD files).</p>
-<p>on the bottom of the soundLayer editor are four buttons, "\^", "V",
-"+", and "-". "\^" and "V" will push up or push down
-soundLayers. (HINT: You can move multiple soundLayers by clicking on one
-soundLayer, then holding down shift and clicking on the last of the
-soundLayers you want to move, then using the "\^" and "V" buttons.)
-the "+" will add a soundLayer after the currently selected soundLayer.
-if no soundLayers are selected, then it will add one to the end of the
-list. the "-" button will remove any selected soundLayers. it should
-ask for a confirmation before removing any layers.</p>
+<p>on the bottom of the soundLayer editor are four buttons, "^", "V", "+",
+and "-". "^" and "V" will push up or push down soundLayers. (HINT: You
+can move multiple soundLayers by clicking on one soundLayer, then
+holding down shift and clicking on the last of the soundLayers you want
+to move, then using the "^" and "V" buttons.) the "+" will add a
+soundLayer after the currently selected soundLayer. if no soundLayers
+are selected, then it will add one to the end of the list. the "-"
+button will remove any selected soundLayers. it should ask for a
+confirmation before removing any layers.</p>
 <p>Below the polyObject bar on the right is the main time line. it shows
 the time line for the currently edited polyObject. The +/- buttons next
 to the scrollbars are used to zoom in on the time line, and those
@@ -1918,33 +1924,97 @@ and Time Display. Snap provides a grid by which to line up your
 SoundObjects. Snap is measured in beats. Time Display allows setting how
 the time bar shows numbers, i.e. every 4 beats, rendered as a number or
 as a time value.</p>
-<p>Shortcuts      Description</p>
-<hr />
-<dl>
-<dt>ctrl-c         copy selected soundObject(s)</dt>
-<dt>  ctrl-x         cut selected soundObject(s)</dt>
-<dt>  ctrl-click     paste soundObject(s) from buffer where clicked</dt>
-<dt>  shift-click    paste soundObject(s) from buffer as a PolyObject where clicked</dt>
-<dt>  shift-click    when selecting soundObjects, adds soundObject to selected if not currently selected and vice-versa</dt>
-<dt>  double-click   if selecting on timeline, select all soundObjects on layer where mouse clicked</dt>
-<dt>  ctrl-d         duplicate selected SoundObjects and place immediately after the originals</dt>
-<dt>  ctrl-r         repeat selected SoundObjects by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat)</dt>
-<dt>  ctrl-drag      if ctrl is held down when drag is initiated of selected SoundObjects, a copy of the originals is made and left at their original times</dt>
-<dt>  ctrl-t         show quick time dialog</dt>
-<dt>  1              switch to Score mode</dt>
-<dt>  2              switch to Single Line mode</dt>
-<dt>  3              switch to Multi Line mode</dt>
-<dt>  space          Start/stop rendering of project</dt>
-<dt>  space          </dt>
-<dt>  G              Scroll score view to location of render start time (green line)</dt>
-<dt>  Y              Scroll score view to location of render end time (yellow line)</dt>
-<dt>  Alt-S          Toggle Snap</dt>
-<dt>  [             Set render start time to previous marker (or beginning of project) and scroll view to new time</dt>
-<dt>  ]             Set render start time to next marker (or end of project) and scroll view to new time</dt>
-<dd>
+<table>
+<thead>
+<tr>
+<th>Shortcuts</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl-c</td>
+<td>copy selected soundObject(s)</td>
+</tr>
+<tr>
+<td>ctrl-x</td>
+<td>cut selected soundObject(s)</td>
+</tr>
+<tr>
+<td>ctrl-click</td>
+<td>paste soundObject(s) from buffer where clicked</td>
+</tr>
+<tr>
+<td>shift-click</td>
+<td>paste soundObject(s) from buffer as a PolyObject where clicked</td>
+</tr>
+<tr>
+<td>shift-click</td>
+<td>when selecting soundObjects, adds soundObject to selected if not currently selected and vice-versa</td>
+</tr>
+<tr>
+<td>double-click</td>
+<td>if selecting on timeline, select all soundObjects on layer where mouse clicked</td>
+</tr>
+<tr>
+<td>ctrl-d</td>
+<td>duplicate selected SoundObjects and place immediately after the originals</td>
+</tr>
+<tr>
+<td>ctrl-r</td>
+<td>repeat selected SoundObjects by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat)</td>
+</tr>
+<tr>
+<td>ctrl-drag</td>
+<td>if ctrl is held down when drag is initiated of selected SoundObjects, a copy of the originals is made and left at their original times</td>
+</tr>
+<tr>
+<td>ctrl-t</td>
+<td>show quick time dialog</td>
+</tr>
+<tr>
+<td>1</td>
+<td>switch to Score mode</td>
+</tr>
+<tr>
+<td>2</td>
+<td>switch to Single Line mode</td>
+</tr>
+<tr>
+<td>3</td>
+<td>switch to Multi Line mode</td>
+</tr>
+<tr>
+<td>space</td>
+<td>Start/stop rendering of project</td>
+</tr>
+<tr>
+<td>space</td>
+<td></td>
+</tr>
+<tr>
+<td>G</td>
+<td>Scroll score view to location of render start time (green line)</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Scroll score view to location of render end time (yellow line)</td>
+</tr>
+<tr>
+<td>Alt-S</td>
+<td>Toggle Snap</td>
+</tr>
+<tr>
+<td>[</td>
+<td>Set render start time to previous marker (or beginning of project) and scroll view to new time</td>
+</tr>
+<tr>
+<td>]</td>
+<td>Set render start time to next marker (or end of project) and scroll view to new time</td>
+</tr>
+</tbody>
+</table>
 <p>Shortcuts for the Timeline</p>
-</dd>
-</dl>
                 
               
               
