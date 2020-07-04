@@ -4,6 +4,8 @@ markdown_extensions:
         separator: '_'
 theme:
     name: material
+    features: 
+      - tabs
 nav:
     - Home: 'index.md'
     - 'User Guide':
@@ -12,5 +14,32 @@ nav:
             - 'Introduction': 'users/gettingStarted/usersIntro.md'
             - 'Installation': 'users/gettingStarted/installation.md'
             - 'Program Options': 'users/gettingStarted/programOptions.md'
+            - 'Primary Editors':
+              - 'Score Timeline': 'users/gettingStarted/primaryEditors/scoreTimeline.md'
+              - 'Orchestra Manager': 'users/gettingStarted/primaryEditors/orchestraManager.md'
+              - 'UDO Manager': 'users/gettingStarted/primaryEditors/udoManager.md'
+              - 'Project Properties': 'users/gettingStarted/primaryEditors/projectProperties.md'
+              - 'Mixer': 'users/gettingStarted/primaryEditors/mixer.md'
+              - 'Blue Live': 'users/gettingStarted/primaryEditors/blueLive.md'
+              - 'Tables Manager': 'users/gettingStarted/primaryEditors/tablesManager.md'
+              - 'Globals Manager': 'users/gettingStarted/primaryEditors/globalsManager.md'
+            - 'Tools':
+              - 'Code Editor': 'users/gettingStarted/tools/codeEditor.md'
+              - 'Blue Share': 'users/gettingStarted/tools/blueShare.md'
+              - 'Code Repository': 'users/gettingStarted/tools/codeRepository.md'
+              - 'Effects Library': 'users/gettingStarted/tools/effectsLibrary.md'
+              - '.csoundrc Editor': 'users/gettingStarted/tools/csoundrcEditor.md'
+              - 'Scanned Matrix': 'users/gettingStarted/tools/scannedMatrix.md'
+              - 'SoundFont Viewer': 'users/gettingStarted/tools/soundFontViewer.md'
+              - 'FTable Converter': 'users/gettingStarted/tools/ftableConverter.md'
+              - 'Python Console': 'users/gettingStarted/tools/pythonConsole.md'
+            - 'Other Features': 
+               - 'Auto Backup': 'users/gettingStarted/otherFeatures/autoBackup.md'
+               - 'SoundObject Freezing': 'users/gettingStarted/otherFeatures/soundObjectFreezing.md'
+               - 'Audition SoundObjects': 'users/gettingStarted/otherFeatures/auditionSoundObjects.md'
+               - 'Import CSD': 'users/gettingStarted/otherFeatures/importCSD.md'
+               - 'Import MIDI': 'users/gettingStarted/otherFeatures/importMIDI.md'
+               - 'Blue Variables': 'users/gettingStarted/otherFeatures/blueVariables.md'
+               - 'Commandline': 'users/gettingStarted/otherFeatures/commandLine.md'
     - 'Reference':
         - 'SoundObjects': 'users/reference/soundObjects/index.md' 
