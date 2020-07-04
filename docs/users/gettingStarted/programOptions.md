@@ -11,7 +11,7 @@ To open up the Program Options dialog, go to the File menu and click on
 
 Program Options - General
 
-![](../../../images/programOptions_general.png){width="100%"}
+![](../../images/programOptions_general.png){width="100%"}
 
 Work Directory
 
@@ -69,7 +69,7 @@ Language
 
 Program Options - Project Defaults
 
-![](../../../images/programOptions_projectDefaults.png){width="100%"}
+![](../../images/programOptions_projectDefaults.png){width="100%"}
 
 These settings are used whenever new projects are created as defaults
 for the project, unless a default.blue file is found in the user's blue
@@ -86,7 +86,7 @@ Mixer Enabled
 
 Program Options - Playback
 
-![](../../../images/programOptions_playBack.png){width="100%"}
+![](../../images/programOptions_playBack.png){width="100%"}
 
 Time Pointer Animation Rate
 
@@ -109,7 +109,7 @@ Latency Correction
 Program Options - Utility
 
 ![ Program Options - Utility
-](../../../images/programOptions_utility.png){width="100%"}
+](../../images/programOptions_utility.png){width="100%"}
 
 Csound Executable
 
@@ -139,7 +139,7 @@ Freeze Flags
 
 Program Options - Realtime
 
-![](../../../images/programOptions_realtime.png){width="100%"}
+![](../../images/programOptions_realtime.png){width="100%"}
 
 Csound Executable
 
@@ -397,7 +397,7 @@ Advanced Settings
 
 Program Options - Disk Render
 
-![](../../../images/programOptions_diskRender.png){width="100%"}
+![](../../images/programOptions_diskRender.png){width="100%"}
 
 Csound Executable
 
@@ -548,7 +548,7 @@ Advanced Settings
 
 Program Options - Disk Render
 
-![](../../../images/programOptions_midi.png)
+![](../../images/programOptions_midi.png)
 
 These settings are for blue's MIDI input, used with
 [blueLive](#blueLive). The table shows what devices are currently
@@ -558,7 +558,7 @@ plugged in a device.
 
 Program Options - OSC
 
-![](../../../images/programOptions_osc.png)
+![](../../images/programOptions_osc.png)
 
 This allows you to set what port blue will listen to for incoming OSC
 messages. Defaults to 8000. The following messages are understood by

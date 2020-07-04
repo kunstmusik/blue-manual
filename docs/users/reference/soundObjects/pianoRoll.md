@@ -5,7 +5,7 @@ Accepts NoteProcessors: yes
 
 Piano Roll - Notes
 
-![ Piano Roll - Notes ](../../../../../images/pianoRoll_notes.png)
+![ Piano Roll - Notes ](../../../images/pianoRoll_notes.png)
 
 The PianoRoll SoundObject is a graphical tool to enter in notes,
 commonly available in many MIDI sequencer environments. This PianoRoll
