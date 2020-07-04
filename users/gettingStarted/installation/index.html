@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Installation - Blue Manual</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Installation</a>
+</li>
+            
+<li>
+    <a href="../programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/soundObjects/index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../usersIntro/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../programOptions/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#requirements" class="nav-link">Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installing_blue_installingblue" class="nav-link">Installing Blue {#installingBlue}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installing_csound_installingcsound" class="nav-link">Installing Csound {#installingCsound}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installation">Installation</h1>
+<h2 id="requirements">Requirements</h2>
+<p>Blue requires Java 11 or greater JVM (Java Virtual Machine) to be
+installed on your system, as well as Csound. Java installations usually
+come in two flavors: a JRE (Java Runtime Environment) which contains
+just a JVM for running applications, and a JDK (Java Development Kit)
+which contains the JVM as well as development tools. Because Blue comes
+with scripting tools that use JDK features, it is recommended to install
+the full JDK, and not just the JRE.</p>
+<p>To test to see if you have a JVM installed and what version, at a
+command prompt type \"java -version\". If you see something along the
+lines of \"command not found\" then you need to install a Java Virtual
+Machine.</p>
+<p>If you do not have Java installed, the recommended JDK to install is
+AdoptOpenJDK, available at:</p>
+<p><a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a></p>
+<p>On this page, look for the download link for your platform. Be sure to
+choose the version of JDK that matches your CPU type and Csound version
+(choose 64-bit if in doubt).</p>
+<h2 id="installing_blue_installingblue">Installing Blue {#installingBlue}</h2>
+<p>To install Blue, you should download the latest ZIP file from the Blue
+releases page <a href="https://github.com/kunstmusik/blue/releases">here</a>. For
+macOS users, download the macOS zip file which contains Blue.app. You
+can double-click the Application to run, as well as copy it to your
+Applications folder to install it.</p>
+<p>For Linux and Windows users, download the appropriate zip file and unzip
+it. Inside of the bin folder you will see a \"blue\" script for Linux or
+a \"blue64.exe\" file for use on Windows. (A 32-bit version,
+\"blue.exe\", is also included for those using an older version of
+Csound that is compiled for 32-bit Windows.)</p>
+<p>Note: After starting Blue, you may want to explore the example projects
+and pieces found in the Blue/example folder (or right-click and explore
+contents of Blue.app/example if on OSX).</p>
+<h3 id="platform_specific_notes_platformnotes">Platform Specific Notes {#platformNotes}</h3>
+<p>The section below has notes for individual platforms.</p>
+<p>Blue uses the right mouse click often to show popup menus. If you do not
+have a right mouse button, you can use ctrl-click for all \"rt-clicks\"
+that are mentioned in this documentation.</p>
+<p>To make use of the function key shortcuts (F1-F12), you will need to go
+into System Preferences, choose Keyboard, then enable \"Use all F1, F2,
+etc. keys as standard function keys\".</p>
+<h2 id="installing_csound_installingcsound">Installing Csound {#installingCsound}</h2>
+<p>Blue is able to interact with Csound either by calling Csound like a
+command-line program (classic Blue), or by directly interacting with
+Csound via the Csound API. Instructions on setting up Blue for each
+method is described below as well as discussion on benefits and
+limitations.</p>
+<h3 id="using_blue_with_command-line_csound_commandlinecsound">Using Blue with command-line Csound {#commandLineCsound}</h3>
+<p>This may be considered \"classical\" Blue usage and interaction with
+Csound as this was the method by which Blue ran with Csound for the
+first eight years in existance. The way Blue operates in this mode is by
+rendering the .Blue project into a temporary CSD file on disk, then
+calling Csound with that temporary CSD file in the same way as if you
+were on a command-line shell and executing Csound yourself with that
+file.</p>
+<p>The benefit to this mode of Csound usage is that it is easier to switch
+out your version of Csound or use multiple versions of Csound on the
+same computer. It is also a little more stable than using the API in
+that if Csound crashes for some reason, it won\'t take down Blue with
+it. Also, it may be more performant to use the command-line mode. These
+benefits however need to be weighed against the benefits of using the
+API, which is described below.</p>
+<p>To use the command-line version, one needs to set up the Csound
+executable option for Realtime and Disk Render settings in <a href="#programOptions">Program
+Options</a>.</p>
+<h3 id="using_blue_with_the_csound_api_csoundapi">Using Blue with the Csound API {#csoundAPI}</h3>
+<p>Enabling Blue to use the Csound API when rendering with Csound opens up
+the ability to manipulate and edit widget values and automations in
+realtime during a render, as well as the ability to use BlueLive on
+Windows. Because of its enhancement to the user-experience while
+rendering and composing, it is the preferred method of using Blue with
+Csound. Blue should work out-of-the-box with the API if Csound is
+installed using the installers provided on Github, or installed via a
+package manager if on Linux.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Blue currently only works with the API if the version of Csound used is
+compiled using 64-bit doubles. (The float version is not supported when
+using the API.) There are technical difficulties in supporting two
+different versions of Csound API in the same build and it is not known
+if or when the float build will be supported. For users interested in
+using the float build of Csound with Blue, you will need to run Blue
+using the command-line Csound mode.</p>
+<p>Additionally, the architecture that Csound is compiled for must match
+the architecture of the Java runtime you are using. For example, on
+Windows, Csound is currently only built for x86_64/amd64 CPU (i.e.
+64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
+will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
+an issue as Csound is compiled as a universal binary for both i386 and
+x86_64. On Linux, it is likely that the version of Csound you
+install/compile and the Java Runtime that you install will likely be the
+same, but if the API does not show as available it may be something to
+check.
+:::</p>
+<p>Blue uses the CsoundJNI Java binding for Csound. This requires that Blue
+can find your installed version of Csound but is configured to do so for
+standard Csound installations. If the API is not enabled when starting
+Blue, the following explains how to setup the API on different
+platforms.</p>
+<p>Users using the Windows Installer for Csound should use the double
+precision version from Github. (This is the default.) After installing,
+the installer should setup everything such that Blue should work with
+the API. If for some reason it is unable to do so, you can modify the
+blue/etc/blue.conf file to tell Blue where to find the csound64.dll. For
+example, if the directory where csound64.dll is located is in
+c:\myCsound, open up blue/etc/blue.conf and modify the default so that
+it contains:</p>
+<pre><code>default_options="--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound"
+</code></pre>
+<p>Linux users should install a doubles version of Csound. The version of
+Csound found in package repositories should be one compiled for doubles.
+After installing Csound, modify the blue/bin/blue file. Search for the
+lines that contain \"-J-Djava.library.path=/usr/lib/jni\" and modify
+/usr/lib/jni (the default for Debian/Ubuntu-based systems) to the
+directory where libcsound64.so is located.</p>
+<p>macOS users may use the installer for Csound from Github, install Csound
+with Homebrew, or self-compile. CsoundJNI is configured to find
+CsoundLib64 in all of the above scenarios for default installations.</p>
+<p>To check if the API is enabled, open Blue and open up the Program
+Options. This is available from the Blue->Preferences menu option on
+OSX, and from the Tools->Options menu option Windows and Linux. In the
+Blue tab, under both Disk and Realtime Render settings, there is an
+option called \"Render Method\". If Csound 6 is availble on your system
+and Blue was able to find it, it will show a \"Csound 6 API\" option. If
+the Csound 6 Java API could be loaded, you will only have the
+\"Commandline Runner\" option which is always available.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

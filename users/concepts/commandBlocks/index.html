@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>commandBlocks - Blue Manual</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../gettingStarted/usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/soundObjects/index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#command_blocks_commandblocks" class="nav-link">Command Blocks {#commandBlocks}</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#basic_usage" class="nav-link">Basic Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#available_commands" class="nav-link">Available Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="command_blocks_commandblocks">Command Blocks {#commandBlocks}</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Command Blocks are Csound ORC code with special directions to Blue on
+how to processes them. The are available to use only within the Global
+Orchestra areas of Instruments (not to be confused with the global
+orchestra area in the globals manager tab) and were created to help
+users build fully-encapsulated instruments, such that an instrument and
+all of its necessary parts could be grouped together.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>This feature has largely been made unnecessary due to new Csound
+programming practices that have developed since this was initially
+introduced. This feature is left in Blue though to support legacy
+projects.
+:::</p>
+<h2 id="basic_usage">Basic Usage</h2>
+<p>To use a command block, you will need to wrap the section of orc code
+that you want Blue to process with the command in the following manner:</p>
+<pre><code>;[command to use]{ 
+...Csound Orchestra Code... 
+;}
+</code></pre>
+<h2 id="available_commands">Available Commands</h2>
+<p>Once blocks are useful to limit how many times a block of code will be
+generated in the final CSD and is more for efficiency than anything else
+(so Csound doesn\'t define the same ftable more than it has to, for
+example). An example of this:</p>
+<pre><code>;[once]{ 
+gaLeft init 0 gaRight init 0 
+;}
+</code></pre>
+<p>In this case, if the above gaLeft and gaRight init statement, wrapped in
+a once block, is used in multiple instruments, then regardless it will
+be generated only once in the final CSD. So a use case for the above
+would be if you have all of your instruments output to the above global
+variables for extra processing by an always-on reverb, you would want to
+add the above to all of the instruments and also the reverb. Then, if
+you start a new project and may want to reuse a few of your instruments
+as well as the reverb, you can just copy them into your new project\'s
+orchestra and start working away, knowing your global variables will be
+initialized and ready to go.</p>
+<p>Pre blocks are useful if you need the enclosed ORC code to be generated
+before any other global orc code. When Blue goes to process the project
+to generate a CSD file, it normally starts of the existing global
+orchestra code from the globals manager, then appends all global orc
+from instruments and soundObjects to it, one after the other. By using a
+pre block, the code enclosed will be pushed up to the top of the global
+orchestra of the CSD (instrument 0).</p>
+<p>The scenario which required a solution such as this was when working
+with the fluidSynth opcodes. For those set of opcodes, a fluidEngine
+needs to be initialized before loading of soundfonts into that engine.
+The design I had wanted was to have the instrument that did the
+fluidOutput also have the engine initialization. This was a problem
+because the fluidOutput needed to be placed at an instrument number
+higher than the fluidNote playing instruments for the output chain to
+work correctly. So here was a case of an instrument that needed to have
+its instrument generate later than the instruments that it depended on,
+but also have its own fluidEngine initialization happen before all the
+other soundFonts load in in their own global orc statements. The
+solution then was to create the once block feature and allow for
+targetting global orc code to be prepended to the top of the generated
+global orc code.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

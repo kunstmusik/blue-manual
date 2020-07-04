@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>patternObject - Blue Manual</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../gettingStarted/usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../gettingStarted/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../../gettingStarted/programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#patternobject_patternobject" class="nav-link">PatternObject {#patternObject}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="patternobject_patternobject">PatternObject {#patternObject}</h1>
+<p>Accepts NoteProcessors: yes</p>
+<p>Pattern Object</p>
+<p><img alt="Pattern Object" src="images/patternObject1.png" /></p>
+<p>The PatternObject is pattern-based score editor, based on the author\'s
+previous project \"Patterns\". It is a flexible pattern-oriented score
+editor, useful for musical ideas which are pattern based, such as drum
+parts or minimalist-style musical ideas.</p>
+<p>For the general workflow of using the PatternObject, users will liked
+likely want to:</p>
+<ol>
+<li>
+<p>Setup the PatternObject Properties (number of beats and
+    subdivisions)</p>
+</li>
+<li>
+<p>Add Patterns, giving each pattern a name to help identify what the
+    pattern is for</p>
+</li>
+<li>
+<p>Edit each Pattern\'s score</p>
+</li>
+<li>
+<p>Visually edit the PatternObject score</p>
+</li>
+</ol>
+<p>The PatternObject\'s Time Properties can be modified by clicking on the
+button in the upper-right corner of the editor. Clicking the button will
+hide or show the properties panel on the right, as shown below:
+PatternObject - Properties PatternObject - Properties</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Editing the time values will clear out any pattern triggers that the
+user has entered. It is recommended that one first decide the pattern
+time properties before working with the PatternObject.
+:::</p>
+<p>To add Patterns to the PatternObject, use the \"+\" button on the bottom
+of the left hand section. Double-clicking the name of the pattern name
+will allow editing of the name, and clicking on the [x] box will allow
+for muting the Pattern. Clicking on the Pattern in the table will also
+bring up it\'s score in the area below.</p>
+<p>The Pattern\'s score is standard Csound SCO text, with the same features
+supported as by the GenericScore SoundObject. Each score should be
+started from time zero. The Pattern\'s score should be set such that its
+score\'s total duration fits within the time of the subDivision. For
+example, if the properties set for the PatternObject\'s time values are
+4 beats and 4 subdivisions, each beat is 1.0 in duration (corresponds to
+p3 value of a note) and thus a single subdivision in this case would be
+equivalent to .25. Scores shorter or longer than the subdivision length
+are allowed, but one should be aware that the resultant score may or may
+not longer than what is visually represented on the PatternObject score.</p>
+<p>The PatternObject score is visually edited by click on squares which
+correspond to subdivisions of the beat. For example, if a Pattern\'s
+score is .25 in total duration, and the time value of the PatternObject
+is set to 4 and 4, then clicking a square would be to insert a 16th note
+in a score.</p>
+<p>To add to the PatternObject score, simply click on the square where one
+wishes to have a Pattern triggered. To remove, simply click on a
+selected square. The user can also click and drag to add or remove
+mutliple triggers.</p>
+<ul>
+<li>
+<p>Users may be surprised at the generated score if time behavior is
+    not set to None(while others may prefer to use Scale, which is the
+    default). Please be mindful of this, especially when using
+    PatternObjects and the SoundObject library, where the default for
+    creating instances of SoundObjects is to have Time Behavior of Scale
+    on the Instance SoundObject.</p>
+</li>
+<li>
+<p>When the PatternObject is used with a Scale time behavior, you may
+    not get the results you think you will get if the pattern is not
+    filled in in the last subdivision of the beat. When Blue goes to
+    generate a score for a soundObject, with a scale time behavior, the
+    score is first generated, then scaled to the duration of the
+    soundObject. So, if you\'re pattern has empty subdivisions and
+    you\'re expecting there to be a space at the end of your pattern,
+    when you go to generate the CSD, the space won\'t be there.</p>
+<p>To get around this, you may want to use a time behavior of None, or
+you may want put in a \"ghost note\" in a Pattern layer, using a
+note like:</p>
+<pre><code>i 10000 0 .25
+</code></pre>
+<p>Where 10000 is not an instrument in use in your project. Then you
+can put in a trigger for this pattern in the last subdivision. What
+will happen is that Blue will process the score with this note\'s
+time and thus will generate with this out to the CSD, but Csound
+will ignore the note.</p>
+<p>When the PatternObject is set to use a time behavior of Repeat, the
+same situation can occur as when using Scale if a Repeat Point is
+not set, as the default for Repeat when no repeat point is set is to
+take the generated score and repeat it after the duration of the
+last note. To prevent this, either use the ghost note technique
+above or set a repeat point.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

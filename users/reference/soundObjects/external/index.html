@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>External - Blue Manual</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../gettingStarted/usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../../gettingStarted/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../../gettingStarted/programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#external_soundobject_externalsoundobject" class="nav-link">External SoundObject {#externalSoundObject}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="external_soundobject_externalsoundobject">External SoundObject {#externalSoundObject}</h1>
+<p>Accepts NoteProcessors: no</p>
+<p>Allows you to write script within Blue and execute an external program
+on that script, bringing in generated notes back into Blue. There is a
+field for \'command line\' as well as a text area for your script. When
+this soundObject is called for generating it\'s notes, it will write the
+text within the text area into a temp file and then use the
+user-supplied \'command line\' to execute on that temp file.</p>
+<p>When Blue runs the commandline, it defaults to appending the temp
+file\'s name to the end of the commandline. For example, if you wrote a
+perl script in the text area and used a commandline of \"perl\", then
+when Blue runs the command, it would be something like \"perl
+/the/path/to/the/tempFile\". If you need to explicitly put the name of
+the temp file somewhere else in the command line than the end, you can
+use \"\$infile\" in your commandline. For example, if you needed
+something like \"myCommand somefileName -w -d --some-other-flags\" and
+had to have it in that order, you could type \"myCommand \$infile -w -d
+--some-other-flags\" and Blue will replace that \$infile with the temp
+file\'s name instead of appending it to the end.</p>
+<p>When designing your scripts that you will be using with external
+programs, you should either set commandline flags to the program or
+script your script in a way that it will write out to stdout(to the
+screen), as that is what Blue will capture and bring in as notes.</p>
+<p>A second method for the external object was created for bringing in
+score data after running the commandline as some programs (i.e. Cmask)
+do not have any possible way to write directly to stdout. The process is
+to use \"\$outfile\" in the commandline to pass in a filename to the
+program. That \$outfile will be the name of a temp file that the
+external program will write score data into. After the program is
+finished, Blue will open up that temp file, read in the score data, and
+then remove the temp file. So, if your program needed a commandline of
+something like \"myProgram -i inputfilename -o outputfilename\" and no
+options for writing to screen, then you could use a commandline of
+\"myProgram -i \$infile -o \$outfile\".</p>
+<p>There is a test button that you may use to check to see that Blue
+properly brings in the generated notes.</p>
+<p>This is a list of commandlines to use when using other programs with
+Blue and any notes that may concern other programs when being used with
+Blue. These commandlines assume that the programs being called are on
+the system path. If not on the path, please append the full path to the
+program before the program name.</p>
+<p>CMask</p>
+<p>:   Homepage: <a href="http://www.bartetzki.de/en/software.html">http://www.bartetzki.de/en/software.html</a> for the Linux,
+    Windows and old Mac builds,
+    <a href="http://www.anthonykozar.net/ports/cmask/">http://www.anthonykozar.net/ports/cmask/</a> for OSX Author: Andre
+    Bartetzki</p>
+<pre><code>Comandline to use:
+
+    cmask $infile $outfile
+</code></pre>
+<p>nGen</p>
+<p>:   Homepage: <a href="http://mikelkuehn.com/index.php/ng">http://mikelkuehn.com/index.php/ng</a> Author: Mikel Kuehn</p>
+<pre><code>Comandline to use:
+
+    ngen $infile $outfile
+</code></pre>
+<p>AthenaCL</p>
+<p>:   Homepage: <a href="http://www.flexatone.org/athena.html">http://www.flexatone.org/athena.html</a> Author: Christopher
+    Ariza</p>
+<pre><code>Comandline to use:
+
+    python athenaPipe.py $infile
+</code></pre>
+<p>Examples of the External SoundObject, as well as athenaPipe.py, can be
+found in the blue/examples/soundObjects folder.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

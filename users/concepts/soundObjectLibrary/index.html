@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>soundObjectLibrary - Blue Manual</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../gettingStarted/usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/soundObjects/index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#soundobject_library_soundobjectlibrary" class="nav-link">SoundObject Library {#soundObjectLibrary}</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="soundobject_library_soundobjectlibrary">SoundObject Library {#soundObjectLibrary}</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The SoundObject Library is a place to store SoundObjects either
+project-wide or program-wide. The project-wide library can be used to
+store a SoundObject that you may want to user later but it also enables
+Instance SoundObjects to be made. Instances of SoundObjects point to the
+SoundObject in the library and when the instance generates its score, it
+will call the SoundObject in the library to first generate score and
+then apply its own properties and NoteProcessors to the generated score.
+Updating a SoundObject in the library will then update all instances of
+that SoundObject. This feature is useful to represent the idea of a
+motive, with instances of the motive allowing to have transformations by
+use of NoteProcessors.</p>
+<p>The program-wide library (called \"User SoundObject Library\" in the
+interface) allows one to build up a catalog of reusable SoundObjects.
+SoundObjects such as Sound and ObjectBuilder allow users to build highly
+configurable sound and score generators that have a high degree of
+reusability. The program-wide library is also where SoundObjects are
+exported from and imported to with BlueShare.</p>
+<h2 id="usage">Usage</h2>
+<p>The general pattern of usage for the project-wide SoundObject Library
+entails:</p>
+<ol>
+<li>
+<p>Add SoundObject to the Library. This is done by selecting a
+    SoundObject, right-clicking the SoundObject to open up the popup
+    menu and selecting \"Add to SoundObject Library\".</p>
+</li>
+<li>
+<p>After doing this, your SoundObject will have been added to the
+    library and the SoundObject on the timeline will have been replaced
+    with an Instance SoundObject which will be pointing to the
+    SoundObject now in the library.</p>
+</li>
+<li>
+<p>At this point, the user can now take advantage of the library by
+    making copies of the instance object on the timeline and pasting in
+    more instances. These instances can be placed anywhere, have
+    different durations and time behaviors, as well as have their own
+    individual NoteProcessors. This allows expressing ideas such as
+    \"This is an instance of the primary motive (SoundObject in the
+    library) but transposed up a major 3rd, retrograded, and inverted\",
+    or an idea like \"I\'ve got drum pattern A in the library and I have
+    instances of it here and here and ...\".</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>When copying and pasting Instance SoundObjects, they are all
+pointing to the SoundObject in the library.
+:::</p>
+</li>
+<li>
+<p>You can also then make instances of SoundObjects in the library by
+    opening up the SoundObject Library dialog (available from the Window
+    menu or by using the F4 shortcut key). There you have the following
+    options:</p>
+<p>Copy</p>
+<p>:   This makes a copy of the selected SoundObject and puts it in the
+    buffer. This is a copy of the original SoundObject and not an
+    Instance. After copying to the buffer, you can paste as normal
+    on the timeline.</p>
+<p>Copy Instance</p>
+<p>:   This makes a Instance of the selected SoundObject and puts it in
+    the buffer. This Instance will point to the original
+    SoundObject. After copying to the buffer, you can paste as
+    normal on the timeline.</p>
+<p>Remove</p>
+<p>:   This will remove the selected SoundObject from the library.</p>
+</li>
+<li>
+<p>You can also then edit the SoundObject in the library from within
+    the SoundObject Library dialog by selecting the SoundObject in the
+    list. The editor for the SoundObject will appear below.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Editing the SoundObject in the library will affect all instances of
+that SoundObject.
+:::</p>
+</li>
+</ol>
+<p>The general pattern of usage for the program-wide SoundObject Library
+entails:</p>
+<ol>
+<li>
+<p>Add SoundObject to the Library. This is done by selecting a
+    SoundObject on the timeline, right-clicking the SoundObject to open
+    up the popup menu and selecting \"Copy\".</p>
+</li>
+<li>
+<p>After copying an object, open up the SoundObject library window and
+    go to the User SoundObject Library. Right-click a folder node in the
+    library tree and choose \"Paste\" to add a copy of the object to the
+    library.</p>
+</li>
+<li>
+<p>You can use the context popup menu to create new folders, or
+    double-click a node to rename the node.</p>
+</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

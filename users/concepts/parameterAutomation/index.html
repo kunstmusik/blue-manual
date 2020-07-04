@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>parameterAutomation - Blue Manual</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../gettingStarted/usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/soundObjects/index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#parameter_automation_parameterautomation" class="nav-link">Parameter Automation {#parameterAutomation}</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#available_parameters" class="nav-link">Available Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#assigning_parameters" class="nav-link">Assigning Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#score_timeline_modes" class="nav-link">Score Timeline Modes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#editing_automations" class="nav-link">Editing Automations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#technical_details" class="nav-link">Technical Details</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="parameter_automation_parameterautomation">Parameter Automation {#parameterAutomation}</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Blue allows for a few ways to enter in values to automate parameters
+over time. The parameters that can be automated are those in
+BlueSynthBuilder Instruments, Mixer Effects, Mixer Sends, and Mixer
+Volumes. The following sections will describe how to use Parameter
+Automation and technical details in how this all works within the
+context of Blue and Csound.</p>
+<h2 id="available_parameters">Available Parameters</h2>
+<p>Besides the Volume sliders in the mixer and level amount on mixer sends,
+the following GUI Parameters are automatable when found in
+BlueSynthBuilder instruments and Mixer Effects:</p>
+<ul>
+<li>
+<p>Knob</p>
+</li>
+<li>
+<p>HSlider</p>
+</li>
+<li>
+<p>HSliderBank</p>
+</li>
+<li>
+<p>VSlider</p>
+</li>
+<li>
+<p>VSliderBank</p>
+</li>
+<li>
+<p>XYController</p>
+</li>
+<li>
+<p>Dropdown</p>
+</li>
+<li>
+<p>Checkbox</p>
+</li>
+</ul>
+<h2 id="assigning_parameters">Assigning Parameters</h2>
+<p>Automations for Parameters are assignable to SoundObject LayerGroup
+Layers that exist in the root Score by selecting from the popup menu
+that appears when selecting the \"A\" button on a SoundLayer\'s panel
+(on the left of the timeline). The menu shows what Parameters are
+available to use from Instruments and the Mixer. Those with normal color
+text are Parameters which are not currently automated, those in green
+are ones currently automated in that SoundLayer, and those in orange are
+ones which are currently automated on a different SoundLayer. Selecting
+normal color text will enable automation for that parameter on the
+SoundLayer, while selecting a green colored text one will disable
+automation for that parameter, and selecting an orange one will move it
+from the layer it is currently on to the one being worked with.</p>
+<h2 id="score_timeline_modes">Score Timeline Modes</h2>
+<p>The Score timeline has three different modes:</p>
+<p>Score</p>
+<p>:   This is the primary mode for adding and editing SoundObjects.
+    Parameter Automations will be drawn but are not editable in this
+    mode.</p>
+<p>Single Line</p>
+<p>:   This is the primary mode for editing line points for Parameter
+    Automations. The user is able to edit a single line at a time per
+    SoundLayer, and can enter and remove points, modify points by
+    dragging them, as well as selecting a region and move the the points
+    by dragging the region. While dragging the region, the region will
+    show that data will overwrite the area dragged to. This overwriting
+    will not be committed however until the user releases the mouse
+    button.</p>
+<p>Multi Line</p>
+<p>:   This is the mode for selecting and moving line points for all
+    Parameter Automations on a single or multiple SoundLayers. The use
+    can click and drag to create a selection region, then click within
+    the selection region to move all points from all lines within the
+    region. While dragging the region, the region will show that data
+    will overwrite the area dragged to. This overwriting will not be
+    committed however until the user releases the mouse button.</p>
+<h2 id="editing_automations">Editing Automations</h2>
+<p>To edit line values in a Parameter Automation, first switch to Single
+Line mode. Then, for the desired SoundLayer, select which of the
+assigned parameters to edit. This can be done either by using the
+SoundLayer Edit Panel\'s Parameter selector (found on the second row
+below the row with mute, solo, etc.; only shown when SoundLayer size is
+greater than 1), or by right-clicking the SoundLayer in the main area
+and selecting from the popup menu (the actively editable Parameter
+Automation will be disabled from the popup menu).</p>
+<p>Once a parameter is selected, the user can change the color of the line
+by using the color box next to the parameter selector panel on the
+SoundLayer Edit Panel. To add new points, use the mouse and mouse over
+to where you would like to add a point and press the left mouse button.
+After pressing, the point will be added, and the user can drag to modify
+the just entered point. Releasing the button will complete the addition
+of the line point. To edit an existing point, mouse over a point until
+it is highlighted in red, then press the left mouse button, drag, and
+release when finished. To remove an existing point, mouse over a point
+until it is highlighted and press the right mouse button.</p>
+<p>To manipulate data for a single automation, use shift-drag to select a
+region of the automation data. Once selected you can ctrl-c to copy and
+ctrl-click to paste that data. You can also drag the selection to move
+the region or drag at the edges to scale the automation data. ctrl-z may
+be used to undo the above changes.</p>
+<p>For finer control over the line points, right-click on the parameter
+line panel when not over an existing line point. A popup menu will
+appear and select \"Edit Line Points\". A dialog showing a table of line
+points with time values in one column and parameter values in a second
+column. The user can then enter in values by text entry.</p>
+<p>For changes of automation data for an entire layer or set of layers, use
+multi-line mode. This will alow you to select, copy/paste, drag, and
+resize automation data. If shift is used when making a selection, it
+will also select underlying ScoreObjects. This will allow you to move
+both automation and ScoreObject data together. If you the selected
+region completely contains ScoreObjects (i.e., no part of any selected
+ScoreObjects extend outside of the region) you can also scale the
+automation and ScoreObject data together.</p>
+<h2 id="technical_details">Technical Details</h2>
+<p>Blue\'s parameter automation system is implemented in Csound code in a
+few different areas. For instruments and effects, when an Automatable
+Parameter is not set for automation, it will replace its replacement key
+in its ORC code with a constant value from the UI item. If the parameter
+is set to allow automation, then the replacement key is replaced with a
+Blue generated global k-rate signal name. Therefore, when coding
+instruments and effects, the user should be careful to make sure that if
+they want the parameter to be automatable that the replacement key is
+placed in the code where a k-rate signal is legal to use. If the user is
+not expecting to automate that value, then it would be safe to place
+that replacement key wherever a constant is allowed. This is also useful
+to know when migrating older BSB Instruments and Effects to be used with
+the purpose of Automation.</p>
+<p>After setting up the Instrument and Effects, Blue will then handle
+compiling the automations into a way that works with Csound. Currently,
+Blue will first calculate init statements from where the render start
+time is and add that to the CSD to make sure that the global krate
+signals will be initiated by the time any instrument could use them.
+Then, Blue creates instruments for each parameter that will be
+automated. The instruments are driven by score and either an instrument
+for continuous data or resolution dependent data will be created. Score
+is then generated for the parameter automation data that together with
+the instruments generated will create the signals.</p>
+<p>Care was taken to optimize the generated score and instruments.
+Unnecessary score will not be generated if multiple points with the same
+value are found as well as when there is a discontinous break in the
+values. Values from the parameter automation will also correctly be
+generated from render start time until render end time (if used). For
+parameters with resolution, every value is a discrete jump, so the
+instrument for resolution based parameters will on it\'s i-time run will
+simply set the new value and then turn the instrument instance off to
+save CPU cycles.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

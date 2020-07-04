@@ -1,0 +1,10 @@
+<part id="developersManual">
+    <title>Developers</title>
+    <partintro>
+        <para>Information here for Developers.</para>
+    </partintro>
+    
+&devExtending; 
+&devCore;
+
+</part>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Shortcuts - Blue Manual</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../gettingStarted/usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="../../gettingStarted/programOptions/" class="dropdown-item">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../soundObjects/index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#shortcuts" class="nav-link">Shortcuts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="shortcuts">Shortcuts</h1>
+<p>Shortcuts      Description</p>
+<hr />
+<p>ctrl-1         brings the score tab into focus
+  ctrl-2         brings the orchestra tab into focus
+  ctrl-3         brings the tables tab into focus
+  ctrl-4         brings the globals tab into focus
+  ctrl-5         brings the project properties tab into focus
+  ctrl-6         brings the soundfile tab into focus
+  alt-right      brings the next manager tab into focus
+  alt-left       brings the previous manager tab into focus
+  F9             start/stop a render (equivalent to pressing the render/stop button)
+  ctrl-g         generate a CSD file
+  ctrl-shift-g   generate a CSD to screen (for previewing)
+  ctrl-o         open a work file
+  ctrl-s         save work file (must use \"Save as\" from file menu if a new work file)
+  ctrl-w         close the current work file
+  alt-F4         close Blue</p>
+<p>: General Shortcuts</p>
+<p>Shortcuts       Description</p>
+<hr />
+<p>F9              Render project using project\'s real-time render options
+  shift-F9        Render to Disk and Play using project\'s disk render options and playing with Blue\'s builtin sound file player
+  ctrl-shift-F9   Render to Disk using project\'s disk render options</p>
+<p>: Rendering</p>
+<p>Shortcuts           Description</p>
+<hr />
+<p>ctrl-c              copy selected soundObject(s)
+  ctrl-x              cut selected soundObject(s)
+  ctrl-d              duplicate selected soundObject(s) and place directly after originals
+  ctrl-r              the repeat selected SoundObjects by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat)
+  ctrl-click          paste soundObject(s) from buffer where clicked
+  shift-click         on timeline, paste soundObjects from buffer as a PolyObject where clicked, if only one sound object is in the buffer it will be pasted as the type it is and not a PolyObject
+  shift-click         when selecting soundObjects, adds soundObject to selected if not currently selected and vice-versa
+  double-click        if selecting on timeline, select all soundObjects on layer where mouse clicked
+  ctrl-t              show quick time dialog
+  right click         pops up a popup menu for adding soundObjects and other tasks
+  left click + drag   creates a selection marquee for selecting multiple soundObjects (when Score mode)
+  1                   switch to Score mode
+  2                   switch to Single Line mode
+  3                   switch to Mult Line mode
+  left                nudge selected soundObjects one pixel to the left
+  right               nudge selected soundObject one pixel to the right
+  shift-left          nudge selected soundObjects ten pixels to the left
+  shift-right         nudge selected soundObjects ten pixels to the right
+  up                  move selected soundObjects up one layer
+  down                move selected soundObjects down one layer
+  ctrl-left           decrease horizontal zoom
+  ctrl-right          incrase horizontal zoom</p>
+<p>: Score Timeline</p>
+<p>Shortcuts         Description</p>
+<hr />
+<p>ctrl-left click   if on the column header of the instruments table, will enable/disable all instruments</p>
+<p>: Orchestra Manager</p>
+<p>Shortcuts      Description</p>
+<hr />
+<p>right click    pops up a popup menu that contains entries for opcodes as well as user-defined entries from the code repository
+  ctrl-space     brings up a dialog that shows all possible opcode matches for the current word being typed in (code completion)
+  shift-F1       if cursor is within a word that is an opcode, attempts to look up manual entry for that opcode
+  shift-F2       if cursor is within a word that is an opcode, attempts to find a manual example CSD for that opcode and if found opens a dialog showing the example
+  ctrl-;         comment out line or selected lines (prepends \";\" to every line)
+  ctrl-shift-;   uncomment out line or selected lines (removes \";\" at beginning of every line if found)</p>
+<p>: In a text box</p>
+<p>Shortcuts   Description</p>
+<hr />
+<p>ctrl-T      when the text area is focused, ctrl-T runs test on the soundObject (same as pressing the test button)</p>
+<p>: Editing GenericScore, PythonObject, JavaScriptObject</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

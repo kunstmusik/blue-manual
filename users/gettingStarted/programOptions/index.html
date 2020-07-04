@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Program Options - Blue Manual</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Blue Manual</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../preface/" class="dropdown-item">Preface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting Started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../usersIntro/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../installation/" class="dropdown-item">Installation</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Program Options</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../reference/soundObjects/index.md" class="dropdown-item">SoundObjects</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../installation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#setting_up_program_options_programoptions" class="nav-link">Setting Up Program Options {#programOptions}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="setting_up_program_options_programoptions">Setting Up Program Options {#programOptions}</h1>
+<p>The first thing you\'ll want to do is set up your Program Options. Some
+settings are required for features of blue to work (e.g., Render
+Settings), while others are there to help setup your project defaults
+and save you time when creating new projects.</p>
+<p>To open up the Program Options dialog, go to the File menu and click on
+\"Program Options\".</p>
+<p>Program Options - General</p>
+<p><img alt="" src="images/programOptions_general.png" />{width="100%"}</p>
+<p>Work Directory</p>
+<p>:   The default directory that blue should open when loading/saving blue
+    project files.</p>
+<p>Maintain Last Window State</p>
+<p>:   Enables saving of window location and size. If enabled, upon
+    starting of program, window states will be restored.</p>
+<p>New User Defaults Enabled</p>
+<p>:   Enables default text for different objects in blue. Curently this
+    affects:</p>
+<pre><code>-   CodeRepository - when adding new Code Snippet
+</code></pre>
+<p>Draw Flat SoundObject Borders</p>
+<p>:   Enables older flat drawing style of SoundObject borders on the score
+    timeline.</p>
+<p>Draw Alpha Background on Marquee</p>
+<p>:   If this is enabled, when selecting a group of SoundObjects on the
+    Score Timeline the marquee that is drawn to show the selection area
+    will paint with an alpha-transparent white background. (May slow
+    down performance when enabled.)</p>
+<p>Show Csound Output</p>
+<p>:   If this is enabled, output from rendering with Csound will be shown
+    in the Csound Output Dialog (accessible from the Window menu or
+    available with the F7 shortcut). If disabled, output will be shown
+    in the std.out of the console that opens when blue starts. (If the
+    blue starter script has been modified not to show the console by
+    using javaw instead of java, then the output will not be able to be
+    seen). It is recommended to enable this option.</p>
+<p>Message Colors Enabled</p>
+<p>:   Since Csound5, the default for printed messages is to show them with
+    colors by using ANSI text modifiers. However, this only works within
+    ANSI-compliant consoles, and does not work within blue\'s Csound
+    Output Dialog. It is recommended to keep this disabled if the \"Show
+    Csound Output\" option is enabled.</p>
+<p>Language</p>
+<p>:   Which language to use for blue. This affects the labels of the User
+    Interface, messages given to the user in dialog boxes, menu titles,
+    etc. (Translation files may not always be up to of date so some UI
+    items may not be translated when not in English.)</p>
+<p>Program Options - Project Defaults</p>
+<p><img alt="" src="images/programOptions_projectDefaults.png" />{width="100%"}</p>
+<p>These settings are used whenever new projects are created as defaults
+for the project, unless a default.blue file is found in the user\'s blue
+home directory, in which case the settings from the default.blue file
+are used.</p>
+<p>Author</p>
+<p>:   Default author to use in new projects.</p>
+<p>Mixer Enabled</p>
+<p>:   Enable using the blue Mixer in new projects by default.</p>
+<p>Program Options - Playback</p>
+<p><img alt="" src="images/programOptions_playBack.png" />{width="100%"}</p>
+<p>Time Pointer Animation Rate</p>
+<p>:   Rate of animation for time pointer to update when playing back in
+    realtime, expressed in frames per second. For example, the default
+    value of 20 means the time pointer is updated 20 times per second,
+    giving a smooth animation rate. Slower values may be desirable on
+    slower computers if the playback pointer is affecting performance.</p>
+<p>Latency Correction</p>
+<p>:   Float value in seconds to use as a correction for audio latency in
+    the user\'s sound playback mechanism. For example, if latency is
+    quite bad on your soundcard and there is a delay of .5 seconds
+    between when audio is passed to your soundcard and when the audio is
+    actually realized from the DAC, the visual time pointer for blue may
+    appear ahead in time of what is being heard. Using a .5 value for
+    latency correction would correct for this.</p>
+<p>Program Options - Utility</p>
+<p><img alt=" Program Options - Utility
+" src="images/programOptions_utility.png" />{width="100%"}</p>
+<p>Csound Executable</p>
+<p>:   This is the command for what version of Csound to execute when blue
+    uses utilities that depend on Csound (for example, freezing
+    SoundObjects, the SoundFont Viewer utility). The default value of
+    \"csound\" works if you have a version of Csound in your path named
+    \"csound\". You may use any command here that would call Csound that
+    would work as if you were running csound from a terminal.</p>
+<pre><code>::: {.note}
+::: {.title}
+Note
+:::
+
+The value defined for Csound Executable should only be the command
+to call Csound and no other flags should be added here.
+:::
+</code></pre>
+<p>Freeze Flags</p>
+<p>:   These are the flags for Csound that blue uses when performing
+    SoundObject freezing. Defaults are \"-Ado\" for Mac and \"-Wdo\" for
+    all other operating systems. Users may wish to modify this value if
+    they would their frozen soundObjects to be in a different format,
+    i.e. 32-bit float soundfiles.</p>
+<p>Program Options - Realtime</p>
+<p><img alt="" src="images/programOptions_realtime.png" />{width="100%"}</p>
+<p>Csound Executable</p>
+<p>:   This is a command for what version of Csound to execute when blue
+    renders the project in realtime. The default value of \"csound\"
+    works if you have a version of Csound in your path named \"csound\".
+    You may use any command here that would call csound that would work
+    as if you were running csound from a terminal.</p>
+<pre><code>Using the button marked \"\...\" on the right will open up a file
+dialog so that you can find and select the Csound executable to use
+to run Csound.
+
+If you are using the API, you still need to have something set here.
+You can set it to \"csound\" in that case.
+
+::: {.note}
+::: {.title}
+Note
+:::
+
+The value defined for Csound Executable should only be the command
+to call Csound and no other flags should be added here.
+:::
+</code></pre>
+<p>Render Method</p>
+<p>:   Choose which render service to use for rendering the project. When
+    the program loads, Blue will first try to see if the Csound 6 API is
+    available and if so, show that option here. If it can not find the
+    Csound 6 API, it will search for the Csound 5 API and show that
+    option here instead if it is found. If neither is found, the
+    Commandline Runner option will always be available to use.</p>
+<pre><code>Note: If you have both Csound 5 and Csound 6 installed, you can
+force Blue to ignore Csound 6 on load by adding
+\"-J-DDISABLE\_CSOUND=true\" to the blue/etc/blue.conf file in the
+default\_options section. On OSX, this will be in
+blue.app/Contents/Resources/blue/etc/blue.conf.
+</code></pre>
+<p>sr</p>
+<p>:   Default sr to use for realtime settings in new projects.</p>
+<p>ksmps</p>
+<p>:   Default ksmps to use for realtime settings in new projects.</p>
+<p>0dbfs</p>
+<p>:   Default value to use for 0dbfs. Also, the checkbox denotes whether
+    projects should use 0dbfs by default or not.</p>
+<p>```{=html}
+<!-- --></p>
+<pre><code>
+Audio Driver
+
+:   Driver to use for audio input and output. This is equivalent to
+    using the \--rtaudio= flag setting on the commandline.
+
+    Enabling the checkbox determines if this value will be used at all
+    when rendering, and if so, will use the value from the dropdown as
+    the driver setting.
+
+Audio Out
+
+:   Audio output device to use. Equivalent to using -o flag setting on
+    the commandline. This setting is dependent on the setting used on
+    the audio driver setting. Using a value of \&quot;dac\&quot; will use the
+    default device for the driver.
+
+    The value of this setting will be used for all projects that set
+    \&quot;Audio Out\&quot; enabled in the project-level realtime render settings.
+
+    By selecting the \[\...\] button to the right of this field, blue
+    will try to detect what devices are available for the chosen Audio
+    Driver. If blue is able to find the devices, a popup dialog will
+    appear with a list of available devices. Selecting from the popup
+    will then populate the textfield with the correct device string that
+    Csound will use to choose the device requested.
+
+    ::: {.note}
+    ::: {.title}
+    Note
+    :::
+
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
+
+    Enabling the checkbox determines if this device will be enabled by
+    default for new projects.
+
+Audio In
+
+:   Audio input device to use. Equivalent to using -i flag setting on
+    the commandline. This setting is dependent on the setting used on
+    the audio driver setting. Using a value of \&quot;adc\&quot; will use the
+    default device for the driver.
+
+    The value of this setting will be used for all projects that set
+    \&quot;Audio In\&quot; enabled in the project-level realtime render settings.
+
+    By selecting the \[\...\] button to the right of this field, blue
+    will try to detect what devices are available for the chosen Audio
+    Driver. If blue is able to find the devices, a popup dialog will
+    appear with a list of available devices. Selecting from the popup
+    will then populate the textfield with the correct device string that
+    Csound will use to choose the device requested.
+
+    ::: {.note}
+    ::: {.title}
+    Note
+    :::
+
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
+
+    Enabling the checkbox determines if this device will be enabled by
+    default for new projects.
+
+MIDI Driver
+
+:   Driver to use for MIDI input and output. This is equivalent to using
+    the \--rtmidi= flag setting on the commandline.
+
+    Enabling the checkbox determines if this value will be used at all
+    when rendering, and if so, will use the value from the dropdown as
+    the driver setting.
+
+MIDI Out
+
+:   MIDI output device to use. Equivalent to using -Q flag setting on
+    the commandline. This setting is dependent on the setting used on
+    the MIDI driver setting.
+
+    The value of this setting will be used for all projects that set
+    \&quot;MIDI Out\&quot; enabled in the project-level realtime render settings.
+
+    By selecting the \[\...\] button to the right of this field, blue
+    will try to detect what devices are available for the chosen MIDI
+    Driver. If blue is able to find the devices, a popup dialog will
+    appear with a list of available devices. Selecting from the popup
+    will then populate the textfield with the correct device string that
+    Csound will use to choose the device requested.
+
+    ::: {.note}
+    ::: {.title}
+    Note
+    :::
+
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
+
+    Enabling the checkbox determines if this device will be enabled by
+    default for new projects.
+
+MIDI In
+
+:   MIDI input device to use. Equivalent to using -M flag setting on the
+    commandline. This setting is dependent on the setting used on the
+    audio driver setting.
+
+    The value of this setting will be used for all projects that set
+    \&quot;MIDI In\&quot; enabled in the project-level realtime render settings.
+
+    By selecting the \[\...\] button to the right of this field, blue
+    will try to detect what devices are available for the chosen MIDI
+    Driver. If blue is able to find the devices, a popup dialog will
+    appear with a list of available devices. Selecting from the popup
+    will then populate the textfield with the correct device string that
+    Csound will use to choose the device requested.
+
+    ::: {.note}
+    ::: {.title}
+    Note
+    :::
+
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
+
+    Enabling the checkbox determines if this device will be enabled by
+    default for new projects.
+
+```{=html}
+&lt;!-- --&gt;
+</code></pre>
+
+<p>Software Buffer</p>
+<p>:   Size of software sample buffer to use (-b). For more information,
+    see CommandFlags section of Csound manual for settings.</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>Hardware Buffer</p>
+<p>:   Size of hardware sample buffer to use (-B). For more information,
+    see CommandFlags section of Csound manual for settings.</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>```{=html}
+<!-- --></p>
+<pre><code>
+Note Amplitudes
+
+:   Enables note amplitude messages from Csound (-m1)
+
+Out-of-Range Messages
+
+:   Enables samples out of range messages from Csound (-m2)
+
+Warnings
+
+:   Enables warning messages from Csound (-m4)
+
+Benchmark Information
+
+:   Enables benchmark information from Csound (-m128)
+
+```{=html}
+&lt;!-- --&gt;
+</code></pre>
+
+<p>Advanced Settings</p>
+<p>:   Extra flags to append to the commandline that might not be covered
+    by options in the UI. Pressing the [?] button will open the
+    documentation for the Csound command flags.</p>
+<p>Program Options - Disk Render</p>
+<p><img alt="" src="images/programOptions_diskRender.png" />{width="100%"}</p>
+<p>Csound Executable</p>
+<p>:   This is a command for what version of csound to execute when blue
+    renders the project to disk. The default value of \"csound\" works
+    if you have a version of Csound in your path named \"csound\". You
+    may use any command here that would call csound that would work as
+    if you were running csound from a terminal.</p>
+<pre><code>Using the button marked \"\...\" on the right will open up a file
+dialog so that you can find and select the csound executable to use
+to run Csound.
+
+::: {.note}
+::: {.title}
+Note
+:::
+
+The value defined for Csound Executable should only be the command
+to call Csound and no other flags should be added here.
+:::
+</code></pre>
+<p>Render Method</p>
+<p>:   Choose which render service to use for rendering the project. When
+    the program loads, Blue will first try to see if the Csound 6 API is
+    available and if so, show that option here. If it can not find the
+    Csound 6 API, it will search for the Csound 5 API and show that
+    option here instead if it is found. If neither is found, the
+    Commandline Runner option will always be available to use.</p>
+<pre><code>Note: If you have both Csound 5 and Csound 6 installed, you can
+force Blue to ignore Csound 6 on load by adding
+\"-J-DDISABLE\_CSOUND=true\" to the blue/etc/blue.conf file in the
+default\_options section. On OSX, this will be in
+blue.app/Contents/Resources/blue/etc/blue.conf.
+</code></pre>
+<p>sr</p>
+<p>:   Default sr to use for disk render settings in new projects.</p>
+<p>ksmps</p>
+<p>:   Default ksmps to use for disk render settings in new projects.</p>
+<p>nchnls</p>
+<p>:   Default nchnls to use for disk render settings in new projects.</p>
+<p>0dbfs</p>
+<p>:   Default value to use for 0dbfs. Also, the checkbox denotes whether
+    projects should use 0dbfs by default or not.</p>
+<p>```{=html}
+<!-- --></p>
+<pre><code>
+Enabled
+
+:   Enable using custom play command when using \&quot;Render and Play\&quot;. If
+    not enabled, blue\'s built-in audio player will be used once the
+    project is finished rendering to disk.
+
+Command
+
+:   Command to call after finished rendering a project. The command line
+    given should use the \$outfile property where the name of the
+    generated audio file should be passed to the program. For example,
+    to open the rendered audio with VLC on Mac OSX, you can use this
+    command line:
+
+        open -a VLC $outfile
+
+```{=html}
+&lt;!-- --&gt;
+</code></pre>
+
+<p>File Format</p>
+<p>:   File format to use (i.e. WAV, AIFF, AU, etc.)</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>Sample Format</p>
+<p>:   Sample format to use. The default of SHORT is the same as 16-bit
+    integer audio (the same as used for CD\'s). Other formats are
+    available in the dropdown to use.</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>Save Peak Information in Header</p>
+<p>:   Save the peak information in the file header.</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>Dither Output</p>
+<p>:   Use dither on output.</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>Rewrite Header while Rendering</p>
+<p>:   Rewrite the file header while rendering. This makes it possible to
+    play the audio file in the middle of a render and is useful when the
+    rendering of the project will take a very long time. However, it
+    does slow down overall render time.</p>
+<pre><code>Enabling the checkbox determines if this value will be used at all
+when rendering.
+</code></pre>
+<p>```{=html}
+<!-- --></p>
+<pre><code>
+Note Amplitudes
+
+:   Enables note amplitude messages from Csound (-m1)
+
+Out-of-Range Messages
+
+:   Enables samples out of range messages from Csound (-m2)
+
+Warnings
+
+:   Enables warning messages from Csound (-m4)
+
+Benchmark Information
+
+:   Enables benchmark information from Csound (-m128)
+
+```{=html}
+&lt;!-- --&gt;
+</code></pre>
+
+<p>Advanced Settings</p>
+<p>:   Extra flags to append to the commandline that might not be covered
+    by options in the UI. Pressing the [?] button will open the
+    documentation for the Csound command flags.</p>
+<p>Program Options - Disk Render</p>
+<p><img alt="" src="images/programOptions_midi.png" /></p>
+<p>These settings are for blue\'s MIDI input, used with
+<a href="#blueLive">blueLive</a>. The table shows what devices are currently
+available, and whether they are enabled for use with blueLive or not.
+You can use the \"rescan\" button to search for devices if you have just
+plugged in a device.</p>
+<p>Program Options - OSC</p>
+<p><img alt="" src="images/programOptions_osc.png" /></p>
+<p>This allows you to set what port blue will listen to for incoming OSC
+messages. Defaults to 8000. The following messages are understood by
+blue:</p>
+<ul>
+<li>
+<p>/score/play</p>
+</li>
+<li>
+<p>/score/stop</p>
+</li>
+<li>
+<p>/score/rewind</p>
+</li>
+<li>
+<p>/score/markerNext</p>
+</li>
+<li>
+<p>/score/markerPrevious</p>
+</li>
+<li>
+<p>/blueLive/onOff</p>
+</li>
+<li>
+<p>/blueLive/recompile</p>
+</li>
+<li>
+<p>/blueLive/allNotesOff</p>
+</li>
+<li>
+<p>/blueLive/toggleMidiInput</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
