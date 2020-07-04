@@ -3,7 +3,7 @@ User-Defined Opcodes Manager {#udoManager}
 
 User-Defined Opcodes Manager
 
-![ User-Defined Opcodes Manager ](images/udoWindow.png){width="100%"}
+![ User-Defined Opcodes Manager ](../../../images/udoWindow.png){width="100%"}
 
 The User-Defined Opcodes Manager contains three main parts:
 
@@ -53,7 +53,7 @@ need an "endop", as Blue will add that itself.
 
 User-Defined Opcode Repository Browser
 
-![ User-Defined Opcode Repository Browser ](images/udoDB.png)
+![ User-Defined Opcode Repository Browser ](../../../images/udoDB.png)
 
 Using the "I" Button will open up the UDO Repository browser. The
 browser shows the available UDO's in the repository on Csounds.com and

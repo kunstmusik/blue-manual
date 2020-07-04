@@ -58,7 +58,7 @@ of Csound instrument code or have to modify the instrument UI at all.
 
 The Interface editor has two modes:
 
-![](images/bsb_interface_edit.png)
+![](../../../images/bsb_interface_edit.png)
 
 The user can add interface elements and modify their properties using
 the property sheet on the right. To enable edit mode, click on the
@@ -77,7 +77,7 @@ group of widgets. After selecting multiple widgets, you can drag them
 around as a group, as well as use the alignment and distribution options
 found on the right side bottom to tidy up the UI.
 
-![](images/bsb_interface_grid.png)
+![](../../../images/bsb_interface_grid.png)
 
 When in edit mode, you can modify the Grid Settings by using the
 properties editor on the right-hand side. This allows you set the
@@ -92,7 +92,7 @@ following values:
 
   : Grid Settings
 
-![](images/bsb_interface_use.png)
+![](../../../images/bsb_interface_use.png)
 
 Once in usage mode, users can configure the instrument by working with
 the UI widgets: rotating knobs, moving sliders, etc. The values of the

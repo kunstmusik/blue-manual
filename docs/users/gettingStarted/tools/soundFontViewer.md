@@ -3,7 +3,7 @@ Sound Font Viewer {#soundFontViewer}
 
 Sound Font Viewer
 
-![ Sound Font Viewer ](images/soundFontViewer.png)
+![ Sound Font Viewer ](../../../images/soundFontViewer.png)
 
 The Sound Font Viewer allows you to select SoundFonts from the file
 selection panel (on the left) and get a listing of the instruments and

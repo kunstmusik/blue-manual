@@ -3,7 +3,7 @@
 
 .csoundrc Editor
 
-![.csoundrc Editor](images/csoundrc_editor.png)
+![.csoundrc Editor](../../../images/csoundrc_editor.png)
 
 The .csoundrc Editor tool allows for editing the system-wide .csoundrc
 file. The editor is accessible from the Tools menu and launching it will

@@ -3,7 +3,7 @@ Python Console {#pythonConsole}
 
 Python Console
 
-![ Python Console ](images/pythonConsole.png){width="100%"}
+![ Python Console ](../../../images/pythonConsole.png){width="100%"}
 
 The Python Console allows you to interactively write and execute python
 code using the Jython interpreter built in to Blue. Because Blue does

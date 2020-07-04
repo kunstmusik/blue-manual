@@ -4,7 +4,7 @@ Scanned Synthesis Matrix Editor {#scannedSynthesisMatrixEditor}
 Scanned Synthesis Matrix Editor
 
 ![Scanned Synthesis Matrix
-Editor](images/scannedSynthesisMatrixEditor.png)
+Editor](../../../images/scannedSynthesisMatrixEditor.png)
 
 The Scanned Synthesis Matrix Editor tools allows for editing and
 creating matrix files used by the Scanned Synthesis opcodes in Csound.

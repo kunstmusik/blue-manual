@@ -3,7 +3,7 @@ Mixer
 
 Mixer
 
-![](images/mixer.png)
+![](../../../images/mixer.png)
 
 The Mixer system in Blue allows for graphically editing levels for
 instruments, applying pre- and post-fader effects, and routing and
@@ -145,7 +145,7 @@ The workflow for using Effects with your Mixer channels is:
 
 Effects Library
 
-![](images/effectsLibrary1.png)
+![](../../../images/effectsLibrary1.png)
 
 Effects are created and managed in your Effects Library, which is
 accessible from the Tools menu. The Effects Library is program wide, so
@@ -173,7 +173,7 @@ an initial value for the Effect.)
 
 Effects Library
 
-![](images/effectsLibrary2.png)
+![](../../../images/effectsLibrary2.png)
 
 In the code editor for the Effect, one sees that the xin and xout lines
 of the User-Defined opcode display according the number of in and out

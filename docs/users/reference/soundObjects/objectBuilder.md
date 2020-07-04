@@ -16,6 +16,6 @@ Note: The code completion feature using ctrl-shift-space for values from
 the UI that is available in BlueSynthBuilder is also available in this
 SoundObject.
 
-![](images/objectBuilderUI.png)
+![](../../../images/objectBuilderUI.png)
 
-![](images/objectBuilderCode.png)
+![](../../../images/objectBuilderCode.png)

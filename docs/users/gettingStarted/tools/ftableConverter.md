@@ -3,7 +3,7 @@ FTable Converter {#ftableConverter}
 
 FTable Converter
 
-![ FTable Converter ](images/ftableConverter.png)
+![ FTable Converter ](../../../images/ftableConverter.png)
 
 The FTable Converter tool converts ftable statements into ftgen
 statements. When converted, the prior ftable statement numbers are

@@ -5,7 +5,7 @@ Accepts NoteProcessors: no
 
 Line Object
 
-![Line Object](images/lineObject.png)
+![Line Object](../../../images/lineObject.png)
 
 Add and graphically edit global k-rate signals.
 

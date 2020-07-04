@@ -3,7 +3,7 @@ Tables Manager {#tablesManager}
 
 Tables Manager
 
-![Tables Manager](images/tablesTab.png)
+![Tables Manager](../../../images/tablesTab.png)
 
 The tables manager contains a text area for global tables. Table
 statements put here will be immediately inserted above i-statements of

@@ -5,7 +5,7 @@ Accepts NoteProcessors: no
 
 Zak Line Object
 
-![ Zak Line Object ](images/zakLineObject.png)
+![ Zak Line Object ](../../../images/zakLineObject.png)
 
 Add and graphically edit zak k-rate signals.
 

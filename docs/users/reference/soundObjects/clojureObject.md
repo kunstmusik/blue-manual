@@ -3,7 +3,7 @@ ClojureObject {#clojureObject}
 
 ClojureObject
 
-![ ClojureObject ](images/clojureObject.png){width="100%"}
+![ ClojureObject ](../../../images/clojureObject.png){width="100%"}
 
 Accepts NoteProcessors: yes
 

@@ -12,7 +12,7 @@ for tracks where note data was found.)
 
 MIDI Import Settings
 
-![ MIDI Import Settings ](images/midiImportSettings.png)
+![ MIDI Import Settings ](../../../images/midiImportSettings.png)
 
 The table column information is as follows:
 

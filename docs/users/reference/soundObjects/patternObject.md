@@ -5,7 +5,7 @@ Accepts NoteProcessors: yes
 
 Pattern Object
 
-![Pattern Object](images/patternObject1.png)
+![Pattern Object](../../../images/patternObject1.png)
 
 The PatternObject is pattern-based score editor, based on the author\'s
 previous project "Patterns". It is a flexible pattern-oriented score

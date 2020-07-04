@@ -69,7 +69,7 @@ different results each render.
 Using the JMask Interface {#jmaskInterface}
 -------------------------
 
-![](images/jmask.png)
+![](../../../images/jmask.png)
 
 The JMask SoundObject Editor allows for viewing the editors for all of
 the assigned parameters. Parameters are each set to generate values for
@@ -141,12 +141,12 @@ also choose to show/hide Parameters by using the popup menu that appears
 when choosing the down arrow button in the JMask title bar, as shown in
 the screenshot below.
 
-![](images/jmask2.png)
+![](../../../images/jmask2.png)
 
 To edit the field name, double click the Parameter Edit Panel. A dialog
 will appear where you can modify the field name, as shown below:
 
-![](images/jmask_field_name.png)
+![](../../../images/jmask_field_name.png)
 
 Beyond these basics for working with the Parameters in general, each
 Parameter type has its own editor, each customized for the values and

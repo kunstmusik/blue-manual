@@ -3,7 +3,7 @@ Code Repository {#codeRepository}
 
 Code Repository
 
-![Code Repository](images/codeRepository.png)
+![Code Repository](../../../images/codeRepository.png)
 
 The Code Repository is where you edit the options that will come up from
 the code popup (the popup menu that is accessible by rt-clicking on most

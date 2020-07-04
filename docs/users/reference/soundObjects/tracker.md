@@ -3,7 +3,7 @@ Tracker
 
 Accepts NoteProcessors: yes
 
-![](images/tracker.png)
+![](../../../images/tracker.png)
 
 The Tracker SoundObject is a table-based tool to enter in patterns of
 notes using the Tracker paradigm but in a way specific to Csound SCO

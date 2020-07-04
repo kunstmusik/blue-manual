@@ -3,7 +3,7 @@ Orchestra Manager {#orchestraManager}
 
 Orchestra Manager
 
-![ Orchestra Manager ](images/orchestra.png){width="100%"}
+![ Orchestra Manager ](../../../images/orchestra.png){width="100%"}
 
 The Orchestra Manager is where the user organizes and edits the
 orchestra for the project as well as their user Instrument Library.
