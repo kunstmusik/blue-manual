@@ -1,0 +1,14 @@
+site_name: Blue Manual 
+markdown_extensions:
+    - toc:
+        separator: '_'
+nav:
+    - Home: 'index.md'
+    - 'User Guide':
+        - 'Preface': 'preface.md'
+        - 'Getting Started': 
+            - 'Introduction': 'users/gettingStarted/usersIntro.md'
+            - 'Installation': 'users/gettingStarted/installation.md'
+            - 'Program Options': 'users/gettingStarted/programOptions.md'
+    - 'Reference':
+        - 'SoundObjects': 'users/reference/soundObjects/index.md' 
