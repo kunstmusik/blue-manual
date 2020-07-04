@@ -67,10 +67,6 @@ Advanced Settings
                     csound -Wdo dac
                   
 
-```{=html}
-<!-- -->
-```
-
 sr
 
 :   sr to use when rendering to disk. Value defaults to value set in
@@ -126,11 +122,6 @@ Advanced Settings
     commandline to use here with "Complete Override" is:
 
                     csound -Wdo mySoundFile.wav
-                  
-
-```{=html}
-<!-- -->
-```
 
 Title
 

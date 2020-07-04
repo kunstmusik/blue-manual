@@ -1,5 +1,6 @@
 site_name: Blue Manual 
 markdown_extensions:
+    - def_list
     - toc:
         separator: '_'
 theme:

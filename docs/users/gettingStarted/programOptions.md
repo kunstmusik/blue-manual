@@ -193,10 +193,6 @@ ksmps
 :   Default value to use for 0dbfs. Also, the checkbox denotes whether
     projects should use 0dbfs by default or not.
 
-```{=html}
-<!-- -->
-```
-
 Audio Driver
 
 :   Driver to use for audio input and output. This is equivalent to
@@ -345,9 +341,6 @@ MIDI In
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
 
-```{=html}
-<!-- -->
-```
 
 Software Buffer
 
@@ -365,9 +358,6 @@ Hardware Buffer
     Enabling the checkbox determines if this value will be used at all
     when rendering.
 
-```{=html}
-<!-- -->
-```
 
 Note Amplitudes
 
@@ -385,9 +375,6 @@ Benchmark Information
 
 :   Enables benchmark information from Csound (-m128)
 
-```{=html}
-<!-- -->
-```
 
 Advanced Settings
 
@@ -452,10 +439,6 @@ nchnls
 :   Default value to use for 0dbfs. Also, the checkbox denotes whether
     projects should use 0dbfs by default or not.
 
-```{=html}
-<!-- -->
-```
-
 Enabled
 
 :   Enable using custom play command when using "Render and Play". If
@@ -472,9 +455,6 @@ Command
 
         open -a VLC $outfile
 
-```{=html}
-<!-- -->
-```
 
 File Format
 
@@ -516,9 +496,6 @@ Rewrite Header while Rendering
     Enabling the checkbox determines if this value will be used at all
     when rendering.
 
-```{=html}
-<!-- -->
-```
 
 Note Amplitudes
 
@@ -536,9 +513,6 @@ Benchmark Information
 
 :   Enables benchmark information from Csound (-m128)
 
-```{=html}
-<!-- -->
-```
 
 Advanced Settings
 

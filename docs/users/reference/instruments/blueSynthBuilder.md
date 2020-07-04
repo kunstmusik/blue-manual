@@ -185,10 +185,7 @@ instruments:
 
   : Widget Values
 
--   For the Label object, you are able to style the label by using HTML.
-    To use this feature, when setting the text of the label, enter the
-    HTML label within \<html\> tags, such as "\<html\>\<font
-    size="+1"\>My Label\</font\>\</html\>".
+-   For the Label object, you are able to style the font using the widget properties. Previous versions of Blue allowed styling using html tags but this is no longer supported.
 
 ### Groups
 
