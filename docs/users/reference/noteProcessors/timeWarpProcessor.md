@@ -4,13 +4,13 @@ Time Warp Processor {#timewarpProcessor}
 parameters: TimeWarpString
 
 Warps time in the same way as Csound t-statement, but does not require
-\"t\" to be used. Statements are in alternating pairs of beat number and
+"t" to be used. Statements are in alternating pairs of beat number and
 tempo.
 
 From the Csound Manual:
 
 Time and Tempo-for-that-time are given as ordered couples that define
-points on a \"tempo vs. time\" graph. (The time-axis here is in beats so
+points on a "tempo vs. time" graph. (The time-axis here is in beats so
 is not necessarily linear.) The beat-rate of a Section can be thought of
 as a movement from point to point on that graph: motion between two
 points of equal height signifies constant tempo, while motion between
@@ -35,13 +35,13 @@ The first tempo given must be for beat 0.
 
     if it is in a GenericScore SoundObject of duration 20, if you want
     the tempo to decrease in half by the last note, you would enter a
-    value for the processor as \"0 60 3 30\" and not \"0 60 20 30\"
+    value for the processor as "0 60 3 30" and not "0 60 20 30"
 
--   If you\'re using a time behavior of \"Repeat\", remember that time
+-   If you're using a time behavior of "Repeat", remember that time
     behavior is applied \*after\* noteProcessors, and the resulting
     score will be a time warped score repeated x times and \*NOT\* a
     score repeated x time and then timewarped
 
--   Time Warping, when used with a time behavior of \"Scale\", be aware
+-   Time Warping, when used with a time behavior of "Scale", be aware
     that estimating the final tempo of the object may be tricky, as the
     scaling will alter the duration of notes.

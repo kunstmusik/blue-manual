@@ -8,7 +8,7 @@ Pattern Object
 ![Pattern Object](images/patternObject1.png)
 
 The PatternObject is pattern-based score editor, based on the author\'s
-previous project \"Patterns\". It is a flexible pattern-oriented score
+previous project "Patterns". It is a flexible pattern-oriented score
 editor, useful for musical ideas which are pattern based, such as drum
 parts or minimalist-style musical ideas.
 
@@ -40,7 +40,7 @@ user has entered. It is recommended that one first decide the pattern
 time properties before working with the PatternObject.
 :::
 
-To add Patterns to the PatternObject, use the \"+\" button on the bottom
+To add Patterns to the PatternObject, use the "+" button on the bottom
 of the left hand section. Double-clicking the name of the pattern name
 will allow editing of the name, and clicking on the \[x\] box will allow
 for muting the Pattern. Clicking on the Pattern in the table will also
@@ -85,7 +85,7 @@ mutliple triggers.
     when you go to generate the CSD, the space won\'t be there.
 
     To get around this, you may want to use a time behavior of None, or
-    you may want put in a \"ghost note\" in a Pattern layer, using a
+    you may want put in a "ghost note" in a Pattern layer, using a
     note like:
 
         i 10000 0 .25

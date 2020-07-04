@@ -16,7 +16,7 @@ The Mixer system has three panel sections:
 
 Channels
 
-:   Channels are auto-created and bound to Instrument ID\'s in the
+:   Channels are auto-created and bound to Instrument ID's in the
     Orchestra for a Project. In the Mixer Dialog they are located in the
     first section on the left within a splitpane that separates them
     from the SubChannels. Channels can be set to route to either
@@ -59,33 +59,33 @@ does it bind SoundLayers to channels, the abstraction of the musical
 system and the interaction with the Mixer system requires different
 handling.
 
-In Blue\'s Mixer system, Mixer channels are automatically bound to
+In Blue's Mixer system, Mixer channels are automatically bound to
 instruments by their instrument ID. Binding to ID and not per-instrument
 in the Orchestra allows for the case where users have set multiple
 instruments to the same instrument ID but only having one which is
 enabled. If you then disable one and then enable another instrument to
 test out different instruments with the same musical note data, the
-mixer channel\'s settings will be maintained for the new instrument as
+mixer channel's settings will be maintained for the new instrument as
 it is bound by ID.
 
 Channels in themselves can not be created or removed directly by the
 user, but are automatically added or removed depending on how how
-instruments are added and removed from the project\'s orchestra. For
+instruments are added and removed from the project's orchestra. For
 cases of when an instrument has an ID and a user wishes to change the
 ID, if the new ID already exists and a channel is already created, the
 old channel is removed as long as no other instrument has the old ID. If
 the new channel ID has no existing mixer channel bound to it and if the
 channel for the old ID only has one instrument with that ID (the
-instrument that is changing ID\'s), the bound mixer channel is simply
+instrument that is changing ID's), the bound mixer channel is simply
 reassigned to the new ID and maintains its settings.
 
 Subchannels are added by right-clicking with in the SubChannels area and
-choosing \"Add SubChannel\" from the popup menu. To remove a subchannel
-right-click the channel strip to be removed and select \"Remove\" from
+choosing "Add SubChannel" from the popup menu. To remove a subchannel
+right-click the channel strip to be removed and select "Remove" from
 the popup menu.
 
 At the bottom of every Channel and SubChannel strip is an output
-dropdown box to choose where to route that Chanel\'s audio to. For
+dropdown box to choose where to route that Chanel's audio to. For
 SubChannels, they can only route to other SubChannels which lead to the
 Master Channel, meaning that there is no feedback allowed (i.e. routing
 SubChannelA to SubChannelB and then to SubChannelC and that back to
@@ -93,13 +93,13 @@ SubChannelA is not allowed as it would create a loop).
 
 For the instruments in the orchestra to be able to route out to the
 Mixer, a special pseudo-opcode must be used for the output of the
-instrument, entitled \"blueMixerOut\". You use blueMixerOut in the same
+instrument, entitled "blueMixerOut". You use blueMixerOut in the same
 way as the outc opcode. If the Mixer is not enabled in the Dialog, when
 Blue goes to process the instrument, blueMixerOut will be replaced with
 outc, thus making the audio of that instrument directly route out to dac
 or disk, depending on how Csound is set to render. If the Mixer is
 enabled, blueMixerOut is translated into global variables and the
-Mixer\'s instrument code is generated automatically without the user
+Mixer's instrument code is generated automatically without the user
 having to worry about the code details of setting up a Mixer system
 themselves in Csound code.
 
@@ -121,7 +121,7 @@ Effects {#mixerEffects}
 
 Effects in Blue are implemented as User-Defined Opcodes, and
 understanding of how User-Defined Opcodes work in Csound is recommended
-before creating Effects. Understanding how UDO\'s work however is not
+before creating Effects. Understanding how UDO's work however is not
 necessary if one simply wants to use Effects.
 
 The workflow for using Effects with your Mixer channels is:
@@ -141,7 +141,7 @@ The workflow for using Effects with your Mixer channels is:
 
 4.  Configure your effect by double-clicking it in the effects bin.
     Double-clicking the effect will open up a dialog that shows the
-    effect\'s graphical user interface.
+    effect's graphical user interface.
 
 Effects Library
 
@@ -210,7 +210,7 @@ Sends
 
 Besides effects, users are also able to put in Sends into the pre- and
 post-fader Effects bins. Sends will output the signal from that point in
-the channel\'s signal chain to a selected SubChannel. As with the output
+the channel's signal chain to a selected SubChannel. As with the output
 channels, Sends can only feed-forward down the chain to the Master Out
 and can not be made to create a feedback loop. Users are able to set the
 channel to send to as well as the amount to send. This send amount is
@@ -228,7 +228,7 @@ Please further information, please see the documentation for
 Code Generation Optimization
 ----------------------------
 
-Blue\'s mixer system optimizes when generated code for Csound to use.
+Blue's mixer system optimizes when generated code for Csound to use.
 When compiling down to ORC code, Blue checks all signal paths to see if
 any path will result in unused audio and if so, will optimize out any
 code that is along that path. The rules for optimization are as follows:
@@ -245,7 +245,7 @@ code that is along that path. The rules for optimization are as follows:
 -   If channel does not have channel output and no valid prefader sends,
     do not generate anything for channel.
 
--   If SubChannel has no signal inputs (whether it\'s from another
-    Channel\'s out channel, a Send, or dependency from code that uses
+-   If SubChannel has no signal inputs (whether it's from another
+    Channel's out channel, a Send, or dependency from code that uses
     the subChannel form of blueMixerOut), do not generate anything for
     channel.

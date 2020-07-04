@@ -2,7 +2,7 @@ NoteProcessors {#noteProcessors}
 ==============
 
 NoteProcessors are used in conjunction with soundObjects, and are used
-post-generation of the soundObject\'s noteList. They are used to modify
+post-generation of the soundObject's noteList. They are used to modify
 values within the noteList.
 
 NoteProcessors can be added via the soundObject property dialog. When a

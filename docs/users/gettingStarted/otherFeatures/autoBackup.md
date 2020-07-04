@@ -8,7 +8,7 @@ remain, otherwise on normal closing of the file they are deleted. If on
 opening a file a backup if found with a date newer than the original
 file, the option to open from the backup or the original is given.
 
-If the backup is chosen, it is required to use \"Save As\" to save over
+If the backup is chosen, it is required to use "Save As" to save over
 the original file or to a new file. At that point the backup is deleted.
 
 If the original file is chosen, then the backup file will be overwritten

@@ -3,16 +3,16 @@ JMask
 
 Accepts NoteProcessors: yes
 
-JMask is GUI score generating soundObject based on Andre Bartetzki\'s
+JMask is GUI score generating soundObject based on Andre Bartetzki's
 [CMask](http://www.bartetzki.de/en/software.html). JMask currently
 supports all features of CMask except field precision, though support
 for this feature is planned. Users of JMask are encouraged to read the
-CMask manual available at Andre Bartetzki\'s site to get familiar with
+CMask manual available at Andre Bartetzki's site to get familiar with
 CMask concepts as they are represented 1:1 in JMask.
 
-JMask builds on top of CMask\'s concepts and feature set by providing
+JMask builds on top of CMask's concepts and feature set by providing
 the user a graphical way to edit parameter values, tables, masks, etc.
-Also, by using JMask, the user\'s projects are guaranteed to run on all
+Also, by using JMask, the user's projects are guaranteed to run on all
 Blue installations, while using CMask from Blue requires anyone opening
 and using the project to have CMask installed on their system.
 
@@ -151,6 +151,6 @@ will appear where you can modify the field name, as shown below:
 Beyond these basics for working with the Parameters in general, each
 Parameter type has its own editor, each customized for the values and
 options allowable for each Parameter. Currently, documentation is
-omitted for each Parameter\'s GUI as they correspond in feature and
+omitted for each Parameter's GUI as they correspond in feature and
 parameters as CMask, and the user is encouraged to consult the CMask
 manual for more information on editing each Parameter.

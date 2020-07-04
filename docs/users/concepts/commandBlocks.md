@@ -37,7 +37,7 @@ Available Commands
 
 Once blocks are useful to limit how many times a block of code will be
 generated in the final CSD and is more for efficiency than anything else
-(so Csound doesn\'t define the same ftable more than it has to, for
+(so Csound doesn't define the same ftable more than it has to, for
 example). An example of this:
 
     ;[once]{ 
@@ -51,7 +51,7 @@ would be if you have all of your instruments output to the above global
 variables for extra processing by an always-on reverb, you would want to
 add the above to all of the instruments and also the reverb. Then, if
 you start a new project and may want to reuse a few of your instruments
-as well as the reverb, you can just copy them into your new project\'s
+as well as the reverb, you can just copy them into your new project's
 orchestra and start working away, knowing your global variables will be
 initialized and ready to go.
 

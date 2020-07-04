@@ -15,7 +15,7 @@ score:
     i1 + . 80
 
 If processed with a LineMultiple Processor with LineMultiplyString set
-to \"0 0 6 2\" and pfield set to 4, would result in:
+to "0 0 6 2" and pfield set to 4, would result in:
 
     i1  0.0 0.5 0.0
     i1  0.5 0.5 53.333336
@@ -27,7 +27,7 @@ soundObject with time behavior set to scale.)
 
 The LineMultiplyString can be interpreted to mean: start at beat 0 with
 value 0, and by beat 6, arrive at value 2. For each note, the
-LineMultiplyString will find the note\'s beat and compare against the
+LineMultiplyString will find the note's beat and compare against the
 LineMultiplyString to see how much should be multiplied. The user should
 be careful to remember that SoundObjects do not apply scaling of score
 until after processing with noteProcessors. Therefore, the beat values

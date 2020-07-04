@@ -5,7 +5,7 @@ Accepts NoteProcessors: yes
 
 Piano Roll - Notes
 
-![ Piano Roll - Notes ](images/pianoRoll_notes.png){width="100%"}
+![ Piano Roll - Notes ](../../images/pianoRoll_notes.png)
 
 The PianoRoll SoundObject is a graphical tool to enter in notes,
 commonly available in many MIDI sequencer environments. This PianoRoll
@@ -17,7 +17,7 @@ PianoRoll above has adapted to that scale to show 13 scale degrees per
 octave of its editor. The generated notes can output values as either
 frequency or PCH notation (octave.scaleDegree). But don\'t worry, if
 you\'re not interested in alternate tunings, the PianoRoll is set by
-default to use 12-TET tuning, the \"standard\" tuning system in use
+default to use 12-TET tuning, the "standard" tuning system in use
 today.
 
 The PianoRoll uses Note Template strings as a way to maintain
@@ -95,8 +95,8 @@ Note Template
 Scale
 
 :   The scale used with this PianoRoll. The PianoRoll defaults to a
-    12-TET scale, the \"standard\" scale in use in Western classical and
-    popular music. Pressing the button labeled \"\...\" will open a file
+    12-TET scale, the "standard" scale in use in Western classical and
+    popular music. Pressing the button labeled "\..." will open a file
     browser for selecting Scala scales to use in place of the default.
     After selecting a scale, the PianoRoll will adjust the note canvas
     for the number of scale degrees the newly selected scale contains.
@@ -122,11 +122,11 @@ Pch Generation
 
     :   Value of note expressed in Blue PCH, a format similar to Csound
         PCH but differs in that it does not allow fractional values.
-        Values are generated as \"octave.scaleDegree\" i.e. \"8.22\"
+        Values are generated as "octave.scaleDegree" i.e. "8.22"
         would be octave 8 and scale degree 22 in a scale that has 23 or
         more notes, or would wrap around as it does in Csound PCH. If
-        the scale had 12 scale degrees, the \"8.22\" would be
-        interpreted as \"9.10\". Blue PCH is allowed as an option to be
+        the scale had 12 scale degrees, the "8.22" would be
+        interpreted as "9.10". Blue PCH is allowed as an option to be
         used with Blue PCH note processors and then to be used with the
         Tuning NoteProcessor.
 
@@ -147,7 +147,7 @@ Piano Roll - Notes - Time Options
 
 The Time Options in the PianoRoll are accessed and behave very much in
 the same manner as those that are in the main timeline. The button
-labelled \"\...\" in the upper right corner of the PianoRoll canvas will
+labelled "\..." in the upper right corner of the PianoRoll canvas will
 open and close the panel on the right that contains the properties.
 
 Snap Enabled

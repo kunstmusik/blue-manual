@@ -28,7 +28,7 @@ from there.
 
 Beyond this primary capacity as a mode to aid composition, Blue Live has
 some capacity to be used for realtime performance. The focus of Blue
-Live\'s development is as a compositional aid first, and performance
+Live's development is as a compositional aid first, and performance
 second, though work continues to expand its usefulness in both regards.
 
 Working with Blue Live
@@ -77,7 +77,7 @@ The Live Space is an area to work with SoundObjects. It is a table
 divided into bins and rows of spaces to place SoundObjects. SoundObjects
 can be copied to/from the Score Timeline as well as the Live Space.
 SoundObjects can also be created within the Live Space by right clicking
-an empty bin within the bins and choosing \"Add SoundObject\" from the
+an empty bin within the bins and choosing "Add SoundObject" from the
 popup menu. Clicking on an occupied bin will select that SoundObject.
 The properties for the SoundObject can be modified using the SoundObject
 Properties Window, and the contents of the SoundObject can be modified
@@ -125,7 +125,7 @@ Live Code
 
 The live coding tab holds Csound Orchestra code for live coding. Once
 BlueLive is enabled, you can select code within the Live Code tab and
-use the \"ctrl-e\" (cmd-e on OSX) shortcut to evaluate the code in the
+use the "ctrl-e" (cmd-e on OSX) shortcut to evaluate the code in the
 running Csound instance.
 
 ::: {.note}
@@ -136,7 +136,7 @@ Note
 When rendering for BlueLive, Blue will define a BLUE\_LIVE orchestra and
 score macro. This allows you to write conditional code (e.g., in the
 Global Orchestra or Global Score tabs for your project) that will run
-only when BLUE\_LIVE is defined. (This can be checked using \#ifdef\'s.)
+only when BLUE\_LIVE is defined. (This can be checked using \#ifdef's.)
 :::
 
 SCO Pad
@@ -166,18 +166,18 @@ necessary and the default commandline used will be sufficient.
 Working with MIDI
 -----------------
 
-Blue\'s MIDI system, when enabled, will listen to configured MIDI
+Blue's MIDI system, when enabled, will listen to configured MIDI
 devices for notes, map the key and velocity, and generate Csound notes
 to achieve MIDI-like note-on and note-off type behavior. This allows
 working with a MIDI keyboard in realtime with your project instruments
 without modifying your instruments specifically for MIDI. This also
-means that when Blue\'s MIDI system is enabled, Csound MIDI processing
+means that when Blue's MIDI system is enabled, Csound MIDI processing
 should be disabled for your project.
 
 To configure what MIDI devices to use, go to the program Options
-settings (on OSX it is the application\'s Preferences, on other
+settings (on OSX it is the application's Preferences, on other
 platofrms it is the Options menu item in the Tools menu) and under
-\"Blue\", go to MIDI. There you will see a list of MIDI devices
+"Blue", go to MIDI. There you will see a list of MIDI devices
 connected to your computer. If you connected a device after starting
 Blue, you can rescan to find your MIDI device. In this window you will
 configure what MIDI devices you want to use with Blue, but these devices
@@ -185,7 +185,7 @@ will not be opened for listening until you enable MIDI Input on the
 BlueLive toolbar in the main application.
 
 Once you have configured what devices to use with Blue, return to the
-main program and enable MIDI input using the \"MIDI Input\" button, then
+main program and enable MIDI input using the "MIDI Input" button, then
 start BlueLive. At this point, when MIDI notes are played, Blue will
 take the incoming note data, map it according to the values configured
 in the MIDI Input Panel window (available from the Windows Menu), and
@@ -203,7 +203,7 @@ generating frequency, Csound PCH, and using Scala Tuning files to
 generate either frequencies or BluePCH format text, amongst other
 values.
 
-Instruments that are intended to be used with Blue\'s MIDI system will
+Instruments that are intended to be used with Blue's MIDI system will
 have to work with a 5 p-field note format. This does not mean your
 instrument can only work with 5 p-fields, but rather that your
 instrument must support at least that. An example Blue project can be

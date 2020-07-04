@@ -4,7 +4,7 @@ Preface
 Blue is my tool for composing with Csound. I originally created it for
 its ability to organize SoundObjects in time as well as to organize and
 automate the more mundane tasks that I've found in working with Csound.
-It\'s here to make working with Csound a more enjoyable and focused
+It's here to make working with Csound a more enjoyable and focused
 experience.
 
 As the program develops over time I am finding more ways to make the

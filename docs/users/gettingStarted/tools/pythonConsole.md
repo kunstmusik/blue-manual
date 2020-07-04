@@ -17,13 +17,13 @@ the console:
 -   Use
     help()
     to view the documentation on an object or class.
--   After generating a score or using the \"Test\" button on a
+-   After generating a score or using the "Test" button on a
     PythonObject, you can interactively test functions you have written
     by calling it using code in the console.
 -   Practice your python coding live.
 
 The console works much like running python interactively in a console or
-terminal. At the \"\>\" prompt, you can type in some code, then press
+terminal. At the "\>" prompt, you can type in some code, then press
 enter to execute the code. All output from python functions (including
 things like print statements in PythonObjects in the Score or Python
 NoteProcessors) will output to the Python Console.

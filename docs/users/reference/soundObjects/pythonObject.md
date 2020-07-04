@@ -5,14 +5,14 @@ Accepts NoteProcessors: yes
 
 Allows for using of the Python programming language to generate score
 data, using the Jython interpreter to interpret Python scripts. You may
-add your own python classes to the library for use with \"import\"
+add your own python classes to the library for use with "import"
 statements by adding them to your BLUE\_HOME/pythonLib folder. Included
-with Blue is Maurizio Umberto Puxeddu\'s pmask, as well as Steven Yi\'s
-Orchestral Composition library, found in Blue\'s application directory
+with Blue is Maurizio Umberto Puxeddu's pmask, as well as Steven Yi's
+Orchestral Composition library, found in Blue's application directory
 under blue/pythonLib.
 
 After writing your script to generate notes, assign the string value of
-the notes to the variable \'score\'. Blue will then read in the value
+the notes to the variable 'score'. Blue will then read in the value
 from that variable and continue processing.
 
     temp = ""
@@ -56,21 +56,21 @@ blueDuration
 
 blueProjectDir
 
-:   The location of the current project\'s directory. Includes path
+:   The location of the current project's directory. Includes path
     separator at end.
 
-There is a checkbox entitled \"Process at Start\". Selecting this option
+There is a checkbox entitled "Process at Start". Selecting this option
 will have the script of the PythonObject run when a .blue project is
 loaded. This is useful for scripts that act as library functions, but
 themselves do not generate any notes. For example, you might define a
 number of score generation utility functions in one PythonObject that
-has \"Process at Start\" enabled. Your other PythonObjects may then use
+has "Process at Start" enabled. Your other PythonObjects may then use
 the functions from that PythonObject. Next time you load your project,
-if that PythonObject hasn\'t been run, your other PythonObjects will not
+if that PythonObject hasn't been run, your other PythonObjects will not
 be able to be run either. If you are rendering from the beginning of a
-project, this won\'t be an issue, but if you\'re starting work in the
+project, this won't be an issue, but if you're starting work in the
 middle of a project, you will need to evaluate that utility PythonObject
 at least once. You can either do a run from the start at least once, use
-the \"Test\" button to have that evaluated, or use \"Process at Start\"
+the "Test" button to have that evaluated, or use "Process at Start"
 and have Blue ensure it is loaded into the python interpreter when you
 load your projects.

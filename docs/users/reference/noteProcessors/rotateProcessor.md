@@ -4,9 +4,9 @@ Rotate Processor {#rotateProcessor}
 parameters: noteIndex
 
 The RotateProcessor rotates the order of the notes, making the noteIndex
-the first note. For example a noteIndex of 2 means \"make the second
+the first note. For example a noteIndex of 2 means "make the second
 note of the notes generated the first, shifting the first note to the
-end\". With a noteIndex of 3, the following score:
+end". With a noteIndex of 3, the following score:
 
     i1 0 2 1
     i1 2 2 2
@@ -24,8 +24,8 @@ will become:
 
 As the third note now becomes the first. If a negative number is given,
 the number will count backwards as to what note should now become the
-first note. With a noteIndex of -2 (meaning, \"Second note from the
-end\"), the following score:
+first note. With a noteIndex of -2 (meaning, "Second note from the
+end"), the following score:
 
     i1 0 2 1
     i1 2 2 2

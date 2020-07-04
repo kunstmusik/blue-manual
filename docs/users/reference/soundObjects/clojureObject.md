@@ -12,10 +12,10 @@ to generate score data. The Clojure interpreter is included with Blue,
 so ClojureObjects are portable between systems without any external
 dependencies. Users do not have to install anything further to use this
 object, and the code will continue to function for the duration of
-Blue\'s existence.
+Blue's existence.
 
 When writing your script to generate notes, assign the string value of
-the notes to the symbol \'score\'. Blue will then read in the value from
+the notes to the symbol 'score'. Blue will then read in the value from
 that variable and continue processing.
 
     (def score "i1 0 2 3 4 5")
@@ -96,23 +96,23 @@ blueDuration
 
 blueProjectDir
 
-:   The location of the current project\'s directory. Includes path
+:   The location of the current project's directory. Includes path
     separator at end.
 
-There is a checkbox entitled \"Process at Start\". Selecting this option
+There is a checkbox entitled "Process at Start". Selecting this option
 will have the script of the ClojureObject run when a .blue project is
 loaded. This is useful for scripts that act as library functions, but
 themselves do not generate any notes. For example, you might define a
 number of score generation utility functions in one ClojureObject that
-has \"Process at Start\" enabled. Your other ClojureObject may then use
+has "Process at Start" enabled. Your other ClojureObject may then use
 the functions from that ClojureObject Next time you load your project,
-if that ClojureObject hasn\'t been run, your other ClojureObject will
+if that ClojureObject hasn't been run, your other ClojureObject will
 not be able to be run either. If you are rendering from the beginning of
-a project, this won\'t be an issue, but if you\'re starting work in the
+a project, this won't be an issue, but if you're starting work in the
 middle of a project, you will need to evaluate that utility
 ClojureObject at least once. You can either do a run from the start at
-least once, use the \"Test\" button to have that evaluated, or use
-\"Process at Start\" and have Blue ensure it is loaded into the Clojure
+least once, use the "Test" button to have that evaluated, or use
+"Process at Start" and have Blue ensure it is loaded into the Clojure
 interpreter when you load your projects.
 
 Blue is able to load external .clj scripts, resolved from the
@@ -123,5 +123,5 @@ example, if you use:
         
 
 This will try to load the script from
-\"/Users/me/.blue/script/clojure/my/script.clj\" or
-\"/path/to/blueProject/script/clojure/script.clj\".
+"/Users/me/.blue/script/clojure/my/script.clj" or
+"/path/to/blueProject/script/clojure/script.clj".

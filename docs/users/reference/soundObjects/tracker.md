@@ -12,12 +12,12 @@ where n is configurable by the user (defaults to 64 steps). Notes are
 entered into each Track with Tracks being configurable as to what
 parameters (columns) to use. Unique to the Blue Tracker SoundObject is
 the support for microtonal scales using Scala scale files as well as
-support for Csound\'s Tied-Notes feature.
+support for Csound's Tied-Notes feature.
 
 The interface consists of three main areas: the top tool bar, the main
 tracking area, and the track properties editor.
 
-The top tool bar has a \"+\" button which adds new tracks to the
+The top tool bar has a "+" button which adds new tracks to the
 Tracker, a Steps entry widget to enter in the number of steps the
 Tracker should have, a toggle for using Keyboard Note mode (see below
 for more information), an Octave entry widget to determine the relative
@@ -27,7 +27,7 @@ opens up a quick reference sheet for keyboard shortcuts.
 
 The main tracking area is where all of the score work is done to enter
 and modify notes. More information about note entry and modification is
-available below in the section \"Entering in Notes\".
+available below in the section "Entering in Notes".
 
 The last interface area is the track properties editor. The track
 properties editor is held in a collapsible pane and when the tracker
@@ -35,24 +35,24 @@ editor initially loads it will be collapsed. To open up the track
 properties, at least one track needs to be added to the tracker. Once
 one track exists, click the small button above the right scroll bar to
 open and close the track editor properties. More information on using
-the properties editor follows below in the section \"Settings Things
-Up\".
+the properties editor follows below in the section "Settings Things
+Up".
 
 When the Tracker Object is edited it is completely blank. To start,
-click the \"+\" button to add as many tracks as you would like to use.
-After adding the number of tracks you\'d like to use you will need to
+click the "+" button to add as many tracks as you would like to use.
+After adding the number of tracks you'd like to use you will need to
 configure the track to work with your Csound instruments. Open up the
-track properties editor using the \"\<\" toggle button above the right
+track properties editor using the "\<" toggle button above the right
 scroll bar. Afterwards, select a track by clicking the name panel above
 a track. Selecting a track will populate the track properties editor as
-well as hilight the name panel with a green border. A track\'s
+well as hilight the name panel with a green border. A track's
 properties consist of a Name, Note Template, Instrument ID, and Columns;
 descriptions of the values are listed below.
 
 Name
 
 :   The name property is used only for reference; editing the name
-    changes the title shown on the name panel and is for the user\'s
+    changes the title shown on the name panel and is for the user's
     reference.
 
 Note Template
@@ -61,10 +61,10 @@ Note Template
     Items in the template that are within \< and \> tags will be
     replaced by values either from the Tracker (START and DUR), the
     Instrument ID (INSTR\_ID) or values from the columns, using the
-    column\'s name as a key (i.e. if a column is called \"space\", when
+    column's name as a key (i.e. if a column is called "space", when
     generating a note for the track, any value in the space column will
     replace the \<space\> text in the note template). Note templates
-    will generally follow the form \"i \<INSTR\_ID\> \<START\> \<DUR\>\"
+    will generally follow the form "i \<INSTR\_ID\> \<START\> \<DUR\>"
     and then have tag keys for each column for the track.
 
 Instrument
@@ -85,7 +85,7 @@ Columns
 
     Each Column also has a type. The type information is used by the
     tracker when entering data to verify that the data being input is of
-    that column\'s type, as well as used when using shortcuts to
+    that column's type, as well as used when using shortcuts to
     manipulate data in that column.
 
     PCH
@@ -104,12 +104,12 @@ Columns
         equivalent in Blue PCH would be 8.1).
 
         Using Blue PCH allows for using Scala scale files to do
-        microtonal tracking. To choose a Scala scale, use the \"\...\"
+        microtonal tracking. To choose a Scala scale, use the "\..."
         button to open up a file selector to choose a Scala scale.
         Afterwards, enter in the base frequency for the scale (the
-        default is 261.62558 or middle-c). The \"output frequencies\"
+        default is 261.62558 or middle-c). The "output frequencies"
         checkbox will determine how the values entered into this column
-        will be interpreted. By default, \"output frequencies\" is
+        will be interpreted. By default, "output frequencies" is
         enabled, meaning when the tracker goes to generate notes, it
         will take the Blue PCH values that are entered and convert them
         to a frequency value in hertz. If you deselect this option, the
@@ -153,7 +153,7 @@ you to either fix your input to be valid or press esc to cancel entering
 in data.
 
 When entering in data for a new note, the first time you enter in
-information for a column in the note\'s row, it will not only enter in
+information for a column in the note's row, it will not only enter in
 the data for the column, but also copy values for all other columns from
 the first note that exists previous to the note being edited. If there
 is no notes entered, some default settings will be used based on the

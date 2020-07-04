@@ -16,7 +16,7 @@ that SoundObject. This feature is useful to represent the idea of a
 motive, with instances of the motive allowing to have transformations by
 use of NoteProcessors.
 
-The program-wide library (called \"User SoundObject Library\" in the
+The program-wide library (called "User SoundObject Library" in the
 interface) allows one to build up a catalog of reusable SoundObjects.
 SoundObjects such as Sound and ObjectBuilder allow users to build highly
 configurable sound and score generators that have a high degree of
@@ -31,7 +31,7 @@ entails:
 
 1.  Add SoundObject to the Library. This is done by selecting a
     SoundObject, right-clicking the SoundObject to open up the popup
-    menu and selecting \"Add to SoundObject Library\".
+    menu and selecting "Add to SoundObject Library".
 
 2.  After doing this, your SoundObject will have been added to the
     library and the SoundObject on the timeline will have been replaced
@@ -43,10 +43,10 @@ entails:
     more instances. These instances can be placed anywhere, have
     different durations and time behaviors, as well as have their own
     individual NoteProcessors. This allows expressing ideas such as
-    \"This is an instance of the primary motive (SoundObject in the
-    library) but transposed up a major 3rd, retrograded, and inverted\",
-    or an idea like \"I\'ve got drum pattern A in the library and I have
-    instances of it here and here and \...\".
+    "This is an instance of the primary motive (SoundObject in the
+    library) but transposed up a major 3rd, retrograded, and inverted",
+    or an idea like "I've got drum pattern A in the library and I have
+    instances of it here and here and \...".
 
     ::: {.note}
     ::: {.title}
@@ -98,11 +98,11 @@ entails:
 
 1.  Add SoundObject to the Library. This is done by selecting a
     SoundObject on the timeline, right-clicking the SoundObject to open
-    up the popup menu and selecting \"Copy\".
+    up the popup menu and selecting "Copy".
 
 2.  After copying an object, open up the SoundObject library window and
     go to the User SoundObject Library. Right-click a folder node in the
-    library tree and choose \"Paste\" to add a copy of the object to the
+    library tree and choose "Paste" to add a copy of the object to the
     library.
 
 3.  You can use the context popup menu to create new folders, or

@@ -13,8 +13,8 @@ with scripting tools that use JDK features, it is recommended to install
 the full JDK, and not just the JRE.
 
 To test to see if you have a JVM installed and what version, at a
-command prompt type \"java -version\". If you see something along the
-lines of \"command not found\" then you need to install a Java Virtual
+command prompt type "java -version". If you see something along the
+lines of "command not found" then you need to install a Java Virtual
 Machine.
 
 If you do not have Java installed, the recommended JDK to install is
@@ -36,9 +36,9 @@ can double-click the Application to run, as well as copy it to your
 Applications folder to install it.
 
 For Linux and Windows users, download the appropriate zip file and unzip
-it. Inside of the bin folder you will see a \"blue\" script for Linux or
-a \"blue64.exe\" file for use on Windows. (A 32-bit version,
-\"blue.exe\", is also included for those using an older version of
+it. Inside of the bin folder you will see a "blue" script for Linux or
+a "blue64.exe" file for use on Windows. (A 32-bit version,
+"blue.exe", is also included for those using an older version of
 Csound that is compiled for 32-bit Windows.)
 
 Note: After starting Blue, you may want to explore the example projects
@@ -50,12 +50,12 @@ contents of Blue.app/example if on OSX).
 The section below has notes for individual platforms.
 
 Blue uses the right mouse click often to show popup menus. If you do not
-have a right mouse button, you can use ctrl-click for all \"rt-clicks\"
+have a right mouse button, you can use ctrl-click for all "rt-clicks"
 that are mentioned in this documentation.
 
 To make use of the function key shortcuts (F1-F12), you will need to go
-into System Preferences, choose Keyboard, then enable \"Use all F1, F2,
-etc. keys as standard function keys\".
+into System Preferences, choose Keyboard, then enable "Use all F1, F2,
+etc. keys as standard function keys".
 
 Installing Csound {#installingCsound}
 -----------------
@@ -68,7 +68,7 @@ limitations.
 
 ### Using Blue with command-line Csound {#commandLineCsound}
 
-This may be considered \"classical\" Blue usage and interaction with
+This may be considered "classical" Blue usage and interaction with
 Csound as this was the method by which Blue ran with Csound for the
 first eight years in existance. The way Blue operates in this mode is by
 rendering the .Blue project into a temporary CSD file on disk, then
@@ -79,7 +79,7 @@ file.
 The benefit to this mode of Csound usage is that it is easier to switch
 out your version of Csound or use multiple versions of Csound on the
 same computer. It is also a little more stable than using the API in
-that if Csound crashes for some reason, it won\'t take down Blue with
+that if Csound crashes for some reason, it won't take down Blue with
 it. Also, it may be more performant to use the command-line mode. These
 benefits however need to be weighed against the benefits of using the
 API, which is described below.
@@ -145,7 +145,7 @@ it contains:
 Linux users should install a doubles version of Csound. The version of
 Csound found in package repositories should be one compiled for doubles.
 After installing Csound, modify the blue/bin/blue file. Search for the
-lines that contain \"-J-Djava.library.path=/usr/lib/jni\" and modify
+lines that contain "-J-Djava.library.path=/usr/lib/jni" and modify
 /usr/lib/jni (the default for Debian/Ubuntu-based systems) to the
 directory where libcsound64.so is located.
 
@@ -157,7 +157,7 @@ To check if the API is enabled, open Blue and open up the Program
 Options. This is available from the Blue-\>Preferences menu option on
 OSX, and from the Tools-\>Options menu option Windows and Linux. In the
 Blue tab, under both Disk and Realtime Render settings, there is an
-option called \"Render Method\". If Csound 6 is availble on your system
-and Blue was able to find it, it will show a \"Csound 6 API\" option. If
+option called "Render Method". If Csound 6 is availble on your system
+and Blue was able to find it, it will show a "Csound 6 API" option. If
 the Csound 6 Java API could be loaded, you will only have the
-\"Commandline Runner\" option which is always available.
+"Commandline Runner" option which is always available.

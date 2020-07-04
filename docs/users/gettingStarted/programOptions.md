@@ -1,13 +1,13 @@
 Setting Up Program Options {#programOptions}
 ==========================
 
-The first thing you\'ll want to do is set up your Program Options. Some
+The first thing you'll want to do is set up your Program Options. Some
 settings are required for features of blue to work (e.g., Render
 Settings), while others are there to help setup your project defaults
 and save you time when creating new projects.
 
 To open up the Program Options dialog, go to the File menu and click on
-\"Program Options\".
+"Program Options".
 
 Program Options - General
 
@@ -56,9 +56,9 @@ Message Colors Enabled
 
 :   Since Csound5, the default for printed messages is to show them with
     colors by using ANSI text modifiers. However, this only works within
-    ANSI-compliant consoles, and does not work within blue\'s Csound
-    Output Dialog. It is recommended to keep this disabled if the \"Show
-    Csound Output\" option is enabled.
+    ANSI-compliant consoles, and does not work within blue's Csound
+    Output Dialog. It is recommended to keep this disabled if the "Show
+    Csound Output" option is enabled.
 
 Language
 
@@ -72,7 +72,7 @@ Program Options - Project Defaults
 ![](images/programOptions_projectDefaults.png){width="100%"}
 
 These settings are used whenever new projects are created as defaults
-for the project, unless a default.blue file is found in the user\'s blue
+for the project, unless a default.blue file is found in the user's blue
 home directory, in which case the settings from the default.blue file
 are used.
 
@@ -99,7 +99,7 @@ Time Pointer Animation Rate
 Latency Correction
 
 :   Float value in seconds to use as a correction for audio latency in
-    the user\'s sound playback mechanism. For example, if latency is
+    the user's sound playback mechanism. For example, if latency is
     quite bad on your soundcard and there is a delay of .5 seconds
     between when audio is passed to your soundcard and when the audio is
     actually realized from the DAC, the visual time pointer for blue may
@@ -116,8 +116,8 @@ Csound Executable
 :   This is the command for what version of Csound to execute when blue
     uses utilities that depend on Csound (for example, freezing
     SoundObjects, the SoundFont Viewer utility). The default value of
-    \"csound\" works if you have a version of Csound in your path named
-    \"csound\". You may use any command here that would call Csound that
+    "csound" works if you have a version of Csound in your path named
+    "csound". You may use any command here that would call Csound that
     would work as if you were running csound from a terminal.
 
     ::: {.note}
@@ -132,7 +132,7 @@ Csound Executable
 Freeze Flags
 
 :   These are the flags for Csound that blue uses when performing
-    SoundObject freezing. Defaults are \"-Ado\" for Mac and \"-Wdo\" for
+    SoundObject freezing. Defaults are "-Ado" for Mac and "-Wdo" for
     all other operating systems. Users may wish to modify this value if
     they would their frozen soundObjects to be in a different format,
     i.e. 32-bit float soundfiles.
@@ -144,17 +144,17 @@ Program Options - Realtime
 Csound Executable
 
 :   This is a command for what version of Csound to execute when blue
-    renders the project in realtime. The default value of \"csound\"
-    works if you have a version of Csound in your path named \"csound\".
+    renders the project in realtime. The default value of "csound"
+    works if you have a version of Csound in your path named "csound".
     You may use any command here that would call csound that would work
     as if you were running csound from a terminal.
 
-    Using the button marked \"\...\" on the right will open up a file
+    Using the button marked "\..." on the right will open up a file
     dialog so that you can find and select the Csound executable to use
     to run Csound.
 
     If you are using the API, you still need to have something set here.
-    You can set it to \"csound\" in that case.
+    You can set it to "csound" in that case.
 
     ::: {.note}
     ::: {.title}
@@ -176,7 +176,7 @@ Render Method
 
     Note: If you have both Csound 5 and Csound 6 installed, you can
     force Blue to ignore Csound 6 on load by adding
-    \"-J-DDISABLE\_CSOUND=true\" to the blue/etc/blue.conf file in the
+    "-J-DDISABLE\_CSOUND=true" to the blue/etc/blue.conf file in the
     default\_options section. On OSX, this will be in
     blue.app/Contents/Resources/blue/etc/blue.conf.
 
@@ -210,11 +210,11 @@ Audio Out
 
 :   Audio output device to use. Equivalent to using -o flag setting on
     the commandline. This setting is dependent on the setting used on
-    the audio driver setting. Using a value of \"dac\" will use the
+    the audio driver setting. Using a value of "dac" will use the
     default device for the driver.
 
     The value of this setting will be used for all projects that set
-    \"Audio Out\" enabled in the project-level realtime render settings.
+    "Audio Out" enabled in the project-level realtime render settings.
 
     By selecting the \[\...\] button to the right of this field, blue
     will try to detect what devices are available for the chosen Audio
@@ -243,11 +243,11 @@ Audio In
 
 :   Audio input device to use. Equivalent to using -i flag setting on
     the commandline. This setting is dependent on the setting used on
-    the audio driver setting. Using a value of \"adc\" will use the
+    the audio driver setting. Using a value of "adc" will use the
     default device for the driver.
 
     The value of this setting will be used for all projects that set
-    \"Audio In\" enabled in the project-level realtime render settings.
+    "Audio In" enabled in the project-level realtime render settings.
 
     By selecting the \[\...\] button to the right of this field, blue
     will try to detect what devices are available for the chosen Audio
@@ -288,7 +288,7 @@ MIDI Out
     the MIDI driver setting.
 
     The value of this setting will be used for all projects that set
-    \"MIDI Out\" enabled in the project-level realtime render settings.
+    "MIDI Out" enabled in the project-level realtime render settings.
 
     By selecting the \[\...\] button to the right of this field, blue
     will try to detect what devices are available for the chosen MIDI
@@ -320,7 +320,7 @@ MIDI In
     audio driver setting.
 
     The value of this setting will be used for all projects that set
-    \"MIDI In\" enabled in the project-level realtime render settings.
+    "MIDI In" enabled in the project-level realtime render settings.
 
     By selecting the \[\...\] button to the right of this field, blue
     will try to detect what devices are available for the chosen MIDI
@@ -402,12 +402,12 @@ Program Options - Disk Render
 Csound Executable
 
 :   This is a command for what version of csound to execute when blue
-    renders the project to disk. The default value of \"csound\" works
-    if you have a version of Csound in your path named \"csound\". You
+    renders the project to disk. The default value of "csound" works
+    if you have a version of Csound in your path named "csound". You
     may use any command here that would call csound that would work as
     if you were running csound from a terminal.
 
-    Using the button marked \"\...\" on the right will open up a file
+    Using the button marked "\..." on the right will open up a file
     dialog so that you can find and select the csound executable to use
     to run Csound.
 
@@ -431,7 +431,7 @@ Render Method
 
     Note: If you have both Csound 5 and Csound 6 installed, you can
     force Blue to ignore Csound 6 on load by adding
-    \"-J-DDISABLE\_CSOUND=true\" to the blue/etc/blue.conf file in the
+    "-J-DDISABLE\_CSOUND=true" to the blue/etc/blue.conf file in the
     default\_options section. On OSX, this will be in
     blue.app/Contents/Resources/blue/etc/blue.conf.
 
@@ -458,8 +458,8 @@ nchnls
 
 Enabled
 
-:   Enable using custom play command when using \"Render and Play\". If
-    not enabled, blue\'s built-in audio player will be used once the
+:   Enable using custom play command when using "Render and Play". If
+    not enabled, blue's built-in audio player will be used once the
     project is finished rendering to disk.
 
 Command
@@ -486,7 +486,7 @@ File Format
 Sample Format
 
 :   Sample format to use. The default of SHORT is the same as 16-bit
-    integer audio (the same as used for CD\'s). Other formats are
+    integer audio (the same as used for CD's). Other formats are
     available in the dropdown to use.
 
     Enabling the checkbox determines if this value will be used at all
@@ -550,10 +550,10 @@ Program Options - Disk Render
 
 ![](images/programOptions_midi.png)
 
-These settings are for blue\'s MIDI input, used with
+These settings are for blue's MIDI input, used with
 [blueLive](#blueLive). The table shows what devices are currently
 available, and whether they are enabled for use with blueLive or not.
-You can use the \"rescan\" button to search for devices if you have just
+You can use the "rescan" button to search for devices if you have just
 plugged in a device.
 
 Program Options - OSC

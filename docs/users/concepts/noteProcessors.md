@@ -14,9 +14,9 @@ as well as applied to a LayerGroup or to the entire Score.
 
 You can add NoteProcessors to SoundObjects by using the SoundObject
 Properties window. You can add them to Layers the support them by using
-the \"N\" button the layer\'s header panel. To apply them to a
+the "N" button the layer's header panel. To apply them to a
 LayerGroup or Score, right click the Root Score in the Score Bar and use
-the popup menus to choose which item you\'d like to apply NoteProcessors
+the popup menus to choose which item you'd like to apply NoteProcessors
 to.
 
 NoteProcessors are applied after the notes of a SoundObject, Layer,

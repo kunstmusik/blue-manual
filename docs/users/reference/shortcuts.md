@@ -15,7 +15,7 @@ Shortcuts
   ctrl-g         generate a CSD file
   ctrl-shift-g   generate a CSD to screen (for previewing)
   ctrl-o         open a work file
-  ctrl-s         save work file (must use \"Save as\" from file menu if a new work file)
+  ctrl-s         save work file (must use "Save as" from file menu if a new work file)
   ctrl-w         close the current work file
   alt-F4         close Blue
 
@@ -23,9 +23,9 @@ Shortcuts
 
   Shortcuts       Description
   --------------- -----------------------------------------------------------------------------------------------------------------
-  F9              Render project using project\'s real-time render options
-  shift-F9        Render to Disk and Play using project\'s disk render options and playing with Blue\'s builtin sound file player
-  ctrl-shift-F9   Render to Disk using project\'s disk render options
+  F9              Render project using project's real-time render options
+  shift-F9        Render to Disk and Play using project's disk render options and playing with Blue's builtin sound file player
+  ctrl-shift-F9   Render to Disk using project's disk render options
 
   : Rendering
 
@@ -68,8 +68,8 @@ Shortcuts
   ctrl-space     brings up a dialog that shows all possible opcode matches for the current word being typed in (code completion)
   shift-F1       if cursor is within a word that is an opcode, attempts to look up manual entry for that opcode
   shift-F2       if cursor is within a word that is an opcode, attempts to find a manual example CSD for that opcode and if found opens a dialog showing the example
-  ctrl-;         comment out line or selected lines (prepends \";\" to every line)
-  ctrl-shift-;   uncomment out line or selected lines (removes \";\" at beginning of every line if found)
+  ctrl-;         comment out line or selected lines (prepends ";" to every line)
+  ctrl-shift-;   uncomment out line or selected lines (removes ";" at beginning of every line if found)
 
   : In a text box
 

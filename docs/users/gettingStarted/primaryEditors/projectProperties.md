@@ -36,11 +36,11 @@ Devices
     which are hardware dependent, so projects can be easily moved from
     one computer to the next.
 
-    For example, if your project is set to use \"Audio Out\", one system
-    may use a value of \"-+rtaudio=alsa -o dac:hw:0,0\" while another
-    system may use a value of \"-+rtaudio=winmme -o dac2\". The project
-    only needs to be set to use \"Audio Out\" and when the project goes
-    to render, the settings set for that system\'s audio out will be
+    For example, if your project is set to use "Audio Out", one system
+    may use a value of "-+rtaudio=alsa -o dac:hw:0,0" while another
+    system may use a value of "-+rtaudio=winmme -o dac2". The project
+    only needs to be set to use "Audio Out" and when the project goes
+    to render, the settings set for that system's audio out will be
     used.
 
 Message Level
@@ -54,15 +54,15 @@ Advanced Settings
     by options in the UI. Pressing the \[?\] button will open the
     documentation for the Csound command flags.
 
-    If \"Complete Override\" is enabled, the value given in the
-    \"Advanced Settings\" textbox will be used as given and no other
+    If "Complete Override" is enabled, the value given in the
+    "Advanced Settings" textbox will be used as given and no other
     values set from the UI will be used. Projects prior to 0.106.0 will
-    have their commandline settings copied to here and the \"Complete
-    Override\" section will be enabled. When this setting is enabled,
+    have their commandline settings copied to here and the "Complete
+    Override" section will be enabled. When this setting is enabled,
     the commandline should set the call to the Csound executable to use
     and the flags to use but with the name of the CSD left out as it
     will automatically be appended to by Blue. An example of a
-    commandline to use here with \"Complete Override\" is:
+    commandline to use here with "Complete Override" is:
 
                     csound -Wdo dac
                   
@@ -99,7 +99,7 @@ Filename
     Blue will ask on each render what to name the file and where to
     render it to.
 
-    If the \"Ask on Render\" is enabled, Blue will always ask on each
+    If the "Ask on Render" is enabled, Blue will always ask on each
     render what to name the file and where to render it to. This is
     useful to enable if temporarily rendering parts of a project or if
     the project is only meant to be used to render small sound samples.
@@ -115,15 +115,15 @@ Advanced Settings
     by options in the UI. Pressing the \[?\] button will open the
     documentation for the Csound command flags.
 
-    If \"Complete Override\" is enabled, the value given in the
-    \"Advanced Settings\" textbox will be used as given and no other
+    If "Complete Override" is enabled, the value given in the
+    "Advanced Settings" textbox will be used as given and no other
     values set from the UI will be used. Projects prior to 0.106.0 will
-    have their commandline settings copied to here and the \"Complete
-    Override\" section will be enabled. When this setting is enabled,
+    have their commandline settings copied to here and the "Complete
+    Override" section will be enabled. When this setting is enabled,
     the commandline should set the call to the Csound executable to use
     and the flags to use but with the name of the CSD left out as it
     will automatically be appended to by Blue. An example of a
-    commandline to use here with \"Complete Override\" is:
+    commandline to use here with "Complete Override" is:
 
                     csound -Wdo mySoundFile.wav
                   

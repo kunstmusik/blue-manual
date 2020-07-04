@@ -39,7 +39,7 @@ Assigning Parameters
 
 Automations for Parameters are assignable to SoundObject LayerGroup
 Layers that exist in the root Score by selecting from the popup menu
-that appears when selecting the \"A\" button on a SoundLayer\'s panel
+that appears when selecting the "A" button on a SoundLayer's panel
 (on the left of the timeline). The menu shows what Parameters are
 available to use from Instruments and the Mixer. Those with normal color
 text are Parameters which are not currently automated, those in green
@@ -88,7 +88,7 @@ Editing Automations
 To edit line values in a Parameter Automation, first switch to Single
 Line mode. Then, for the desired SoundLayer, select which of the
 assigned parameters to edit. This can be done either by using the
-SoundLayer Edit Panel\'s Parameter selector (found on the second row
+SoundLayer Edit Panel's Parameter selector (found on the second row
 below the row with mute, solo, etc.; only shown when SoundLayer size is
 greater than 1), or by right-clicking the SoundLayer in the main area
 and selecting from the popup menu (the actively editable Parameter
@@ -113,7 +113,7 @@ be used to undo the above changes.
 
 For finer control over the line points, right-click on the parameter
 line panel when not over an existing line point. A popup menu will
-appear and select \"Edit Line Points\". A dialog showing a table of line
+appear and select "Edit Line Points". A dialog showing a table of line
 points with time values in one column and parameter values in a second
 column. The user can then enter in values by text entry.
 
@@ -129,7 +129,7 @@ automation and ScoreObject data together.
 Technical Details
 -----------------
 
-Blue\'s parameter automation system is implemented in Csound code in a
+Blue's parameter automation system is implemented in Csound code in a
 few different areas. For instruments and effects, when an Automatable
 Parameter is not set for automation, it will replace its replacement key
 in its ORC code with a constant value from the UI item. If the parameter
@@ -160,6 +160,6 @@ value are found as well as when there is a discontinous break in the
 values. Values from the parameter automation will also correctly be
 generated from render start time until render end time (if used). For
 parameters with resolution, every value is a discrete jump, so the
-instrument for resolution based parameters will on it\'s i-time run will
+instrument for resolution based parameters will on it's i-time run will
 simply set the new value and then turn the instrument instance off to
 save CPU cycles.

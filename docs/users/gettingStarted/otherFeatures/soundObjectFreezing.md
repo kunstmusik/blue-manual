@@ -10,12 +10,12 @@ soundObject and removing the frozen wave file.
 
 To freeze a soundObject, select one or many soundObjects on the
 timeline, rt-click on a selected soundObject, and then select
-\"Freeze/Unfreeze SoundObjects\". To unfreeze, select one or many frozen
+"Freeze/Unfreeze SoundObjects". To unfreeze, select one or many frozen
 soundObjects and select the same menu option.
 
 On the timeline, if your soundObject rendered wave is longer in duration
-than the original soundObject\'s duration (as is the case if you have
-reverb processing), the frozen soundObject\'s bar will graphically show
+than the original soundObject's duration (as is the case if you have
+reverb processing), the frozen soundObject's bar will graphically show
 the difference in times with two different colors.
 
 Note: As currently implemented, when Blue goes to freeze soundObjects it
@@ -30,15 +30,15 @@ versions will be more polished.
     Blue generates the sco for the selected soundObject and produce a
     temporary .csd file
 
-3.  Blue runs csound with \"csound -Wdo freezex.wav tempfile.csd\" where
+3.  Blue runs csound with "csound -Wdo freezex.wav tempfile.csd" where
     the x in freezex.wav is an integer, counting up. This wav file is
     generated in the same directory that the projectFile is located.
 
 4.  Blue replaces the soundObject in the timeline with a
     FrozenSoundObject. The FrozenSoundObject keeps a copy of the
     original soundObject (for unfreezing), as well as shows the name of
-    the frozen wav file, the original soundObject\'s duration, and the
-    frozen wav file\'s duration (not necessarily the same, as is the
+    the frozen wav file, the original soundObject's duration, and the
+    frozen wav file's duration (not necessarily the same, as is the
     case if using global reverb, for example).
 
 5.  When you do a render of the entire piece now, the frozen sound
@@ -64,8 +64,8 @@ versions will be more polished.
     is taken into account.
 
 -   The freezing system does \*not\* work for all graph toplogies. If
-    you\'re using soundObjects with instruments used as control signals,
-    this won\'t work unless the notes for the instruments they are
+    you're using soundObjects with instruments used as control signals,
+    this won't work unless the notes for the instruments they are
     controlling are alsoin the same soundObject. I.e. I have one
     soundObject that has only notes that affect global variables, while
     I have one instrument thatuses those global variables. This could
@@ -81,13 +81,13 @@ versions will be more polished.
         but together with freezing, this lets you set the start time of
         always-on instruments to the first time where non-frozen
         soundObjects occur, so if the first half of your piece is frozen
-        and you\'re unfrozen stuff is in the second half, you don\'t
+        and you're unfrozen stuff is in the second half, you don't
         need always on instruments to be turned on until the second half
         as the first half is routed to outs
 
--   This system is tested with 2-channel pieces. I\'m not sure if this
-    will work with higher number of channels, but I don\'t see why it
-    wouldn\'t.
+-   This system is tested with 2-channel pieces. I'm not sure if this
+    will work with higher number of channels, but I don't see why it
+    wouldn't.
 
 -   Changing the number of channels on the project after a freeze may
     cause Csound errors when rendering the frozen soundObject (can be
@@ -98,4 +98,4 @@ versions will be more polished.
     frozen files will work fine.
 
 -   Freezing SoundObjects uses the same settings as found in the
-    project\'s Disk Render settings (e.g., sr, ksmps, 0dbfs).
+    project's Disk Render settings (e.g., sr, ksmps, 0dbfs).

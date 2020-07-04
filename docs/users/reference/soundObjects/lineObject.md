@@ -20,5 +20,5 @@ values (need to be floating point values). For editing the color of the
 line, double-click the color box to the left of the lineName. A color
 selection dialog will appear for the user to choose their desired color.
 
-The name of the signal will be prepended with \"gk\" when outputing a
-signal, i.e. a line name of \"cutoff\" will become \"gkcutoff\".
+The name of the signal will be prepended with "gk" when outputing a
+signal, i.e. a line name of "cutoff" will become "gkcutoff".

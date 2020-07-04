@@ -9,13 +9,13 @@ Note
 This instrument is currently undergoing re-implementation.
 :::
 
-A 6 Operator Phase Modulation instrument using Russell Pinkston\'s DX7
+A 6 Operator Phase Modulation instrument using Russell Pinkston's DX7
 Emulation Patches.
 
-The BlueX7 editor contains two tabs, the \'patch\' tab, where the sound
-creation parameters are tweaked and a second tab called \'csound\' which
+The BlueX7 editor contains two tabs, the 'patch' tab, where the sound
+creation parameters are tweaked and a second tab called 'csound' which
 can contain further post-processing algorithms or special routing of the
-instrument\'s output.
+instrument's output.
 
 The patch tab contains three panels: Common, LFO and operators. The
 common panel deals with global aspects of the instrument like
@@ -62,12 +62,12 @@ dx72csound.zip file from: [](http://www.parnasse.com/dx72csnd.shtml).
 (to steven: reading this page it seems part of the model is unfinished,
 which may answer some of my questions above)
 
-On the \'csound\' tab you find by default:
+On the 'csound' tab you find by default:
 
     blueMixerOut aout, aout
 
 This routes the output of the instrument directly to the stereo output
-of csound. You can include further code to process the \'aout\' signal
+of csound. You can include further code to process the 'aout' signal
 produced by the BlueX7, or to route it as needed. For example, if you
 are outputing in mono, you could code such as:
 

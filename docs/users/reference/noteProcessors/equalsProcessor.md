@@ -4,8 +4,8 @@ Equals Processor {#equalsProcessor}
 Parameters: pfield, value
 
 Sets user-given pField of all notes in soundObject to user-given value,
-i.e. set all p4\'s to value \"440\", or set all p6\'s to value
-\"/work/audio/wav/mySample2.wav\". The following score:
+i.e. set all p4's to value "440", or set all p6's to value
+"/work/audio/wav/mySample2.wav". The following score:
 
     i1 0 2 8.00
     i1 + . 8.04

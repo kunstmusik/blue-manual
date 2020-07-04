@@ -13,5 +13,5 @@ are common features shared. Some things which are available are:
 
 -   Popup Menu (use right-mouse click) with additional options
 
-You can adjust colors, fonts, and other settings within Blue\'s Program
+You can adjust colors, fonts, and other settings within Blue's Program
 Options.

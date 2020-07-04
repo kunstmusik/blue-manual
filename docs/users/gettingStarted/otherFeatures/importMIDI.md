@@ -3,7 +3,7 @@ Importing MIDI Files {#importMIDI}
 
 Blue is able to import MIDI files and set up a Blue project file from
 the note information in the MIDI file, using the settings given by the
-user. To import a MIDI file, choose the \"Import MIDI File\" option from
+user. To import a MIDI file, choose the "Import MIDI File" option from
 the File menu. Next, using the file dialog to locate the MIDI file to
 import. After selecting the desired file, Blue will show the following
 MIDI Import Settings dialog for you to configure how you would like to
@@ -28,15 +28,15 @@ Instrument ID
     the \<INSTR\_ID\> key within the note template. This value is
     treated as a string to allow users to assign the track information
     to Csound named instruments. If one is doing so, one must quote the
-    name, i.e. use \"trumpet\" instead of trumpet (without quotes),
+    name, i.e. use "trumpet" instead of trumpet (without quotes),
     otherwise the output will not be legal Csound SCO. Default value is
     the number of the MIDI track.
 
 Note Template
 
 :   Template note text to use for generating Csound SCO from the MIDI
-    data. The default note template is \"i\<INSTR\_ID\> \<START\>
-    \<DUR\> \<KEY\> \<VELOCITY\>\". By having note templates, the user
+    data. The default note template is "i\<INSTR\_ID\> \<START\>
+    \<DUR\> \<KEY\> \<VELOCITY\>". By having note templates, the user
     can massage the note information to work with any number of pfields
     that their instruments require.
 
@@ -56,7 +56,7 @@ Note Template
 
       : Key Values
 
-    The button labelled \"Reference\" on the dialog will pop open the
+    The button labelled "Reference" on the dialog will pop open the
     above information for quick reference of the allowable replacement
     keys for note templates.
 
@@ -65,7 +65,7 @@ Trim Time
 :   This option will shift the generated SoundObject to the time of the
     first note and then take the generated notes for the track and shift
     them all so that the first note starts at time 0 so that there is no
-    empty time at the beginning of the track\'s note information.
+    empty time at the beginning of the track's note information.
 
 After finishing configuring settings for the imported MIDI data, Blue
 will generate the notes with one SoundLayer per MIDI track, and on each
@@ -83,5 +83,5 @@ results are unpredictable. Also, only MIDI files where time is PPQ is
 supported at the moment (non-SMPTE). Users wanting support for either of
 these cases or have other ideas they would like implemented are
 requested to make feature requests on the Blue mailing list or to use
-the help menu \"Request a Feature\" option.
+the help menu "Request a Feature" option.
 :::

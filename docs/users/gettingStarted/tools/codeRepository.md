@@ -23,4 +23,4 @@ associated with the code snippet.
 
 When you are done editing your code repository, the next time you
 rt-click on a text area, the code popup will reflect the changes you
-have made, including any new code groups and snippets you\'ve added.
+have made, including any new code groups and snippets you've added.

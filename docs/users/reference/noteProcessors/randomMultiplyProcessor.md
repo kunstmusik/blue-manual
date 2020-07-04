@@ -28,7 +28,7 @@ set to 2.0, and pfield set to 4, results in the following:
 (The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)
 
-If seedUsed is set to \"true\", the random number generator will be
+If seedUsed is set to "true", the random number generator will be
 initialized using the given seed value. The seed value must be a valid
 long integer value (-2\^63, 2\^63-1).
 

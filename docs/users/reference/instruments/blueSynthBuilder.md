@@ -13,7 +13,7 @@ About BlueSynthBuilder
 It has been my experience that most Csound instruments tend to be
 limited in user configurability of parameters than commercial
 synthesizer counterparts. It is my belief that a large part of that is
-due to the text-based nature of instruments. I\'ve found that:
+due to the text-based nature of instruments. I've found that:
 
 -   Modular instruments are easier to express connections of modules via
     text or code rather than visual paradigms (patch cables, line
@@ -26,14 +26,14 @@ due to the text-based nature of instruments. I\'ve found that:
     and limits
 
 Going completely graphical for the building of instruments, in the case
-of systems like Max/PD/jMax or Reaktor, I\'ve found that the
-instrument\'s design no longer become apparent when viewing complicated
+of systems like Max/PD/jMax or Reaktor, I've found that the
+instrument's design no longer become apparent when viewing complicated
 patches. On the other hand, using completely textual systems such as
 Csound or C++ coding, the design of the instrument has a degree of
 transparency, while the configuration of the parameters of the
 instrument becomes difficult to understand and invites less exploration.
 
-Using systems like MacCsound\'s widgets or Blue\'s BlueSynthBuilder, one
+Using systems like MacCsound's widgets or Blue's BlueSynthBuilder, one
 is able to use graphical elements where they excel, in showing
 configuration of an instrument and for manipulation of values, while
 using textual elements where they excel, in the design of instruments
@@ -42,7 +42,7 @@ and expressing the connections between modules.
 I have found that this sort of hybrid design offers the best of both
 worlds and when I am spending time building and using new instruments, I
 can quickly design an instrument and also explore the parameters of an
-instrument\'s design by using BlueSynthBuilder.
+instrument's design by using BlueSynthBuilder.
 
 Using BlueSynthBuilder
 ----------------------
@@ -62,13 +62,13 @@ The Interface editor has two modes:
 
 The user can add interface elements and modify their properties using
 the property sheet on the right. To enable edit mode, click on the
-\"Edit Enabled\" checkbox in the upper right of the BSB instrument
+"Edit Enabled" checkbox in the upper right of the BSB instrument
 editor.
 
 Once the edit mode is enabled, right clicking in the main panel will
 show a popup menu of available UI widgets for your instrument. After
 selecting and inserting a widget, clicking on the widget will hilight it
-and show it\'s properties in the property editor. You can also then drag
+and show it's properties in the property editor. You can also then drag
 the widget around to place as you desire.
 
 You may select multiple widgets by shift-clicking them, or by clicking
@@ -104,11 +104,11 @@ API.
 
 The code editor is where the Csound instrument code is to be written. To
 use the values from the widgets, use the replacement key of the widget
-within \< \>\'s, and that value will be replaced when the instrument is
+within \< \>'s, and that value will be replaced when the instrument is
 generated (the replacement key is usually the objectName of the object;
 see table below).
 
-For example, if there\'s a knob with an objectName of *amplitude* and
+For example, if there's a knob with an objectName of *amplitude* and
 the value is set to 0.5, the following instrument code:
 
     iamp    = <amplitude> * 0dbfs
@@ -125,7 +125,7 @@ will generate the following instrument:
             outs aout, aout
 
 For convenience, the standard code completion popup will auto-complete
-text for replacement keys. When editing code, type \"\<\" then press
+text for replacement keys. When editing code, type "\<" then press
 ctrl-space. The standard code completion popup will show a list of all
 of the replacement keys that have been assigned to interface objects.
 Selecting a replacement key will insert that key into the code text
@@ -139,7 +139,7 @@ code that can be encapsulated with the instrument allows modeling things
 like body filters as well as adding effects like chorus/echo/reverb to
 the instrument itself. While one can always add always-on effects to a
 mixer channel, having the capability to add these features to an
-instrument can be useful as part of the instrument\'s design.
+instrument can be useful as part of the instrument's design.
 
 To use this, one writes code in teh Always-On code tab. The code from
 this tab will be used to generate an instrument that will be run after
@@ -187,21 +187,21 @@ instruments:
 
 -   For the Label object, you are able to style the label by using HTML.
     To use this feature, when setting the text of the label, enter the
-    HTML label within \<html\> tags, such as \"\<html\>\<font
-    size=\"+1\"\>My Label\</font\>\</html\>\".
+    HTML label within \<html\> tags, such as "\<html\>\<font
+    size="+1"\>My Label\</font\>\</html\>".
 
 ### Groups
 
 Widgets may be organized into Groups that provide titled border around
 the set of widgets. Double-clicking on a group will allow editing of the
-group\'s set of widgets. The Breadcrumb bar that appears when edit mode
+group's set of widgets. The Breadcrumb bar that appears when edit mode
 is enabled allows for navigating back up the hierarchy of groups to the
 root group for the interface.
 
 Users may either start by creating an empty group, double-clicking, then
 editing the interface for the group. Optionally, they may select a
 number of existing widgets, right-click on one of the selected widgets,
-then choose \"Make Group\" to embed the selected widgets within a group.
+then choose "Make Group" to embed the selected widgets within a group.
 
 ### Presets
 
@@ -213,12 +213,12 @@ x/y coordinates or other configuration for the widget, only the value.
 You can add presets and folders of presets using the presets menu in the
 upper left of the BSB editor. Each menu has an option for adding a
 folder or adding a preset to it. You can also manage presets by using
-the \"Manage Presets\" button. This will open up a dialog with a tree
+the "Manage Presets" button. This will open up a dialog with a tree
 view of your presets, allowing you to rename the presets and folders, as
 well as reorganize by dragging and dropping. You can remove presets and
 folders here by right-clicking and selecting the remove option. Changes
 in the dialog are not committed until you press the save button, so if
-you close the window or cancel, you\'re old settings will be still in
+you close the window or cancel, you're old settings will be still in
 tact.
 
 ### Automation {#bsbAutomation}
@@ -241,15 +241,15 @@ Note
 :::
 
 In 0.124.3, a change was made that breaks backwards compatibility.
-Previously, if a BSBObject was set to have \"Automation Allowed\" but
+Previously, if a BSBObject was set to have "Automation Allowed" but
 was not itself automated, it would compile as a constant in the
 generated CSD. As of 0.124.3, if a widget is made to allow automation,
 the Csound code that uses the widget value must accept a k-rate signal,
 whether the API is used or not.
 
 If you have a project that rendered fine before 0.124.3 but afterwards
-can not render due to problems with Csound complaining that \"k-rate
-signals not allowed\", then you will need to either set the widget to
+can not render due to problems with Csound complaining that "k-rate
+signals not allowed", then you will need to either set the widget to
 not allow automation or change the Csound code so that it will work with
 the generated k-rate signal.
 :::
@@ -259,7 +259,7 @@ the generated k-rate signal.
 Since 0.117.0, users are able to randomize values for widgets in a
 BlueSynthBuilder instrument. To use, first choose which widgets are set
 to be randomized in edit mode, then in usage mode, right click on the
-panel in an area not covered by a widget, then select \"Randomize\" from
+panel in an area not covered by a widget, then select "Randomize" from
 the popup menu. The following widgets are cable of being randomized:
 
 -   Knob
