@@ -1,5 +1,4 @@
-NoteProcessors 
-==============
+# NoteProcessors
 
 NoteProcessors are used in conjunction with soundObjects, and are used
 post-generation of the soundObject's noteList. They are used to modify
@@ -15,3 +14,8 @@ generated and before time behavior is applied. Processing starts with
 the first NoteProcessor in the chain and the results of that are passed
 down the chain.
 
+ADDPROCESSOR EQUALSPROCESSOR INVERSIONPROCESSOR LINEADDPROCESSOR
+LINEMULTIPLYPROCESSOR MULTIPLYPROCESSOR PCHADDPROCESSOR
+PCHINVERSIONPROCESSOR PYTHONPROCESSOR RANDOMADDPROCESSOR
+RANDOMMULTIPLYPROCESSOR RETROGRADEPROCESSOR ROTATEPROCESSOR
+SUBLISTPROCESSOR SWITCHPROCESSOR TIMEWARPPROCESSOR TUNINGPROCESSOR

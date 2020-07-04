@@ -1,14 +1,9 @@
-Glossary
-========
+# Glossary
 
-.blue directory
+# 
 
-:   
+  - .blue directory
 
-blue Home
+  - blue Home
 
-:   
-
-blue PCH
-
-:   
+  - blue PCH

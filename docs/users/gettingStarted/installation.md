@@ -1,8 +1,6 @@
-Installation
-============
+# Installation
 
-Requirements
-------------
+## Requirements
 
 Blue requires Java 11 or greater JVM (Java Virtual Machine) to be
 installed on your system, as well as Csound. Java installations usually
@@ -26,8 +24,7 @@ On this page, look for the download link for your platform. Be sure to
 choose the version of JDK that matches your CPU type and Csound version
 (choose 64-bit if in doubt).
 
-Installing Blue 
----------------
+## Installing Blue
 
 To install Blue, you should download the latest ZIP file from the Blue
 releases page [here](https://github.com/kunstmusik/blue/releases). For
@@ -36,16 +33,16 @@ can double-click the Application to run, as well as copy it to your
 Applications folder to install it.
 
 For Linux and Windows users, download the appropriate zip file and unzip
-it. Inside of the bin folder you will see a "blue" script for Linux or
-a "blue64.exe" file for use on Windows. (A 32-bit version,
-"blue.exe", is also included for those using an older version of
-Csound that is compiled for 32-bit Windows.)
+it. Inside of the bin folder you will see a "blue" script for Linux or a
+"blue64.exe" file for use on Windows. (A 32-bit version, "blue.exe", is
+also included for those using an older version of Csound that is
+compiled for 32-bit Windows.)
 
 Note: After starting Blue, you may want to explore the example projects
 and pieces found in the Blue/example folder (or right-click and explore
 contents of Blue.app/example if on OSX).
 
-### Platform Specific Notes 
+### Platform Specific Notes
 
 The section below has notes for individual platforms.
 
@@ -57,8 +54,7 @@ To make use of the function key shortcuts (F1-F12), you will need to go
 into System Preferences, choose Keyboard, then enable "Use all F1, F2,
 etc. keys as standard function keys".
 
-Installing Csound 
------------------
+## Installing Csound
 
 Blue is able to interact with Csound either by calling Csound like a
 command-line program (classic Blue), or by directly interacting with
@@ -66,7 +62,7 @@ Csound via the Csound API. Instructions on setting up Blue for each
 method is described below as well as discussion on benefits and
 limitations.
 
-### Using Blue with command-line Csound 
+### Using Blue with command-line Csound
 
 This may be considered "classical" Blue usage and interaction with
 Csound as this was the method by which Blue ran with Csound for the
@@ -79,8 +75,8 @@ file.
 The benefit to this mode of Csound usage is that it is easier to switch
 out your version of Csound or use multiple versions of Csound on the
 same computer. It is also a little more stable than using the API in
-that if Csound crashes for some reason, it won't take down Blue with
-it. Also, it may be more performant to use the command-line mode. These
+that if Csound crashes for some reason, it won't take down Blue with it.
+Also, it may be more performant to use the command-line mode. These
 benefits however need to be weighed against the benefits of using the
 API, which is described below.
 
@@ -88,7 +84,7 @@ To use the command-line version, one needs to set up the Csound
 executable option for Realtime and Disk Render settings in [Program
 Options](#programOptions).
 
-### Using Blue with the Csound API 
+### Using Blue with the Csound API
 
 Enabling Blue to use the Csound API when rendering with Csound opens up
 the ability to manipulate and edit widget values and automations in
@@ -99,10 +95,13 @@ Csound. Blue should work out-of-the-box with the API if Csound is
 installed using the installers provided on Github, or installed via a
 package manager if on Linux.
 
-::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::
+
+</div>
 
 Blue currently only works with the API if the version of Csound used is
 compiled using 64-bit doubles. (The float version is not supported when
@@ -122,7 +121,8 @@ x86\_64. On Linux, it is likely that the version of Csound you
 install/compile and the Java Runtime that you install will likely be the
 same, but if the API does not show as available it may be something to
 check.
-:::
+
+</div>
 
 Blue uses the CsoundJNI Java binding for Csound. This requires that Blue
 can find your installed version of Csound but is configured to do so for
@@ -139,8 +139,10 @@ example, if the directory where csound64.dll is located is in
 c:\\myCsound, open up blue/etc/blue.conf and modify the default so that
 it contains:
 
-    default_options="--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound"
-            
+``` 
+default_options="--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound"
+        
+```
 
 Linux users should install a doubles version of Csound. The version of
 Csound found in package repositories should be one compiled for doubles.

@@ -1,5 +1,4 @@
-PythonObject 
-============
+# PythonObject
 
 Accepts NoteProcessors: yes
 
@@ -12,26 +11,30 @@ Orchestral Composition library, found in Blue's application directory
 under blue/pythonLib.
 
 After writing your script to generate notes, assign the string value of
-the notes to the variable 'score'. Blue will then read in the value
-from that variable and continue processing.
+the notes to the variable 'score'. Blue will then read in the value from
+that variable and continue processing.
 
-    temp = ""
+``` 
+temp = ""
 
-    for i in range(4):
-      temp += "i1 %d 1 %s %s\n"%(i, "8.0" + str(i), 80)
+for i in range(4):
+  temp += "i1 %d 1 %s %s\n"%(i, "8.0" + str(i), 80)
 
-    score = temp
-        
+score = temp
+    
+```
 
 The above example script will generate four notes at ascending half
 steps. If the PythonObject is set with a start time of 0 and a duration
 of 2, then it will generate the following score:
 
-    i1  0.0 0.5 8.00    80
-    i1  0.5 0.5 8.01    80
-    i1  1.0 0.5 8.02    80
-    i1  1.5 0.5 8.03    80
-        
+``` 
+i1  0.0 0.5 8.00    80
+i1  0.5 0.5 8.01    80
+i1  1.0 0.5 8.02    80
+i1  1.5 0.5 8.03    80
+    
+```
 
 Blue processes soundObjects by going through each SoundLayer and
 generating score for each object within each layer. This is useful to
@@ -50,13 +53,11 @@ project.
 
 The following variables are avaialable from Blue:
 
-blueDuration
+  - blueDuration  
+    Duration of the Python SoundObject
 
-:   Duration of the Python SoundObject
-
-blueProjectDir
-
-:   The location of the current project's directory. Includes path
+  - blueProjectDir  
+    The location of the current project's directory. Includes path
     separator at end.
 
 There is a checkbox entitled "Process at Start". Selecting this option
@@ -71,6 +72,6 @@ be able to be run either. If you are rendering from the beginning of a
 project, this won't be an issue, but if you're starting work in the
 middle of a project, you will need to evaluate that utility PythonObject
 at least once. You can either do a run from the start at least once, use
-the "Test" button to have that evaluated, or use "Process at Start"
-and have Blue ensure it is loaded into the python interpreter when you
-load your projects.
+the "Test" button to have that evaluated, or use "Process at Start" and
+have Blue ensure it is loaded into the python interpreter when you load
+your projects.

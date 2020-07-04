@@ -1,13 +1,16 @@
-BlueX7 
-======
+# BlueX7
 
-::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::
+
+</div>
 
 This instrument is currently undergoing re-implementation.
-:::
+
+</div>
 
 A 6 Operator Phase Modulation instrument using Russell Pinkston's DX7
 Emulation Patches.
@@ -46,15 +49,15 @@ Finally you have the 6 operators plus an envelope generator (PEG) each
 on its own tab. All six operators have the same parameters divided in
 the following sections:
 
--   Oscillator
+  - Oscillator
 
--   Keyboard Level Scaling
+  - Keyboard Level Scaling
 
--   Operator
+  - Operator
 
--   Modulation sensitivity
+  - Modulation sensitivity
 
--   Envelope Generator
+  - Envelope Generator
 
 An important feature of the BlueX7 is that it can import DX7 banks. A
 large collection can be found in the bigdx7.zip file within the

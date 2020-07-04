@@ -100,7 +100,7 @@ API.
 
 The code editor is where the Csound instrument code is to be written. To
 use the values from the widgets, use the replacement key of the widget
-within \< \>'s, and that value will be replaced when the instrument is
+within < \>'s, and that value will be replaced when the instrument is
 generated (the replacement key is usually the objectName of the object;
 see table below).
 
@@ -121,11 +121,11 @@ will generate the following instrument:
             outs aout, aout
 
 For convenience, the standard code completion popup will auto-complete
-text for replacement keys. When editing code, type "\<" then press
+text for replacement keys. When editing code, type "<" then press
 ctrl-space. The standard code completion popup will show a list of all
 of the replacement keys that have been assigned to interface objects.
 Selecting a replacement key will insert that key into the code text
-area, already formatted within \< and \>.
+area, already formatted within < and \>.
 
 ##### Always-On Instrument Code
 
@@ -185,8 +185,8 @@ Widget Values
 
   - For the Label object, you are able to style the label by using HTML.
     To use this feature, when setting the text of the label, enter the
-    HTML label within \<html\> tags, such as "\<html\>\<font
-    size="+1"\>My Label\</font\>\</html\>".
+    HTML label within <html\> tags, such as "<html\><font
+    size="+1"\>My Label</font\></html\>".
 
 ### Groups
 

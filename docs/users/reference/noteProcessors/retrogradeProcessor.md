@@ -1,5 +1,4 @@
-Retrograde Processor 
-====================
+# Retrograde Processor
 
 Parameters: none
 

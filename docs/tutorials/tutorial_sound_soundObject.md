@@ -1,5 +1,4 @@
-Introduction
-============
+# Introduction
 
 One of the more curious soundObjects in blue is the *Sound SoundObject*,
 which allows for the direct writing of instruments in the score. It's
@@ -7,29 +6,29 @@ origin came a long time ago now when I was first beginning to create
 more soundObjects for blue. I was thinking of what exactly should be
 possible for a soundObject, thinking that if someone were to make a
 soundObject, they should be able to also embed instruments and f-tables
-that they'll know will always be generated and available. The case
-which I was thinking about at the time were non-generic soundObjects
-like a drum machine, where the soundObject would not only have a GUI to
-develop pattern tracks for different drum sounds, but also would be able
-to furnish the instruments and f-tables needed to generate those sounds,
+that they'll know will always be generated and available. The case which
+I was thinking about at the time were non-generic soundObjects like a
+drum machine, where the soundObject would not only have a GUI to develop
+pattern tracks for different drum sounds, but also would be able to
+furnish the instruments and f-tables needed to generate those sounds,
 the idea being that one could release a soundObject that a user could
-use "straight out of the box", no instrument writing or tables
-required. That design decision eventually lead me to the conception of
-the *Sound SoundObject*, which uses those mechanisms that were put in
-place for all soundObjects. Theoretically I was very fascinated with the
-possibility of writing instruments within the main scoring area, mixing
-note blocks with pure sound blocks. It became possible to really compose
-with the sound in a very direct manner; saying things like "I want a
-sine wave here with this envelope, then a triangle wave here, and on top
-of that i want a processed sample sound to come in here" now had a
-direct translation. You didn't need to write the instrument, then write
-a note for it, and then have to work with both of them as separate
-entities. You could just add a *Sound SoundObject*block on the timeline,
-write your sound using standard orc code, and move it around in time on
-the timeline. After having thought through that possibility to express
-my musical goals by using the *Sound SoundObject*, I found that it
-opened up a lot of how I saw blue's timeline as well as how I thought
-about ways to work with blue.
+use "straight out of the box", no instrument writing or tables required.
+That design decision eventually lead me to the conception of the *Sound
+SoundObject*, which uses those mechanisms that were put in place for all
+soundObjects. Theoretically I was very fascinated with the possibility
+of writing instruments within the main scoring area, mixing note blocks
+with pure sound blocks. It became possible to really compose with the
+sound in a very direct manner; saying things like "I want a sine wave
+here with this envelope, then a triangle wave here, and on top of that i
+want a processed sample sound to come in here" now had a direct
+translation. You didn't need to write the instrument, then write a note
+for it, and then have to work with both of them as separate entities.
+You could just add a *Sound SoundObject*block on the timeline, write
+your sound using standard orc code, and move it around in time on the
+timeline. After having thought through that possibility to express my
+musical goals by using the *Sound SoundObject*, I found that it opened
+up a lot of how I saw blue's timeline as well as how I thought about
+ways to work with blue.
 
 As a Csound user or general electronic musician, it might seem strange
 to think of directly writing instruments in a score, especially in
@@ -40,57 +39,58 @@ creation and inclusion into blue it has been used and has played a part
 of just about every piece that I've worked on.
 
 Note: It's not that it's impossible to implement this any other way.
-Really, it's just a single instrument with a single note, but, that's
-a technical issue, an implementation issue. The interesting thing is
-that when working with it, it's really a different thing altogether
+Really, it's just a single instrument with a single note, but, that's a
+technical issue, an implementation issue. The interesting thing is that
+when working with it, it's really a different thing altogether
 conceptually. It's the *sound* *soundObject* in the context of the
 timeline that makes its usage interesting and useful(well, for me at
-least!).
+least\!).
 
 The following sections will go over how to use *Sound SoundObject,* what
 happens when it gets processed by blue, as well as some usage scenarios
 and patterns that have arose while using it in my own work.
 
-How to Use the Sound SoundObject
-================================
+# How to Use the Sound SoundObject
 
 First, insert the *Sound SoundObject* as you would any soundObject by
 rt-clicking (for Mac users, hold down the apple key and click) on the
-main timeline of the score area and chose "Add New Sound" from the
-popup menu.
+main timeline of the score area and chose "Add New Sound" from the popup
+menu.
 
 A *Sound SoundObject* will be inserted wherever you clicked on the
 timeline. You'll notice that this soundObject acts and behaves like any
 other soundObject: you can move it around in time, drag to change the
-duration, change it's name in the soundObject property dialog, and
-click on it to edit it. You won't be able to add any noteProcessors to
-it, however, but that will be explained more in detail in the "What
-happens when it gets processed" section.
+duration, change it's name in the soundObject property dialog, and click
+on it to edit it. You won't be able to add any noteProcessors to it,
+however, but that will be explained more in detail in the "What happens
+when it gets processed" section.
 
-If you click on the soundObject to pull up its editor, you'll see a
-text box with a default message "insert instrument text here". In the
-editor is where you write your instrument definition, but without
-writing any "instr 11" or "endin": the number of the instrument and
-the correct formatting of the instrument is handled by the soundObject.
-For a simple example, you might try:
+If you click on the soundObject to pull up its editor, you'll see a text
+box with a default message "insert instrument text here". In the editor
+is where you write your instrument definition, but without writing any
+"instr 11" or "endin": the number of the instrument and the correct
+formatting of the instrument is handled by the soundObject. For a simple
+example, you might try:
 
-     
-    aout    oscili 30000, 440, 1
-            outs aout, aout
+``` 
+ 
+aout    oscili 30000, 440, 1
+        outs aout, aout
+```
 
 where the 1 at the end of the oscili line is an ftable numbered 1,
 defined in the tables editor under the tables tab. (For our example,
-let's go ahead and definte the ftable as "f1 0 65536 10 1", which is
-a sin wave). At this point you might want to try listening your work
-file with the play button (assuming you've set up the command line
-under project properties to a command line that will output to speaker;
-for more information on this, please consult the blue user's manual).
-What you should hear is that where you've put your *Sound SoundObject*
-on the timeline (i.e. starts at .5 seconds) should play the sound
-you've written, in this example case, a sine wave at 440hz at 30000
-amp, playing at equal volume out both left and right channels.
+let's go ahead and definte the ftable as "f1 0 65536 10 1", which is a
+sin wave). At this point you might want to try listening your work file
+with the play button (assuming you've set up the command line under
+project properties to a command line that will output to speaker; for
+more information on this, please consult the blue user's manual). What
+you should hear is that where you've put your *Sound SoundObject* on the
+timeline (i.e. starts at .5 seconds) should play the sound you've
+written, in this example case, a sine wave at 440hz at 30000 amp,
+playing at equal volume out both left and right channels.
 
-And that's pretty much it! From here you might want to try copying the
+And that's pretty much it\! From here you might want to try copying the
 block and pasting it a few times, changing some parameters, embellishing
 your instrument definitions, etc. Also, you might want to try mixing
 this with other soundObject, i.e. write some instruments in the
@@ -98,8 +98,7 @@ orchestra manager, then write some genericScore soundObjects to play
 those instruments, as well as use some *Sound SoundObjects* directly on
 the timeline.
 
-What Happens When It Gets Processed
-===================================
+# What Happens When It Gets Processed
 
 If your confused as to what's going on, it'll probably help to know
 exactly what happens when blue processes *Sound SoundObjects.* blue,
@@ -126,12 +125,11 @@ note will be:
 
     i2 0.5 2
 
-Perhaps the best way to see it is to do the simple example from the
-"How to use the Sound SoundObject" section, generate a CSD file (from
-the Project menu, select "Generate CSD to file"), and inspect what got
-generated. Comparing the soundObject's representation on the timeline
-as a sound and seeing how it got generated out might explain things
-better.
+Perhaps the best way to see it is to do the simple example from the "How
+to use the Sound SoundObject" section, generate a CSD file (from the
+Project menu, select "Generate CSD to file"), and inspect what got
+generated. Comparing the soundObject's representation on the timeline as
+a sound and seeing how it got generated out might explain things better.
 
 (NOTE: because the *Sound SoundObject* only write out the three
 p-fields, using a noteProcessor really doesn't have any purpose, which
@@ -139,16 +137,15 @@ is why the *sound soundObject* does not support noteProcessors)
 
 Ultimately in the lowest level implementation, there is a separation of
 a note as well as an instrument, but within blue, that separation is
-hidden from the user. From the user's point of view, all they have to
-do is write their sounds on the timeline, and they don't have to worry
+hidden from the user. From the user's point of view, all they have to do
+is write their sounds on the timeline, and they don't have to worry
 about numbering the instruments or creating notes for that instrument.
 
-Usage Scenarios and Patterns
-============================
+# Usage Scenarios and Patterns
 
 Most of the time I've found myself using the *Sound SoundObject* at the
-start of a project when I'm creating new sounds for a piece. I find
-it's good a prototyping tool, initially working with sounds on the
+start of a project when I'm creating new sounds for a piece. I find it's
+good a prototyping tool, initially working with sounds on the
 scoreTimeCanvas (this is the name of java object that is the main score
 timeline area). Usually, when I write instruments in the *Sound
 SoundObject*, I define all of the i-time variables in a way that will
@@ -184,9 +181,8 @@ then converting them into instruments. It's a nice separation to have
 the ability to work just with sounds at the start of a piece for me, as
 really, that's what I'm concerned with at the beginning of a piece,
 finding the sounds and initially sculpting the sound space that the
-piece will take on. After I find what I'm looking for, it's easy for
-me to convert all the sounds into instruments and then proceed from
-there.
+piece will take on. After I find what I'm looking for, it's easy for me
+to convert all the sounds into instruments and then proceed from there.
 
 Sometimes when you're wanting to just to build a single sound or
 texture, maybe to use as a sound effect in project, you might not really
@@ -196,19 +192,19 @@ SoundObject* would be the first thing I would use, and might really be
 the only soundObject I would use. Notes, as a concept, somtimes really
 don't play a part of the musical model for a piece. It's not that you
 have all these instruments being played everywhere, but rather you have
-sounds going on here and there. It might seem like I'm being a little
-to theoretical here, but I really think it does play a part in the work
+sounds going on here and there. It might seem like I'm being a little to
+theoretical here, but I really think it does play a part in the work
 process.
 
-In the situations I've been in when I've been asked to make a sound
-for a friend's website or game, I've found it nice to fire up blue,
-set the timeline to a really close-up zoom on time, and just work from
-there to craft a sound. I would add a *Sound SoundObject* here and
-there, maybe use some global variables so I can make *Sound
-SoundObjects* that might just function as an lfo or other control
-instrument, moving things around just slightly around in time to sculpt
-the sound. An oscillator here, maybe blending it into an fm sound, throw
-in a noise generator with some formants and a notch filter sweep\...
+In the situations I've been in when I've been asked to make a sound for
+a friend's website or game, I've found it nice to fire up blue, set the
+timeline to a really close-up zoom on time, and just work from there to
+craft a sound. I would add a *Sound SoundObject* here and there, maybe
+use some global variables so I can make *Sound SoundObjects* that might
+just function as an lfo or other control instrument, moving things
+around just slightly around in time to sculpt the sound. An oscillator
+here, maybe blending it into an fm sound, throw in a noise generator
+with some formants and a notch filter sweep...
 
 Sometimes I find myself just making sounds with blue and Csound. It
 might be because I'm just curious to try something out, I might be
@@ -220,9 +216,9 @@ haven't really ever used.
 
 It's times like this when I find myself just using the *Sound
 SoundObject*, as I'm not interested in the note-instrument paradigm,
-it's the furthest thing from my mind. I'm focused on achieving a
-sound, or on experimenting to see what is the sound of instrument code
-I've just written. And I want the flexibility to add more sounds on the
+it's the furthest thing from my mind. I'm focused on achieving a sound,
+or on experimenting to see what is the sound of instrument code I've
+just written. And I want the flexibility to add more sounds on the
 timeline: I don't want to break my concentration to go and think about
 numbering instruments, writing notes, moving the note around in time. I
 want to see and work with it all of it in one place., as that's what's
@@ -235,16 +231,15 @@ would still need to know the basics of how Csound works, what is a CSD,
 and understand how things in blue map the different parts if itself to
 the different parts of a CSD file).
 
-Final Thoughts
-==============
+# Final Thoughts
 
-Thanks for reading the tutorial! I hope this tutorial has helped to show
-how to use *Sound SoundObject*in blue, as well as helped show some ways
-in which you might want to use it.
+Thanks for reading the tutorial\! I hope this tutorial has helped to
+show how to use *Sound SoundObject*in blue, as well as helped show some
+ways in which you might want to use it.
 
 If you have any comments, suggestions for improving this tutorial, or
 questions, please feel free to email me at <stevenyi@gmail.com.>
 
-Thanks and good luck!
+Thanks and good luck\!
 
 Steven

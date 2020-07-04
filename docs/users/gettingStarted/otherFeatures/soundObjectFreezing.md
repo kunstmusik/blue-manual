@@ -1,5 +1,4 @@
-Sound Object Freezing 
-=====================
+# Sound Object Freezing
 
 Sound Object Freezing allows you to free up CPU-cycles by pre-rendering
 soundObjects. Frozen soundObjects can work with global processing
@@ -38,18 +37,20 @@ versions will be more polished.
     FrozenSoundObject. The FrozenSoundObject keeps a copy of the
     original soundObject (for unfreezing), as well as shows the name of
     the frozen wav file, the original soundObject's duration, and the
-    frozen wav file's duration (not necessarily the same, as is the
-    case if using global reverb, for example).
+    frozen wav file's duration (not necessarily the same, as is the case
+    if using global reverb, for example).
 
 5.  When you do a render of the entire piece now, the frozen sound
     object generates a very simple wav playing csound instrument that
     will play the rendered wav file as-is. The instrument looks
     something like:
-
-        aout1, aout2    diskin    p4         
-                        outs      aout1, aout2 
-                  
-
+    
+    ``` 
+    aout1, aout2    diskin    p4         
+                    outs      aout1, aout2 
+              
+    ```
+    
     and the FrozenSoundObject only generates a single note that has the
     start-time, the duration of the frozen wav file, and the name of the
     file. This will end up playing the soundFile exactly as if the SCO
@@ -58,12 +59,14 @@ versions will be more polished.
     effects originally, the would be generated as part of the frozen
     file.
 
--   You can select multiple soundObjects and batch freeze and unfreeze
+<!-- end list -->
+
+  - You can select multiple soundObjects and batch freeze and unfreeze
     -the generated wav file may be longer than the original soundObject,
     due to global processing instruments (like reverb, echo, etc.) This
     is taken into account.
 
--   The freezing system does \*not\* work for all graph toplogies. If
+  - The freezing system does \*not\* work for all graph toplogies. If
     you're using soundObjects with instruments used as control signals,
     this won't work unless the notes for the instruments they are
     controlling are alsoin the same soundObject. I.e. I have one
@@ -71,31 +74,31 @@ versions will be more polished.
     I have one instrument thatuses those global variables. This could
     work though if you repackage the set of soundObjects into a
     polyObject. Probably best to generalize as:
-
-    -   Your soundObject must be self-contained
-
-    -   All sound output from instruments go directly out or piped
+    
+      - Your soundObject must be self-contained
+    
+      - All sound output from instruments go directly out or piped
         through always-on instruments, that most likely should take
-        advantage of the \<total\_dur\> variable, as well as the new
-        \<processing\_start\> variable (more about this when I release,
+        advantage of the <total\_dur\> variable, as well as the new
+        <processing\_start\> variable (more about this when I release,
         but together with freezing, this lets you set the start time of
         always-on instruments to the first time where non-frozen
         soundObjects occur, so if the first half of your piece is frozen
-        and you're unfrozen stuff is in the second half, you don't
-        need always on instruments to be turned on until the second half
-        as the first half is routed to outs
+        and you're unfrozen stuff is in the second half, you don't need
+        always on instruments to be turned on until the second half as
+        the first half is routed to outs
 
--   This system is tested with 2-channel pieces. I'm not sure if this
+  - This system is tested with 2-channel pieces. I'm not sure if this
     will work with higher number of channels, but I don't see why it
     wouldn't.
 
--   Changing the number of channels on the project after a freeze may
+  - Changing the number of channels on the project after a freeze may
     cause Csound errors when rendering the frozen soundObject (can be
     remedied by unfreezing and refreezing)
 
--   Frozen files are referenced relatively to the project file, so you
+  - Frozen files are referenced relatively to the project file, so you
     are free to move your project directory around or rename it and the
     frozen files will work fine.
 
--   Freezing SoundObjects uses the same settings as found in the
+  - Freezing SoundObjects uses the same settings as found in the
     project's Disk Render settings (e.g., sr, ksmps, 0dbfs).

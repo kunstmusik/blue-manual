@@ -1,5 +1,4 @@
-Mixer
-=====
+# Mixer
 
 Mixer
 
@@ -9,37 +8,32 @@ The Mixer system in Blue allows for graphically editing levels for
 instruments, applying pre- and post-fader effects, and routing and
 mixing of signals through subchannels.
 
-Architecture
-------------
+## Architecture
 
 The Mixer system has three panel sections:
 
-Channels
-
-:   Channels are auto-created and bound to Instrument ID's in the
+  - Channels  
+    Channels are auto-created and bound to Instrument ID's in the
     Orchestra for a Project. In the Mixer Dialog they are located in the
     first section on the left within a splitpane that separates them
     from the SubChannels. Channels can be set to route to either
     SubChannels or directly to the Master Channel.
 
-SubChannels
-
-:   SubChannels are user-created and are located in the center section
+  - SubChannels  
+    SubChannels are user-created and are located in the center section
     of the Mixer Dialog, on the right side of the splitpane. Channels
     can be set to route to SubChannels, and SubChannels can route into
     other SubChannels or out to the Master Channel.
 
-Master Channel
-
-:   The Master Channel is located on the right side of the Mixer Dialog.
+  - Master Channel  
+    The Master Channel is located on the right side of the Mixer Dialog.
     There is only one master Channel per project which all channel and
     subchannel signals ultimately route through.
 
 Each channel allows for applying effects to the incoming signal either
 pre- or post-fader.
 
-Using the Mixer
----------------
+## Using the Mixer
 
 For most MIDI-based music composition environments, the typical user
 interaction with a Mixer system is that users first create tracks on a
@@ -65,8 +59,8 @@ in the Orchestra allows for the case where users have set multiple
 instruments to the same instrument ID but only having one which is
 enabled. If you then disable one and then enable another instrument to
 test out different instruments with the same musical note data, the
-mixer channel's settings will be maintained for the new instrument as
-it is bound by ID.
+mixer channel's settings will be maintained for the new instrument as it
+is bound by ID.
 
 Channels in themselves can not be created or removed directly by the
 user, but are automatically added or removed depending on how how
@@ -81,8 +75,8 @@ reassigned to the new ID and maintains its settings.
 
 Subchannels are added by right-clicking with in the SubChannels area and
 choosing "Add SubChannel" from the popup menu. To remove a subchannel
-right-click the channel strip to be removed and select "Remove" from
-the popup menu.
+right-click the channel strip to be removed and select "Remove" from the
+popup menu.
 
 At the bottom of every Channel and SubChannel strip is an output
 dropdown box to choose where to route that Chanel's audio to. For
@@ -106,8 +100,10 @@ themselves in Csound code.
 There is also a subChannel form of blueMixerOut available that is able
 to target a subchannel by name. This form is used in the following way:
 
-          blueMixerOut "subChannelName", asig1, asig2 [, asig3...]
-        
+``` 
+      blueMixerOut "subChannelName", asig1, asig2 [, asig3...]
+    
+```
 
 Using this form, the asig signals will be mixed into the subChannel
 given by name. This form is available to use within Instruments but is
@@ -116,8 +112,7 @@ SoundObjects, which do not have channels created for them. This way, you
 can route the output of an AudioFile to a named subchannel and apply
 Effects, etc.
 
-Effects 
--------
+## Effects
 
 Effects in Blue are implemented as User-Defined Opcodes, and
 understanding of how User-Defined Opcodes work in Csound is recommended
@@ -187,26 +182,28 @@ Values from the widgets follow the same principles as BlueSynthBuilder,
 and code completion for opcodes (ctrl-space) and BSB widgets
 (ctrl-shift-space) work within the code editor.
 
-::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::
+
+</div>
 
 Blue currently expects Effects to have nchnls number of channels in and
 out where nchnls is the number set by the project.
-:::
 
-Other Notes
------------
+</div>
 
--   The Extra Render Time option in the Mixer dialog allows the user to
+## Other Notes
+
+  - The Extra Render Time option in the Mixer dialog allows the user to
     add extra time to the end of the score. This is useful to allow time
     for Effects which may have time delay (i.e. 3-second long reverb) to
     have time enough for processing, as well as simply to add time at
     the end of a piece.
 
-Sends
------
+## Sends
 
 Besides effects, users are also able to put in Sends into the pre- and
 post-fader Effects bins. Sends will output the signal from that point in
@@ -216,8 +213,7 @@ and can not be made to create a feedback loop. Users are able to set the
 channel to send to as well as the amount to send. This send amount is
 also able to be Automated, just as the Effects are.
 
-Randomization
--------------
+## Randomization
 
 Widget values are able to be randomized in the same way as in the
 BlueSynthBuilder, and is available in the usage mode when working with
@@ -225,27 +221,26 @@ Effects in the Effects Library or when using Effects from the mixer.
 Please further information, please see the documentation for
 [BlueSynthBuilder Widget Randomization](#bsbWidgetRandomization).
 
-Code Generation Optimization
-----------------------------
+## Code Generation Optimization
 
 Blue's mixer system optimizes when generated code for Csound to use.
 When compiling down to ORC code, Blue checks all signal paths to see if
 any path will result in unused audio and if so, will optimize out any
 code that is along that path. The rules for optimization are as follows:
 
--   If channel does not generate signal to channel output (if no
+  - If channel does not generate signal to channel output (if no
     automation for level fader and fader == -96.0f), only generate code
     up to last send in preFader effects chain
 
--   When processing Sends, checks down the graph to see if send signal
+  - When processing Sends, checks down the graph to see if send signal
     will make it to the Master output or not, checking both down graph
     of output channels as well as sends for each channel. If not, does
     not generate output for Send.
 
--   If channel does not have channel output and no valid prefader sends,
+  - If channel does not have channel output and no valid prefader sends,
     do not generate anything for channel.
 
--   If SubChannel has no signal inputs (whether it's from another
-    Channel's out channel, a Send, or dependency from code that uses
-    the subChannel form of blueMixerOut), do not generate anything for
+  - If SubChannel has no signal inputs (whether it's from another
+    Channel's out channel, a Send, or dependency from code that uses the
+    subChannel form of blueMixerOut), do not generate anything for
     channel.

@@ -1,5 +1,4 @@
-JavaScriptObject 
-================
+# JavaScriptObject
 
 Accepts NoteProcessors: yes
 

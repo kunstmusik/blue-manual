@@ -1,5 +1,4 @@
-Orchestra Manager 
-=================
+# Orchestra Manager
 
 Orchestra Manager
 
@@ -31,9 +30,9 @@ button allows you to create new instruments from one of the available
 Blue instrument types. You can also right-click on the Orchestra to show
 options for copying/pasting. Once instruments are in the Orchestra, you
 can edit what their instrument ID's: these may be either numbers or
-strings (i.e. 3 for "instr 3", violin for "instr violin"). Selecting
-an instrument will show its editor in the Instrument editor section on
-the right.
+strings (i.e. 3 for "instr 3", violin for "instr violin"). Selecting an
+instrument will show its editor in the Instrument editor section on the
+right.
 
 On the right hand side of the Orchestra Manager is the area for editing
 instruments. To make more space available for editing an instrument, you

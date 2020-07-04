@@ -1,8 +1,6 @@
-Parameter Automation 
-====================
+# Parameter Automation
 
-Introduction
-------------
+## Introduction
 
 Blue allows for a few ways to enter in values to automate parameters
 over time. The parameters that can be automated are those in
@@ -11,59 +9,54 @@ Volumes. The following sections will describe how to use Parameter
 Automation and technical details in how this all works within the
 context of Blue and Csound.
 
-Available Parameters
---------------------
+## Available Parameters
 
 Besides the Volume sliders in the mixer and level amount on mixer sends,
 the following GUI Parameters are automatable when found in
 BlueSynthBuilder instruments and Mixer Effects:
 
--   Knob
+  - Knob
 
--   HSlider
+  - HSlider
 
--   HSliderBank
+  - HSliderBank
 
--   VSlider
+  - VSlider
 
--   VSliderBank
+  - VSliderBank
 
--   XYController
+  - XYController
 
--   Dropdown
+  - Dropdown
 
--   Checkbox
+  - Checkbox
 
-Assigning Parameters
---------------------
+## Assigning Parameters
 
 Automations for Parameters are assignable to SoundObject LayerGroup
 Layers that exist in the root Score by selecting from the popup menu
-that appears when selecting the "A" button on a SoundLayer's panel
-(on the left of the timeline). The menu shows what Parameters are
-available to use from Instruments and the Mixer. Those with normal color
-text are Parameters which are not currently automated, those in green
-are ones currently automated in that SoundLayer, and those in orange are
-ones which are currently automated on a different SoundLayer. Selecting
+that appears when selecting the "A" button on a SoundLayer's panel (on
+the left of the timeline). The menu shows what Parameters are available
+to use from Instruments and the Mixer. Those with normal color text are
+Parameters which are not currently automated, those in green are ones
+currently automated in that SoundLayer, and those in orange are ones
+which are currently automated on a different SoundLayer. Selecting
 normal color text will enable automation for that parameter on the
 SoundLayer, while selecting a green colored text one will disable
 automation for that parameter, and selecting an orange one will move it
 from the layer it is currently on to the one being worked with.
 
-Score Timeline Modes
---------------------
+## Score Timeline Modes
 
 The Score timeline has three different modes:
 
-Score
-
-:   This is the primary mode for adding and editing SoundObjects.
+  - Score  
+    This is the primary mode for adding and editing SoundObjects.
     Parameter Automations will be drawn but are not editable in this
     mode.
 
-Single Line
-
-:   This is the primary mode for editing line points for Parameter
+  - Single Line  
+    This is the primary mode for editing line points for Parameter
     Automations. The user is able to edit a single line at a time per
     SoundLayer, and can enter and remove points, modify points by
     dragging them, as well as selecting a region and move the the points
@@ -72,9 +65,8 @@ Single Line
     will not be committed however until the user releases the mouse
     button.
 
-Multi Line
-
-:   This is the mode for selecting and moving line points for all
+  - Multi Line  
+    This is the mode for selecting and moving line points for all
     Parameter Automations on a single or multiple SoundLayers. The use
     can click and drag to create a selection region, then click within
     the selection region to move all points from all lines within the
@@ -82,8 +74,7 @@ Multi Line
     will overwrite the area dragged to. This overwriting will not be
     committed however until the user releases the mouse button.
 
-Editing Automations
--------------------
+## Editing Automations
 
 To edit line values in a Parameter Automation, first switch to Single
 Line mode. Then, for the desired SoundLayer, select which of the
@@ -126,8 +117,7 @@ region completely contains ScoreObjects (i.e., no part of any selected
 ScoreObjects extend outside of the region) you can also scale the
 automation and ScoreObject data together.
 
-Technical Details
------------------
+## Technical Details
 
 Blue's parameter automation system is implemented in Csound code in a
 few different areas. For instruments and effects, when an Automatable

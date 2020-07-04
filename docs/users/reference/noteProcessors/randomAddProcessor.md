@@ -1,5 +1,4 @@
-Random Add Processor 
-====================
+# Random Add Processor
 
 Parameters: pfield, min, max, seedUsed, seed
 
@@ -32,7 +31,7 @@ results will be different on another processing pass. .
 
 If seedUsed is set to "true", the random number generator will be
 initialized using the given seed value. The seed value must be a valid
-long integer value (-2\^63, 2\^63-1).
+long integer value (-2^63, 2^63-1).
 
-Hint: One useful way to use this noteProcessor is as a way to
-"humanize" velocity or pitch values values.
+Hint: One useful way to use this noteProcessor is as a way to "humanize"
+velocity or pitch values values.

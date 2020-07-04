@@ -1,5 +1,4 @@
-ZakLineObject 
-=============
+# ZakLineObject
 
 Accepts NoteProcessors: no
 
@@ -19,9 +18,9 @@ of the "Zak Channel" column. A color selection dialog will appear for
 the user to choose their desired color.
 
 Enter the zak channel that you whish the signal to be written to under
-the "Zak Channel" column. The "min" and "max" columns define the
-min and max values of the graph that the line is drawn in to the right.
-However, the min and max values can be different on a per-line basis.
+the "Zak Channel" column. The "min" and "max" columns define the min and
+max values of the graph that the line is drawn in to the right. However,
+the min and max values can be different on a per-line basis.
 
 When editing the line in the right panel, left clicking adds a point at
 the current cursor position. Right-clicking will delete a point when a

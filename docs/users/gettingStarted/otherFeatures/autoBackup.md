@@ -1,5 +1,4 @@
-AutoBackup and Recovery 
-=======================
+# AutoBackup and Recovery
 
 Temporary backups of open projects are generated every minute for
 projects which have previously been saved to disk (new projects not yet

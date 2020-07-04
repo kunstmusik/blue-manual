@@ -1,5 +1,4 @@
-Sound Font Viewer 
-=================
+# Sound Font Viewer
 
 Sound Font Viewer
 

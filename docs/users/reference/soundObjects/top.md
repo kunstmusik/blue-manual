@@ -1,48 +1,43 @@
-Sound Objects 
-=============
+# Sound Objects
 
 Sound Objects are objects on the score timeline that are primarily
 responsible for generating score data.
 
 The following are properties that all SoundObjects share.
 
-Name
+  - Name  
+    Name of the Soundobject
 
-:   Name of the Soundobject
-
-Subjective Duration
-
-:   The duration of the soundObject on the timeline (versus the duration
+  - Subjective Duration  
+    The duration of the soundObject on the timeline (versus the duration
     of the generated score within the soundObject, which may be
     different). How the duration relates to the generated score contents
     is controlled by the "Time Behavior" property.
 
-End Time
+  - End Time  
+    Read-Only property that shows the end-time of the soundObject
 
-:   Read-Only property that shows the end-time of the soundObject
-
-Time Behavior
-
-:   Selects how subjective time should be used on a soundObject. Options
+  - Time Behavior  
+    Selects how subjective time should be used on a soundObject. Options
     are:
-
+    
     1.  Scale - The default option, stretches generated score to last
         the duration of the soundObject
-
+    
     2.  Repeat - repeats generated score up to the duration of the
         soundObject
-
+    
     3.  None - Passes the score data as-is (When using Time-Behavior of
         None, width of soundObject no longer visually corresponds to
         duration of the soundObject's score.)
 
 Sound Objects generate notes in the following manner:
 
--   SoundObject generates initial notes
+  - SoundObject generates initial notes
 
--   NoteProcessors are applied to the generated notes
+  - NoteProcessors are applied to the generated notes
 
--   Time Behavior is applied to the notes
+  - Time Behavior is applied to the notes
 
 When using a render start time other than 0.0, how soundObjects
 contribute notes depends on if they support partial object rendering.
@@ -62,3 +57,7 @@ ZakLineObject. For those soundObjects, if render is started within the
 middle of one of those, you will hear audio and have control signals
 generated from the correct place and time.
 
+AUDIOFILEOBJECT CECILIAMODULE COMMENT CLOJUREOBJECT EXTERNAL
+GENERICSCORE INSTANCE JMASK LINEOBJECT OBJECTBUILDER PATTERNOBJECT
+PIANOROLL POLYOBJECT PYTHONOBJECT JAVASCRIPTOBJECT SOUND TRACKER
+ZAKLINEOBJECT

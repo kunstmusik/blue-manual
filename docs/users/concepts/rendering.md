@@ -1,22 +1,19 @@
-Rendering
-=========
+# Rendering
 
-Introduction
-------------
+## Introduction
 
 Blue offers a number of ways to render a project, each method useful for
 different purposes you may have. The following section explains the ways
 which Blue is able to render a .blue project file as well as possible
 use-case scenarios to guide you on how that feature may be useful.
 
-Render Methods
---------------
+## Render Methods
 
 Rendering in uses the project's Real-Time render settings to render the
 project in realtime to the users soundcard. This is the most common
 rendering one will likely use. To use this, you can press the play
-button at the top of the window, use the "Project-\>Render/Stop
-Project" menu option, or use the F9 shortcut key.
+button at the top of the window, use the "Project-\>Render/Stop Project"
+menu option, or use the F9 shortcut key.
 
 Blue's general method of communicating with Csound is by generating a
 CSD file and calling Csound to run it. For debugging purposes, it is
@@ -26,8 +23,8 @@ using the "Project-\>Generate CSD to Screen" menu option, or by using
 the ctrl-shift-g shortcut.
 
 If you'd like to generate a CSD from the current project to a file, you
-can do so by using the "Project-\>Generate CSD to File" menu option,
-or by using the ctrl-g shortcut.
+can do so by using the "Project-\>Generate CSD to File" menu option, or
+by using the ctrl-g shortcut.
 
 The Render to Disk option will use the project's Disk Render Options
 from its project properties to generate a soundfile on disk (format of
@@ -47,8 +44,8 @@ then play, which will give very smooth playback. It is also useful if
 you render in realtime with lower quality settings but use higher
 quality settings for final project output, as you can occasionally test
 what the output would be like using this feature. To use this option,
-you can use the "File-\>Render to Disk and Play" menu option or use
-the ctrl-F9 shortcut.
+you can use the "File-\>Render to Disk and Play" menu option or use the
+ctrl-F9 shortcut.
 
 The Render to Disk and Open option will use the project's Disk Render
 Options from its project properties to generate a soundfile on disk and

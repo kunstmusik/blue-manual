@@ -1,5 +1,4 @@
-Tuning Processor 
-================
+# Tuning Processor
 
 Parameters: pfield, baseFrequency, scalaFile
 
@@ -21,15 +20,14 @@ where oct is equal to octave, and scale degree equal to what degree of
 the scale to use. The output will be frequency values, so instruments
 should be set to accept values as frequency.
 
--   Fractional scaleDegree's are not supported.
+  - Fractional scaleDegree's are not supported.
 
--   For the scaleDegree, the Blue PCH does not work exactly like Csound
-    pch notation. In Csound pch, "8.01" would be different than
-    "8.1", while for the Tuning processor, there is no difference. The
-    tuning processor takes everything from the right side of the decimal
-    and converts that to an integer to figure out the scale degree.
+  - For the scaleDegree, the Blue PCH does not work exactly like Csound
+    pch notation. In Csound pch, "8.01" would be different than "8.1",
+    while for the Tuning processor, there is no difference. The tuning
+    processor takes everything from the right side of the decimal and
+    converts that to an integer to figure out the scale degree.
 
--   If you enter in a scale degree higher than the number degrees in the
+  - If you enter in a scale degree higher than the number degrees in the
     scale, it will be converted as if the octave is raised. For example,
-    in a 19 tone scale, an input of "8.21" would get converted to
-    "9.1".
+    in a 19 tone scale, an input of "8.21" would get converted to "9.1".

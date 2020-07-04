@@ -1,5 +1,4 @@
-Instance 
-========
+# Instance
 
 Accepts NoteProcessors: yes
 
@@ -36,8 +35,8 @@ instance with a copy of the original to modify, you can convert the
 Instance object to a GenericScore. To do this, you can use one of two
 methods:
 
--   Right-click the Instance object and choose "Convert to Generic
+  - Right-click the Instance object and choose "Convert to Generic
     Score"
--   Go the SoundObject Library, select the original and use "Copy",
-    then select the Instance object and use "Replace with SoundObject
-    in Buffer"
+  - Go the SoundObject Library, select the original and use "Copy", then
+    select the Instance object and use "Replace with SoundObject in
+    Buffer"

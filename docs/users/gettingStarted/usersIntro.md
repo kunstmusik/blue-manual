@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 Blue is a music composition environment for use with Csound. Blue
 interacts with Csound by generating .CSD files, which it then feeds to
@@ -13,9 +13,9 @@ notes, be it a block of Csound SCO, a script in python, or a graphical
 object.
 
 SoundObjects may further have noteProcessors added to them, which may do
-things like "add .3 to all p4 values" or "of these notes, only
-generate the first three". NoteProcessors are especially useful when
-used with Instance SoundObjects from the SoundObject Library.
+things like "add .3 to all p4 values" or "of these notes, only generate
+the first three". NoteProcessors are especially useful when used with
+Instance SoundObjects from the SoundObject Library.
 
 The SoundObject library allows for working with SoundObjects by making
 instances of a SoundObject. Instances point to a SoundObject, and when

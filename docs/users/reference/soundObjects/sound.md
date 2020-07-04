@@ -1,5 +1,4 @@
-Sound SoundObject 
-=================
+# Sound SoundObject
 
 Accepts NoteProcessors: no
 

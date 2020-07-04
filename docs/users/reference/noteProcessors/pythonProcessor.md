@@ -1,5 +1,4 @@
-Python Processor 
-================
+# Python Processor
 
 Parameters: code
 
@@ -28,7 +27,7 @@ blue/examples/noteProcessors/pythonProcessor.blue and can be run within
 Blue to hear the example).
 
     import random
-
+    
     for i in noteList:
       newVal = str((2 * random.random()) - 1)
       i.setPField(newVal, 7)

@@ -1,8 +1,6 @@
-Command Blocks 
-==============
+# Command Blocks
 
-Introduction
-------------
+## Introduction
 
 Command Blocks are Csound ORC code with special directions to Blue on
 how to processes them. The are available to use only within the Global
@@ -11,19 +9,22 @@ orchestra area in the globals manager tab) and were created to help
 users build fully-encapsulated instruments, such that an instrument and
 all of its necessary parts could be grouped together.
 
-::: {.note}
-::: {.title}
+<div class="note">
+
+<div class="title">
+
 Note
-:::
+
+</div>
 
 This feature has largely been made unnecessary due to new Csound
 programming practices that have developed since this was initially
 introduced. This feature is left in Blue though to support legacy
 projects.
-:::
 
-Basic Usage
------------
+</div>
+
+## Basic Usage
 
 To use a command block, you will need to wrap the section of orc code
 that you want Blue to process with the command in the following manner:
@@ -32,8 +33,7 @@ that you want Blue to process with the command in the following manner:
     ...Csound Orchestra Code... 
     ;}
 
-Available Commands
-------------------
+## Available Commands
 
 Once blocks are useful to limit how many times a block of code will be
 generated in the final CSD and is more for efficiency than anything else
