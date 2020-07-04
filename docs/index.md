@@ -1,6 +1,5 @@
 # Blue Manual 
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
+This is the manual for the [Blue](https://blue.kunstmusik.com) music composition environment.  
 
 
