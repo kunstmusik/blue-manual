@@ -1,4 +1,4 @@
- {#conceptsPolyObjects}
+ 
 
 Introduction
 ------------

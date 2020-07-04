@@ -1,4 +1,4 @@
-Code Editor {#codeEditor}
+Code Editor 
 ===========
 
 Blue uses the Netbeans Code Editor library for editing code. The editor

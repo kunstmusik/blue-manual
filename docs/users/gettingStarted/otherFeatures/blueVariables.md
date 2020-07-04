@@ -1,4 +1,4 @@
-Blue Variables {#blueVariables}
+Blue Variables 
 ==============
 
 Blue treats special text as special Blue variables. Below is a list of

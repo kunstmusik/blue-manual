@@ -1,4 +1,4 @@
-Extending Blue {#extendingBlue}
+Extending Blue 
 ==============
 
 Introduction

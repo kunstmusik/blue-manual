@@ -1,4 +1,4 @@
-Tables Manager {#tablesManager}
+Tables Manager 
 ==============
 
 Tables Manager

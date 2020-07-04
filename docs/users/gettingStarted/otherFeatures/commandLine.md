@@ -1,4 +1,4 @@
-Command Line Options for Blue {#commandLine}
+Command Line Options for Blue 
 =============================
 
 To view the options that Blue has from the commandline, type "blue

@@ -1,4 +1,4 @@
-Instance {#instanceObject}
+Instance 
 ========
 
 Accepts NoteProcessors: yes

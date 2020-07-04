@@ -26,7 +26,7 @@ On this page, look for the download link for your platform. Be sure to
 choose the version of JDK that matches your CPU type and Csound version
 (choose 64-bit if in doubt).
 
-Installing Blue {#installingBlue}
+Installing Blue 
 ---------------
 
 To install Blue, you should download the latest ZIP file from the Blue
@@ -45,7 +45,7 @@ Note: After starting Blue, you may want to explore the example projects
 and pieces found in the Blue/example folder (or right-click and explore
 contents of Blue.app/example if on OSX).
 
-### Platform Specific Notes {#platformNotes}
+### Platform Specific Notes 
 
 The section below has notes for individual platforms.
 
@@ -57,7 +57,7 @@ To make use of the function key shortcuts (F1-F12), you will need to go
 into System Preferences, choose Keyboard, then enable "Use all F1, F2,
 etc. keys as standard function keys".
 
-Installing Csound {#installingCsound}
+Installing Csound 
 -----------------
 
 Blue is able to interact with Csound either by calling Csound like a
@@ -66,7 +66,7 @@ Csound via the Csound API. Instructions on setting up Blue for each
 method is described below as well as discussion on benefits and
 limitations.
 
-### Using Blue with command-line Csound {#commandLineCsound}
+### Using Blue with command-line Csound 
 
 This may be considered "classical" Blue usage and interaction with
 Csound as this was the method by which Blue ran with Csound for the
@@ -88,7 +88,7 @@ To use the command-line version, one needs to set up the Csound
 executable option for Realtime and Disk Render settings in [Program
 Options](#programOptions).
 
-### Using Blue with the Csound API {#csoundAPI}
+### Using Blue with the Csound API 
 
 Enabling Blue to use the Csound API when rendering with Csound opens up
 the ability to manipulate and edit widget values and automations in

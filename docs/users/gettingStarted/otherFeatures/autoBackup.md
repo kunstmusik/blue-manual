@@ -1,4 +1,4 @@
-AutoBackup and Recovery {#autoBackup}
+AutoBackup and Recovery 
 =======================
 
 Temporary backups of open projects are generated every minute for

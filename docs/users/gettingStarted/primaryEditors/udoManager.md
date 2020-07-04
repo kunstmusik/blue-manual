@@ -1,9 +1,9 @@
-User-Defined Opcodes Manager {#udoManager}
+User-Defined Opcodes Manager 
 ============================
 
 User-Defined Opcodes Manager
 
-![ User-Defined Opcodes Manager ](../../../images/udoWindow.png){width="100%"}
+![ User-Defined Opcodes Manager ](../../../images/udoWindow.png)
 
 The User-Defined Opcodes Manager contains three main parts:
 

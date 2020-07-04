@@ -1,4 +1,4 @@
-Sound Font Viewer {#soundFontViewer}
+Sound Font Viewer 
 =================
 
 Sound Font Viewer

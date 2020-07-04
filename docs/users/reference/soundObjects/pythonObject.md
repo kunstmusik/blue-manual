@@ -1,4 +1,4 @@
-PythonObject {#pythonObject}
+PythonObject 
 ============
 
 Accepts NoteProcessors: yes

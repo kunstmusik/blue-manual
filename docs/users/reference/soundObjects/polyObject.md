@@ -1,4 +1,4 @@
-PolyObject {#polyObject}
+PolyObject 
 ==========
 
 Accepts NoteProcessors: yes

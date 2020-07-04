@@ -1,4 +1,4 @@
-CeciliaModule {#ceciliaModule}
+CeciliaModule 
 =============
 
 Accepts NoteProcessors: no, Supports TimeBehavior: no

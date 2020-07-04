@@ -1,4 +1,4 @@
-LineObject {#lineObject}
+LineObject 
 ==========
 
 Accepts NoteProcessors: no

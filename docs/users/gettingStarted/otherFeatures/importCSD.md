@@ -1,4 +1,4 @@
-Importing ORC/SCO and CSD Files {#importCSD}
+Importing ORC/SCO and CSD Files 
 ===============================
 
 Blue is able to import ORC/SCO and CSD files and set up a Blue project

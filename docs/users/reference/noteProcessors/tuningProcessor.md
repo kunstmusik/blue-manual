@@ -1,4 +1,4 @@
-Tuning Processor {#tuningProcessor}
+Tuning Processor 
 ================
 
 Parameters: pfield, baseFrequency, scalaFile

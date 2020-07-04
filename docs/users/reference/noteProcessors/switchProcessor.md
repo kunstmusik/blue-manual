@@ -1,4 +1,4 @@
-Switch Processor {#switchProcessor}
+Switch Processor 
 ================
 
 parameters: pfield1, pfield2

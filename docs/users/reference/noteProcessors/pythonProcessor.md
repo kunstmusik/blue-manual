@@ -1,4 +1,4 @@
-Python Processor {#pythonProcessor}
+Python Processor 
 ================
 
 Parameters: code

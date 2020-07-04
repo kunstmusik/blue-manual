@@ -1,4 +1,4 @@
-Sound Object Freezing {#soundObjectFreezing}
+Sound Object Freezing 
 =====================
 
 Sound Object Freezing allows you to free up CPU-cycles by pre-rendering

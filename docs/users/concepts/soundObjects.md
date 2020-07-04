@@ -1,4 +1,4 @@
-SoundObjects {#conceptsSoundObjects}
+SoundObjects 
 ============
 
 Introduction

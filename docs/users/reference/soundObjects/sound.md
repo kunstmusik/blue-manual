@@ -1,4 +1,4 @@
-Sound SoundObject {#sound}
+Sound SoundObject 
 =================
 
 Accepts NoteProcessors: no

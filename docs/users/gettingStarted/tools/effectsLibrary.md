@@ -1,4 +1,4 @@
-Effects Library {#effectsLibrary}
+Effects Library 
 ===============
 
 Please see the [Effects](#mixerEffects) section of the manual entry for

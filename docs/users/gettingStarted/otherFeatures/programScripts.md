@@ -1,4 +1,4 @@
-Program Scripts {#programScripts}
+Program Scripts 
 ===============
 
 Users are able to create scripts in Python that can interact with the
@@ -19,7 +19,7 @@ very customized scripts to aid in their work.
 **Managing and Using Scripts**
 
 Scripts are created and organized from the Script Library, available
-from the \"Script-\>Manage Script Library\" menu option. A dialog
+from the "Script-\>Manage Script Library" menu option. A dialog
 appears with a tree on the left and a script editor on the right. To
 create a script or script category, right click on a folder node on the
 tree and select the appropriate option. To edit the names of either of
@@ -49,7 +49,7 @@ as default text on any new script for reference.
 
 blueData
 
-:   reference to the current blue project\'s BlueData class
+:   reference to the current blue project's BlueData class
 
 selectedSoundObjects
 
@@ -57,11 +57,11 @@ selectedSoundObjects
 
 userConfigDir
 
-:   location of the user\'s .blue settings directory
+:   location of the user's .blue settings directory
 
 blueLibDir
 
-:   location of blue\'s lib directory
+:   location of blue's lib directory
 
 blueProjectDir
 

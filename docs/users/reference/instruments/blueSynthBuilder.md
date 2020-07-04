@@ -1,4 +1,4 @@
-BlueSynthBuilder {#blueSynthBuilder}
+BlueSynthBuilder 
 ================
 
 BlueSynthBuilder (BSB) allows the user to graphically build instrument
@@ -221,7 +221,7 @@ in the dialog are not committed until you press the save button, so if
 you close the window or cancel, you're old settings will be still in
 tact.
 
-### Automation {#bsbAutomation}
+### Automation 
 
 Blue supports automation of BSB Widget values for those which support
 automation. For these widgets, automation must be enabled before they
@@ -254,7 +254,7 @@ not allow automation or change the Csound code so that it will work with
 the generated k-rate signal.
 :::
 
-### Randomization {#bsbWidgetRandomization}
+### Randomization 
 
 Since 0.117.0, users are able to randomize values for widgets in a
 BlueSynthBuilder instrument. To use, first choose which widgets are set

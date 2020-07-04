@@ -1,4 +1,4 @@
-ZakLineObject {#zakLineObject}
+ZakLineObject 
 =============
 
 Accepts NoteProcessors: no

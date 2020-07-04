@@ -1,9 +1,9 @@
-Project Properties {#projectProperties}
+Project Properties 
 ==================
 
 Project Properties
 
-![](../../../images/projectProperties.png){width="100%"}
+![](../../../images/projectProperties.png)
 
 sr
 

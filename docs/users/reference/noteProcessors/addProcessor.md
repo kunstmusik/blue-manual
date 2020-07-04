@@ -1,4 +1,4 @@
-Add Processor {#addProcessor}
+Add Processor 
 =============
 
 Parameters: pfield, value

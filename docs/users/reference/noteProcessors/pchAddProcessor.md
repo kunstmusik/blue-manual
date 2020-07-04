@@ -1,4 +1,4 @@
-Pch Add Processor {#pchAddProcessor}
+Pch Add Processor 
 =================
 
 Parameters: pfield, value

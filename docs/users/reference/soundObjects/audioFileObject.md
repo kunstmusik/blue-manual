@@ -1,4 +1,4 @@
-AudioFile {#audioFile}
+AudioFile 
 =========
 
 Accepts NoteProcessors: no

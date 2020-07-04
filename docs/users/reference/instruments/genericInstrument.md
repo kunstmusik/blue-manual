@@ -1,4 +1,4 @@
-Generic Instrument {#genericInstrument}
+Generic Instrument 
 ==================
 
 A generic editor for Csound instruments. Insert your instrument text in

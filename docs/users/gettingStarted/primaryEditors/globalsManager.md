@@ -1,4 +1,4 @@
-Globals Manager {#globalsManager}
+Globals Manager 
 ===============
 
 Csound Orchestra and Score text can be passed directly into a generated

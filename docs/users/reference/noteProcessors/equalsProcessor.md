@@ -1,4 +1,4 @@
-Equals Processor {#equalsProcessor}
+Equals Processor 
 ================
 
 Parameters: pfield, value

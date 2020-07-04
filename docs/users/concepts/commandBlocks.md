@@ -1,4 +1,4 @@
-Command Blocks {#commandBlocks}
+Command Blocks 
 ==============
 
 Introduction

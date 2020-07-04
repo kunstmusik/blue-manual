@@ -1,4 +1,4 @@
-Importing MIDI Files {#importMIDI}
+Importing MIDI Files 
 ====================
 
 Blue is able to import MIDI files and set up a Blue project file from

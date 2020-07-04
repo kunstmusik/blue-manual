@@ -1,4 +1,4 @@
-Best Practices {#bestPractices}
+Best Practices 
 ==============
 
 Introduction

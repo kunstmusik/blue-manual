@@ -1,4 +1,4 @@
-Create Encapsulated Instruments {#createEncapsulatedInstrument}
+Create Encapsulated Instruments 
 ===============================
 
 Creating a fully encapsulated instrument in Csound alone is difficult as

@@ -1,4 +1,4 @@
-SubList Processor {#sublistProcessor}
+SubList Processor 
 =================
 
 Parameters: start, end

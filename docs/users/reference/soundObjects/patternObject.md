@@ -1,4 +1,4 @@
-PatternObject {#patternObject}
+PatternObject 
 =============
 
 Accepts NoteProcessors: yes

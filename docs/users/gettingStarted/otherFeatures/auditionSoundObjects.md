@@ -1,4 +1,4 @@
-Auditioning SoundObjects {#auditionSoundObjects}
+Auditioning SoundObjects 
 ========================
 
 You are able to quickly audition individual SoundObjects or groups of

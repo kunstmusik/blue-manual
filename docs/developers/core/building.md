@@ -1,4 +1,4 @@
-Building blue {#buildingBlue}
+Building blue 
 =============
 
 Requirements

@@ -1,4 +1,4 @@
-LineMultiply Processor {#lineMultiplyProcessor}
+LineMultiply Processor 
 ======================
 
 Parameters: pfield, LineMultiply String

@@ -1,4 +1,4 @@
-User-Defined Tools {#userDefinedTools}
+User-Defined Tools 
 ==================
 
 Users may add their own tools which they may wish to call quickly from

@@ -1,9 +1,9 @@
-ClojureObject {#clojureObject}
+ClojureObject 
 =============
 
 ClojureObject
 
-![ ClojureObject ](../../../images/clojureObject.png){width="100%"}
+![ ClojureObject ](../../../images/clojureObject.png)
 
 Accepts NoteProcessors: yes
 

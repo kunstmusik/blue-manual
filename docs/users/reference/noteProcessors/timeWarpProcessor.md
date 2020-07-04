@@ -1,4 +1,4 @@
-Time Warp Processor {#timewarpProcessor}
+Time Warp Processor 
 ===================
 
 parameters: TimeWarpString

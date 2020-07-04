@@ -1,4 +1,4 @@
-Pch Inversion Processor {#pchInversionProcessor}
+Pch Inversion Processor 
 =======================
 
 Parameters: value, pfield

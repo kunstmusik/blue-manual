@@ -1,4 +1,4 @@
-SoundObject Library {#soundObjectLibrary}
+SoundObject Library 
 ===================
 
 Introduction

@@ -1,4 +1,4 @@
-Multiply Processor {#multiplyProcessor}
+Multiply Processor 
 ==================
 
 Parameters: value, pfield

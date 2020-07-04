@@ -1,4 +1,4 @@
-NoteProcessors {#noteProcessors}
+NoteProcessors 
 ==============
 
 NoteProcessors are used in conjunction with soundObjects, and are used

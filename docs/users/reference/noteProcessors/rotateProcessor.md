@@ -1,4 +1,4 @@
-Rotate Processor {#rotateProcessor}
+Rotate Processor 
 ================
 
 parameters: noteIndex

@@ -1,9 +1,9 @@
-Blue Live {#blueLive}
+Blue Live 
 =========
 
 Blue Live
 
-![ Blue Live ](../../../images/blueLive.png){width="100%"}
+![ Blue Live ](../../../images/blueLive.png)
 
 Blue Live allows you to work with Csound in realtime. It allows for
 generating score with SoundObjects and working with MIDI keyboard input

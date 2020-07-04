@@ -1,4 +1,4 @@
-NoteProcessors {#conceptsNoteProcessors}
+NoteProcessors 
 ==============
 
 NoteProcessors are a powerful tool for manipulating notes. Each type of

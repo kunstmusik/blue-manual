@@ -1,4 +1,4 @@
-.csoundrc Editor {#csoundrcEditor}
+.csoundrc Editor 
 ================
 
 .csoundrc Editor

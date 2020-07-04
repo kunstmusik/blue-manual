@@ -1,4 +1,4 @@
-GenericScore {#genericScore}
+GenericScore 
 ============
 
 Accepts NoteProcessors: yes

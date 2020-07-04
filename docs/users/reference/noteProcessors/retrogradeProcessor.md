@@ -1,4 +1,4 @@
-Retrograde Processor {#retrogradeProcessor}
+Retrograde Processor 
 ====================
 
 Parameters: none

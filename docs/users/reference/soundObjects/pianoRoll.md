@@ -1,4 +1,4 @@
-PianoRoll {#pianoRoll}
+PianoRoll 
 =========
 
 Accepts NoteProcessors: yes
@@ -77,7 +77,7 @@ before using the actual note drawing canvas.
 Piano Roll - Notes - Properties
 
 ![ Piano Roll - Notes - Properties
-](../../../images/pianoRoll_properties.png){width="100%"}
+](../../../images/pianoRoll_properties.png)
 
 Instrument ID
 
@@ -143,7 +143,7 @@ Pch Generation
 Piano Roll - Notes - Time Options
 
 ![ Piano Roll - Notes - Time Options
-](../../../images/pianoRoll_notes_snap.png){width="100%"}
+](../../../images/pianoRoll_notes_snap.png)
 
 The Time Options in the PianoRoll are accessed and behave very much in
 the same manner as those that are in the main timeline. The button

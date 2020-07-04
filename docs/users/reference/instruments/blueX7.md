@@ -1,4 +1,4 @@
-BlueX7 {#blueX7}
+BlueX7 
 ======
 
 ::: {.note}

@@ -1,4 +1,4 @@
-Setting Up Program Options {#programOptions}
+Setting Up Program Options 
 ==========================
 
 The first thing you'll want to do is set up your Program Options. Some
@@ -11,7 +11,7 @@ To open up the Program Options dialog, go to the File menu and click on
 
 Program Options - General
 
-![](../../images/programOptions_general.png){width="100%"}
+![](../../images/programOptions_general.png)
 
 Work Directory
 
@@ -69,7 +69,7 @@ Language
 
 Program Options - Project Defaults
 
-![](../../images/programOptions_projectDefaults.png){width="100%"}
+![](../../images/programOptions_projectDefaults.png)
 
 These settings are used whenever new projects are created as defaults
 for the project, unless a default.blue file is found in the user's blue
@@ -86,7 +86,7 @@ Mixer Enabled
 
 Program Options - Playback
 
-![](../../images/programOptions_playBack.png){width="100%"}
+![](../../images/programOptions_playBack.png)
 
 Time Pointer Animation Rate
 
@@ -109,7 +109,7 @@ Latency Correction
 Program Options - Utility
 
 ![ Program Options - Utility
-](../../images/programOptions_utility.png){width="100%"}
+](../../images/programOptions_utility.png)
 
 Csound Executable
 
@@ -139,7 +139,7 @@ Freeze Flags
 
 Program Options - Realtime
 
-![](../../images/programOptions_realtime.png){width="100%"}
+![](../../images/programOptions_realtime.png)
 
 Csound Executable
 
@@ -397,7 +397,7 @@ Advanced Settings
 
 Program Options - Disk Render
 
-![](../../images/programOptions_diskRender.png){width="100%"}
+![](../../images/programOptions_diskRender.png)
 
 Csound Executable
 

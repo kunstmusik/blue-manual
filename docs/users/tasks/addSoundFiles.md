@@ -1,4 +1,4 @@
-Add Sound Files to Your Project {#addSoundFiles}
+Add Sound Files to Your Project 
 ===============================
 
 If you have audio files you\'d like to add to your project to play

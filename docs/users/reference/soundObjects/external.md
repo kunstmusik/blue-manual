@@ -1,4 +1,4 @@
-External SoundObject {#externalSoundObject}
+External SoundObject 
 ====================
 
 Accepts NoteProcessors: no

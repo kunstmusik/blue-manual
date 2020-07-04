@@ -1,4 +1,4 @@
-LineAdd Processor {#lineAddProcessor}
+LineAdd Processor 
 =================
 
 Parameters: pfield, LineAdd String

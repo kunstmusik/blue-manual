@@ -24,7 +24,7 @@ with the user interface. Over time, this manual entry for JMask will
 attempt to grow to be self sufficient and not require knowledge of
 CMask, but for now familiarity with CMask is suggested.
 
-Overview {#jmaskOverview}
+Overview 
 --------
 
 A single JMask object is equivalent to one CMask field. A single JMask
@@ -66,7 +66,7 @@ set a seed and get consistently reproducible results. The default is to
 use the system time to seed the random number generator, thus giving
 different results each render.
 
-Using the JMask Interface {#jmaskInterface}
+Using the JMask Interface 
 -------------------------
 
 ![](../../../images/jmask.png)

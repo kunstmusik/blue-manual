@@ -1,4 +1,4 @@
-Scanned Synthesis Matrix Editor {#scannedSynthesisMatrixEditor}
+Scanned Synthesis Matrix Editor 
 ===============================
 
 Scanned Synthesis Matrix Editor

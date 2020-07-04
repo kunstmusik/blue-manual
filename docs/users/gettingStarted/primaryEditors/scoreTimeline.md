@@ -1,9 +1,9 @@
-Score Timeline {#scoreTimeline}
+Score Timeline 
 ==============
 
 Score Timeline
 
-![ Score Timeline ](../../../images/ScoreTimeline.png){width="100%"}
+![ Score Timeline ](../../../images/ScoreTimeline.png)
 
 Overview
 --------
@@ -20,7 +20,7 @@ Patterns LayerGroups, while the last is a SoundObject Layer Group. Also
 shown is the ScoreManager dialog (accessible from the Manage button on
 the left part of the Score).
 
-Layer Groups {#layerGroups}
+Layer Groups 
 ------------
 
 A Score is divided into Layer Groups. Each Layer Group has a

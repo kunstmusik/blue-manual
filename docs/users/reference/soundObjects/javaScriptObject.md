@@ -1,4 +1,4 @@
-JavaScriptObject {#javaScriptObject}
+JavaScriptObject 
 ================
 
 Accepts NoteProcessors: yes

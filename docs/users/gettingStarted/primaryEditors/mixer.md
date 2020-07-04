@@ -116,7 +116,7 @@ SoundObjects, which do not have channels created for them. This way, you
 can route the output of an AudioFile to a named subchannel and apply
 Effects, etc.
 
-Effects {#mixerEffects}
+Effects 
 -------
 
 Effects in Blue are implemented as User-Defined Opcodes, and

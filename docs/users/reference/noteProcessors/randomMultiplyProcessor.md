@@ -1,4 +1,4 @@
-Random Multiply Processor {#randomMultiplyProcessor}
+Random Multiply Processor 
 =========================
 
 Parameters: pfield, min, max
