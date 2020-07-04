@@ -56,8 +56,3 @@ such as the AudioFile SoundObject, FrozenObject, the LineObject, and the
 ZakLineObject. For those soundObjects, if render is started within the
 middle of one of those, you will hear audio and have control signals
 generated from the correct place and time.
-
-AUDIOFILEOBJECT CECILIAMODULE COMMENT CLOJUREOBJECT EXTERNAL
-GENERICSCORE INSTANCE JMASK LINEOBJECT OBJECTBUILDER PATTERNOBJECT
-PIANOROLL POLYOBJECT PYTHONOBJECT JAVASCRIPTOBJECT SOUND TRACKER
-ZAKLINEOBJECT
