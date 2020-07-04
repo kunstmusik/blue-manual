@@ -2,6 +2,8 @@ site_name: Blue Manual
 markdown_extensions:
     - toc:
         separator: '_'
+theme:
+    name: material
 nav:
     - Home: 'index.md'
     - 'User Guide':
