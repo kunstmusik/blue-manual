@@ -1649,26 +1649,34 @@ generated in the score. Each of the Parameter types in CMask is
 available in JMask:</p>
 <p>Type          Description</p>
 <hr />
-<p>Constant      Generate the given value when generating values for notes
-  Item List     Generates values from a list of values given by the user. Options for generation include cycling through the list (cycle), going backwards and forwards through the list (swing), going through the list in random order using all values once before repeating (heap), and choosing a random list item (random).
-  Segment       Generates values along a user-defined line.
-  Random        Generates a random value.
-  Probability   Generates a randomized value that is weighted by the given probability type and the configuration of the parameters of that probability type.
-  Oscillator    Generates values that oscillate in a given period using different user-chosen shapes.</p>
-<p>: Parameter Types</p>
+<dl>
+<dt>Constant      Generate the given value when generating values for notes</dt>
+<dt>  Item List     Generates values from a list of values given by the user. Options for generation include cycling through the list (cycle), going backwards and forwards through the list (swing), going through the list in random order using all values once before repeating (heap), and choosing a random list item (random).</dt>
+<dt>  Segment       Generates values along a user-defined line.</dt>
+<dt>  Random        Generates a random value.</dt>
+<dt>  Probability   Generates a randomized value that is weighted by the given probability type and the configuration of the parameters of that probability type.</dt>
+<dt>  Oscillator    Generates values that oscillate in a given period using different user-chosen shapes.</dt>
+<dd>
+<p>Parameter Types</p>
+</dd>
+</dl>
 <p>Beyond the Parameters, JMask supports the three modifier types found in
 CMask: Masks, Quantizers, and Accumulators. Certain parameters support
 different modifiers, and their support by paramater type is listed
 below:</p>
 <p>Type          Supports Mask   Supports Quantizer   Supports Accumulator</p>
 <hr />
-<p>Constant      No              No                   Yes
-  List          No              No                   Yes
-  Segment       No              Yes                  Yes
-  Random        No              Yes                  Yes
-  Probability   Yes             Yes                  Yes
-  Oscillator    Yes             Yes                  Yes</p>
-<p>: Parameter Modifier Support</p>
+<dl>
+<dt>Constant      No              No                   Yes</dt>
+<dt>  List          No              No                   Yes</dt>
+<dt>  Segment       No              Yes                  Yes</dt>
+<dt>  Random        No              Yes                  Yes</dt>
+<dt>  Probability   Yes             Yes                  Yes</dt>
+<dt>  Oscillator    Yes             Yes                  Yes</dt>
+<dd>
+<p>Parameter Modifier Support</p>
+</dd>
+</dl>
 <p>JMask also supports the use of a seed value. When enabling the use of
 seeding, the seed value will be used to initialize the pseudo-random
 number generator used in randomized operations. This allows the user to
@@ -1684,44 +1692,64 @@ This panel shows a number at the top that corresponds to what pfield
 this parameter will generate values for, as well as the field name. To
 change things about the Parameter, right-click the panel to show a popup
 menu as shown in the image above. The options are described below:</p>
-<p>Add Parameter Before</p>
-<p>:   Create a new Parameter and insert it before the Parameter clicked on
-    by mouse. When this option is selected, a dialog will appear with a
-    dropdown of options of what type of Parameter to add.</p>
-<p>Add Parameter After</p>
-<p>:   Create a new Parameter and insert it after the Parameter clicked on
-    by mouse. When this option is selected, a dialog will appear with a
-    dropdown of options of what type of Parameter to add.</p>
-<p>Remove Parameter</p>
-<p>:   Remove this Parameter. Will not be allowed if trying to edit
-    parameters 1-3 as JMask requires a minimum of 3 pfields.</p>
-<p>Change Parameter Type</p>
-<p>:   Choose a different type of Parameter and replace the current one
-    with the selected one. Any edits from the old Parameter will be lost
-    once a new parameter type is chosen.</p>
-<p>Push Up</p>
-<p>:   Move the selected Parameter to before the previous Parameter.
-    Example: Push up parameter at pfield 5 to pfield 4, moving what was
-    previously at 4 to 5.</p>
-<p>Push Down</p>
-<p>:   Move the selected Parameter to after the next Parameter. Example:
-    Push down parameter at pfield 4 to pfield 5, moving what was
-    previously at 5 to 4.</p>
-<p>Mask</p>
-<p>:   Enable/disable using a Mask with this parameter. If enabled, the
-    Mask editor will appear, and if disabled, the Mask editor will
-    disappear. This menu option will not show for those Parameters that
-    do not support Masks.</p>
-<p>Quantizer</p>
-<p>:   Enable/disable using a Quantizer with this parameter. If enabled,
-    the Quantizer editor will appear, and if disabled, the Quantizer
-    editor will disappear. This menu option will not show for those
-    Parameters that do not support Quantizers.</p>
-<p>Accumulator</p>
-<p>:   Enable/disable using an Accumulator with this parameter. If enabled,
-    the Accumulator editor will appear, and if disabled, the Accumulator
-    editor will disappear. This menu option will not show for those
-    Parameters which do not support Accumulators.</p>
+<dl>
+<dt>Add Parameter Before</dt>
+<dd>
+<p>Create a new Parameter and insert it before the Parameter clicked on
+by mouse. When this option is selected, a dialog will appear with a
+dropdown of options of what type of Parameter to add.</p>
+</dd>
+<dt>Add Parameter After</dt>
+<dd>
+<p>Create a new Parameter and insert it after the Parameter clicked on
+by mouse. When this option is selected, a dialog will appear with a
+dropdown of options of what type of Parameter to add.</p>
+</dd>
+<dt>Remove Parameter</dt>
+<dd>
+<p>Remove this Parameter. Will not be allowed if trying to edit
+parameters 1-3 as JMask requires a minimum of 3 pfields.</p>
+</dd>
+<dt>Change Parameter Type</dt>
+<dd>
+<p>Choose a different type of Parameter and replace the current one
+with the selected one. Any edits from the old Parameter will be lost
+once a new parameter type is chosen.</p>
+</dd>
+<dt>Push Up</dt>
+<dd>
+<p>Move the selected Parameter to before the previous Parameter.
+Example: Push up parameter at pfield 5 to pfield 4, moving what was
+previously at 4 to 5.</p>
+</dd>
+<dt>Push Down</dt>
+<dd>
+<p>Move the selected Parameter to after the next Parameter. Example:
+Push down parameter at pfield 4 to pfield 5, moving what was
+previously at 5 to 4.</p>
+</dd>
+<dt>Mask</dt>
+<dd>
+<p>Enable/disable using a Mask with this parameter. If enabled, the
+Mask editor will appear, and if disabled, the Mask editor will
+disappear. This menu option will not show for those Parameters that
+do not support Masks.</p>
+</dd>
+<dt>Quantizer</dt>
+<dd>
+<p>Enable/disable using a Quantizer with this parameter. If enabled,
+the Quantizer editor will appear, and if disabled, the Quantizer
+editor will disappear. This menu option will not show for those
+Parameters that do not support Quantizers.</p>
+</dd>
+<dt>Accumulator</dt>
+<dd>
+<p>Enable/disable using an Accumulator with this parameter. If enabled,
+the Accumulator editor will appear, and if disabled, the Accumulator
+editor will disappear. This menu option will not show for those
+Parameters which do not support Accumulators.</p>
+</dd>
+</dl>
 <p>Beyond the basics of moving around Parameters, adding new ones, and
 choosing whether to enable Masks, Quantizeres, and Accumulators, one can
 also choose to show/hide Parameters by using the popup menu that appears

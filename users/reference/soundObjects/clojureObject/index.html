@@ -1634,11 +1634,17 @@ values (or values from another project even) if one is not careful to
 always assign values in the project that require being set for this
 particular project.</p>
 <p>The following variables are available from Blue:</p>
-<p>blueDuration</p>
-<p>:   Duration of the Clojure SoundObject</p>
-<p>blueProjectDir</p>
-<p>:   The location of the current project's directory. Includes path
-    separator at end.</p>
+<dl>
+<dt>blueDuration</dt>
+<dd>
+<p>Duration of the Clojure SoundObject</p>
+</dd>
+<dt>blueProjectDir</dt>
+<dd>
+<p>The location of the current project's directory. Includes path
+separator at end.</p>
+</dd>
+</dl>
 <p>There is a checkbox entitled "Process at Start". Selecting this option
 will have the script of the ClojureObject run when a .blue project is
 loaded. This is useful for scripts that act as library functions, but

@@ -1562,28 +1562,43 @@
 <p>Sound Objects are objects on the score timeline that are primarily
 responsible for generating score data.</p>
 <p>The following are properties that all SoundObjects share.</p>
-<p>Name</p>
-<p>:   Name of the Soundobject</p>
-<p>Subjective Duration</p>
-<p>:   The duration of the soundObject on the timeline (versus the duration
-    of the generated score within the soundObject, which may be
-    different). How the duration relates to the generated score contents
-    is controlled by the "Time Behavior" property.</p>
-<p>End Time</p>
-<p>:   Read-Only property that shows the end-time of the soundObject</p>
-<p>Time Behavior</p>
-<p>:   Selects how subjective time should be used on a soundObject. Options
-    are:</p>
-<pre><code>1.  Scale - The default option, stretches generated score to last
-    the duration of the soundObject
-
-2.  Repeat - repeats generated score up to the duration of the
-    soundObject
-
-3.  None - Passes the score data as-is (When using Time-Behavior of
+<dl>
+<dt>Name</dt>
+<dd>
+<p>Name of the Soundobject</p>
+</dd>
+<dt>Subjective Duration</dt>
+<dd>
+<p>The duration of the soundObject on the timeline (versus the duration
+of the generated score within the soundObject, which may be
+different). How the duration relates to the generated score contents
+is controlled by the "Time Behavior" property.</p>
+</dd>
+<dt>End Time</dt>
+<dd>
+<p>Read-Only property that shows the end-time of the soundObject</p>
+</dd>
+<dt>Time Behavior</dt>
+<dd>
+<p>Selects how subjective time should be used on a soundObject. Options
+are:</p>
+<ol>
+<li>
+<p>Scale - The default option, stretches generated score to last
+    the duration of the soundObject</p>
+</li>
+<li>
+<p>Repeat - repeats generated score up to the duration of the
+    soundObject</p>
+</li>
+<li>
+<p>None - Passes the score data as-is (When using Time-Behavior of
     None, width of soundObject no longer visually corresponds to
-    duration of the soundObject's score.)
-</code></pre>
+    duration of the soundObject's score.)</p>
+</li>
+</ol>
+</dd>
+</dl>
 <p>Sound Objects generate notes in the following manner:</p>
 <ul>
 <li>

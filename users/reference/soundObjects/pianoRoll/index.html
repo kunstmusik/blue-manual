@@ -1617,57 +1617,71 @@ before using the actual note drawing canvas.</p>
 <p>Piano Roll - Notes - Properties</p>
 <p><img alt=" Piano Roll - Notes - Properties
 " src="../../../../images/pianoRoll_properties.png" /></p>
-<p>Instrument ID</p>
-<p>:   Instrument name or number to be used when replacing \&lt;INSTR_ID> in
-    Note template strings.</p>
-<p>Note Template</p>
-<p>:   The default note template when inserting notes. Notes make a copy of
-    this template string when created and edits to the note\'s string
-    stay with the note. Generally, you\'ll want to create a template
-    string that will match the instrument this PianoRoll will be used
-    with.</p>
-<p>Scale</p>
-<p>:   The scale used with this PianoRoll. The PianoRoll defaults to a
-    12-TET scale, the "standard" scale in use in Western classical and
-    popular music. Pressing the button labeled "..." will open a file
-    browser for selecting Scala scales to use in place of the default.
-    After selecting a scale, the PianoRoll will adjust the note canvas
-    for the number of scale degrees the newly selected scale contains.</p>
-<p>Base Frequency</p>
-<p>:   The base frequency of the scale for octave 8 and scale degree 0
-    (8.00). Defaults to C below A440.</p>
-<p>Pch Generation</p>
-<p>:   Selects how the notes will generate their value to be used when
-    replacing the \&lt;FREQ> tag value in a note template. The options
-    are:</p>
-<pre><code>Frequency
-
-:   The value of the note\'s pitch expressed in terms of frequency
-    in hertz. This value is calculated using the chosen Scale for
-    the PianoRoll.
-
-Blue PCH
-
-:   Value of note expressed in Blue PCH, a format similar to Csound
-    PCH but differs in that it does not allow fractional values.
-    Values are generated as "octave.scaleDegree" i.e. "8.22"
-    would be octave 8 and scale degree 22 in a scale that has 23 or
-    more notes, or would wrap around as it does in Csound PCH. If
-    the scale had 12 scale degrees, the "8.22" would be
-    interpreted as "9.10". Blue PCH is allowed as an option to be
-    used with Blue PCH note processors and then to be used with the
-    Tuning NoteProcessor.
-
-MIDI
-
-:   When this Pch Generation method is chosen, a MIDI note value
-    (0-127, 60 = Middle-C) is used for \&lt;FREQ\&gt; and the chosen Scale
-    will not be used. The display for the editor will automatically
-    switch to show octaves and notes for standard MIDI scale values.
-    Using MIDI note values is useful for instruments that exepct
-    MIDI note values such as the fluidsynth opcodes as well as
-    midiout.
-</code></pre>
+<dl>
+<dt>Instrument ID</dt>
+<dd>
+<p>Instrument name or number to be used when replacing \&lt;INSTR_ID> in
+Note template strings.</p>
+</dd>
+<dt>Note Template</dt>
+<dd>
+<p>The default note template when inserting notes. Notes make a copy of
+this template string when created and edits to the note\'s string
+stay with the note. Generally, you\'ll want to create a template
+string that will match the instrument this PianoRoll will be used
+with.</p>
+</dd>
+<dt>Scale</dt>
+<dd>
+<p>The scale used with this PianoRoll. The PianoRoll defaults to a
+12-TET scale, the "standard" scale in use in Western classical and
+popular music. Pressing the button labeled "..." will open a file
+browser for selecting Scala scales to use in place of the default.
+After selecting a scale, the PianoRoll will adjust the note canvas
+for the number of scale degrees the newly selected scale contains.</p>
+</dd>
+<dt>Base Frequency</dt>
+<dd>
+<p>The base frequency of the scale for octave 8 and scale degree 0
+(8.00). Defaults to C below A440.</p>
+</dd>
+<dt>Pch Generation</dt>
+<dd>
+<p>Selects how the notes will generate their value to be used when
+replacing the \&lt;FREQ> tag value in a note template. The options
+are:</p>
+<dl>
+<dt>Frequency</dt>
+<dd>
+<p>The value of the note\'s pitch expressed in terms of frequency
+in hertz. This value is calculated using the chosen Scale for
+the PianoRoll.</p>
+</dd>
+<dt>Blue PCH</dt>
+<dd>
+<p>Value of note expressed in Blue PCH, a format similar to Csound
+PCH but differs in that it does not allow fractional values.
+Values are generated as "octave.scaleDegree" i.e. "8.22"
+would be octave 8 and scale degree 22 in a scale that has 23 or
+more notes, or would wrap around as it does in Csound PCH. If
+the scale had 12 scale degrees, the "8.22" would be
+interpreted as "9.10". Blue PCH is allowed as an option to be
+used with Blue PCH note processors and then to be used with the
+Tuning NoteProcessor.</p>
+</dd>
+<dt>MIDI</dt>
+<dd>
+<p>When this Pch Generation method is chosen, a MIDI note value
+(0-127, 60 = Middle-C) is used for \&lt;FREQ> and the chosen Scale
+will not be used. The display for the editor will automatically
+switch to show octaves and notes for standard MIDI scale values.
+Using MIDI note values is useful for instruments that exepct
+MIDI note values such as the fluidsynth opcodes as well as
+midiout.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <p>Piano Roll - Notes - Time Options</p>
 <p><img alt=" Piano Roll - Notes - Time Options
 " src="../../../../images/pianoRoll_notes_snap.png" /></p>
@@ -1675,17 +1689,23 @@ MIDI
 the same manner as those that are in the main timeline. The button
 labelled "..." in the upper right corner of the PianoRoll canvas will
 open and close the panel on the right that contains the properties.</p>
-<p>Snap Enabled</p>
-<p>:   Enables snapping behavior on the timeline. If enabled, vertical
-    lines will be drawn at snap points, set by the value below it. In
-    the screenshot above, the snap is enabled and set to every 1.0
-    beats.</p>
-<p>Time Display</p>
-<p>:   Controls how the time in the time bar above the PianoRoll canvas
-    will display. The time value will show as time, while Number display
-    will display as integers. The number below show how often to put a
-    label. In the screenshot above, the Time Display is set to show a
-    label in units of time and at every 5.0 seconds.</p>
+<dl>
+<dt>Snap Enabled</dt>
+<dd>
+<p>Enables snapping behavior on the timeline. If enabled, vertical
+lines will be drawn at snap points, set by the value below it. In
+the screenshot above, the snap is enabled and set to every 1.0
+beats.</p>
+</dd>
+<dt>Time Display</dt>
+<dd>
+<p>Controls how the time in the time bar above the PianoRoll canvas
+will display. The time value will show as time, while Number display
+will display as integers. The number below show how often to put a
+label. In the screenshot above, the Time Display is set to show a
+label in units of time and at every 5.0 seconds.</p>
+</dd>
+</dl>
 <p>To enter notes, hold down the shift key and press the left mouse button
 down on the canvas. A note will be entered where you pressed and will be
 set to resize as you move the mouse around. When you finally release the

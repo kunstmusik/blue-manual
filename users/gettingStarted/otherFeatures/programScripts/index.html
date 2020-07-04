@@ -1588,38 +1588,60 @@ execute that Script.</p>
 <p>The following variables are pre-defined by the time your script runs and
 are useful variables which you will most likely use. They are also shown
 as default text on any new script for reference.</p>
-<p>blueData</p>
-<p>:   reference to the current blue project's BlueData class</p>
-<p>selectedSoundObjects</p>
-<p>:   array of soundObjects currently selected on the timeline</p>
-<p>userConfigDir</p>
-<p>:   location of the user's .blue settings directory</p>
-<p>blueLibDir</p>
-<p>:   location of blue's lib directory</p>
-<p>blueProjectDir</p>
-<p>:   directory of the current Blue project</p>
+<dl>
+<dt>blueData</dt>
+<dd>
+<p>reference to the current blue project's BlueData class</p>
+</dd>
+<dt>selectedSoundObjects</dt>
+<dd>
+<p>array of soundObjects currently selected on the timeline</p>
+</dd>
+<dt>userConfigDir</dt>
+<dd>
+<p>location of the user's .blue settings directory</p>
+</dd>
+<dt>blueLibDir</dt>
+<dd>
+<p>location of blue's lib directory</p>
+</dd>
+<dt>blueProjectDir</dt>
+<dd>
+<p>directory of the current Blue project</p>
+</dd>
+</dl>
 <p><strong>ScriptingUtils</strong></p>
 <p>Included with Blue is a python file named ScriptingUtils.py that
 contains useful utility functions.</p>
-<p>alert(message)</p>
-<p>:   Shows message to user using dialog, much like JavaScript alert
-    message</p>
-<p>info(message)</p>
-<p>:   Shows message to user but uses dialog with scrollable text area.
-    Useful for showing large amounts of text or text with tabbed
-    formatting.</p>
-<p>infoTabs(message, title)</p>
-<p>:   Like the info function, but messages are added as tabs to a central
-    tabbed pane in an information Dialog. Each call to infoTabs will add
-    a new tab with the title given and the contents of the tab will be a
-    scrollable textarea with the message. Tabs can be removed by right
-    clicking a tab and selecting remove from the popup menu.</p>
-<p>objectInfo(object)</p>
-<p>:   Lists methods and properties for an object. This is especially
-    helpful when editing a script and either not knowing or having
-    forgotten the properties of an object, you can show what they are
-    using this function. Information will be shown in the same manner as
-    the info function.</p>
+<dl>
+<dt>alert(message)</dt>
+<dd>
+<p>Shows message to user using dialog, much like JavaScript alert
+message</p>
+</dd>
+<dt>info(message)</dt>
+<dd>
+<p>Shows message to user but uses dialog with scrollable text area.
+Useful for showing large amounts of text or text with tabbed
+formatting.</p>
+</dd>
+<dt>infoTabs(message, title)</dt>
+<dd>
+<p>Like the info function, but messages are added as tabs to a central
+tabbed pane in an information Dialog. Each call to infoTabs will add
+a new tab with the title given and the contents of the tab will be a
+scrollable textarea with the message. Tabs can be removed by right
+clicking a tab and selecting remove from the popup menu.</p>
+</dd>
+<dt>objectInfo(object)</dt>
+<dd>
+<p>Lists methods and properties for an object. This is especially
+helpful when editing a script and either not knowing or having
+forgotten the properties of an object, you can show what they are
+using this function. Information will be shown in the same manner as
+the info function.</p>
+</dd>
+</dl>
 <p>To use the ScriptingUtils, use an import statement like this at the top
 of your script:</p>
 <pre><code>from ScriptingUtils import *

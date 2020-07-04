@@ -1572,49 +1572,59 @@ for tracks where note data was found.)</p>
 <p>MIDI Import Settings</p>
 <p><img alt=" MIDI Import Settings " src="../../../../images/midiImportSettings.png" /></p>
 <p>The table column information is as follows:</p>
-<p>Track</p>
-<p>:   The original MIDI track number to which this setting is to be
-    applied to. This column is not editable is for reference purpose
-    only.</p>
-<p>Instrument ID</p>
-<p>:   The Csound instrument ID to use for this track. This will replace
-    the \&lt;INSTR_ID> key within the note template. This value is
-    treated as a string to allow users to assign the track information
-    to Csound named instruments. If one is doing so, one must quote the
-    name, i.e. use "trumpet" instead of trumpet (without quotes),
-    otherwise the output will not be legal Csound SCO. Default value is
-    the number of the MIDI track.</p>
-<p>Note Template</p>
-<p>:   Template note text to use for generating Csound SCO from the MIDI
-    data. The default note template is "i\&lt;INSTR_ID> \&lt;START>
-    \&lt;DUR> \&lt;KEY> \&lt;VELOCITY>". By having note templates, the user
-    can massage the note information to work with any number of pfields
-    that their instruments require.</p>
-<pre><code>The following values are allowed in the note template:
-
-  Shortcuts           Description
-  ------------------- ---------------------------------------------------
-  \&lt;INSTR\_ID\&gt;       The instrument ID assigned in the track settings.
-  \&lt;START\&gt;           Start Time of Note
-  \&lt;DUR\&gt;             Duration of Note
-  \&lt;KEY\&gt;             MIDI key number
-  \&lt;KEY\_PCH\&gt;        MIDI key number as Csound PCH
-  \&lt;KEY\_OCT\&gt;        MIDI key number as Csound OCT
-  \&lt;KEY\_CPS\&gt;        MIDI key number as CPS
-  \&lt;VELOCITY\&gt;        MIDI velocity number
-  \&lt;VELOCITY\_AMP\&gt;   MIDI velocity number as amplitude
-
-  : Key Values
-
-The button labelled "Reference" on the dialog will pop open the
+<dl>
+<dt>Track</dt>
+<dd>
+<p>The original MIDI track number to which this setting is to be
+applied to. This column is not editable is for reference purpose
+only.</p>
+</dd>
+<dt>Instrument ID</dt>
+<dd>
+<p>The Csound instrument ID to use for this track. This will replace
+the \&lt;INSTR_ID> key within the note template. This value is
+treated as a string to allow users to assign the track information
+to Csound named instruments. If one is doing so, one must quote the
+name, i.e. use "trumpet" instead of trumpet (without quotes),
+otherwise the output will not be legal Csound SCO. Default value is
+the number of the MIDI track.</p>
+</dd>
+<dt>Note Template</dt>
+<dd>
+<p>Template note text to use for generating Csound SCO from the MIDI
+data. The default note template is "i\&lt;INSTR_ID> \&lt;START>
+\&lt;DUR> \&lt;KEY> \&lt;VELOCITY>". By having note templates, the user
+can massage the note information to work with any number of pfields
+that their instruments require.</p>
+<p>The following values are allowed in the note template:</p>
+<p>Shortcuts           Description</p>
+<hr />
+<dl>
+<dt>\&lt;INSTR_ID>       The instrument ID assigned in the track settings.</dt>
+<dt>  \&lt;START>           Start Time of Note</dt>
+<dt>  \&lt;DUR>             Duration of Note</dt>
+<dt>  \&lt;KEY>             MIDI key number</dt>
+<dt>  \&lt;KEY_PCH>        MIDI key number as Csound PCH</dt>
+<dt>  \&lt;KEY_OCT>        MIDI key number as Csound OCT</dt>
+<dt>  \&lt;KEY_CPS>        MIDI key number as CPS</dt>
+<dt>  \&lt;VELOCITY>        MIDI velocity number</dt>
+<dt>  \&lt;VELOCITY_AMP>   MIDI velocity number as amplitude</dt>
+<dd>
+<p>Key Values</p>
+</dd>
+</dl>
+<p>The button labelled "Reference" on the dialog will pop open the
 above information for quick reference of the allowable replacement
-keys for note templates.
-</code></pre>
-<p>Trim Time</p>
-<p>:   This option will shift the generated SoundObject to the time of the
-    first note and then take the generated notes for the track and shift
-    them all so that the first note starts at time 0 so that there is no
-    empty time at the beginning of the track's note information.</p>
+keys for note templates.</p>
+</dd>
+<dt>Trim Time</dt>
+<dd>
+<p>This option will shift the generated SoundObject to the time of the
+first note and then take the generated notes for the track and shift
+them all so that the first note starts at time 0 so that there is no
+empty time at the beginning of the track's note information.</p>
+</dd>
+</dl>
 <p>After finishing configuring settings for the imported MIDI data, Blue
 will generate the notes with one SoundLayer per MIDI track, and on each
 SoundLayer it will contain one GenericScore SoundObject containing the

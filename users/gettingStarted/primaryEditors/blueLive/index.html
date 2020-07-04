@@ -1742,18 +1742,28 @@ This allows your notes that would be used for effects instruments to run
 for 3600 seconds (this size can be modified; please make a request if
 desired).</p>
 <p>The main toolbar has four buttons for Blue Live:</p>
-<p>BlueLive</p>
-<p>:   Toggle button that stops and starts BlueLive</p>
-<p>Recompile</p>
-<p>:   If BlueLive is running, this button will cause Blue to recompile the
-    CSD from your project and restart BlueLive. This is useful if you
-    modify your orchestra code and want to quickly recompile and
-    continue working with BlueLive.</p>
-<p>All Notes Off</p>
-<p>:   Turns off any score notes that are actively playing</p>
-<p>MIDI Input</p>
-<p>:   Toggle button that turns on and off the configured MIDI devices
-    setup in Program Options (discussed further below).</p>
+<dl>
+<dt>BlueLive</dt>
+<dd>
+<p>Toggle button that stops and starts BlueLive</p>
+</dd>
+<dt>Recompile</dt>
+<dd>
+<p>If BlueLive is running, this button will cause Blue to recompile the
+CSD from your project and restart BlueLive. This is useful if you
+modify your orchestra code and want to quickly recompile and
+continue working with BlueLive.</p>
+</dd>
+<dt>All Notes Off</dt>
+<dd>
+<p>Turns off any score notes that are actively playing</p>
+</dd>
+<dt>MIDI Input</dt>
+<dd>
+<p>Toggle button that turns on and off the configured MIDI devices
+setup in Program Options (discussed further below).</p>
+</dd>
+</dl>
 <p>The primary Blue Live window is available from the Window Menu, or by
 using the ctrl-8 shortcut. The Blue Live window has three main tabs: the
 Live Space, the SCO Pad, and Options. These will be discussed int he
@@ -1773,13 +1783,19 @@ state. Enabled objects are highlighted in orange and are the
 SoundObjects that are triggered when multi-trigger or repeat is used.</p>
 <p>Once a SoundObject is added to the Live Space, it can be triggered in
 one of two ways:</p>
-<p>Single Trigger</p>
-<p>:   Trigger the contents of the currently selected SoundObject. This is
-    done by using the keyboard shortcut ctrl-T (cmd-T on OSX).</p>
-<p>Multi Trigger</p>
-<p>:   Triggers the contents of the currently enabled SoundObjects. This is
-    done either by using the Trigger button, or using the keyboard
-    shortcut ctrl-shift-T (cmd-shift-T on OSX).</p>
+<dl>
+<dt>Single Trigger</dt>
+<dd>
+<p>Trigger the contents of the currently selected SoundObject. This is
+done by using the keyboard shortcut ctrl-T (cmd-T on OSX).</p>
+</dd>
+<dt>Multi Trigger</dt>
+<dd>
+<p>Triggers the contents of the currently enabled SoundObjects. This is
+done either by using the Trigger button, or using the keyboard
+shortcut ctrl-shift-T (cmd-shift-T on OSX).</p>
+</dd>
+</dl>
 <p>Triggering a soundObject will take the score generated from it and pass
 it immediately to the active Csound instance for BlueLive (BlueLive must
 be running for this to work). Scores are always generated with Time

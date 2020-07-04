@@ -1841,11 +1841,15 @@ properties editor on the right-hand side. This allows you set the
 following values:</p>
 <p>Property       Description</p>
 <hr />
-<p>Grid Style     Affects the visual style of the Grid. Options are NONE, DOT, or LINE.
-  Snap Enabled   Affects whether adding, pasting, and dragging of BSBObjects in the editor will snap to the grid.
-  Width          Sets the width of each grid box. Defaults to 15 pixels.
-  Height         Sets the height of each grid box. Defaults to 15 pixels.</p>
-<p>: Grid Settings</p>
+<dl>
+<dt>Grid Style     Affects the visual style of the Grid. Options are NONE, DOT, or LINE.</dt>
+<dt>  Snap Enabled   Affects whether adding, pasting, and dragging of BSBObjects in the editor will snap to the grid.</dt>
+<dt>  Width          Sets the width of each grid box. Defaults to 15 pixels.</dt>
+<dt>  Height         Sets the height of each grid box. Defaults to 15 pixels.</dt>
+<dd>
+<p>Grid Settings</p>
+</dd>
+</dl>
 <p><img alt="" src="../../../../images/bsb_interface_use.png" /></p>
 <p>Once in usage mode, users can configure the instrument by working with
 the UI widgets: rotating knobs, moving sliders, etc. The values of the
@@ -1907,26 +1911,27 @@ always-on code.</p>
 instruments:</p>
 <p>Widget                     Replacement Key                           Value</p>
 <hr />
-<p>Knob                       objectName                                float value from knob
-  Horizontal Slider          objectName                                float value from slider
-  Horizontal Slider Bank     objectName_sliderNum (for each slider)   float value from slider
-  Vertical Slider            objectName                                float value from slider
-  Vertical Slider Bank       objectName_sliderNum (for each slider)   float value from slider
-  Label                      none                                      none
-  Checkbox                   objectName                                1 or 0, depending on if checked or not
-  Dropdown List              objectName                                Generates index of selected item when item is made automatable, or uses value from user-assigned Dropdown List
-  SubChannel Dropdown List   objectName                                Value from Dropdown List that is a named subchannel from the Blue Mixer
-  XY Controller              objectNameX, objectNameY                  X and Y value
-  LineObject                 objectName_lineName (for each line)      list of values from line (can be comma separated, with or without leading 0.0 X value, and x values can be generated either in absolute or relative terms)
-  Text Field                 objectName                                Value from text field (compile-time only).
-  File Selector              objectName                                If stringChannelEnabled is selected, outputs a Csound string variable (S-var) that can be updated at runtime if API is enabled, if stringChannelEnabled is set to off, outputs as a string (without quotes) at compilation time
-  Value                      objectName                                Generates using its default value or values from automation. Widget is only visible during edit mode.</p>
-<p>: Widget Values</p>
+<dl>
+<dt>Knob                       objectName                                float value from knob</dt>
+<dt>  Horizontal Slider          objectName                                float value from slider</dt>
+<dt>  Horizontal Slider Bank     objectName_sliderNum (for each slider)   float value from slider</dt>
+<dt>  Vertical Slider            objectName                                float value from slider</dt>
+<dt>  Vertical Slider Bank       objectName_sliderNum (for each slider)   float value from slider</dt>
+<dt>  Label                      none                                      none</dt>
+<dt>  Checkbox                   objectName                                1 or 0, depending on if checked or not</dt>
+<dt>  Dropdown List              objectName                                Generates index of selected item when item is made automatable, or uses value from user-assigned Dropdown List</dt>
+<dt>  SubChannel Dropdown List   objectName                                Value from Dropdown List that is a named subchannel from the Blue Mixer</dt>
+<dt>  XY Controller              objectNameX, objectNameY                  X and Y value</dt>
+<dt>  LineObject                 objectName_lineName (for each line)      list of values from line (can be comma separated, with or without leading 0.0 X value, and x values can be generated either in absolute or relative terms)</dt>
+<dt>  Text Field                 objectName                                Value from text field (compile-time only).</dt>
+<dt>  File Selector              objectName                                If stringChannelEnabled is selected, outputs a Csound string variable (S-var) that can be updated at runtime if API is enabled, if stringChannelEnabled is set to off, outputs as a string (without quotes) at compilation time</dt>
+<dt>  Value                      objectName                                Generates using its default value or values from automation. Widget is only visible during edit mode.</dt>
+<dd>
+<p>Widget Values</p>
+</dd>
+</dl>
 <ul>
-<li>For the Label object, you are able to style the label by using HTML.
-    To use this feature, when setting the text of the label, enter the
-    HTML label within \&lt;html> tags, such as "\&lt;html>\&lt;font
-    size="+1">My Label\&lt;/font>\&lt;/html>".</li>
+<li>For the Label object, you are able to style the font using the widget properties. Previous versions of Blue allowed styling using html tags but this is no longer supported.</li>
 </ul>
 <h3 id="groups">Groups</h3>
 <p>Widgets may be organized into Groups that provide titled border around
