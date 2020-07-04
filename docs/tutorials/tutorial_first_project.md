@@ -15,7 +15,7 @@ select Add Instrument\>GenericInstrument.
 
 Instrument Library
 
-![ Instrument Library ](../../images/tutorial_first_project/tutA_1.jpg)
+![ Instrument Library ](../images/tutorial_first_project/tutA_1.jpg)
 
 You will want to choose GenericInstrument when you want to create an
 ordinary csound instrument. An empty 'untitled' instrument iFs created.
@@ -29,7 +29,7 @@ is always available, drag it to the Instrument Library folder.
 Assigning Instrument to Arrangement
 
 ![ Assigning Instrument to Arrangement
-](../../images/tutorial_first_project/tutA_2.jpg)
+](../images/tutorial_first_project/tutA_2.jpg)
 
 The '\>' button brings an instrument from the library to the project. To
 remove an instrument from the project, select it and press '-'.
@@ -54,7 +54,7 @@ We will create a simple oscillator with an amplitude envelope like this:
 
 Editing Instrument
 
-![ Editing Instrument ](../../images/tutorial_first_project/tutA_3.jpg)
+![ Editing Instrument ](../images/tutorial_first_project/tutA_3.jpg)
 
 Try using blue's autocompletion feature like this: type 'line' and press
 ctrl-Space Bar. A pop-up window will display all known opcodes that
@@ -75,7 +75,7 @@ following code in the Global Orc tab for the instrument:
 Adding an FTable for the Instrument
 
 ![ Adding an FTable for the Instrument
-](../../images/tutorial_first_project/tutA_4.jpg)
+](../images/tutorial_first_project/tutA_4.jpg)
 
 Placing things like tables in the global tabs inside the instruments
 makes it very simple to share instruments between projects, because the
@@ -100,7 +100,7 @@ sound layer, right-click, and select 'Add New GenericScore'.
 
 Adding a Generic Score
 
-![ Adding a Generic Score ](../../images/tutorial_first_project/tutA_5.jpg)
+![ Adding a Generic Score ](../images/tutorial_first_project/tutA_5.jpg)
 
 GenericScore allows ordinary csound code to be used, in this case things
 like 'i' statements. When you click on the genericScore that has been
@@ -113,7 +113,7 @@ instrument. We'll use the simple:
 
 Editing a Generic Score
 
-![ Editing a Generic Score ](../../images/tutorial_first_project/tutA_6.jpg)
+![ Editing a Generic Score ](../images/tutorial_first_project/tutA_6.jpg)
 
 You can preview how the object will generate the csound score by
 pressing the \[ t e s t \] button on the right side of the panel. Notice
@@ -135,7 +135,7 @@ select 'Paste'. You should now have two objects like in figure 7.
 
 Copying SoundObjects
 
-![ Copying SoundObjects ](../../images/tutorial_first_project/tutA_7.jpg)
+![ Copying SoundObjects ](../images/tutorial_first_project/tutA_7.jpg)
 
 You can use the snap feature to move the objects by fixed values. press
 the \[...\] button on the upper right corner of the timeline to open the
@@ -146,7 +146,7 @@ to display numbers instead of time values.
 
 Setting Timeline Options
 
-![ Setting Timeline Options ](../../images/tutorial_first_project/tutA_8.jpg)
+![ Setting Timeline Options ](../images/tutorial_first_project/tutA_8.jpg)
 
 Now move and shape the objects so the first starts at 0, with a duration
 of 5 seconds, and the second starts at 10, again with a duration of 5.
@@ -169,7 +169,7 @@ a real-time flag for this project, like -o dac0 or -+P depending on your
 system.
 
 An important thing to note here is that when using the play button, the
-flags used are the ones inside te command line. The <CsOptions\> below
+flags used are the ones inside te command line. The \<CsOptions\> below
 only affect the generation of external csd's using the 'Generate CSD to
 screen/file' commands from the menu.
 

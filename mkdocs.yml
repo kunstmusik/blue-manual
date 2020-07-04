@@ -63,6 +63,7 @@ nav:
           - 'Comment': 'users/reference/soundObjects/comment.md'
           - 'Clojure': 'users/reference/soundObjects/clojureObject.md'
           - 'External': 'users/reference/soundObjects/external.md'
+          - 'GenericScore': 'users/reference/soundObjects/genericScore.md'
           - 'Instance': 'users/reference/soundObjects/instance.md'
           - 'Javascript': 'users/reference/soundObjects/javaScriptObject.md'
           - 'JMask': 'users/reference/soundObjects/jmask.md'
