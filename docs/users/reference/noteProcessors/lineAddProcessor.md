@@ -7,18 +7,22 @@ noteProcessor differs from the AddProcessor in that the value added is
 variable over time. The LineAdd String is a set of beat/value pairs that
 are like the breakpoints on curve. The following score:
 
-    i1 0 2 80
-    i1 + . 80
-    i1 + . 80
-    i1 + . 80
+```csound-sco 
+i1 0 2 80
+i1 + . 80
+i1 + . 80
+i1 + . 80
+```
 
 If processed with a LineAdd Processor with LineAddString set to "0 0 6
 3" and pfield set to 4, would result in:
 
-    i1  0.0 0.5 80.0
-    i1  0.5 0.5 81.0
-    i1  1.0 0.5 82.0
-    i1  1.5 0.5 83.0
+```csound-sco 
+i1  0.0 0.5 80.0
+i1  0.5 0.5 81.0
+i1  1.0 0.5 82.0
+i1  1.5 0.5 83.0
+```
 
 (The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)

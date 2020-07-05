@@ -9,18 +9,22 @@ number of scale degrees in which to add to the pch value. If a
 soundObject has notes where p5 is a pch value, and you the notes have
 values of 8.00, 8.04, 8.07, and 9.00:
 
-    i1 0 2 8.00
-    i1 + . 8.04
-    i1 + . 8.07
-    i1 + . 9.00
+```csound-sco
+i1 0 2 8.00
+i1 + . 8.04
+i1 + . 8.07
+i1 + . 9.00
+```
 
 If a PchAddProcessor with value 7 and pfield 5 is used, after
 processing, the score would result in:
 
-    i1  0.0 0.5 8.07
-    i1  0.5 0.5 8.11
-    i1  1.0 0.5 9.02
-    i1  1.5 0.5 9.07
+```csound-sco
+i1  0.0 0.5 8.07
+i1  0.5 0.5 8.11
+i1  1.0 0.5 9.02
+i1  1.5 0.5 9.07
+```
 
 (The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)

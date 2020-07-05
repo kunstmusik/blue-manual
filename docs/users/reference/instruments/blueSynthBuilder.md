@@ -1,5 +1,7 @@
 # BlueSynthBuilder
 
+## Introduction
+
 BlueSynthBuilder (BSB) allows the user to graphically build instrument
 interfaces for their Csound instruments. The graphical interface is
 designed for the use of exploring configuration of an instrument as well
@@ -7,6 +9,8 @@ as adjustment to values in realtime(requires enabling using the Csound
 API, see [here](../../../gettingStarted/installation#using_blue_with_the_csound_api).
 
 ## About BlueSynthBuilder
+
+### Principles of Design
 
 It has been my experience that most Csound instruments tend to be
 limited in user configurability of parameters than commercial
@@ -22,6 +26,8 @@ due to the text-based nature of instruments. I've found that:
     experimentation, while text-based configuration of instruments is
     often more difficult to quickly understand the parameters settings
     and limits
+
+###  Hybrid Design
 
 Going completely graphical for the building of instruments, in the case
 of systems like Max/PD/jMax or Reaktor, I've found that the instrument's
@@ -57,6 +63,8 @@ The Interface editor has two modes:
 
 ![](../../../images/bsb_interface_edit.png)
 
+#### Edit Mode
+
 The user can add interface elements and modify their properties using
 the property sheet on the right. To enable edit mode, click on the "Edit
 Enabled" checkbox in the upper right of the BSB instrument editor.
@@ -73,6 +81,8 @@ group of widgets. After selecting multiple widgets, you can drag them
 around as a group, as well as use the alignment and distribution options
 found on the right side bottom to tidy up the UI.
 
+#### Grid Settings
+
 ![](../../../images/bsb_interface_grid.png)
 
 When in edit mode, you can modify the Grid Settings by using the
@@ -86,7 +96,7 @@ following values:
 | Width        | Sets the width of each grid box. Defaults to 15 pixels.                                          |
 | Height       | Sets the height of each grid box. Defaults to 15 pixels.                                         |
 
-Grid Settings
+#### Usage Mode
 
 ![](../../../images/bsb_interface_use.png)
 
@@ -150,7 +160,6 @@ feature, there is Blue pseudo-opcode called blueMixerIn:
 
 ``` 
 asig1 [, asig2...] blueMixerIn        
-      
 ```
 
 The always-on code should then do processing code, then write out to
@@ -180,13 +189,6 @@ instruments:
 | Text Field               | objectName                              | Value from text field (compile-time only).                                                                                                                                                                                      |
 | File Selector            | objectName                              | If stringChannelEnabled is selected, outputs a Csound string variable (S-var) that can be updated at runtime if API is enabled, if stringChannelEnabled is set to off, outputs as a string (without quotes) at compilation time |
 | Value                    | objectName                              | Generates using its default value or values from automation. Widget is only visible during edit mode.                                                                                                                           |
-
-Widget Values
-
-  - For the Label object, you are able to style the label by using HTML.
-    To use this feature, when setting the text of the label, enter the
-    HTML label within <html\> tags, such as "<html\><font
-    size="+1"\>My Label</font\></html\>".
 
 ### Groups
 
@@ -233,28 +235,19 @@ to be k-rate to allow for live modification of the value when rendering.
 More information on paramenter automation can be found
 [here](../../../concepts/parameterAutomation).
 
-<div class="note">
+!!! note
+    In 0.124.3, a change was made that breaks backwards compatibility.
+    Previously, if a BSBObject was set to have "Automation Allowed" but was
+    not itself automated, it would compile as a constant in the generated
+    CSD. As of 0.124.3, if a widget is made to allow automation, the Csound
+    code that uses the widget value must accept a k-rate signal, whether the
+    API is used or not.
 
-<div class="title">
-
-Note
-
-</div>
-
-In 0.124.3, a change was made that breaks backwards compatibility.
-Previously, if a BSBObject was set to have "Automation Allowed" but was
-not itself automated, it would compile as a constant in the generated
-CSD. As of 0.124.3, if a widget is made to allow automation, the Csound
-code that uses the widget value must accept a k-rate signal, whether the
-API is used or not.
-
-If you have a project that rendered fine before 0.124.3 but afterwards
-can not render due to problems with Csound complaining that "k-rate
-signals not allowed", then you will need to either set the widget to not
-allow automation or change the Csound code so that it will work with the
-generated k-rate signal.
-
-</div>
+    If you have a project that rendered fine before 0.124.3 but afterwards
+    can not render due to problems with Csound complaining that "k-rate
+    signals not allowed", then you will need to either set the widget to not
+    allow automation or change the Csound code so that it will work with the
+    generated k-rate signal.
 
 ### Randomization
 

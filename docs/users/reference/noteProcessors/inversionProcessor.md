@@ -5,15 +5,18 @@ Parameters: pfield, value
 This NoteProcessor flips all values in designated pfield about an axis
 (value). The following score:
 
-    i1 0 2 80
-    i1 + . 85
-    i1 + . 95
-    i1 + . 100
+
+```csound-sco 
+i1 0 2 80
+i1 + . 85
+i1 + . 95
+i1 + . 100
+```
 
 If processed with an InversionProcessor with value 90 and pfield 4 would
 result in:
 
-``` 
+```csound-sco 
 i1  0.0 0.5 100.0
 i1  0.5 0.5 95.0
 i1  1.0 0.5 85.0

@@ -1,16 +1,7 @@
 # BlueX7
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-This instrument is currently undergoing re-implementation.
-
-</div>
+!!! note
+    This instrument is currently undergoing re-implementation.
 
 A 6 Operator Phase Modulation instrument using Russell Pinkston's DX7
 Emulation Patches.
@@ -67,14 +58,18 @@ which may answer some of my questions above)
 
 On the 'csound' tab you find by default:
 
+```csound-orc
     blueMixerOut aout, aout
+```
 
 This routes the output of the instrument directly to the stereo output
 of csound. You can include further code to process the 'aout' signal
 produced by the BlueX7, or to route it as needed. For example, if you
 are outputing in mono, you could code such as:
 
+```csound-orc
     out aout
+```
 
 To call the BlueX7 instrument in the orchestra, create a GenericScore
 object in the timeline, and call the the BlueX7 instrument. BlueX7
@@ -83,8 +78,10 @@ in format octave.semitone (e.g. C4 is 4.00, C\#1 is 1.01 and F6 is
 6.05). P-field 5 contains the midi velocity for the note with values
 from 0 to 127. For example:
 
-    i1 0 1 8.00 100
-    i1 + 1 8.02 100
-    i1 + 1 8.04 100
-    i1 + 1 8.05 100
-    i1 + 1 8.07 100
+```csound-sco
+i1 0 1 8.00 100
+i1 + 1 8.02 100
+i1 + 1 8.04 100
+i1 + 1 8.05 100
+i1 + 1 8.07 100
+```

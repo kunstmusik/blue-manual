@@ -105,18 +105,9 @@ are used.
     "csound". You may use any command here that would call Csound that
     would work as if you were running csound from a terminal.
     
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    The value defined for Csound Executable should only be the command
-    to call Csound and no other flags should be added here.
-    
-    </div>
+    !!! note 
+        The value defined for Csound Executable should only be the command
+        to call Csound and no other flags should be added here.
 
   - Freeze Flags  
     These are the flags for Csound that blue uses when performing
@@ -128,6 +119,8 @@ are used.
 ## Realtime
 
 ![](../../images/programOptions_realtime.png)
+
+### Project Settings
 
   - Csound Executable  
     This is a command for what version of Csound to execute when blue
@@ -143,18 +136,10 @@ are used.
     If you are using the API, you still need to have something set here.
     You can set it to "csound" in that case.
     
-    <div class="note">
+    !!! note 
+        The value defined for Csound Executable should only be the command
+        to call Csound and no other flags should be added here.
     
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    The value defined for Csound Executable should only be the command
-    to call Csound and no other flags should be added here.
-    
-    </div>
 
   - Render Method  
     Choose which render service to use for rendering the project. When
@@ -180,7 +165,7 @@ are used.
     Default value to use for 0dbfs. Also, the checkbox denotes whether
     projects should use 0dbfs by default or not.
 
-<!-- end list -->
+### Devices
 
   - Audio Driver  
     Driver to use for audio input and output. This is equivalent to
@@ -206,22 +191,14 @@ are used.
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
-    <div class="note">
+    !!! note 
     
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    If the driver is chosen but not enabled for use via its checkbox,
-    when auto-detecting, blue will check for devices against the default
-    driver and not necessarily what is in the dropdown. Please be sure
-    that if you are planning to use the auto-detect feature with a
-    particular driver that you also select the driver and enable it with
-    the checkbox.
-    
-    </div>
+        If the driver is chosen but not enabled for use via its checkbox,
+        when auto-detecting, blue will check for devices against the default
+        driver and not necessarily what is in the dropdown. Please be sure
+        that if you are planning to use the auto-detect feature with a
+        particular driver that you also select the driver and enable it with
+        the checkbox.
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -242,22 +219,13 @@ are used.
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    If the driver is chosen but not enabled for use via its checkbox,
-    when auto-detecting, blue will check for devices against the default
-    driver and not necessarily what is in the dropdown. Please be sure
-    that if you are planning to use the auto-detect feature with a
-    particular driver that you also select the driver and enable it with
-    the checkbox.
-    
-    </div>
+    !!! note 
+        If the driver is chosen but not enabled for use via its checkbox,
+        when auto-detecting, blue will check for devices against the default
+        driver and not necessarily what is in the dropdown. Please be sure
+        that if you are planning to use the auto-detect feature with a
+        particular driver that you also select the driver and enable it with
+        the checkbox.
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -284,23 +252,14 @@ are used.
     appear with a list of available devices. Selecting from the popup
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
+
+    !!! note 
     
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    If the driver is chosen but not enabled for use via its checkbox,
-    when auto-detecting, blue will check for devices against the default
-    driver and not necessarily what is in the dropdown. Please be sure
-    that if you are planning to use the auto-detect feature with a
-    particular driver that you also select the driver and enable it with
-    the checkbox.
-    
-    </div>
+        If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, blue will check for devices against the default
+        driver and not necessarily what is in the dropdown. Please be sure
+        that if you are planning to use the auto-detect feature with a
+        particular driver that you also select the driver and enable it with
+        the checkbox.
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -320,27 +279,19 @@ are used.
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    If the driver is chosen but not enabled for use via its checkbox,
-    when auto-detecting, blue will check for devices against the default
-    driver and not necessarily what is in the dropdown. Please be sure
-    that if you are planning to use the auto-detect feature with a
-    particular driver that you also select the driver and enable it with
-    the checkbox.
-    
-    </div>
+    !!! note
+
+        If the driver is chosen but not enabled for use via its checkbox,
+        when auto-detecting, blue will check for devices against the default
+        driver and not necessarily what is in the dropdown. Please be sure
+        that if you are planning to use the auto-detect feature with a
+        particular driver that you also select the driver and enable it with
+        the checkbox.
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
 
-<!-- end list -->
+### Buffer Settings
 
   - Software Buffer  
     Size of software sample buffer to use (-b). For more information,
@@ -356,7 +307,7 @@ are used.
     Enabling the checkbox determines if this value will be used at all
     when rendering.
 
-<!-- end list -->
+### Message Level
 
   - Note Amplitudes  
     Enables note amplitude messages from Csound (-m1)
@@ -370,7 +321,7 @@ are used.
   - Benchmark Information  
     Enables benchmark information from Csound (-m128)
 
-<!-- end list -->
+### Advanced Settings
 
   - Advanced Settings  
     Extra flags to append to the commandline that might not be covered
@@ -380,6 +331,8 @@ are used.
 ## Disk Render
 
 ![](../../images/programOptions_diskRender.png)
+
+### Project Settings
 
   - Csound Executable  
     This is a command for what version of csound to execute when blue
@@ -391,20 +344,12 @@ are used.
     Using the button marked "..." on the right will open up a file
     dialog so that you can find and select the csound executable to use
     to run Csound.
-    
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    The value defined for Csound Executable should only be the command
-    to call Csound and no other flags should be added here.
-    
-    </div>
 
+    !!! note 
+    
+        The value defined for Csound Executable should only be the command
+        to call Csound and no other flags should be added here.
+    
   - Render Method  
     Choose which render service to use for rendering the project. When
     the program loads, Blue will first try to see if the Csound 6 API is
@@ -432,7 +377,7 @@ are used.
     Default value to use for 0dbfs. Also, the checkbox denotes whether
     projects should use 0dbfs by default or not.
 
-<!-- end list -->
+###  Render and Play Command 
 
   - Enabled  
     Enable using custom play command when using "Render and Play". If
@@ -448,7 +393,7 @@ are used.
     
         open -a VLC $outfile
 
-<!-- end list -->
+###  File Output Settings 
 
   - File Format  
     File format to use (i.e. WAV, AIFF, AU, etc.)
@@ -485,8 +430,7 @@ are used.
     Enabling the checkbox determines if this value will be used at all
     when rendering.
 
-<!-- end list -->
-
+###  Message Level 
   - Note Amplitudes  
     Enables note amplitude messages from Csound (-m1)
 
@@ -499,7 +443,7 @@ are used.
   - Benchmark Information  
     Enables benchmark information from Csound (-m128)
 
-<!-- end list -->
+###  Advanced Settings 
 
   - Advanced Settings  
     Extra flags to append to the commandline that might not be covered

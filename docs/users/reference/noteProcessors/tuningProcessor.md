@@ -1,5 +1,7 @@
 # Tuning Processor
 
+## Introduction
+
 Parameters: pfield, baseFrequency, scalaFile
 
 Converts Blue PCH notation to frequency according to scale values in a
@@ -19,6 +21,8 @@ should be:
 where oct is equal to octave, and scale degree equal to what degree of
 the scale to use. The output will be frequency values, so instruments
 should be set to accept values as frequency.
+
+## Notes
 
   - Fractional scaleDegree's are not supported.
 

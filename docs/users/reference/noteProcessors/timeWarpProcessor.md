@@ -1,5 +1,7 @@
 # Time Warp Processor
 
+# Introduction
+
 parameters: TimeWarpString
 
 Warps time in the same way as Csound t-statement, but does not require
@@ -22,6 +24,8 @@ That is, an accelerando between two tempos M1 and M2 proceeds by linear
 interpolation of the single-beat durations from 60/M1 to 60/M2.
 
 The first tempo given must be for beat 0.
+
+##  Notes on Usage
 
   - Beat values for beat/tempo pairs should related to the score
     \*before\* any time behavior is applied. For example, for the

@@ -11,18 +11,22 @@ The RandomMultiplyProcessor expects either a positive or negative float
 value for the min and max, and a postive integer for the pfield. The
 following score:
 
-    i1 0 2 80
-    i1 + . 80
-    i1 + . 80
-    i1 + . 80
+```csound-sco
+i1 0 2 80
+i1 + . 80
+i1 + . 80
+i1 + . 80
+```
 
 when processed with an RandomMultiplyProcessor with min set to 1.0, max
 set to 2.0, and pfield set to 4, results in the following:
 
-    i1  0.0 0.5 85.553246
-    i1  0.5 0.5 148.94167
-    i1  1.0 0.5 125.57565
-    i1  1.5 0.5 97.00755
+```csound-sco
+i1  0.0 0.5 85.553246
+i1  0.5 0.5 148.94167
+i1  1.0 0.5 125.57565
+i1  1.5 0.5 97.00755
+```
 
 (The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)

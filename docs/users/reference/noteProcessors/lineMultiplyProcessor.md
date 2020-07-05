@@ -8,18 +8,23 @@ muliplied by is variable over time. The LineMultiply String is a set of
 beat/value pairs that are like the breakpoints on curve. The following
 score:
 
-    i1 0 2 80
-    i1 + . 80
-    i1 + . 80
-    i1 + . 80
+```csound-sco 
+i1 0 2 80
+i1 + . 80
+i1 + . 80
+i1 + . 80
+```
 
 If processed with a LineMultiple Processor with LineMultiplyString set
 to "0 0 6 2" and pfield set to 4, would result in:
 
-    i1  0.0 0.5 0.0
-    i1  0.5 0.5 53.333336
-    i1  1.0 0.5 106.66667
-    i1  1.5 0.5 160.0
+
+```csound-sco 
+i1  0.0 0.5 0.0
+i1  0.5 0.5 53.333336
+i1  1.0 0.5 106.66667
+i1  1.5 0.5 160.0
+```
 
 (The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)

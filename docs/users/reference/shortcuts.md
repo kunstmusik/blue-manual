@@ -1,5 +1,7 @@
 # Shortcuts
 
+## General Shortcuts
+
 | Shortcuts    | Description                                                           |
 | ------------ | --------------------------------------------------------------------- |
 | ctrl-1       | brings the score tab into focus                                       |
@@ -18,7 +20,7 @@
 | ctrl-w       | close the current work file                                           |
 | alt-F4       | close Blue                                                            |
 
-General Shortcuts
+## Rendering
 
 | Shortcuts     | Description                                                                                                   |
 | ------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -26,7 +28,8 @@ General Shortcuts
 | shift-F9      | Render to Disk and Play using project's disk render options and playing with Blue's builtin sound file player |
 | ctrl-shift-F9 | Render to Disk using project's disk render options                                                            |
 
-Rendering
+
+## Score Timeline
 
 | Shortcuts         | Description                                                                                                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,13 +56,15 @@ Rendering
 | ctrl-left         | decrease horizontal zoom                                                                                                                                                                                        |
 | ctrl-right        | incrase horizontal zoom                                                                                                                                                                                         |
 
-Score Timeline
+##  Orchestra Manager
+
 
 | Shortcuts       | Description                                                                           |
 | --------------- | ------------------------------------------------------------------------------------- |
 | ctrl-left click | if on the column header of the instruments table, will enable/disable all instruments |
 
-Orchestra Manager
+
+## In a text box
 
 | Shortcuts    | Description                                                                                                                                         |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,10 +75,10 @@ Orchestra Manager
 | ctrl-;       | comment out line or selected lines (prepends ";" to every line)                                                                                     |
 | ctrl-shift-; | uncomment out line or selected lines (removes ";" at beginning of every line if found)                                                              |
 
-In a text box
+## Editing GenericScore, PythonObject, JavaScriptObject
+
 
 | Shortcuts | Description                                                                                           |
 | --------- | ----------------------------------------------------------------------------------------------------- |
 | ctrl-T    | when the text area is focused, ctrl-T runs test on the soundObject (same as pressing the test button) |
 
-Editing GenericScore, PythonObject, JavaScriptObject

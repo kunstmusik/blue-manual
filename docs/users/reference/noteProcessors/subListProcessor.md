@@ -21,16 +21,20 @@ duration lasting 1.25 seconds, each starting one right after the other.
 
 The following score:
 
-    i1 0 2 1
-    i1 + . 2
-    i1 + . 3
-    i1 + . 4
+```csound-sco
+i1 0 2 1
+i1 + . 2
+i1 + . 3
+i1 + . 4
+```
 
 when processed with a SubList processor with start 2 and end 3, would
 result in:
 
-    i1  0.0 1   2
-    i1  1.0 1   3
+```csound-sco
+i1  0.0 1   2
+i1  1.0 1   3
+```
 
 (The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)
