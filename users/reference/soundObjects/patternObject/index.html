@@ -1122,9 +1122,77 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Pattern
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Pattern" class="md-nav__link md-nav__link--active">
       Pattern
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding_patterns" class="md-nav__link">
+    Adding Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing_the_patterns_score" class="md-nav__link">
+    Editing the Pattern's Score
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing_the_patternobject_score" class="md-nav__link">
+    Editing the PatternObject Score
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other_notes" class="md-nav__link">
+    Other Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1588,6 +1656,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding_patterns" class="md-nav__link">
+    Adding Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing_the_patterns_score" class="md-nav__link">
+    Editing the Pattern's Score
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing_the_patternobject_score" class="md-nav__link">
+    Editing the PatternObject Score
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other_notes" class="md-nav__link">
+    Other Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1603,13 +1723,14 @@
                 
                 
                 <h1 id="patternobject">PatternObject</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Accepts NoteProcessors: yes</p>
-<p>Pattern Object</p>
 <p><img alt="Pattern Object" src="../../../../images/patternObject1.png" /></p>
 <p>The PatternObject is pattern-based score editor, based on the author's
 previous project "Patterns". It is a flexible pattern-oriented score
 editor, useful for musical ideas which are pattern based, such as drum
 parts or minimalist-style musical ideas.</p>
+<h2 id="usage">Usage</h2>
 <p>For the general workflow of using the PatternObject, users will liked
 likely want to:</p>
 <ol>
@@ -1628,29 +1749,24 @@ likely want to:</p>
 <p>Visually edit the PatternObject score</p>
 </li>
 </ol>
+<p>Setting PatternObject Properties</p>
 <p>The PatternObject's Time Properties can be modified by clicking on the
 button in the upper-right corner of the editor. Clicking the button will
-hide or show the properties panel on the right, as shown below:
-PatternObject - Properties PatternObject - Properties</p>
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-Editing the time values will clear out any pattern triggers that the
+hide or show the properties panel on the right, as shown below:</p>
+<p><img alt="Pattern Object Properties" src="../../../../images/patternObject2.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Editing the time values will clear out any pattern triggers that the
 user has entered. It is recommended that one first decide the pattern
-time properties before working with the PatternObject.
-
+time properties before working with the PatternObject.</p>
 </div>
-
+<h2 id="adding_patterns">Adding Patterns</h2>
 <p>To add Patterns to the PatternObject, use the "+" button on the bottom
 of the left hand section. Double-clicking the name of the pattern name
 will allow editing of the name, and clicking on the [x] box will allow
 for muting the Pattern. Clicking on the Pattern in the table will also
 bring up it's score in the area below.</p>
+<h2 id="editing_the_patterns_score">Editing the Pattern's Score</h2>
 <p>The Pattern's score is standard Csound SCO text, with the same features
 supported as by the GenericScore SoundObject. Each score should be
 started from time zero. The Pattern's score should be set such that its
@@ -1661,6 +1777,7 @@ p3 value of a note) and thus a single subdivision in this case would be
 equivalent to .25. Scores shorter or longer than the subdivision length
 are allowed, but one should be aware that the resultant score may or may
 not longer than what is visually represented on the PatternObject score.</p>
+<h2 id="editing_the_patternobject_score">Editing the PatternObject Score</h2>
 <p>The PatternObject score is visually edited by click on squares which
 correspond to subdivisions of the beat. For example, if a Pattern's
 score is .25 in total duration, and the time value of the PatternObject
@@ -1670,6 +1787,7 @@ in a score.</p>
 wishes to have a Pattern triggered. To remove, simply click on a
 selected square. The user can also click and drag to add or remove
 mutliple triggers.</p>
+<h2 id="other_notes">Other Notes</h2>
 <ul>
 <li>
 <p>Users may be surprised at the generated score if time behavior is
@@ -1691,9 +1809,7 @@ mutliple triggers.</p>
 <p>To get around this, you may want to use a time behavior of None, or
 you may want put in a "ghost note" in a Pattern layer, using a note
 like:</p>
-<p>``` 
-i 10000 0 .25</p>
-<p>```</p>
+<p><code>i 10000 0 .25</code></p>
 <p>Where 10000 is not an instrument in use in your project. Then you
 can put in a trigger for this pattern in the last subdivision. What
 will happen is that Blue will process the score with this note's

@@ -1182,9 +1182,91 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tracker
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Tracker" class="md-nav__link md-nav__link--active">
       Tracker
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction_to_the_interface" class="md-nav__link">
+    Introduction to the Interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting_things_up" class="md-nav__link">
+    Setting Things Up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track_properties" class="md-nav__link">
+    Track Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entering_in_notes" class="md-nav__link">
+    Entering in Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard_note_mode" class="md-nav__link">
+    Keyboard Note Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    Shortcuts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard_note_mode_1" class="md-nav__link">
+    Keyboard Note Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1588,6 +1670,72 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction_to_the_interface" class="md-nav__link">
+    Introduction to the Interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting_things_up" class="md-nav__link">
+    Setting Things Up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#track_properties" class="md-nav__link">
+    Track Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entering_in_notes" class="md-nav__link">
+    Entering in Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard_note_mode" class="md-nav__link">
+    Keyboard Note Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    Shortcuts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard_note_mode_1" class="md-nav__link">
+    Keyboard Note Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1603,6 +1751,7 @@
                 
                 
                 <h1 id="tracker">Tracker</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Accepts NoteProcessors: yes</p>
 <p><img alt="" src="../../../../images/tracker.png" /></p>
 <p>The Tracker SoundObject is a table-based tool to enter in patterns of
@@ -1613,6 +1762,7 @@ entered into each Track with Tracks being configurable as to what
 parameters (columns) to use. Unique to the Blue Tracker SoundObject is
 the support for microtonal scales using Scala scale files as well as
 support for Csound's Tied-Notes feature.</p>
+<h2 id="introduction_to_the_interface">Introduction to the Interface</h2>
 <p>The interface consists of three main areas: the top tool bar, the main
 tracking area, and the track properties editor.</p>
 <p>The top tool bar has a "+" button which adds new tracks to the Tracker,
@@ -1632,6 +1782,7 @@ properties, at least one track needs to be added to the tracker. Once
 one track exists, click the small button above the right scroll bar to
 open and close the track editor properties. More information on using
 the properties editor follows below in the section "Settings Things Up".</p>
+<h2 id="setting_things_up">Setting Things Up</h2>
 <p>When the Tracker Object is edited it is completely blank. To start,
 click the "+" button to add as many tracks as you would like to use.
 After adding the number of tracks you'd like to use you will need to
@@ -1642,6 +1793,7 @@ a track. Selecting a track will populate the track properties editor as
 well as hilight the name panel with a green border. A track's properties
 consist of a Name, Note Template, Instrument ID, and Columns;
 descriptions of the values are listed below.</p>
+<h2 id="track_properties">Track Properties</h2>
 <ul>
 <li>
 <p>Name<br />
@@ -1735,6 +1887,7 @@ for PCH.</p>
 </ul>
 </li>
 </ul>
+<h2 id="entering_in_notes">Entering in Notes</h2>
 <p>Entering in data into the tracker is much like entering data into any
 other table, though learning the keyboard shortcuts will vastly speed up
 entering and modifying data. To begin click anywhere on a track where
@@ -1767,6 +1920,7 @@ ctrl-down respectively to change the value. (NOTE: This operation
 operates differently for each column type and does nothing for the
 String type. Please see the column type information above for more
 information.)</p>
+<h2 id="keyboard_note_mode">Keyboard Note Mode</h2>
 <p>Like most trackers, the Tracker object has keyboard shortcuts that will
 allow for very quickly adding notes. To enable Keybaord Note mode,
 either click the checkbox on the top tool bar or use the keyboard
@@ -1779,6 +1933,7 @@ section).</p>
 mode. To change the octave, use either the spinner control on the top
 tool bar or use the keyboard shortcuts ctrl-shift-up or ctrl-shift-down.
 By default, the base octave starts at middle-c.</p>
+<h2 id="shortcuts">Shortcuts</h2>
 <table>
 <thead>
 <tr>
@@ -1845,7 +2000,7 @@ By default, the base octave starts at middle-c.</p>
 </tr>
 </tbody>
 </table>
-<p>Keyboard Shortcuts</p>
+<h2 id="keyboard_note_mode_1">Keyboard Note Mode</h2>
 <table>
 <thead>
 <tr>
@@ -2032,18 +2187,10 @@ By default, the base octave starts at middle-c.</p>
 </tr>
 </tbody>
 </table>
-<p>Keyboard Note Mode</p>
-<div class="note">
-
-<div class="title">
-
-For More Information
-
-</div>
-
-See the tracker.blue example file in the blue/examples/soundObjects
-folder.
-
+<div class="admonition note">
+<p class="admonition-title">For More Information</p>
+<p>See the tracker.blue example file in the blue/examples/soundObjects
+folder.</p>
 </div>
                 
               

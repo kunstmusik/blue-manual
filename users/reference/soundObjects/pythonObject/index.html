@@ -1158,9 +1158,70 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Python
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Python" class="md-nav__link md-nav__link--active">
       Python
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regarding_processing" class="md-nav__link">
+    Regarding Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables_from_blue" class="md-nav__link">
+    Variables from Blue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process_at_start" class="md-nav__link">
+    Process at Start
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1588,6 +1649,51 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regarding_processing" class="md-nav__link">
+    Regarding Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables_from_blue" class="md-nav__link">
+    Variables from Blue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process_at_start" class="md-nav__link">
+    Process at Start
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1603,6 +1709,7 @@
                 
                 
                 <h1 id="pythonobject">PythonObject</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Accepts NoteProcessors: yes</p>
 <p>Allows for using of the Python programming language to generate score
 data, using the Jython interpreter to interpret Python scripts. You may
@@ -1614,10 +1721,11 @@ under blue/pythonLib.</p>
 <p>After writing your script to generate notes, assign the string value of
 the notes to the variable 'score'. Blue will then read in the value from
 that variable and continue processing.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="ss">&quot;&quot;</span>
+<h2 id="example">Example</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-  <span class="n">temp</span> <span class="o">+=</span> <span class="ss">&quot;i1 %d 1 %s %s\n&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="ss">&quot;8.0&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">80</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+  <span class="n">temp</span> <span class="o">+=</span> <span class="s2">&quot;i1 </span><span class="si">%d</span><span class="s2"> 1 </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;8.0&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">80</span><span class="p">)</span>
 
 <span class="n">score</span> <span class="o">=</span> <span class="n">temp</span>
 </code></pre></div>
@@ -1626,13 +1734,14 @@ that variable and continue processing.</p>
 <p>The above example script will generate four notes at ascending half
 steps. If the PythonObject is set with a start time of 0 and a duration
 of 2, then it will generate the following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 8.00    80</span>
-<span class="err">i1  0.5 0.5 8.01    80</span>
-<span class="err">i1  1.0 0.5 8.02    80</span>
-<span class="err">i1  1.5 0.5 8.03    80</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">0.5</span> <span class="mf">8.00</span>    <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">8.01</span>    <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.0</span> <span class="mf">0.5</span> <span class="mf">8.02</span>    <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.5</span> <span class="mf">0.5</span> <span class="mf">8.03</span>    <span class="mi">80</span>
 </code></pre></div>
 
 
+<h2 id="regarding_processing">Regarding Processing</h2>
 <p>Blue processes soundObjects by going through each SoundLayer and
 generating score for each object within each layer. This is useful to
 know so that if you are using a PythonObject that has utility functions
@@ -1646,6 +1755,7 @@ allows creating utility PythonObjects. However, one can use stale values
 (or values from another project even) if one is not careful to always
 assign values in the project that require being set for this particular
 project.</p>
+<h2 id="variables_from_blue">Variables from Blue</h2>
 <p>The following variables are avaialable from Blue:</p>
 <ul>
 <li>
@@ -1658,6 +1768,7 @@ project.</p>
     separator at end.</p>
 </li>
 </ul>
+<h2 id="process_at_start">Process at Start</h2>
 <p>There is a checkbox entitled "Process at Start". Selecting this option
 will have the script of the PythonObject run when a .blue project is
 loaded. This is useful for scripts that act as library functions, but
