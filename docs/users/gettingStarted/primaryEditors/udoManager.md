@@ -1,7 +1,5 @@
 # User-Defined Opcodes Manager
 
-User-Defined Opcodes Manager
-
 ![ User-Defined Opcodes Manager ](../../../images/udoWindow.png)
 
 The User-Defined Opcodes Manager contains three main parts:
@@ -43,6 +41,8 @@ To edit the UDO, select one from the table. After selecting a UDO, the
 UDO Editor will be populated with that UDO. This time, no green border
 will show, as that is only done when a Library UDO is being edited.
 
+## Notes on Editing UDOs
+
 For UDO's, you will need the name of the UDO, the intypes and outtypes,
 and the body of the code itself. For the body of the code, you will not
 need anything from the "opcode" line that normally starts a UDO
@@ -50,10 +50,14 @@ definition (i.e. "opcode myOpcode, a, ak"), as those should be in the
 text fields for Opcode Name, In Types, and Out Types, and you will not
 need an "endop", as Blue will add that itself.
 
-User-Defined Opcode Repository Browser
+<!-- 
+
+TODO - add documentation on Importing Blue or Csound UDOs
+
+## User-Defined Opcode Repository Browser
 
 ![ User-Defined Opcode Repository Browser ](../../../images/udoDB.png)
 
 Using the "I" Button will open up the UDO Repository browser. The
 browser shows the available UDO's in the repository on Csounds.com and
-allows for importing from the repository straight into your project.
+allows for importing from the repository straight into your project. -->

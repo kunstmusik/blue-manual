@@ -1,7 +1,5 @@
 # .csoundrc Editor
 
-.csoundrc Editor
-
 ![.csoundrc Editor](../../../images/csoundrc_editor.png)
 
 The .csoundrc Editor tool allows for editing the system-wide .csoundrc

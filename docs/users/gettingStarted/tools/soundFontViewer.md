@@ -1,7 +1,5 @@
 # Sound Font Viewer
 
-Sound Font Viewer
-
 ![ Sound Font Viewer ](../../../images/soundFontViewer.png)
 
 The Sound Font Viewer allows you to select SoundFonts from the file

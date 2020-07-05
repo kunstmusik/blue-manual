@@ -1,7 +1,5 @@
 # Code Repository
 
-Code Repository
-
 ![Code Repository](../../../images/codeRepository.png)
 
 The Code Repository is where you edit the options that will come up from

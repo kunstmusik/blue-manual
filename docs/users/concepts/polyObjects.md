@@ -1,4 +1,4 @@
-# 
+by Michael Bechard, 2005
 
 ## Introduction
 
@@ -10,6 +10,8 @@ against the PolyObject, and that is when one really begins to realize
 the benefits of using PolyObjects.
 
 ## Basic
+
+### Explanation
 
 To repeat what is stated in the reference documentation, a PolyObject
 can be seen as a container of other SoundObjects. It contains its own
@@ -33,6 +35,8 @@ inside of boxes inside of boxes, as many layers as we like. And when you
 realize that you can change the sounds inside of any box by applying a
 NoteProcessor to it (like making the box metal instead of cardboard),
 you begin to see the power of using PolyObjects.
+
+### Usage
 
 The way it works is, you create a PolyObject in a SoundLayer like you
 would any other SoundObject; by right-clicking on the SoundLayer and
@@ -86,6 +90,8 @@ beats, depending on the size of your PolyObject. One can test this with
 the Test button: shrink a PolyObject that has the Scale Time Behavior
 and the notes within it will shrink as well.
 
+#### No Special Time Behavior
+
 There are a couple of easy ways to make sure that the sounds you place
 in a PolyObject remain to scale in the parent container, or the root
 score. One method is to right-click on the PolyObject itself and click
@@ -114,6 +120,8 @@ Objective Time" on it, so that you may edit the rest of the score while
 having an accurate picture of the actual length of the PolyObject. Keep
 in mind that you may use the "Set Subjective Time to Objective Time"
 feature on any SoundObject with any Time Behavior setting.
+
+####  Repeat/Looping Time Behavior
 
 One can lay down a series of sounds in a PolyObject and setup the
 PolyObject to loop them. The Time Behavior of the PolyObject itself
@@ -172,6 +180,8 @@ the length of our PolyObject, which is six.
 NoteProcessors are great when used in conjunction with PolyObjects. They
 can be very powerful, but you have to be careful of a few gotcha's.
 
+#### P-fields and PolyObjects
+
 One thing to be aware of with PolyObjects and NoteProcessors are
 p-fields. The user must make sure that the p-field(s) that is being
 operated on by the Note Processor(s) is the same for all sounds within
@@ -180,6 +190,8 @@ p4 equals the pitch, and one errant note where p4 equals phase, for
 instance, things could get disastrous if one tries to apply a
 PchAddProcessor to the whole PolyObject. Please refer to the Best
 Practices section for more information.
+
+####  Time Behavior and NoteProcessors
 
 Everything that is to follow in this section can be summed up in one
 important fact: NoteProcessors get applied to SoundObjects before the
@@ -241,6 +253,8 @@ results, one has to change the ending beat in the LineAddProcessor to
 five instead of two, because five is the beat at which the last note
 plays in the looped sequence.
 
+### Multi-layered Polyobjects
+
 As mentioned previously, PolyObjects can contain other PolyObjects. The
 thing to remember when doing this is that each PolyObject's settings,
 NoteProcessor's, etc. are local to itself. For blue, the notes generated
@@ -249,6 +263,8 @@ GenericScore or any other type of SoundObject, and can be manipulated in
 the same way.
 
 ## Best Practices
+
+### Separate notes with dissimilar behavior into their own PolyObjects
 
 Let's say you're making a PolyObject with lots of regular notes whose p4
 field represents the pitch. At some point you also want to insert a note
@@ -262,6 +278,8 @@ called) represents the pitch of all of the notes it contains. However,
 with that extra note in it, p4 has no consistent meaning in PolyObject
 X, and you can't safely apply NoteProcessors to it that affect that
 p-field.
+
+### Group co-reliant notes together into PolyObjects
 
 Co-reliant notes, in this case, would be notes that rely on each other
 to make their sound. For instance, if you had a group of notes that fed
@@ -278,6 +296,8 @@ channel, the resulting sound file would be dead silence, and the score
 would never work (since a frozen sound does nothing but read and play a
 sound file).
 
+### Wait, what about separating dissimilar notes?
+
 That's still possible with co-reliant but dissimilar notes. What one
 would do, to use the example in the previous section, is make a
 PolyObject that contained the instrument processing the zak channel
@@ -287,11 +307,16 @@ what you can do is apply all kinds of NoteProcessors to the embedded
 PolyObject, then freeze or do whatever to the parent PolyObject in a
 reliable fashion.
 
+
+###  Try to group logical phrases in your music into PolyObjects
+
 It's much easier on the user as a composer to arrange the notes this
 way. This enables one to see opportunites for reuse of certain musical
 phrases, and implement that repetition easily by adding said PolyObjects
 to the SoundObject Library and copying instances wherever they're
 needed.
+
+###  Try to keep the length of the PolyObject representational of its actual length
 
 This only really applies if the Time Behavior being used is None,
 otherwise a PolyObject's length is always going to represent accurately

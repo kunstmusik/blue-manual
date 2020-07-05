@@ -1,7 +1,5 @@
 # Mixer
 
-Mixer
-
 ![](../../../images/mixer.png)
 
 The Mixer system in Blue allows for graphically editing levels for
@@ -102,7 +100,6 @@ to target a subchannel by name. This form is used in the following way:
 
 ``` 
       blueMixerOut "subChannelName", asig1, asig2 [, asig3...]
-    
 ```
 
 Using this form, the asig signals will be mixed into the subChannel
@@ -138,7 +135,7 @@ The workflow for using Effects with your Mixer channels is:
     Double-clicking the effect will open up a dialog that shows the
     effect's graphical user interface.
 
-Effects Library
+### Effects Library
 
 ![](../../../images/effectsLibrary1.png)
 
@@ -166,8 +163,6 @@ edit modes, one in which you can add, remove, and move around widgets,
 and another where you can interact with the widgets (useful for setting
 an initial value for the Effect.)
 
-Effects Library
-
 ![](../../../images/effectsLibrary2.png)
 
 In the code editor for the Effect, one sees that the xin and xout lines
@@ -182,18 +177,9 @@ Values from the widgets follow the same principles as BlueSynthBuilder,
 and code completion for opcodes (ctrl-space) and BSB widgets
 (ctrl-shift-space) work within the code editor.
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-Blue currently expects Effects to have nchnls number of channels in and
-out where nchnls is the number set by the project.
-
-</div>
+!!! note
+    Blue currently expects Effects to have nchnls number of channels in and
+    out where nchnls is the number set by the project.
 
 ## Other Notes
 

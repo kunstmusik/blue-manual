@@ -14,12 +14,15 @@ copyright: Copyright &copy; 2000 - 2020 Steven Yi
 markdown_extensions:
     - def_list
     - tables 
+    - admonition
+    - codehilite
     - toc:
         separator: '_'
 theme:
     name: material
     features: 
       - tabs
+      - instant
     include_search_page: false
     search_index_only: true
 

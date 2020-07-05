@@ -1,4 +1,4 @@
-# Introduction
+# Scripting
 
 The blue music composition environment entails the use of timelines on
 which SoundObjects are placed. these SoundObjects are basically lists of
@@ -82,7 +82,7 @@ little bit about scripting and how to use it to achieve their musical
 goals, as I've found the experience highly liberating and musically
 rewarding .
 
-# Why Use Scripting?
+## Why Use Scripting?
 
 For some, the use of scripting or programming may never be a factor in
 how they go about creating their music, as the tools they have already
@@ -149,7 +149,7 @@ Those are some of my reasons for the use of script for musical work, and
 I'm sure others have their own reasons. In the end, it's up to you to
 evaluate your situation and see if it will aid in your work or not.
 
-# Scripting and blue
+## Scripting and blue
 
 Every once in a while someone releases a new program for score
 generation, a utility they've decided to make for their own benefit that
@@ -235,16 +235,16 @@ The next two sections below will explain how to use the two different
 SoundObjects, and for the Python programmer, help you determine when you
 might want to use one object verse the other.
 
-# External SoundObject
+## External SoundObject
 
-The external SoundObject is a generic object that allows you to write
+The External SoundObject is a generic object that allows you to write
 script within blue to be executed outside of blue and have the generated
 score be brought back in. The way this is implemented, blue will read in
 anything that the external program writes to stdout. for most scripting
 languages, this equates to a "print()" command of some sort in your
 script.
 
-The external SoundObject's editor takes in two inputs, a script and a
+The External SoundObject's editor takes in two inputs, a script and a
 commandline to run on that script. technically, when blue is in the
 score generating pass and comes to an external SoundObject, the external
 SoundObject writes your script to a temp file, then runs the commandline
@@ -419,7 +419,7 @@ a file. If writing out to a file, care must be taken to use the $outfile
 parameter of the External SoundObject so that after the external program
 finishes, blue will know to grab the file's contents back into blue.
 
-# Python SoundObject
+## Python SoundObject
 
 The Python SoundObject is a Python-only scripting SoundObject which uses
 the Jython Python interpreter (more information about this all-Java
@@ -457,7 +457,7 @@ with locating standard library files. However, I find that just copying
 the library twice into both the PythonLib and my standard Python
 install's directory to be sufficient and easier to manage.
 
-## Using Python with the External SoundObject versus the Python SoundObject
+### Using Python with the External SoundObject versus the Python SoundObject
 
 This has been the most often asked question since the addition of the
 external SoundObject blue, and when I initially put in the external
@@ -468,6 +468,8 @@ But a week or so after the addition the of externalObject, I started
 using Python alot more in conjunction with blue and found that the
 Python SoundObject has a few key benefits which make me use it now
 everyday.
+
+#### The Case for Using the External SoundObject
 
 First of all, performance of the PythonObject is not as fast as using
 the standard Python interpreter with the external SoundObject. For
@@ -494,6 +496,8 @@ Jython.
 So, if the Python SoundObject is slower, if you have to manage another
 set of libraries, and you might not have all of the features of standard
 Python available, why use the Python SoundObject at all?
+
+#### The Case for Using the Python SoundObject
 
 Now, just to let you know, I use exclusively the Python SoundObject when
 I'm doing Python scripts in blue. I haven't come across any of the
@@ -610,7 +614,7 @@ hack, but enough for me to want to avoid, especially when it's not
 necessary. (though, if you're programming in a scripting language
 besides Python, you would hack to work in a manner like this...)
 
-## Usage
+### Usage
 
 For the PythonObject, instead of using a print command to stdout to
 bring things back into blue, you simply assign the variable
@@ -670,7 +674,7 @@ Let's say you're writing a simple Python script:
     assigned to it, but the script within the PythonObject is still run.
     this allows for the possibility of code that needs to be run but
     doesn't necessary need to generate score text at that time. (as
-    mentioned above in [simplesect\_title](#caseUsingPython))
+    mentioned above in [The Case for Using the Python Object](#the_case_for_using_the_python_soundobject))
 
 4.  blue parses the score text, making Note objects for blue to use,
     applies scaling and translation of time to make the genreated notes
@@ -746,7 +750,7 @@ to scripting and programming learn how to go about analyzing music goals
 in terms of programming and then designing and implementing their
 solutions.
 
-# Usage Ideas
+## Usage Ideas
 
 Using the external SoundObject and the Python SoundObject, besides their
 general usefulness of allowing scripting in blue, may be considered
@@ -776,7 +780,7 @@ suggesting it to a Java programmer could lead to it's inclusion into
 blue, where it could be remade in a way to have it be usable by
 non-programmers as well.
 
-# Future Enhancements
+## Future Enhancements
 
 As blue has developed over time, and as the ways to use it are being
 augmented with each new build, I'm always looking for new ways to make
@@ -839,7 +843,7 @@ languages, maybe has some kind of help system for syntax and references,
 etc. I haven't found one I could easily use or modify yet, but hopefully
 something will come along.
 
-# Final Thoughts
+## Final Thoughts
 
 As time goes on, I'm sure there will be alot of additions to blue to
 help aid scripting and the use of other score generating programs within

@@ -4,7 +4,7 @@ BlueSynthBuilder (BSB) allows the user to graphically build instrument
 interfaces for their Csound instruments. The graphical interface is
 designed for the use of exploring configuration of an instrument as well
 as adjustment to values in realtime(requires enabling using the Csound
-API, see [here](#csoundAPI).
+API, see [here](../../../gettingStarted/installation#using_blue_with_the_csound_api).
 
 ## About BlueSynthBuilder
 
@@ -231,7 +231,7 @@ This is required because when using the Csound API, the signal will need
 to be k-rate to allow for live modification of the value when rendering.
 
 More information on paramenter automation can be found
-[here](#parameterAutomation).
+[here](../../../concepts/parameterAutomation).
 
 <div class="note">
 

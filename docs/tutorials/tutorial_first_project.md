@@ -1,3 +1,9 @@
+# Your First Project
+
+by Andrés Cabrera
+
+(This tutorial was last modified in 2005 and is planned to be revised.)
+
 This tutorial will explain how to start using blue. It assumes a little
 knowledge of csound, but not too much (If you don't know csound,
 understanding Dr. Boulanger's toots at

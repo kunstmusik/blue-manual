@@ -1,7 +1,5 @@
 # FTable Converter
 
-FTable Converter
-
 ![ FTable Converter ](../../../images/ftableConverter.png)
 
 The FTable Converter tool converts ftable statements into ftgen
@@ -19,21 +17,24 @@ To use, simply put your ftable statement text in the top text area and
 press the "Convert to FTGEN" button to convert. For example, if you use
 the following ftable statement text:
 
-    f1 0 128 7 0 128 0      ; initpos
-    f2 0 128 -7 1 128 1     ; masses
-    f4 0 128 -7 0 128 2     ; centering force
-    f5 0 128 -7 1 128 1     ; damping
-    f6 0 128 -7 -.0 128 0   ; init velocity
-    f7 0 128 -7 0 128 128   ; trajectory
-
+```csound-sco
+f1 0 128 7 0 128 0      ; initpos
+f2 0 128 -7 1 128 1     ; masses
+f4 0 128 -7 0 128 2     ; centering force
+f5 0 128 -7 1 128 1     ; damping
+f6 0 128 -7 -.0 128 0   ; init velocity
+f7 0 128 -7 0 128 128   ; trajectory
+```
 you will get the following output:
 
-    gi_ ftgen 0, 0, 128, 7, 0, 128, 0   ; initpos
-    gi_ ftgen 0, 0, 128, -7, 1, 128, 1    ; masses
-    gi_ ftgen 0, 0, 128, -7, 0, 128, 2    ; centering force
-    gi_ ftgen 0, 0, 128, -7, 1, 128, 1    ; damping
-    gi_ ftgen 0, 0, 128, -7, -.0, 128, 0  ; init velocity
-    gi_ ftgen 0, 0, 128, -7, 0, 128, 128  ; trajectory
+```csound-orc
+gi_ ftgen 0, 0, 128, 7, 0, 128, 0   ; initpos
+gi_ ftgen 0, 0, 128, -7, 1, 128, 1    ; masses
+gi_ ftgen 0, 0, 128, -7, 0, 128, 2    ; centering force
+gi_ ftgen 0, 0, 128, -7, 1, 128, 1    ; damping
+gi_ ftgen 0, 0, 128, -7, -.0, 128, 0  ; init velocity
+gi_ ftgen 0, 0, 128, -7, 0, 128, 128  ; trajectory
+```
 
 This work is based on the Steven Yi's FTable Converter web page utility
 located [here](http://www.csounds.com/stevenyi/ftable.html).

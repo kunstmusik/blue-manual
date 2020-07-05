@@ -1,7 +1,5 @@
 # Scanned Synthesis Matrix Editor
 
-Scanned Synthesis Matrix Editor
-
 ![Scanned Synthesis Matrix
 Editor](../../../images/scannedSynthesisMatrixEditor.png)
 

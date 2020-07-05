@@ -21,7 +21,7 @@ import the notes from the CsScore section:
     instrument. This is broken up into different soundObjects and layers
     if sections (s-statement) are found in the score.
 
-<!-- end list -->
+## Notes
 
   - From the CsScore, Blue will only import f-, i-, and s- statements.
     Other score statements are not currently supported at this time.

@@ -9,20 +9,10 @@ orchestra area in the globals manager tab) and were created to help
 users build fully-encapsulated instruments, such that an instrument and
 all of its necessary parts could be grouped together.
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-This feature has largely been made unnecessary due to new Csound
-programming practices that have developed since this was initially
-introduced. This feature is left in Blue though to support legacy
-projects.
-
-</div>
+!!! note
+    This feature has largely been made unnecessary due to new Csound programming practices that have developed since this was initially
+    introduced. This feature is left in Blue though to support legacy
+    projects.
 
 ## Basic Usage
 

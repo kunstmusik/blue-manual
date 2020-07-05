@@ -1,7 +1,5 @@
 # Score Timeline
 
-Score Timeline
-
 ![ Score Timeline ](../../../images/ScoreTimeline.png)
 
 ## Overview
@@ -32,19 +30,10 @@ push up and down Layer Groups to reorganize them. The same
 add/remove/push up/push down actions are also available for Layers
 within a Layer Group.
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-Add/Remove/Push Up/Push Down for layers is also available while working
-in the main score area by right-clicking the Layer panels on the right
-and selecting the options from the popup menu.
-
-</div>
+!!! note
+    Add/Remove/Push Up/Push Down for layers is also available while working
+    in the main score area by right-clicking the Layer panels on the right
+    and selecting the options from the popup menu.
 
 Also, all LayerGroups support having [NoteProcessors](../../../reference/noteProcessors/top)
 used with them. Using a NoteProcessor on a LayerGroup will affect all
@@ -225,6 +214,8 @@ For more information about Fades, please see Ardour's manual entry on
 Crossfades](http://manual.ardour.org/editing-and-arranging/create-region-fades-and-crossfades/).
 
 ## User-Interface Walkthrough
+
+### Play Bar
 
 The play bar at the top has:
 

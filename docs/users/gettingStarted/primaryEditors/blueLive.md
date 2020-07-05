@@ -1,7 +1,5 @@
 # Blue Live
 
-Blue Live
-
 ![ Blue Live ](../../../images/blueLive.png)
 
 Blue Live allows you to work with Csound in realtime. It allows for
@@ -117,34 +115,18 @@ BlueLive is enabled, you can select code within the Live Code tab and
 use the "ctrl-e" (cmd-e on OSX) shortcut to evaluate the code in the
 running Csound instance.
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-When rendering for BlueLive, Blue will define a BLUE\_LIVE orchestra and
-score macro. This allows you to write conditional code (e.g., in the
-Global Orchestra or Global Score tabs for your project) that will run
-only when BLUE\_LIVE is defined. (This can be checked using \#ifdef's.)
-
-</div>
+!!! note
+    When rendering for BlueLive, Blue will define a BLUE\_LIVE orchestra and
+    score macro. This allows you to write conditional code (e.g., in the
+    Global Orchestra or Global Score tabs for your project) that will run
+    only when BLUE\_LIVE is defined. (This can be checked using \#ifdef's.)
 
 ## SCO Pad
 
-<div class="note">
 
-<div class="title">
+!!! note
 
-Note
-
-</div>
-
-This feature will likely be removed in a future release.
-
-</div>
+    This feature will likely be removed in a future release.
 
 This is an experimental feature to record MIDI input in a manner similar
 to to notation programs (press keys, then press 4 for a quarter note, 8

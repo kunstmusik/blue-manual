@@ -1,7 +1,5 @@
 # Python Console
 
-Python Console
-
 ![ Python Console ](../../../images/pythonConsole.png)
 
 The Python Console allows you to interactively write and execute python
@@ -34,4 +32,3 @@ Some useful shortcuts available while in the console:
 | ctrl-up/ctrl-down | cycle through previous commands used                           |
 | ctrl-l            | clear the console (also available from the rt-click popup menu |
 
-Shortcuts for the Python Console

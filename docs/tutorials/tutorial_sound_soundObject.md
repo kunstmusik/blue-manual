@@ -1,4 +1,4 @@
-# Introduction
+# Sound SoundObject 
 
 One of the more curious soundObjects in blue is the *Sound SoundObject*,
 which allows for the direct writing of instruments in the score. It's
@@ -50,7 +50,7 @@ The following sections will go over how to use *Sound SoundObject,* what
 happens when it gets processed by blue, as well as some usage scenarios
 and patterns that have arose while using it in my own work.
 
-# How to Use the Sound SoundObject
+## How to Use the Sound SoundObject
 
 First, insert the *Sound SoundObject* as you would any soundObject by
 rt-clicking (for Mac users, hold down the apple key and click) on the
@@ -98,7 +98,7 @@ orchestra manager, then write some genericScore soundObjects to play
 those instruments, as well as use some *Sound SoundObjects* directly on
 the timeline.
 
-# What Happens When It Gets Processed
+## What Happens When It Gets Processed
 
 If your confused as to what's going on, it'll probably help to know
 exactly what happens when blue processes *Sound SoundObjects.* blue,
@@ -141,7 +141,7 @@ hidden from the user. From the user's point of view, all they have to do
 is write their sounds on the timeline, and they don't have to worry
 about numbering the instruments or creating notes for that instrument.
 
-# Usage Scenarios and Patterns
+## Usage Scenarios and Patterns
 
 Most of the time I've found myself using the *Sound SoundObject* at the
 start of a project when I'm creating new sounds for a piece. I find it's
@@ -231,7 +231,7 @@ would still need to know the basics of how Csound works, what is a CSD,
 and understand how things in blue map the different parts if itself to
 the different parts of a CSD file).
 
-# Final Thoughts
+## Final Thoughts
 
 Thanks for reading the tutorial\! I hope this tutorial has helped to
 show how to use *Sound SoundObject*in blue, as well as helped show some

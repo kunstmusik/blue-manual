@@ -1,5 +1,7 @@
 # Sound Object Freezing
 
+## Introduction
+
 Sound Object Freezing allows you to free up CPU-cycles by pre-rendering
 soundObjects. Frozen soundObjects can work with global processing
 instruments, and files are relative to the directory the project file is
@@ -21,6 +23,8 @@ Note: As currently implemented, when Blue goes to freeze soundObjects it
 may appear to be frozen, but messages will continue to appear in the
 console showing that csound is rendering the frozen soundObjects. Future
 versions will be more polished.
+
+## How SoundObject Freezing Works
 
 1.  An soundObject is selected
 
@@ -45,7 +49,7 @@ versions will be more polished.
     will play the rendered wav file as-is. The instrument looks
     something like:
     
-    ``` 
+    ```csound-orc 
     aout1, aout2    diskin    p4         
                     outs      aout1, aout2 
               
@@ -59,7 +63,7 @@ versions will be more polished.
     effects originally, the would be generated as part of the frozen
     file.
 
-<!-- end list -->
+## Notes
 
   - You can select multiple soundObjects and batch freeze and unfreeze
     -the generated wav file may be longer than the original soundObject,

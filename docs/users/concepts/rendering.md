@@ -9,11 +9,15 @@ use-case scenarios to guide you on how that feature may be useful.
 
 ## Render Methods
 
+### Render in Real-time
+
 Rendering in uses the project's Real-Time render settings to render the
 project in realtime to the users soundcard. This is the most common
 rendering one will likely use. To use this, you can press the play
 button at the top of the window, use the "Project-\>Render/Stop Project"
 menu option, or use the F9 shortcut key.
+
+### Generate CSD to Screen 
 
 Blue's general method of communicating with Csound is by generating a
 CSD file and calling Csound to run it. For debugging purposes, it is
@@ -22,9 +26,14 @@ matching the generated CSD file. You can generate the CSD to screen by
 using the "Project-\>Generate CSD to Screen" menu option, or by using
 the ctrl-shift-g shortcut.
 
+
+### Generate CSD to Disk 
+
 If you'd like to generate a CSD from the current project to a file, you
 can do so by using the "Project-\>Generate CSD to File" menu option, or
 by using the ctrl-g shortcut.
+
+### Render to Disk
 
 The Render to Disk option will use the project's Disk Render Options
 from its project properties to generate a soundfile on disk (format of
@@ -33,6 +42,8 @@ this useful for rendering a wav to disk and converting to MP3 to listen
 to on the go so I can review my current work. To render to disk, you can
 do so by using the "File-\>Render to Disk" menu option or use the
 ctrl-shift-F9 shortcut.
+
+### Render to Disk and Play
 
 The Render to Disk and play option will use the project's Disk Render
 Options from its project properties to generate a soundfile on disk and
@@ -46,6 +57,8 @@ quality settings for final project output, as you can occasionally test
 what the output would be like using this feature. To use this option,
 you can use the "File-\>Render to Disk and Play" menu option or use the
 ctrl-F9 shortcut.
+
+### Render to Disk and Open
 
 The Render to Disk and Open option will use the project's Disk Render
 Options from its project properties to generate a soundfile on disk and

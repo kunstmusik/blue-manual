@@ -46,6 +46,8 @@ contents of Blue.app/example if on OSX).
 
 The section below has notes for individual platforms.
 
+#### macOS
+
 Blue uses the right mouse click often to show popup menus. If you do not
 have a right mouse button, you can use ctrl-click for all "rt-clicks"
 that are mentioned in this documentation.
@@ -95,40 +97,33 @@ Csound. Blue should work out-of-the-box with the API if Csound is
 installed using the installers provided on Github, or installed via a
 package manager if on Linux.
 
-<div class="note">
+!!! note
+    Blue currently only works with the API if the version of Csound used is
+    compiled using 64-bit doubles. (The float version is not supported when
+    using the API.) There are technical difficulties in supporting two
+    different versions of Csound API in the same build and it is not known
+    if or when the float build will be supported. For users interested in
+    using the float build of Csound with Blue, you will need to run Blue
+    using the command-line Csound mode.
 
-<div class="title">
-
-Note
-
-</div>
-
-Blue currently only works with the API if the version of Csound used is
-compiled using 64-bit doubles. (The float version is not supported when
-using the API.) There are technical difficulties in supporting two
-different versions of Csound API in the same build and it is not known
-if or when the float build will be supported. For users interested in
-using the float build of Csound with Blue, you will need to run Blue
-using the command-line Csound mode.
-
-Additionally, the architecture that Csound is compiled for must match
-the architecture of the Java runtime you are using. For example, on
-Windows, Csound is currently only built for x86\_64/amd64 CPU (i.e.
-64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
-will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
-an issue as Csound is compiled as a universal binary for both i386 and
-x86\_64. On Linux, it is likely that the version of Csound you
-install/compile and the Java Runtime that you install will likely be the
-same, but if the API does not show as available it may be something to
-check.
-
-</div>
+    Additionally, the architecture that Csound is compiled for must match
+    the architecture of the Java runtime you are using. For example, on
+    Windows, Csound is currently only built for x86\_64/amd64 CPU (i.e.
+    64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
+    will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
+    an issue as Csound is compiled as a universal binary for both i386 and
+    x86\_64. On Linux, it is likely that the version of Csound you
+    install/compile and the Java Runtime that you install will likely be the
+    same, but if the API does not show as available it may be something to
+    check.
 
 Blue uses the CsoundJNI Java binding for Csound. This requires that Blue
 can find your installed version of Csound but is configured to do so for
 standard Csound installations. If the API is not enabled when starting
 Blue, the following explains how to setup the API on different
 platforms.
+
+#### Windows
 
 Users using the Windows Installer for Csound should use the double
 precision version from Github. (This is the default.) After installing,
@@ -141,8 +136,9 @@ it contains:
 
 ``` 
 default_options="--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound"
-        
 ```
+
+#### Linux 
 
 Linux users should install a doubles version of Csound. The version of
 Csound found in package repositories should be one compiled for doubles.
@@ -151,9 +147,13 @@ lines that contain "-J-Djava.library.path=/usr/lib/jni" and modify
 /usr/lib/jni (the default for Debian/Ubuntu-based systems) to the
 directory where libcsound64.so is located.
 
+#### macOS
+
 macOS users may use the installer for Csound from Github, install Csound
 with Homebrew, or self-compile. CsoundJNI is configured to find
 CsoundLib64 in all of the above scenarios for default installations.
+
+#### Checking whether the API is enabled
 
 To check if the API is enabled, open Blue and open up the Program
 Options. This is available from the Blue-\>Preferences menu option on

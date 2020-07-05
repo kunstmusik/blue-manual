@@ -45,18 +45,9 @@ entails:
     or an idea like "I've got drum pattern A in the library and I have
     instances of it here and here and ...".
     
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    When copying and pasting Instance SoundObjects, they are all
-    pointing to the SoundObject in the library.
-    
-    </div>
+    !!! note
+        When copying and pasting Instance SoundObjects, they are all
+        pointing to the SoundObject in the library.
 
 4.  You can also then make instances of SoundObjects in the library by
     opening up the SoundObject Library dialog (available from the Window
@@ -82,18 +73,9 @@ entails:
     the SoundObject Library dialog by selecting the SoundObject in the
     list. The editor for the SoundObject will appear below.
     
-    <div class="note">
-    
-    <div class="title">
-    
-    Note
-    
-    </div>
-    
-    Editing the SoundObject in the library will affect all instances of
-    that SoundObject.
-    
-    </div>
+    !!! note 
+        Editing the SoundObject in the library will affect all instances of
+        that SoundObject.
 
 The general pattern of usage for the program-wide SoundObject Library
 entails:

@@ -1,11 +1,11 @@
 # Orchestra Manager
 
-Orchestra Manager
-
 ![ Orchestra Manager ](../../../images/orchestra.png)
 
 The Orchestra Manager is where the user organizes and edits the
 orchestra for the project as well as their user Instrument Library.
+
+## User Instrument Library
 
 In the User Instrument Library (the tree pictured on the left), you can
 create instruments as well as categorize them into groups. Most actions
@@ -24,6 +24,8 @@ orchestra, you can similarly drag and drop an instrument from the
 Library to the Orchestra. You may also use cut/copy/paste to move
 instrument from one to the other.
 
+## Orchestra
+
 The Orchestra panel (located in the top left of the picture) is where
 you will place your instruments to be used for your project. The "+"
 button allows you to create new instruments from one of the available
@@ -34,6 +36,8 @@ strings (i.e. 3 for "instr 3", violin for "instr violin"). Selecting an
 instrument will show its editor in the Instrument editor section on the
 right.
 
+## Instrument Editor
+
 On the right hand side of the Orchestra Manager is the area for editing
 instruments. To make more space available for editing an instrument, you
 can drag the split pane splitter to the left, or double-click the
@@ -42,6 +46,8 @@ instrument-type has its own editor. Note: if you are editing and
 instrument from the Library, Blue will show a green border with the
 title "Editing Library Instrument" to help notify you what instrument
 you are editing.
+
+## Legacy Projects
 
 For projects before 0.94.0, imported projects will have their
 instruments largely setup in the same way as they were before.

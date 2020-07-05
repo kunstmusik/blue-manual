@@ -9,8 +9,6 @@ MIDI Import Settings dialog for you to configure how you would like to
 import the MIDI note information. (Note: Blue will only show information
 for tracks where note data was found.)
 
-MIDI Import Settings
-
 ![ MIDI Import Settings ](../../../images/midiImportSettings.png)
 
 The table column information is as follows:
@@ -68,20 +66,11 @@ will generate the notes with one SoundLayer per MIDI track, and on each
 SoundLayer it will contain one GenericScore SoundObject containing the
 converted MIDI score.
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-The current implementation does not handle cases where there are
-overlapping notes of the same MIDI note number within the same track and
-results are unpredictable. Also, only MIDI files where time is PPQ is
-supported at the moment (non-SMPTE). Users wanting support for either of
-these cases or have other ideas they would like implemented are
-requested to make feature requests on the Blue mailing list or to use
-the help menu "Request a Feature" option.
-
-</div>
+!!! note
+    The current implementation does not handle cases where there are
+    overlapping notes of the same MIDI note number within the same track and
+    results are unpredictable. Also, only MIDI files where time is PPQ is
+    supported at the moment (non-SMPTE). Users wanting support for either of
+    these cases or have other ideas they would like implemented are
+    requested to make feature requests on the Blue mailing list or to use
+    the help menu "Request a Feature" option.

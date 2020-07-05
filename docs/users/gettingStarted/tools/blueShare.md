@@ -1,7 +1,5 @@
 # BlueShare
 
-BlueShare
-
 ![ BlueShare ](../../../images/blueShare.png)
 
 BlueShare is an online, in-program way to share instruments, effects,

@@ -4,7 +4,7 @@ Accepts NoteProcessors: no
 
 The Sound SoundObject allows one to develop solitary sounds by using
 Csound Orchestra code and graphical user interfaces. It uses the same
-GUI and coding system as found in [BlueSynthBuilder](#blueSynthBuilder).
+GUI and coding system as found in [BlueSynthBuilder](../../instruments/blueSynthBuilder).
 
 Sound SoundObjects will generate an instrument as well as i-statement
 with the duration of the SoundObject. Sound SoundObjects can route

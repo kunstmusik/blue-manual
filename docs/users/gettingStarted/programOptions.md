@@ -8,7 +8,7 @@ and save you time when creating new projects.
 To open up the Program Options dialog, go to the File menu and click on
 "Program Options".
 
-Program Options - General
+## General
 
 ![](../../images/programOptions_general.png)
 
@@ -58,7 +58,7 @@ Program Options - General
     etc. (Translation files may not always be up to of date so some UI
     items may not be translated when not in English.)
 
-Program Options - Project Defaults
+## Project Defaults
 
 ![](../../images/programOptions_projectDefaults.png)
 
@@ -73,7 +73,7 @@ are used.
   - Mixer Enabled  
     Enable using the blue Mixer in new projects by default.
 
-Program Options - Playback
+## Playback
 
 ![](../../images/programOptions_playBack.png)
 
@@ -93,7 +93,7 @@ Program Options - Playback
     appear ahead in time of what is being heard. Using a .5 value for
     latency correction would correct for this.
 
-Program Options - Utility
+## Utility
 
 ![ Program Options - Utility ](../../images/programOptions_utility.png)
 
@@ -125,7 +125,7 @@ Program Options - Utility
     would their frozen soundObjects to be in a different format, i.e.
     32-bit float soundfiles.
 
-Program Options - Realtime
+## Realtime
 
 ![](../../images/programOptions_realtime.png)
 
@@ -377,7 +377,7 @@ Program Options - Realtime
     by options in the UI. Pressing the \[?\] button will open the
     documentation for the Csound command flags.
 
-Program Options - Disk Render
+## Disk Render
 
 ![](../../images/programOptions_diskRender.png)
 
@@ -506,7 +506,7 @@ Program Options - Disk Render
     by options in the UI. Pressing the \[?\] button will open the
     documentation for the Csound command flags.
 
-Program Options - Disk Render
+## MIDI
 
 ![](../../images/programOptions_midi.png)
 
@@ -516,7 +516,7 @@ available, and whether they are enabled for use with blueLive or not.
 You can use the "rescan" button to search for devices if you have just
 plugged in a device.
 
-Program Options - OSC
+## OSC
 
 ![](../../images/programOptions_osc.png)
 
