@@ -1607,23 +1607,23 @@
 <p>A Switch Processor switches pfield1 with pfield2 for all notes in
 SoundObject. It is useful in conjunction with RetrogradeProcessor when
 reversing notes that have start and end values in pfields, i.e.</p>
-<div class="codehilite"><pre><span></span><code><span class="err">;inum start dur   start   end</span>
-<span class="err">i1    0     1     8.04    8.00</span>
-<span class="err">i1    1     2     8.00    8.07</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">;inum start dur   start   end</span>
+<span class="k">i</span><span class="mi">1</span>    <span class="mi">0</span>     <span class="mi">1</span>     <span class="mf">8.04</span>    <span class="mf">8.00</span>
+<span class="k">i</span><span class="mi">1</span>    <span class="mi">1</span>     <span class="mi">2</span>     <span class="mf">8.00</span>    <span class="mf">8.07</span>
 </code></pre></div>
 
 
 <p>with just retrograde processor becomes:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">;inum start dur   start   end</span>
-<span class="err">i1    0     2     8.00    8.07</span>
-<span class="err">i1    2     1     8.04    8.00</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">;inum start dur   start   end</span>
+<span class="k">i</span><span class="mi">1</span>    <span class="mi">0</span>     <span class="mi">2</span>     <span class="mf">8.00</span>    <span class="mf">8.07</span>
+<span class="k">i</span><span class="mi">1</span>    <span class="mi">2</span>     <span class="mi">1</span>     <span class="mf">8.04</span>    <span class="mf">8.00</span>
 </code></pre></div>
 
 
 <p>with retrograde and switch on p4 and p5 becomes:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">;inum start dur   start   end</span>
-<span class="err">i1    0     2     8.07    8.00</span>
-<span class="err">i1    2     1     8.00    8.04</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">;inum start dur   start   end</span>
+<span class="k">i</span><span class="mi">1</span>    <span class="mi">0</span>     <span class="mi">2</span>     <span class="mf">8.07</span>    <span class="mf">8.00</span>
+<span class="k">i</span><span class="mi">1</span>    <span class="mi">2</span>     <span class="mi">1</span>     <span class="mf">8.00</span>    <span class="mf">8.04</span>
 </code></pre></div>
                 
               

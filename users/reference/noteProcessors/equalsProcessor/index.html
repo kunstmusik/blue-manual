@@ -1607,26 +1607,29 @@
 <p>Sets user-given pField of all notes in soundObject to user-given value,
 i.e. set all p4's to value "440", or set all p6's to value
 "/work/audio/wav/mySample2.wav". The following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 8.00</span>
-<span class="err">i1 + . 8.04</span>
-<span class="err">i1 + . 8.07</span>
-<span class="err">i1 + . 9.00    </span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mf">8.00</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mf">8.04</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mf">8.07</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mf">9.00</span>    
 </code></pre></div>
 
 
 <p>If used with an EqualsProcessor with value 7.00 and pfield 4, would
 result in the following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 7.00</span>
-<span class="err">i1  0.5 0.5 7.00</span>
-<span class="err">i1  1.0 0.5 7.00</span>
-<span class="err">i1  1.5 0.5 7.00</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">0.5</span> <span class="mf">7.00</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">7.00</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.0</span> <span class="mf">0.5</span> <span class="mf">7.00</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.5</span> <span class="mf">0.5</span> <span class="mf">7.00</span>
 </code></pre></div>
 
 
 <p>(The p2 and p3 times above are post-processing for a 2 second duration
 SoundObject with time behavior set to scale.)</p>
-<p>Tip: One can use this NoteProcessor to quickly try testing a score with
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>One can use this NoteProcessor to quickly try testing a score with
 another insturment. To do this, use this NoteProcessor to reassign p1.</p>
+</div>
                 
               
               

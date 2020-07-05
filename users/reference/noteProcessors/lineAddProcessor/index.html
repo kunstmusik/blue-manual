@@ -1608,19 +1608,19 @@
 noteProcessor differs from the AddProcessor in that the value added is
 variable over time. The LineAdd String is a set of beat/value pairs that
 are like the breakpoints on curve. The following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 80</span>
-<span class="err">i1 + . 80</span>
-<span class="err">i1 + . 80</span>
-<span class="err">i1 + . 80</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
 </code></pre></div>
 
 
 <p>If processed with a LineAdd Processor with LineAddString set to "0 0 6
 3" and pfield set to 4, would result in:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 80.0</span>
-<span class="err">i1  0.5 0.5 81.0</span>
-<span class="err">i1  1.0 0.5 82.0</span>
-<span class="err">i1  1.5 0.5 83.0</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">0.5</span> <span class="mf">80.0</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">81.0</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.0</span> <span class="mf">0.5</span> <span class="mf">82.0</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.5</span> <span class="mf">0.5</span> <span class="mf">83.0</span>
 </code></pre></div>
 
 

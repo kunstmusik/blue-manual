@@ -1603,18 +1603,10 @@
                 
                 
                 <h1 id="bluex7">BlueX7</h1>
-<div class="note">
-
-<div class="title">
-
-Note
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This instrument is currently undergoing re-implementation.</p>
 </div>
-
-This instrument is currently undergoing re-implementation.
-
-</div>
-
 <p>A 6 Operator Phase Modulation instrument using Russell Pinkston's DX7
 Emulation Patches.</p>
 <p>The BlueX7 editor contains two tabs, the 'patch' tab, where the sound
@@ -1668,7 +1660,7 @@ dx72csound.zip file from: <a href="http://www.parnasse.com/dx72csnd.shtml"></a>.
 (to steven: reading this page it seems part of the model is unfinished,
 which may answer some of my questions above)</p>
 <p>On the 'csound' tab you find by default:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">blueMixerOut aout, aout</span>
+<div class="codehilite"><pre><span></span><code>    <span class="n">blueMixerOut</span> <span class="kt">a</span><span class="n">out</span><span class="p">,</span> <span class="kt">a</span><span class="n">out</span>
 </code></pre></div>
 
 
@@ -1676,7 +1668,7 @@ which may answer some of my questions above)</p>
 of csound. You can include further code to process the 'aout' signal
 produced by the BlueX7, or to route it as needed. For example, if you
 are outputing in mono, you could code such as:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">out aout</span>
+<div class="codehilite"><pre><span></span><code>    <span class="nb">out</span> <span class="kt">a</span><span class="n">out</span>
 </code></pre></div>
 
 
@@ -1686,11 +1678,11 @@ requires 2 additional p-fields. P-field 4 is the pitch class of the note
 in format octave.semitone (e.g. C4 is 4.00, C#1 is 1.01 and F6 is
 6.05). P-field 5 contains the midi velocity for the note with values
 from 0 to 127. For example:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 1 8.00 100</span>
-<span class="err">i1 + 1 8.02 100</span>
-<span class="err">i1 + 1 8.04 100</span>
-<span class="err">i1 + 1 8.05 100</span>
-<span class="err">i1 + 1 8.07 100</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mf">8.00</span> <span class="mi">100</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="mf">8.02</span> <span class="mi">100</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="mf">8.04</span> <span class="mi">100</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="mf">8.05</span> <span class="mi">100</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="mf">8.07</span> <span class="mi">100</span>
 </code></pre></div>
                 
               

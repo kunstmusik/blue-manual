@@ -1620,17 +1620,17 @@ four notes being generated(the first four from the original
 soundObject), starting a 0 seconds on the timeline, with each notes
 duration lasting 1.25 seconds, each starting one right after the other.</p>
 <p>The following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 1</span>
-<span class="err">i1 + . 2</span>
-<span class="err">i1 + . 3</span>
-<span class="err">i1 + . 4</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">2</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">3</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">4</span>
 </code></pre></div>
 
 
 <p>when processed with a SubList processor with start 2 and end 3, would
 result in:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 1   2</span>
-<span class="err">i1  1.0 1   3</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mi">1</span>   <span class="mi">2</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.0</span> <span class="mi">1</span>   <span class="mi">3</span>
 </code></pre></div>
 
 

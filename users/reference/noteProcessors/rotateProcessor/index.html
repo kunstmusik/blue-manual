@@ -1608,20 +1608,20 @@
 the first note. For example a noteIndex of 2 means "make the second note
 of the notes generated the first, shifting the first note to the end".
 With a noteIndex of 3, the following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 1</span>
-<span class="err">i1 2 2 2</span>
-<span class="err">i1 4 2 3</span>
-<span class="err">i1 5 2 4</span>
-<span class="err">i1 6 2 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">5</span>
 </code></pre></div>
 
 
 <p>will become:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 3</span>
-<span class="err">i1 2 2 4</span>
-<span class="err">i1 4 2 5</span>
-<span class="err">i1 5 2 1</span>
-<span class="err">i1 6 2 2</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">2</span>
 </code></pre></div>
 
 
@@ -1629,20 +1629,20 @@ With a noteIndex of 3, the following score:</p>
 the number will count backwards as to what note should now become the
 first note. With a noteIndex of -2 (meaning, "Second note from the
 end"), the following score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 1</span>
-<span class="err">i1 2 2 2</span>
-<span class="err">i1 4 2 3</span>
-<span class="err">i1 5 2 4</span>
-<span class="err">i1 6 2 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">5</span>
 </code></pre></div>
 
 
 <p>Will become:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 4</span>
-<span class="err">i1 2 2 5</span>
-<span class="err">i1 4 2 1</span>
-<span class="err">i1 5 2 2</span>
-<span class="err">i1 6 2 3</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">2</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">3</span>
 </code></pre></div>
 
 
@@ -1651,30 +1651,30 @@ pushed to the end of list will start at the end time of the last note
 before it. For the above examples, the duration of the note list ast a
 whole did not change at all. However, when there are overlapping notes
 as in the following example, where note index of -3 was used:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0   5.0 0   4   </span>
-<span class="err">i1  2   5.0 1   4   </span>
-<span class="err">i1  4   5.0 2   4   </span>
-<span class="err">i1  6   5.0 3   4   </span>
-<span class="err">i1  8   5.0 4   4   </span>
-<span class="err">i1  10  5.0 5   4   </span>
-<span class="err">i1  12  5.0 6   4   </span>
-<span class="err">i1  14  5.0 7   4   </span>
-<span class="err">i1  16  5.0 8   4   </span>
-<span class="err">i1  18  5.0 9   4   </span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mi">0</span>   <span class="mf">5.0</span> <span class="mi">0</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">2</span>   <span class="mf">5.0</span> <span class="mi">1</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">4</span>   <span class="mf">5.0</span> <span class="mi">2</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">6</span>   <span class="mf">5.0</span> <span class="mi">3</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">8</span>   <span class="mf">5.0</span> <span class="mi">4</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">10</span>  <span class="mf">5.0</span> <span class="mi">5</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">12</span>  <span class="mf">5.0</span> <span class="mi">6</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">14</span>  <span class="mf">5.0</span> <span class="mi">7</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">16</span>  <span class="mf">5.0</span> <span class="mi">8</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mi">18</span>  <span class="mf">5.0</span> <span class="mi">9</span>   <span class="mi">4</span>   
 </code></pre></div>
 
 
 <p>The resultant scores duration has changed as shown below:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 5.0 7   4   </span>
-<span class="err">i1  2.0 5.0 8   4   </span>
-<span class="err">i1  4.0 5.0 9   4   </span>
-<span class="err">i1  9.0 5.0 0   4   </span>
-<span class="err">i1  11.0    5.0 1   4   </span>
-<span class="err">i1  13.0    5.0 2   4   </span>
-<span class="err">i1  15.0    5.0 3   4   </span>
-<span class="err">i1  17.0    5.0 4   4   </span>
-<span class="err">i1  19.0    5.0 5   4   </span>
-<span class="err">i1  21.0    5.0 6   4   </span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">5.0</span> <span class="mi">7</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">2.0</span> <span class="mf">5.0</span> <span class="mi">8</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">4.0</span> <span class="mf">5.0</span> <span class="mi">9</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">9.0</span> <span class="mf">5.0</span> <span class="mi">0</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">11.0</span>    <span class="mf">5.0</span> <span class="mi">1</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">13.0</span>    <span class="mf">5.0</span> <span class="mi">2</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">15.0</span>    <span class="mf">5.0</span> <span class="mi">3</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">17.0</span>    <span class="mf">5.0</span> <span class="mi">4</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">19.0</span>    <span class="mf">5.0</span> <span class="mi">5</span>   <span class="mi">4</span>   
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">21.0</span>    <span class="mf">5.0</span> <span class="mi">6</span>   <span class="mi">4</span>   
 </code></pre></div>
 
 

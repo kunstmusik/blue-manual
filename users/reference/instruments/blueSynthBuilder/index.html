@@ -1569,9 +1569,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about_bluesynthbuilder" class="md-nav__link">
     About BlueSynthBuilder
   </a>
+  
+    <nav class="md-nav" aria-label="About BlueSynthBuilder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principles_of_design" class="md-nav__link">
+    Principles of Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid_design" class="md-nav__link">
+    Hybrid Design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1590,6 +1617,27 @@
   
     <nav class="md-nav" aria-label="Interface Editor">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit_mode" class="md-nav__link">
+    Edit Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid_settings" class="md-nav__link">
+    Grid Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_mode" class="md-nav__link">
+    Usage Mode
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#code_editor" class="md-nav__link">
@@ -1711,9 +1759,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#about_bluesynthbuilder" class="md-nav__link">
     About BlueSynthBuilder
   </a>
+  
+    <nav class="md-nav" aria-label="About BlueSynthBuilder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principles_of_design" class="md-nav__link">
+    Principles of Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid_design" class="md-nav__link">
+    Hybrid Design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1732,6 +1807,27 @@
   
     <nav class="md-nav" aria-label="Interface Editor">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit_mode" class="md-nav__link">
+    Edit Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid_settings" class="md-nav__link">
+    Grid Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_mode" class="md-nav__link">
+    Usage Mode
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#code_editor" class="md-nav__link">
@@ -1815,12 +1911,14 @@
                 
                 
                 <h1 id="bluesynthbuilder">BlueSynthBuilder</h1>
+<h2 id="introduction">Introduction</h2>
 <p>BlueSynthBuilder (BSB) allows the user to graphically build instrument
 interfaces for their Csound instruments. The graphical interface is
 designed for the use of exploring configuration of an instrument as well
 as adjustment to values in realtime(requires enabling using the Csound
 API, see <a href="../../../gettingStarted/installation#using_blue_with_the_csound_api">here</a>.</p>
 <h2 id="about_bluesynthbuilder">About BlueSynthBuilder</h2>
+<h3 id="principles_of_design">Principles of Design</h3>
 <p>It has been my experience that most Csound instruments tend to be
 limited in user configurability of parameters than commercial
 synthesizer counterparts. It is my belief that a large part of that is
@@ -1839,6 +1937,7 @@ due to the text-based nature of instruments. I've found that:</p>
     and limits</p>
 </li>
 </ul>
+<h3 id="hybrid_design">Hybrid Design</h3>
 <p>Going completely graphical for the building of instruments, in the case
 of systems like Max/PD/jMax or Reaktor, I've found that the instrument's
 design no longer become apparent when viewing complicated patches. On
@@ -1865,6 +1964,7 @@ of Csound instrument code or have to modify the instrument UI at all.</p>
 <h3 id="interface_editor">Interface Editor</h3>
 <p>The Interface editor has two modes:</p>
 <p><img alt="" src="../../../../images/bsb_interface_edit.png" /></p>
+<h4 id="edit_mode">Edit Mode</h4>
 <p>The user can add interface elements and modify their properties using
 the property sheet on the right. To enable edit mode, click on the "Edit
 Enabled" checkbox in the upper right of the BSB instrument editor.</p>
@@ -1878,6 +1978,7 @@ on an empty part of the edit panel and dragging a marquee to select a
 group of widgets. After selecting multiple widgets, you can drag them
 around as a group, as well as use the alignment and distribution options
 found on the right side bottom to tidy up the UI.</p>
+<h4 id="grid_settings">Grid Settings</h4>
 <p><img alt="" src="../../../../images/bsb_interface_grid.png" /></p>
 <p>When in edit mode, you can modify the Grid Settings by using the
 properties editor on the right-hand side. This allows you set the
@@ -1908,7 +2009,7 @@ following values:</p>
 </tr>
 </tbody>
 </table>
-<p>Grid Settings</p>
+<h4 id="usage_mode">Usage Mode</h4>
 <p><img alt="" src="../../../../images/bsb_interface_use.png" /></p>
 <p>Once in usage mode, users can configure the instrument by working with
 the UI widgets: rotating knobs, moving sliders, etc. The values of the
@@ -2055,13 +2156,6 @@ instruments:</p>
 </tr>
 </tbody>
 </table>
-<p>Widget Values</p>
-<ul>
-<li>For the Label object, you are able to style the label by using HTML.
-    To use this feature, when setting the text of the label, enter the
-    HTML label within &lt;html> tags, such as "&lt;html>&lt;font
-    size="+1">My Label&lt;/font>&lt;/html>".</li>
-</ul>
 <h3 id="groups">Groups</h3>
 <p>Widgets may be organized into Groups that provide titled border around
 the set of widgets. Double-clicking on a group will allow editing of the
@@ -2098,29 +2192,20 @@ This is required because when using the Csound API, the signal will need
 to be k-rate to allow for live modification of the value when rendering.</p>
 <p>More information on paramenter automation can be found
 <a href="../../../concepts/parameterAutomation">here</a>.</p>
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-In 0.124.3, a change was made that breaks backwards compatibility.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In 0.124.3, a change was made that breaks backwards compatibility.
 Previously, if a BSBObject was set to have "Automation Allowed" but was
 not itself automated, it would compile as a constant in the generated
 CSD. As of 0.124.3, if a widget is made to allow automation, the Csound
 code that uses the widget value must accept a k-rate signal, whether the
-API is used or not.
-
-If you have a project that rendered fine before 0.124.3 but afterwards
+API is used or not.</p>
+<p>If you have a project that rendered fine before 0.124.3 but afterwards
 can not render due to problems with Csound complaining that "k-rate
 signals not allowed", then you will need to either set the widget to not
 allow automation or change the Csound code so that it will work with the
-generated k-rate signal.
-
+generated k-rate signal.</p>
 </div>
-
 <h3 id="randomization">Randomization</h3>
 <p>Since 0.117.0, users are able to randomize values for widgets in a
 BlueSynthBuilder instrument. To use, first choose which widgets are set

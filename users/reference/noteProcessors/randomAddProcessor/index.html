@@ -1610,19 +1610,19 @@ generated for each note.</p>
 <p>The RandomAddProcessor expects either a positive or negative float value
 for the min and max, and a postive integer for the pfield. The following
 score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 80</span>
-<span class="err">i1 + . 80</span>
-<span class="err">i1 + . 80</span>
-<span class="err">i1 + . 80</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
 </code></pre></div>
 
 
 <p>when processed with an RandomAddProcessor with min set to 0.0, max set
 to 1.0, and pfield set to 4, resulted in the following on one pass:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 80.92294</span>
-<span class="err">i1  0.5 0.5 80.50539</span>
-<span class="err">i1  1.0 0.5 80.112495</span>
-<span class="err">i1  1.5 0.5 80.93934</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">0.5</span> <span class="mf">80.92294</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">80.50539</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.0</span> <span class="mf">0.5</span> <span class="mf">80.112495</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.5</span> <span class="mf">0.5</span> <span class="mf">80.93934</span>
 </code></pre></div>
 
 
@@ -1633,8 +1633,11 @@ results will be different on another processing pass. .</p>
 <p>If seedUsed is set to "true", the random number generator will be
 initialized using the given seed value. The seed value must be a valid
 long integer value (-2^63, 2^63-1).</p>
-<p>Hint: One useful way to use this noteProcessor is as a way to "humanize"
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>One useful way to use this noteProcessor is as a way to "humanize"
 velocity or pitch values values.</p>
+</div>
                 
               
               

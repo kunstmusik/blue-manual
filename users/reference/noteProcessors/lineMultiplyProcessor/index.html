@@ -1609,19 +1609,19 @@ This noteProcessor differs from the Multiply Processor in that the value
 muliplied by is variable over time. The LineMultiply String is a set of
 beat/value pairs that are like the breakpoints on curve. The following
 score:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 80</span>
-<span class="err">i1 + . 80</span>
-<span class="err">i1 + . 80</span>
-<span class="err">i1 + . 80</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
+<span class="k">i</span><span class="mi">1</span> <span class="o">+</span> <span class="o">.</span> <span class="mi">80</span>
 </code></pre></div>
 
 
 <p>If processed with a LineMultiple Processor with LineMultiplyString set
 to "0 0 6 2" and pfield set to 4, would result in:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 0.0</span>
-<span class="err">i1  0.5 0.5 53.333336</span>
-<span class="err">i1  1.0 0.5 106.66667</span>
-<span class="err">i1  1.5 0.5 160.0</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">0.5</span> <span class="mf">0.0</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">53.333336</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.0</span> <span class="mf">0.5</span> <span class="mf">106.66667</span>
+<span class="k">i</span><span class="mi">1</span>  <span class="mf">1.5</span> <span class="mf">0.5</span> <span class="mf">160.0</span>
 </code></pre></div>
 
 
