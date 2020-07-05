@@ -1,0 +1,8 @@
+:root {
+    --md-primary-fg-color: rgba(38,51,76,1);
+    --md-primary-bg-color: white;
+}
+
+body {
+    --md-text-link-color: rgba(102,177,253,1) !important;
+}

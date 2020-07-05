@@ -23,8 +23,13 @@ theme:
     features: 
       - tabs
       - instant
+    logo: 'images/blueIcon.png'
+    favicon: 'images/favicon.ico'
     include_search_page: false
     search_index_only: true
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
     - Home: 'index.md'
