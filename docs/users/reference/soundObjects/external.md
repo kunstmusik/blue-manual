@@ -1,5 +1,7 @@
 # External SoundObject
 
+## Introduction
+
 Accepts NoteProcessors: no
 
 Allows you to write script within Blue and execute an external program
@@ -40,6 +42,8 @@ $infile -o $outfile".
 
 There is a test button that you may use to check to see that Blue
 properly brings in the generated notes.
+
+##  Example Command Lines
 
 This is a list of commandlines to use when using other programs with
 Blue and any notes that may concern other programs when being used with

@@ -1,5 +1,7 @@
 # Tracker
 
+## Introduction
+
 Accepts NoteProcessors: yes
 
 ![](../../../images/tracker.png)
@@ -12,6 +14,8 @@ entered into each Track with Tracks being configurable as to what
 parameters (columns) to use. Unique to the Blue Tracker SoundObject is
 the support for microtonal scales using Scala scale files as well as
 support for Csound's Tied-Notes feature.
+
+##  Introduction to the Interface
 
 The interface consists of three main areas: the top tool bar, the main
 tracking area, and the track properties editor.
@@ -36,6 +40,8 @@ one track exists, click the small button above the right scroll bar to
 open and close the track editor properties. More information on using
 the properties editor follows below in the section "Settings Things Up".
 
+##  Setting Things Up
+
 When the Tracker Object is edited it is completely blank. To start,
 click the "+" button to add as many tracks as you would like to use.
 After adding the number of tracks you'd like to use you will need to
@@ -46,6 +52,8 @@ a track. Selecting a track will populate the track properties editor as
 well as hilight the name panel with a green border. A track's properties
 consist of a Name, Note Template, Instrument ID, and Columns;
 descriptions of the values are listed below.
+
+##  Track Properties 
 
   - Name  
     The name property is used only for reference; editing the name
@@ -130,6 +138,8 @@ descriptions of the values are listed below.
         only use whole number integers. Using the increment and
         decrement value shortcuts will add or subtract 1 to the value.
 
+##  Entering in Notes
+
 Entering in data into the tracker is much like entering data into any
 other table, though learning the keyboard shortcuts will vastly speed up
 entering and modifying data. To begin click anywhere on a track where
@@ -166,6 +176,8 @@ operates differently for each column type and does nothing for the
 String type. Please see the column type information above for more
 information.)
 
+## Keyboard Note Mode
+
 Like most trackers, the Tracker object has keyboard shortcuts that will
 allow for very quickly adding notes. To enable Keybaord Note mode,
 either click the checkbox on the top tool bar or use the keyboard
@@ -179,6 +191,8 @@ The user is also able to change the base octave of the Keyboard Note
 mode. To change the octave, use either the spinner control on the top
 tool bar or use the keyboard shortcuts ctrl-shift-up or ctrl-shift-down.
 By default, the base octave starts at middle-c.
+
+## Shortcuts
 
 | Shortcuts        | Description                                                                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -197,7 +211,7 @@ By default, the base octave starts at middle-c.
 | ctrl-shift-up    | raise keyboard octave by one                                                                                                                      |
 | ctrl-shift-down  | lower keyboard octave by one                                                                                                                      |
 
-Keyboard Shortcuts
+## Keyboard Note Mode
 
 | Shortcut | PCh Value | Blue PCH Value | MIDI Value |
 | -------- | --------- | -------------- | ---------- |
@@ -231,17 +245,9 @@ Keyboard Shortcuts
 | 0        | 10.03     | 10.3           | 87         |
 | p        | 10.04     | 10.4           | 88         |
 
-Keyboard Note Mode
 
-<div class="note">
+!!! note "For More Information"
 
-<div class="title">
+    See the tracker.blue example file in the blue/examples/soundObjects
+    folder.
 
-For More Information
-
-</div>
-
-See the tracker.blue example file in the blue/examples/soundObjects
-folder.
-
-</div>

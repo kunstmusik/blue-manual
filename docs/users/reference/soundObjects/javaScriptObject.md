@@ -1,5 +1,7 @@
 # JavaScriptObject
 
+## Introduction
+
 Accepts NoteProcessors: yes
 
 Allows for the use of the JavaScript programming language to create
@@ -10,9 +12,16 @@ After writing your script to generate notes, you'll have to bring back
 into Blue by assigning the variable 'score' the text string of the
 generated JavaScript score.
 
-    [code for generating score]
-    ...
-             
-    score = myScoreGenerator();
+## Example
+
+```javascript
+function myScoreGenerator() {
+   //code for generating score
+   returns scoreText;
+}
+...
+            
+score = myScoreGenerator();
+```
 
 (where myScoreGenerator() is a function that will generate Csound SCO)

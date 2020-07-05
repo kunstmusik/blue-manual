@@ -1,8 +1,8 @@
 # PatternObject
 
-Accepts NoteProcessors: yes
+## Introduction
 
-Pattern Object
+Accepts NoteProcessors: yes
 
 ![Pattern Object](../../../images/patternObject1.png)
 
@@ -10,6 +10,8 @@ The PatternObject is pattern-based score editor, based on the author's
 previous project "Patterns". It is a flexible pattern-oriented score
 editor, useful for musical ideas which are pattern based, such as drum
 parts or minimalist-style musical ideas.
+
+## Usage
 
 For the general workflow of using the PatternObject, users will liked
 likely want to:
@@ -24,30 +26,28 @@ likely want to:
 
 4.  Visually edit the PatternObject score
 
+ Setting PatternObject Properties
+
 The PatternObject's Time Properties can be modified by clicking on the
 button in the upper-right corner of the editor. Clicking the button will
 hide or show the properties panel on the right, as shown below:
-PatternObject - Properties PatternObject - Properties
 
-<div class="note">
+![Pattern Object Properties](../../../images/patternObject2.png)
 
-<div class="title">
+!!! note
+    Editing the time values will clear out any pattern triggers that the
+    user has entered. It is recommended that one first decide the pattern
+    time properties before working with the PatternObject.
 
-Note
-
-</div>
-
-Editing the time values will clear out any pattern triggers that the
-user has entered. It is recommended that one first decide the pattern
-time properties before working with the PatternObject.
-
-</div>
+##  Adding Patterns
 
 To add Patterns to the PatternObject, use the "+" button on the bottom
 of the left hand section. Double-clicking the name of the pattern name
 will allow editing of the name, and clicking on the \[x\] box will allow
 for muting the Pattern. Clicking on the Pattern in the table will also
 bring up it's score in the area below.
+
+##  Editing the Pattern's Score
 
 The Pattern's score is standard Csound SCO text, with the same features
 supported as by the GenericScore SoundObject. Each score should be
@@ -60,6 +60,8 @@ equivalent to .25. Scores shorter or longer than the subdivision length
 are allowed, but one should be aware that the resultant score may or may
 not longer than what is visually represented on the PatternObject score.
 
+##  Editing the PatternObject Score
+
 The PatternObject score is visually edited by click on squares which
 correspond to subdivisions of the beat. For example, if a Pattern's
 score is .25 in total duration, and the time value of the PatternObject
@@ -70,6 +72,8 @@ To add to the PatternObject score, simply click on the square where one
 wishes to have a Pattern triggered. To remove, simply click on a
 selected square. The user can also click and drag to add or remove
 mutliple triggers.
+
+## Other Notes
 
   - Users may be surprised at the generated score if time behavior is
     not set to None(while others may prefer to use Scale, which is the
@@ -91,9 +95,8 @@ mutliple triggers.
     you may want put in a "ghost note" in a Pattern layer, using a note
     like:
     
-    ``` 
+    ```
     i 10000 0 .25
-        
     ```
     
     Where 10000 is not an instrument in use in your project. Then you

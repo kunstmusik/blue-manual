@@ -1,6 +1,6 @@
 # ClojureObject
 
-ClojureObject
+## Introduction
 
 ![ ClojureObject ](../../../images/clojureObject.png)
 
@@ -17,7 +17,9 @@ When writing your script to generate notes, assign the string value of
 the notes to the symbol 'score'. Blue will then read in the value from
 that variable and continue processing.
 
-``` 
+## Example 1
+
+```clojure 
 (def score "i1 0 2 3 4 5")
     
 ```
@@ -26,12 +28,13 @@ The above example shows the simplest script and will generate a single
 note. If the ClojureObject is set with a start time of 0 and a duration
 of 2, then it will generate the following score:
 
-``` 
+```csound-sco
 i1  0.0 2   3   4   5
-    
 ```
 
-``` 
+## Example 2
+
+```clojure 
 (use '[clojure.string :only (join)])
 
 (defn pchadd [base interval] 
@@ -60,7 +63,7 @@ to the duration of the ClojureObject.
 If the ClojureObject is set with a start time of 0 and a duration of 4,
 then it will generate the following score:
 
-``` 
+```csound-sco
 i1  0.0 0.25    8.00    -12
 i1  0.25    0.25    8.04    -12
 i1  0.5 0.25    8.07    -12
@@ -80,6 +83,8 @@ i1  3.75    0.25    8.04    -12
     
 ```
 
+##  Regarding Processing
+
 Blue processes soundObjects by going through each SoundLayer and
 generating score for each object within each layer. This is useful to
 know so that if you are using a ClojureObject that has utility functions
@@ -95,6 +100,8 @@ values (or values from another project even) if one is not careful to
 always assign values in the project that require being set for this
 particular project.
 
+## Variables from Blue
+
 The following variables are available from Blue:
 
   - blueDuration  
@@ -103,6 +110,8 @@ The following variables are available from Blue:
   - blueProjectDir  
     The location of the current project's directory. Includes path
     separator at end.
+
+## Process at Start
 
 There is a checkbox entitled "Process at Start". Selecting this option
 will have the script of the ClojureObject run when a .blue project is
@@ -120,13 +129,14 @@ least once, use the "Test" button to have that evaluated, or use
 "Process at Start" and have Blue ensure it is loaded into the Clojure
 interpreter when you load your projects.
 
+## Using External CLJ Scripts
+
 Blue is able to load external .clj scripts, resolved from the
 .blue/script/clojure or PROJECT\_DIR/script/clojure directory. For
 example, if you use:
 
-``` 
+```clojure 
 (use 'my.script)      
-    
 ```
 
 This will try to load the script from

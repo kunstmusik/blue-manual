@@ -1,8 +1,8 @@
 # PianoRoll
 
-Accepts NoteProcessors: yes
+## Introduction
 
-Piano Roll - Notes
+Accepts NoteProcessors: yes
 
 ![ Piano Roll - Notes ](../../../images/pianoRoll_notes.png)
 
@@ -18,6 +18,8 @@ frequency or PCH notation (octave.scaleDegree). But don't worry, if
 you're not interested in alternate tunings, the PianoRoll is set by
 default to use 12-TET tuning, the "standard" tuning system in use today.
 
+##  About Note Template Strings
+
 The PianoRoll uses Note Template strings as a way to maintain
 flexibility and be able to handle the open-ended nature of Csound's
 instruments. Since the user who builds the instrument designs what each
@@ -31,7 +33,6 @@ For example, the following Note Template string:
 
 ``` 
       i<INSTR_ID> <START> <DUR> <FREQ> 0 1 1
-    
 ```
 
 Will have the <INSTR\_ID\> replaced with the value set in the Piano
@@ -41,52 +42,39 @@ either a frequency or PCH value, depending on how the Piano Roll is
 configured in its properties. The other values will pass through as part
 of the note.
 
-<div class="warning">
+!!! warning
+    Caution should be used when creating a Note Template string to make sure
+    that there are enough spaces allowed between replacement strings. For
+    example, the following:
 
-<div class="title">
+    ``` 
+    i<INSTR_ID> <START> <DUR> <FREQ> <FREQ> 0 1 1
+    ```
 
-Warning
+    would result in:
 
-</div>
+    ``` 
+    i1 0 2 440 440 0 1 1
+    ```
 
-Caution should be used when creating a Note Template string to make sure
-that there are enough spaces allowed between replacement strings. For
-example, the following:
+    while the following:
 
-``` 
-i<INSTR_ID> <START> <DUR> <FREQ> <FREQ> 0 1 1
-      
-```
+    ``` 
+    i<INSTR_ID> <START> <DUR> <FREQ><FREQ> 0 1 1
+    ```
 
-would result in:
+    which does not have proper space between the two <FREQ\> tags, results
+    in:
 
-``` 
-i1 0 2 440 440 0 1 1
-      
-```
+    ``` 
+    i1 0 2 440440 0 1 1
+    ```
 
-while the following:
+##  Piano Roll Properties
 
-``` 
-i<INSTR_ID> <START> <DUR> <FREQ><FREQ> 0 1 1
-      
-```
-
-which does not have proper space between the two <FREQ\> tags, results
-in:
-
-``` 
-i1 0 2 440440 0 1 1
-      
-```
-
-</div>
-
-The PianoRoll requires a bit of configuration before using. The
+The PianoRoll requires configuration before using. The
 properties page below shows the properties that should be configure
 before using the actual note drawing canvas.
-
-Piano Roll - Notes - Properties
 
 ![ Piano Roll - Notes - Properties ](../../../images/pianoRoll_properties.png)
 
@@ -143,7 +131,7 @@ Piano Roll - Notes - Properties
         MIDI note values such as the fluidsynth opcodes as well as
         midiout.
 
-Piano Roll - Notes - Time Options
+## Time Options
 
 ![ Piano Roll - Notes - Time Options ](../../../images/pianoRoll_notes_snap.png)
 
@@ -177,6 +165,8 @@ notes around by click a selected note and dragging. To resize a note,
 select a single note, and after hilighted, move the mouse to the right
 edge of the selected now, and then click and drag.
 
+##  Using the Note Canvas
+
 To remove a note or notes, select the notes, then press the del key.
 
 To cut or copy a note, select a single note (only one note in the buffer
@@ -190,14 +180,7 @@ To edit a note's template, select a single note. After selecting a note,
 the text field for editing the note's template text will be enabled.
 Here you can then edit the note's values.
 
-<div class="note">
+!!! note "For more Information"
 
-<div class="title">
+    See the example .blue file in the blue/examples/soundObjects folder.
 
-For more Information
-
-</div>
-
-See the example .blue file in the blue/examples/soundObjects folder.
-
-</div>

@@ -1,5 +1,7 @@
 # JMask
 
+## Introduction
+
 Accepts NoteProcessors: yes
 
 JMask is GUI score generating soundObject based on Andre Bartetzki's
@@ -39,7 +41,6 @@ available in JMask:
 | Probability | Generates a randomized value that is weighted by the given probability type and the configuration of the parameters of that probability type.                                                                                                                                                                     |
 | Oscillator  | Generates values that oscillate in a given period using different user-chosen shapes.                                                                                                                                                                                                                             |
 
-Parameter Types
 
 Beyond the Parameters, JMask supports the three modifier types found in
 CMask: Masks, Quantizers, and Accumulators. Certain parameters support
@@ -54,8 +55,6 @@ below:
 | Random      | No            | Yes                | Yes                  |
 | Probability | Yes           | Yes                | Yes                  |
 | Oscillator  | Yes           | Yes                | Yes                  |
-
-Parameter Modifier Support
 
 JMask also supports the use of a seed value. When enabling the use of
 seeding, the seed value will be used to initialize the pseudo-random

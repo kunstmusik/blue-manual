@@ -3,6 +3,8 @@
 Sound Objects are objects on the score timeline that are primarily
 responsible for generating score data.
 
+## Common Properties
+
 The following are properties that all SoundObjects share.
 
   - Name  
@@ -31,6 +33,8 @@ The following are properties that all SoundObjects share.
         None, width of soundObject no longer visually corresponds to
         duration of the soundObject's score.)
 
+##  About Note Generation
+
 Sound Objects generate notes in the following manner:
 
   - SoundObject generates initial notes
@@ -38,6 +42,8 @@ Sound Objects generate notes in the following manner:
   - NoteProcessors are applied to the generated notes
 
   - Time Behavior is applied to the notes
+
+## Partial Object Rendering
 
 When using a render start time other than 0.0, how soundObjects
 contribute notes depends on if they support partial object rendering.

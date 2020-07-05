@@ -1,5 +1,7 @@
 # PythonObject
 
+## Introduction
+
 Accepts NoteProcessors: yes
 
 Allows for using of the Python programming language to generate score
@@ -14,27 +16,29 @@ After writing your script to generate notes, assign the string value of
 the notes to the variable 'score'. Blue will then read in the value from
 that variable and continue processing.
 
-``` 
+## Example
+
+```python
 temp = ""
 
 for i in range(4):
   temp += "i1 %d 1 %s %s\n"%(i, "8.0" + str(i), 80)
 
 score = temp
-    
 ```
 
 The above example script will generate four notes at ascending half
 steps. If the PythonObject is set with a start time of 0 and a duration
 of 2, then it will generate the following score:
 
-``` 
+```csound-sco 
 i1  0.0 0.5 8.00    80
 i1  0.5 0.5 8.01    80
 i1  1.0 0.5 8.02    80
 i1  1.5 0.5 8.03    80
-    
 ```
+
+## Regarding Processing
 
 Blue processes soundObjects by going through each SoundLayer and
 generating score for each object within each layer. This is useful to
@@ -51,6 +55,8 @@ allows creating utility PythonObjects. However, one can use stale values
 assign values in the project that require being set for this particular
 project.
 
+##  Variables from Blue
+
 The following variables are avaialable from Blue:
 
   - blueDuration  
@@ -59,6 +65,8 @@ The following variables are avaialable from Blue:
   - blueProjectDir  
     The location of the current project's directory. Includes path
     separator at end.
+
+##  Process at Start
 
 There is a checkbox entitled "Process at Start". Selecting this option
 will have the script of the PythonObject run when a .blue project is
