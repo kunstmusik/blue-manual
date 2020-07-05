@@ -1606,7 +1606,7 @@
 <p>Accepts NoteProcessors: no</p>
 <p>The Sound SoundObject allows one to develop solitary sounds by using
 Csound Orchestra code and graphical user interfaces. It uses the same
-GUI and coding system as found in <a href="#blueSynthBuilder">BlueSynthBuilder</a>.</p>
+GUI and coding system as found in <a href="../../instruments/blueSynthBuilder">BlueSynthBuilder</a>.</p>
 <p>Sound SoundObjects will generate an instrument as well as i-statement
 with the duration of the SoundObject. Sound SoundObjects can route
 signals to mixer sub-channels and master out by using the blueMixerOut
@@ -1693,7 +1693,7 @@ BlueSynthBuilder.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

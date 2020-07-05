@@ -1614,24 +1614,24 @@ under blue/pythonLib.</p>
 <p>After writing your script to generate notes, assign the string value of
 the notes to the variable 'score'. Blue will then read in the value from
 that variable and continue processing.</p>
-<pre><code>temp = &quot;&quot;
+<div class="codehilite"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="ss">&quot;&quot;</span>
 
-for i in range(4):
-  temp += &quot;i1 %d 1 %s %s\n&quot;%(i, &quot;8.0&quot; + str(i), 80)
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+  <span class="n">temp</span> <span class="o">+=</span> <span class="ss">&quot;i1 %d 1 %s %s\n&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="ss">&quot;8.0&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">80</span><span class="p">)</span>
 
-score = temp
+<span class="n">score</span> <span class="o">=</span> <span class="n">temp</span>
+</code></pre></div>
 
-</code></pre>
 
 <p>The above example script will generate four notes at ascending half
 steps. If the PythonObject is set with a start time of 0 and a duration
 of 2, then it will generate the following score:</p>
-<pre><code>i1  0.0 0.5 8.00    80
-i1  0.5 0.5 8.01    80
-i1  1.0 0.5 8.02    80
-i1  1.5 0.5 8.03    80
+<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 8.00    80</span>
+<span class="err">i1  0.5 0.5 8.01    80</span>
+<span class="err">i1  1.0 0.5 8.02    80</span>
+<span class="err">i1  1.5 0.5 8.03    80</span>
+</code></pre></div>
 
-</code></pre>
 
 <p>Blue processes soundObjects by going through each SoundLayer and
 generating score for each object within each layer. This is useful to
@@ -1749,7 +1749,7 @@ your projects.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

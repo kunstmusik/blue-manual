@@ -1651,23 +1651,29 @@ program before the program name.</p>
     <a href="http://www.anthonykozar.net/ports/cmask/">http://www.anthonykozar.net/ports/cmask/</a> for OSX Author: Andre
     Bartetzki</p>
 <p>Comandline to use:</p>
-<pre><code>cmask $infile $outfile
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">cmask $infile $outfile</span>
+</code></pre></div>
+
+
 </li>
 <li>
 <p>nGen<br />
     Homepage: <a href="http://mikelkuehn.com/index.php/ng">http://mikelkuehn.com/index.php/ng</a> Author: Mikel Kuehn</p>
 <p>Comandline to use:</p>
-<pre><code>ngen $infile $outfile
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">ngen $infile $outfile</span>
+</code></pre></div>
+
+
 </li>
 <li>
 <p>AthenaCL<br />
     Homepage: <a href="http://www.flexatone.org/athena.html">http://www.flexatone.org/athena.html</a> Author: Christopher
     Ariza</p>
 <p>Comandline to use:</p>
-<pre><code>python athenaPipe.py $infile
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">python athenaPipe.py $infile</span>
+</code></pre></div>
+
+
 </li>
 </ul>
 <p>Examples of the External SoundObject, as well as athenaPipe.py, can be
@@ -1748,7 +1754,7 @@ found in the blue/examples/soundObjects folder.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

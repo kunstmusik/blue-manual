@@ -1688,37 +1688,32 @@ Orchestra areas of Instruments (not to be confused with the global
 orchestra area in the globals manager tab) and were created to help
 users build fully-encapsulated instruments, such that an instrument and
 all of its necessary parts could be grouped together.</p>
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-This feature has largely been made unnecessary due to new Csound
-programming practices that have developed since this was initially
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature has largely been made unnecessary due to new Csound programming practices that have developed since this was initially
 introduced. This feature is left in Blue though to support legacy
-projects.
-
+projects.</p>
 </div>
-
 <h2 id="basic_usage">Basic Usage</h2>
 <p>To use a command block, you will need to wrap the section of orc code
 that you want Blue to process with the command in the following manner:</p>
-<pre><code>;[command to use]{ 
-...Csound Orchestra Code... 
-;}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">;[command to use]{ </span>
+<span class="err">...Csound Orchestra Code... </span>
+<span class="err">;}</span>
+</code></pre></div>
+
+
 <h2 id="available_commands">Available Commands</h2>
 <p>Once blocks are useful to limit how many times a block of code will be
 generated in the final CSD and is more for efficiency than anything else
 (so Csound doesn't define the same ftable more than it has to, for
 example). An example of this:</p>
-<pre><code>;[once]{ 
-gaLeft init 0 gaRight init 0 
-;}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">;</span><span class="o">[</span><span class="n">once</span><span class="o">]</span><span class="err">{</span><span class="w"> </span>
+<span class="n">gaLeft</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">gaRight</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span>
+<span class="p">;</span><span class="err">}</span><span class="w"></span>
+</code></pre></div>
+
+
 <p>In this case, if the above gaLeft and gaRight init statement, wrapped in
 a once block, is used in multiple instruments, then regardless it will
 be generated only once in the final CSD. So a use case for the above
@@ -1826,7 +1821,7 @@ global orc code.</p>
       <script>
         app = initialize({
           base: "../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

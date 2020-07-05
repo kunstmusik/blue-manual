@@ -1605,9 +1605,8 @@
                 
                 
                 <h1 id="tables_manager">Tables Manager</h1>
-<p>Tables Manager</p>
 <p><img alt="Tables Manager" src="../../../../images/tablesTab.png" /></p>
-<p>The tables manager contains a text area for global tables. Table
+<p>The tables manager contains a text area for global ftables. Table
 statements put here will be immediately inserted above i-statements of
 the &lt;CsScore> area of the generated CSD file.</p>
                 
@@ -1686,7 +1685,7 @@ the &lt;CsScore> area of the generated CSD file.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

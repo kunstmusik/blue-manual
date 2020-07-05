@@ -1609,14 +1609,17 @@
 --help". After that, you should see information printed to the console.
 Some of these flags are used by the Netbeans Platform that Blue is built
 upon. The following are ones Blue uses itself:</p>
-<pre><code>  -c, --compile &lt;arg&gt;       
-  -o, --output &lt;arg&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">  -c, --compile &lt;arg&gt;       </span>
+<span class="err">  -o, --output &lt;arg&gt;</span>
+</code></pre></div>
+
 
 <p>The flags above allow for commandline compilation of a .blue project
 into a CSD. Both flags must be set to work. An example of usage is:</p>
-<pre><code>blue -csomeFile.blue -ooutput.csd
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">blue -csomeFile.blue -ooutput.csd</span>
+</code></pre></div>
+
+
 <p>This will use somefile.blue and produce output.csd. The generated CSD
 will use the Disk Render settings for the project. Using the commandline
 option for compiling .blue projects is useful for automating builds of
@@ -1697,7 +1700,7 @@ projects using a build system like Make, Rake, Ant, or other tool.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

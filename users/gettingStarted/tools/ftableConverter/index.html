@@ -1605,7 +1605,6 @@
                 
                 
                 <h1 id="ftable_converter">FTable Converter</h1>
-<p>FTable Converter</p>
 <p><img alt=" FTable Converter " src="../../../../images/ftableConverter.png" /></p>
 <p>The FTable Converter tool converts ftable statements into ftgen
 statements. When converted, the prior ftable statement numbers are
@@ -1619,21 +1618,25 @@ hard-coded numbers.</p>
 <p>To use, simply put your ftable statement text in the top text area and
 press the "Convert to FTGEN" button to convert. For example, if you use
 the following ftable statement text:</p>
-<pre><code>f1 0 128 7 0 128 0      ; initpos
-f2 0 128 -7 1 128 1     ; masses
-f4 0 128 -7 0 128 2     ; centering force
-f5 0 128 -7 1 128 1     ; damping
-f6 0 128 -7 -.0 128 0   ; init velocity
-f7 0 128 -7 0 128 128   ; trajectory
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">f</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">128</span> <span class="mi">7</span> <span class="mi">0</span> <span class="mi">128</span> <span class="mi">0</span>      <span class="c1">; initpos</span>
+<span class="k">f</span><span class="mi">2</span> <span class="mi">0</span> <span class="mi">128</span> <span class="o">-</span><span class="mi">7</span> <span class="mi">1</span> <span class="mi">128</span> <span class="mi">1</span>     <span class="c1">; masses</span>
+<span class="k">f</span><span class="mi">4</span> <span class="mi">0</span> <span class="mi">128</span> <span class="o">-</span><span class="mi">7</span> <span class="mi">0</span> <span class="mi">128</span> <span class="mi">2</span>     <span class="c1">; centering force</span>
+<span class="k">f</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">128</span> <span class="o">-</span><span class="mi">7</span> <span class="mi">1</span> <span class="mi">128</span> <span class="mi">1</span>     <span class="c1">; damping</span>
+<span class="k">f</span><span class="mi">6</span> <span class="mi">0</span> <span class="mi">128</span> <span class="o">-</span><span class="mi">7</span> <span class="o">-</span><span class="mf">.0</span> <span class="mi">128</span> <span class="mi">0</span>   <span class="c1">; init velocity</span>
+<span class="k">f</span><span class="mi">7</span> <span class="mi">0</span> <span class="mi">128</span> <span class="o">-</span><span class="mi">7</span> <span class="mi">0</span> <span class="mi">128</span> <span class="mi">128</span>   <span class="c1">; trajectory</span>
+</code></pre></div>
+
+
 <p>you will get the following output:</p>
-<pre><code>gi_ ftgen 0, 0, 128, 7, 0, 128, 0   ; initpos
-gi_ ftgen 0, 0, 128, -7, 1, 128, 1    ; masses
-gi_ ftgen 0, 0, 128, -7, 0, 128, 2    ; centering force
-gi_ ftgen 0, 0, 128, -7, 1, 128, 1    ; damping
-gi_ ftgen 0, 0, 128, -7, -.0, 128, 0  ; init velocity
-gi_ ftgen 0, 0, 128, -7, 0, 128, 128  ; trajectory
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="kt">gi</span><span class="n">_</span> <span class="nb">ftgen</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">0</span>   <span class="c1">; initpos</span>
+<span class="kt">gi</span><span class="n">_</span> <span class="nb">ftgen</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">1</span>    <span class="c1">; masses</span>
+<span class="kt">gi</span><span class="n">_</span> <span class="nb">ftgen</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">2</span>    <span class="c1">; centering force</span>
+<span class="kt">gi</span><span class="n">_</span> <span class="nb">ftgen</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">1</span>    <span class="c1">; damping</span>
+<span class="kt">gi</span><span class="n">_</span> <span class="nb">ftgen</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mf">.0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1">; init velocity</span>
+<span class="kt">gi</span><span class="n">_</span> <span class="nb">ftgen</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">128</span>  <span class="c1">; trajectory</span>
+</code></pre></div>
+
+
 <p>This work is based on the Steven Yi's FTable Converter web page utility
 located <a href="http://www.csounds.com/stevenyi/ftable.html">here</a>.</p>
                 
@@ -1712,7 +1715,7 @@ located <a href="http://www.csounds.com/stevenyi/ftable.html">here</a>.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

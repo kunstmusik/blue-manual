@@ -1605,23 +1605,29 @@
                 <h1 id="retrograde_processor">Retrograde Processor</h1>
 <p>Parameters: none</p>
 <p>Reverses all the generated notes in time. The following score:</p>
-<pre><code>i1 0 2 1
-i1 + . 2
-i1 + . 3
-i1 + . 4
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 1</span>
+<span class="err">i1 + . 2</span>
+<span class="err">i1 + . 3</span>
+<span class="err">i1 + . 4</span>
+</code></pre></div>
+
+
 <p>If processed with a RetrogradeProcessor would result in:</p>
-<pre><code>i1  1.5 0.5 1
-i1  1.0 0.5 2
-i1  0.5 0.5 3
-i1  0.0 0.5 4
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1  1.5 0.5 1</span>
+<span class="err">i1  1.0 0.5 2</span>
+<span class="err">i1  0.5 0.5 3</span>
+<span class="err">i1  0.0 0.5 4</span>
+</code></pre></div>
+
+
 <p>which if re-sorted by start time would result in:</p>
-<pre><code>i1  0.0 0.5 4
-i1  0.5 0.5 3
-i1  1.0 0.5 2
-i1  1.5 0.5 1
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 4</span>
+<span class="err">i1  0.5 0.5 3</span>
+<span class="err">i1  1.0 0.5 2</span>
+<span class="err">i1  1.5 0.5 1</span>
+</code></pre></div>
+
+
 <p>(The p2 and p3 times above are post-processing for a 2 second duration
 soundObject with time behavior set to scale.)</p>
                 
@@ -1700,7 +1706,7 @@ soundObject with time behavior set to scale.)</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

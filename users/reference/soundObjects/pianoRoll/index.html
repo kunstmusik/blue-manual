@@ -1626,9 +1626,9 @@ PianoRoll with. When the note is generated, certain special text values
 (those enclosed in &lt; and >) will be replaced by values unique to the
 note.</p>
 <p>For example, the following Note Template string:</p>
-<pre><code>      i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt; 0 1 1
+<div class="codehilite"><pre><span></span><code><span class="err">      i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt; 0 1 1</span>
+</code></pre></div>
 
-</code></pre>
 
 <p>Will have the &lt;INSTR_ID> replaced with the value set in the Piano
 Roll properties, &lt;START> replaced the start time for the note, &lt;DUR>
@@ -1649,34 +1649,34 @@ that there are enough spaces allowed between replacement strings. For
 example, the following:
 
 
-<pre><code>i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt; &lt;FREQ&gt; 0 1 1
+<div class="codehilite"><pre><span></span><code><span class="err">i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt; &lt;FREQ&gt; 0 1 1</span>
+</code></pre></div>
 
-</code></pre>
 
 
 would result in:
 
 
-<pre><code>i1 0 2 440 440 0 1 1
+<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 440 440 0 1 1</span>
+</code></pre></div>
 
-</code></pre>
 
 
 while the following:
 
 
-<pre><code>i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt;&lt;FREQ&gt; 0 1 1
+<div class="codehilite"><pre><span></span><code><span class="err">i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt;&lt;FREQ&gt; 0 1 1</span>
+</code></pre></div>
 
-</code></pre>
 
 
 which does not have proper space between the two <FREQ\> tags, results
 in:
 
 
-<pre><code>i1 0 2 440440 0 1 1
+<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 440440 0 1 1</span>
+</code></pre></div>
 
-</code></pre>
 
 
 </div>
@@ -1880,7 +1880,7 @@ See the example .blue file in the blue/examples/soundObjects folder.
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

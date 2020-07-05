@@ -492,6 +492,19 @@
     Effects
   </a>
   
+    <nav class="md-nav" aria-label="Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effects_library" class="md-nav__link">
+    Effects Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1692,6 +1705,19 @@
     Effects
   </a>
   
+    <nav class="md-nav" aria-label="Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effects_library" class="md-nav__link">
+    Effects Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1739,7 +1765,6 @@
                 
                 
                 <h1 id="mixer">Mixer</h1>
-<p>Mixer</p>
 <p><img alt="" src="../../../../images/mixer.png" /></p>
 <p>The Mixer system in Blue allows for graphically editing levels for
 instruments, applying pre- and post-fader effects, and routing and
@@ -1829,9 +1854,9 @@ having to worry about the code details of setting up a Mixer system
 themselves in Csound code.</p>
 <p>There is also a subChannel form of blueMixerOut available that is able
 to target a subchannel by name. This form is used in the following way:</p>
-<pre><code>      blueMixerOut &quot;subChannelName&quot;, asig1, asig2 [, asig3...]
+<div class="codehilite"><pre><span></span><code><span class="err">      blueMixerOut &quot;subChannelName&quot;, asig1, asig2 [, asig3...]</span>
+</code></pre></div>
 
-</code></pre>
 
 <p>Using this form, the asig signals will be mixed into the subChannel
 given by name. This form is available to use within Instruments but is
@@ -1868,7 +1893,7 @@ necessary if one simply wants to use Effects.</p>
     effect's graphical user interface.</p>
 </li>
 </ol>
-<p>Effects Library</p>
+<h3 id="effects_library">Effects Library</h3>
 <p><img alt="" src="../../../../images/effectsLibrary1.png" /></p>
 <p>Effects are created and managed in your Effects Library, which is
 accessible from the Tools menu. The Effects Library is program wide, so
@@ -1890,7 +1915,6 @@ editors in Blue, clicking Edit Enabled will allow you to move between to
 edit modes, one in which you can add, remove, and move around widgets,
 and another where you can interact with the widgets (useful for setting
 an initial value for the Effect.)</p>
-<p>Effects Library</p>
 <p><img alt="" src="../../../../images/effectsLibrary2.png" /></p>
 <p>In the code editor for the Effect, one sees that the xin and xout lines
 of the User-Defined opcode display according the number of in and out
@@ -1902,19 +1926,11 @@ Opcodes(i.e. one can add a setksmps line at the top of the code area).
 Values from the widgets follow the same principles as BlueSynthBuilder,
 and code completion for opcodes (ctrl-space) and BSB widgets
 (ctrl-shift-space) work within the code editor.</p>
-<div class="note">
-
-<div class="title">
-
-Note
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Blue currently expects Effects to have nchnls number of channels in and
+out where nchnls is the number set by the project.</p>
 </div>
-
-Blue currently expects Effects to have nchnls number of channels in and
-out where nchnls is the number set by the project.
-
-</div>
-
 <h2 id="other_notes">Other Notes</h2>
 <ul>
 <li>The Extra Render Time option in the Mixer dialog allows the user to
@@ -2041,7 +2057,7 @@ code that is along that path. The rules for optimization are as follows:</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

@@ -475,6 +475,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#play_bar" class="md-nav__link">
+    Play Bar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#score_bar" class="md-nav__link">
     Score Bar
   </a>
@@ -1777,6 +1784,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#play_bar" class="md-nav__link">
+    Play Bar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#score_bar" class="md-nav__link">
     Score Bar
   </a>
@@ -1847,7 +1861,6 @@
                 
                 
                 <h1 id="score_timeline">Score Timeline</h1>
-<p>Score Timeline</p>
 <p><img alt=" Score Timeline " src="../../../../images/ScoreTimeline.png" /></p>
 <h2 id="overview">Overview</h2>
 <p>The Score is the tool in Blue for working with musical material in time.
@@ -1871,20 +1884,12 @@ you like, as well as many layers to each group as you like. You can also
 push up and down Layer Groups to reorganize them. The same
 add/remove/push up/push down actions are also available for Layers
 within a Layer Group.</p>
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-Add/Remove/Push Up/Push Down for layers is also available while working
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Add/Remove/Push Up/Push Down for layers is also available while working
 in the main score area by right-clicking the Layer panels on the right
-and selecting the options from the popup menu.
-
+and selecting the options from the popup menu.</p>
 </div>
-
 <p>Also, all LayerGroups support having <a href="../../../reference/noteProcessors/top">NoteProcessors</a>
 used with them. Using a NoteProcessor on a LayerGroup will affect all
 notes generated within that LayerGroup. Editing the LayerGroup's
@@ -2035,6 +2040,7 @@ using the popup menu.</p>
 <a href="http://manual.ardour.org/editing-and-arranging/create-region-fades-and-crossfades/">Region Fades and
 Crossfades</a>.</p>
 <h2 id="user-interface_walkthrough">User-Interface Walkthrough</h2>
+<h3 id="play_bar">Play Bar</h3>
 <p>The play bar at the top has:</p>
 <ul>
 <li>time to start playing from</li>
@@ -2308,7 +2314,7 @@ as a time value.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

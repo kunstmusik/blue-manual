@@ -1620,22 +1620,22 @@ design.</p>
 <p><strong>Appending “ftable” in Instrument Definitions.</strong></p>
 <p>Instruments are required to append the word “ftable” before any number
 that is meant to be an ftable. For example:</p>
-<pre><code>        instr 1
+<div class="codehilite"><pre><span></span><code>        <span class="n">instr</span> <span class="mi">1</span>
 
-        aout oscil 10000, 440, 1
+        <span class="n">aout</span> <span class="n">oscil</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">440</span><span class="p">,</span> <span class="mi">1</span>
 
-        out aout, aout endin
+        <span class="k">out</span> <span class="n">aout</span><span class="p">,</span> <span class="n">aout</span> <span class="n">endin</span>
+</code></pre></div>
 
-</code></pre>
 
 <p>would have to become:</p>
-<pre><code>        instr 1
+<div class="codehilite"><pre><span></span><code>        <span class="n">instr</span> <span class="mi">1</span>
 
-        aout oscil 10000, 440, ftable1
+        <span class="n">aout</span> <span class="n">oscil</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">440</span><span class="p">,</span> <span class="n">ftable1</span>
 
-        out aout, aout endin
+        <span class="k">out</span> <span class="n">aout</span><span class="p">,</span> <span class="n">aout</span> <span class="n">endin</span>
+</code></pre></div>
 
-</code></pre>
 
 <p>The purpose of this is so that Blue will know what ftable references
 will need to be updated when Blue reassigns ftable numbers.</p>
@@ -1680,7 +1680,7 @@ will need to be updated when Blue reassigns ftable numbers.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

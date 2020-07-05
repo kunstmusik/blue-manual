@@ -1819,7 +1819,7 @@
 interfaces for their Csound instruments. The graphical interface is
 designed for the use of exploring configuration of an instrument as well
 as adjustment to values in realtime(requires enabling using the Csound
-API, see <a href="#csoundAPI">here</a>.</p>
+API, see <a href="../../../gettingStarted/installation#using_blue_with_the_csound_api">here</a>.</p>
 <h2 id="about_bluesynthbuilder">About BlueSynthBuilder</h2>
 <p>It has been my experience that most Csound instruments tend to be
 limited in user configurability of parameters than commercial
@@ -1923,18 +1923,22 @@ generated (the replacement key is usually the objectName of the object;
 see table below).</p>
 <p>For example, if there's a knob with an objectName of <em>amplitude</em> and the
 value is set to 0.5, the following instrument code:</p>
-<pre><code>iamp    = &lt;amplitude&gt; * 0dbfs
-aout    vco2 iamp, 440
+<div class="codehilite"><pre><span></span><code><span class="n">iamp</span>    <span class="o">=</span> <span class="o">&lt;</span><span class="n">amplitude</span><span class="o">&gt;</span> <span class="o">*</span> <span class="mi">0</span><span class="n">dbfs</span>
+<span class="n">aout</span>    <span class="n">vco2</span> <span class="n">iamp</span><span class="p">,</span> <span class="mi">440</span>
 
-        outs aout, aout
-</code></pre>
+        <span class="n">outs</span> <span class="n">aout</span><span class="p">,</span> <span class="n">aout</span>
+</code></pre></div>
+
+
 <p>will generate the following instrument:</p>
-<pre><code>iamp    = 0.5 * 0dbfs
+<div class="codehilite"><pre><span></span><code><span class="n">iamp</span>    <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">0</span><span class="n">dbfs</span>
 
-aout    vco2 iamp, 440
+<span class="n">aout</span>    <span class="n">vco2</span> <span class="n">iamp</span><span class="p">,</span> <span class="mi">440</span>
 
-        outs aout, aout
-</code></pre>
+        <span class="n">outs</span> <span class="n">aout</span><span class="p">,</span> <span class="n">aout</span>
+</code></pre></div>
+
+
 <p>For convenience, the standard code completion popup will auto-complete
 text for replacement keys. When editing code, type "&lt;" then press
 ctrl-space. The standard code completion popup will show a list of all
@@ -1959,9 +1963,9 @@ will go from the instrument to the mixer. If the always-on code is
 enabled, the signal generated from the main instrument code will be
 intercepted and read by the always-on instrument. To facilitate this
 feature, there is Blue pseudo-opcode called blueMixerIn:</p>
-<pre><code>asig1 [, asig2...] blueMixerIn        
+<div class="codehilite"><pre><span></span><code><span class="err">asig1 [, asig2...] blueMixerIn        </span>
+</code></pre></div>
 
-</code></pre>
 
 <p>The always-on code should then do processing code, then write out to
 blueMixerOut.</p>
@@ -2093,7 +2097,7 @@ otherwise the code will not compile and Csound will not run the project.
 This is required because when using the Csound API, the signal will need
 to be k-rate to allow for live modification of the value when rendering.</p>
 <p>More information on paramenter automation can be found
-<a href="#parameterAutomation">here</a>.</p>
+<a href="../../../concepts/parameterAutomation">here</a>.</p>
 <div class="note">
 
 <div class="title">
@@ -2225,7 +2229,7 @@ the popup menu. The following widgets are cable of being randomized:</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

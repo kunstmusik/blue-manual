@@ -394,6 +394,19 @@
     Platform Specific Notes
   </a>
   
+    <nav class="md-nav" aria-label="Platform Specific Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -420,6 +433,40 @@
   <a href="#using_blue_with_the_csound_api" class="md-nav__link">
     Using Blue with the Csound API
   </a>
+  
+    <nav class="md-nav" aria-label="Using Blue with the Csound API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos_1" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking_whether_the_api_is_enabled" class="md-nav__link">
+    Checking whether the API is enabled
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1696,6 +1743,19 @@
     Platform Specific Notes
   </a>
   
+    <nav class="md-nav" aria-label="Platform Specific Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1722,6 +1782,40 @@
   <a href="#using_blue_with_the_csound_api" class="md-nav__link">
     Using Blue with the Csound API
   </a>
+  
+    <nav class="md-nav" aria-label="Using Blue with the Csound API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos_1" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking_whether_the_api_is_enabled" class="md-nav__link">
+    Checking whether the API is enabled
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1781,6 +1875,7 @@ and pieces found in the Blue/example folder (or right-click and explore
 contents of Blue.app/example if on OSX).</p>
 <h3 id="platform_specific_notes">Platform Specific Notes</h3>
 <p>The section below has notes for individual platforms.</p>
+<h4 id="macos">macOS</h4>
 <p>Blue uses the right mouse click often to show popup menus. If you do not
 have a right mouse button, you can use ctrl-click for all "rt-clicks"
 that are mentioned in this documentation.</p>
@@ -1820,40 +1915,32 @@ rendering and composing, it is the preferred method of using Blue with
 Csound. Blue should work out-of-the-box with the API if Csound is
 installed using the installers provided on Github, or installed via a
 package manager if on Linux.</p>
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
-Blue currently only works with the API if the version of Csound used is
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Blue currently only works with the API if the version of Csound used is
 compiled using 64-bit doubles. (The float version is not supported when
 using the API.) There are technical difficulties in supporting two
 different versions of Csound API in the same build and it is not known
 if or when the float build will be supported. For users interested in
 using the float build of Csound with Blue, you will need to run Blue
-using the command-line Csound mode.
-
-Additionally, the architecture that Csound is compiled for must match
+using the command-line Csound mode.</p>
+<p>Additionally, the architecture that Csound is compiled for must match
 the architecture of the Java runtime you are using. For example, on
-Windows, Csound is currently only built for x86\_64/amd64 CPU (i.e.
+Windows, Csound is currently only built for x86_64/amd64 CPU (i.e.
 64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
 will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
 an issue as Csound is compiled as a universal binary for both i386 and
-x86\_64. On Linux, it is likely that the version of Csound you
+x86_64. On Linux, it is likely that the version of Csound you
 install/compile and the Java Runtime that you install will likely be the
 same, but if the API does not show as available it may be something to
-check.
-
+check.</p>
 </div>
-
 <p>Blue uses the CsoundJNI Java binding for Csound. This requires that Blue
 can find your installed version of Csound but is configured to do so for
 standard Csound installations. If the API is not enabled when starting
 Blue, the following explains how to setup the API on different
 platforms.</p>
+<h4 id="windows">Windows</h4>
 <p>Users using the Windows Installer for Csound should use the double
 precision version from Github. (This is the default.) After installing,
 the installer should setup everything such that Blue should work with
@@ -1862,19 +1949,22 @@ blue/etc/blue.conf file to tell Blue where to find the csound64.dll. For
 example, if the directory where csound64.dll is located is in
 c:\myCsound, open up blue/etc/blue.conf and modify the default so that
 it contains:</p>
-<pre><code>default_options=&quot;--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound&quot;
+<div class="codehilite"><pre><span></span><code><span class="err">default_options=&quot;--branding blue -J-Xms256m -J-Xmx768m -J-Djava.library.path=c:/myCsound&quot;</span>
+</code></pre></div>
 
-</code></pre>
 
+<h4 id="linux">Linux</h4>
 <p>Linux users should install a doubles version of Csound. The version of
 Csound found in package repositories should be one compiled for doubles.
 After installing Csound, modify the blue/bin/blue file. Search for the
 lines that contain "-J-Djava.library.path=/usr/lib/jni" and modify
 /usr/lib/jni (the default for Debian/Ubuntu-based systems) to the
 directory where libcsound64.so is located.</p>
+<h4 id="macos_1">macOS</h4>
 <p>macOS users may use the installer for Csound from Github, install Csound
 with Homebrew, or self-compile. CsoundJNI is configured to find
 CsoundLib64 in all of the above scenarios for default installations.</p>
+<h4 id="checking_whether_the_api_is_enabled">Checking whether the API is enabled</h4>
 <p>To check if the API is enabled, open Blue and open up the Program
 Options. This is available from the Blue->Preferences menu option on
 OSX, and from the Tools->Options menu option Windows and Linux. In the
@@ -1959,7 +2049,7 @@ the Csound 6 Java API could be loaded, you will only have the
       <script>
         app = initialize({
           base: "../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

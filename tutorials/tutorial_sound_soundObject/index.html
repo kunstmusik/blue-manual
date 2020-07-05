@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#sound_soundobject" class="md-skip">
           Skip to content
         </a>
       
@@ -921,9 +921,63 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Sound SoundObject
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Sound SoundObject" class="md-nav__link md-nav__link--active">
       Sound SoundObject
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how_to_use_the_sound_soundobject" class="md-nav__link">
+    How to Use the Sound SoundObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what_happens_when_it_gets_processed" class="md-nav__link">
+    What Happens When It Gets Processed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage_scenarios_and_patterns" class="md-nav__link">
+    Usage Scenarios and Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final_thoughts" class="md-nav__link">
+    Final Thoughts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1586,6 +1640,44 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how_to_use_the_sound_soundobject" class="md-nav__link">
+    How to Use the Sound SoundObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what_happens_when_it_gets_processed" class="md-nav__link">
+    What Happens When It Gets Processed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage_scenarios_and_patterns" class="md-nav__link">
+    Usage Scenarios and Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final_thoughts" class="md-nav__link">
+    Final Thoughts
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1600,7 +1692,7 @@
                   
                 
                 
-                <h1 id="introduction">Introduction</h1>
+                <h1 id="sound_soundobject">Sound SoundObject</h1>
 <p>One of the more curious soundObjects in blue is the <em>Sound SoundObject</em>,
 which allows for the direct writing of instruments in the score. It's
 origin came a long time ago now when I was first beginning to create
@@ -1647,7 +1739,7 @@ least!).</p>
 <p>The following sections will go over how to use <em>Sound SoundObject,</em> what
 happens when it gets processed by blue, as well as some usage scenarios
 and patterns that have arose while using it in my own work.</p>
-<h1 id="how_to_use_the_sound_soundobject">How to Use the Sound SoundObject</h1>
+<h2 id="how_to_use_the_sound_soundobject">How to Use the Sound SoundObject</h2>
 <p>First, insert the <em>Sound SoundObject</em> as you would any soundObject by
 rt-clicking (for Mac users, hold down the apple key and click) on the
 main timeline of the score area and chose "Add New Sound" from the popup
@@ -1665,10 +1757,10 @@ is where you write your instrument definition, but without writing any
 "instr 11" or "endin": the number of the instrument and the correct
 formatting of the instrument is handled by the soundObject. For a simple
 example, you might try:</p>
-<pre><code>
-aout    oscili 30000, 440, 1
-        outs aout, aout
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">aout    oscili 30000, 440, 1</span>
+<span class="err">        outs aout, aout</span>
+</code></pre></div>
+
 
 <p>where the 1 at the end of the oscili line is an ftable numbered 1,
 defined in the tables editor under the tables tab. (For our example,
@@ -1688,7 +1780,7 @@ this with other soundObject, i.e. write some instruments in the
 orchestra manager, then write some genericScore soundObjects to play
 those instruments, as well as use some <em>Sound SoundObjects</em> directly on
 the timeline.</p>
-<h1 id="what_happens_when_it_gets_processed">What Happens When It Gets Processed</h1>
+<h2 id="what_happens_when_it_gets_processed">What Happens When It Gets Processed</h2>
 <p>If your confused as to what's going on, it'll probably help to know
 exactly what happens when blue processes <em>Sound SoundObjects.</em> blue,
 whenever it goes to create a .CSD file to use with a commandline or to
@@ -1710,8 +1802,10 @@ other p-fields).</p>
 at 0.5 seconds and a duration of 2 seconds<em>.</em>When blue goes to get it's
 instrument, let's say it is assigned instrument number 2. The generated
 note will be:</p>
-<pre><code>i2 0.5 2
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i2 0.5 2</span>
+</code></pre></div>
+
+
 <p>Perhaps the best way to see it is to do the simple example from the "How
 to use the Sound SoundObject" section, generate a CSD file (from the
 Project menu, select "Generate CSD to file"), and inspect what got
@@ -1725,7 +1819,7 @@ a note as well as an instrument, but within blue, that separation is
 hidden from the user. From the user's point of view, all they have to do
 is write their sounds on the timeline, and they don't have to worry
 about numbering the instruments or creating notes for that instrument.</p>
-<h1 id="usage_scenarios_and_patterns">Usage Scenarios and Patterns</h1>
+<h2 id="usage_scenarios_and_patterns">Usage Scenarios and Patterns</h2>
 <p>Most of the time I've found myself using the <em>Sound SoundObject</em> at the
 start of a project when I'm creating new sounds for a piece. I find it's
 good a prototyping tool, initially working with sounds on the
@@ -1737,10 +1831,12 @@ want to do so. This is a general instrument writing pattern of mine that
 I would do anyways even before I had blue to use. For example, I might
 be designing an sound on the timeline with the something like the
 following at the top of the text:</p>
-<pre><code>ipch   = cpspch(8.02)
-iamp  = ampdb(80)
-ispace  = .2
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">ipch   = cpspch(8.02)</span>
+<span class="err">iamp  = ampdb(80)</span>
+<span class="err">ispace  = .2</span>
+</code></pre></div>
+
+
 <p>Later, when I get to a point after sketching out some sounds and finding
 I like how things are beginning to flow in the piece, I find that i
 usually want to start working with the sounds then as instruments. At
@@ -1752,10 +1848,12 @@ orchestra manager, and also leaves me with a single three p-field note,
 which also shows me what instrument number the instrument was assigned.
 After that I'll go to the orchestra manager and edit the instrument to
 now take in more p-fields, changing the top text to something like:</p>
-<pre><code>ipch   = cpspch(p4)
-iamp  = ampdb(p5)
-ispace  = p6
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">ipch   = cpspch(p4)</span>
+<span class="err">iamp  = ampdb(p5)</span>
+<span class="err">ispace  = p6</span>
+</code></pre></div>
+
+
 <p>I usually find myself making two or three different sounds, then copying
 a bunch of them and changing a few parameters to try out things in time,
 then converting them into instruments. It's a nice separation to have
@@ -1806,7 +1904,7 @@ new Csound, as it allows just working with instrument code. (Note: you
 would still need to know the basics of how Csound works, what is a CSD,
 and understand how things in blue map the different parts if itself to
 the different parts of a CSD file).</p>
-<h1 id="final_thoughts">Final Thoughts</h1>
+<h2 id="final_thoughts">Final Thoughts</h2>
 <p>Thanks for reading the tutorial! I hope this tutorial has helped to
 show how to use <em>Sound SoundObject</em>in blue, as well as helped show some
 ways in which you might want to use it.</p>
@@ -1890,7 +1988,7 @@ questions, please feel free to email me at <a href="&#109;&#97;&#105;&#108;&#116
       <script>
         app = initialize({
           base: "../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

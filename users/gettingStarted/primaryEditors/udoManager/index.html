@@ -423,9 +423,42 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        UDO Manager
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="UDO Manager" class="md-nav__link md-nav__link--active">
       UDO Manager
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes_on_editing_udos" class="md-nav__link">
+    Notes on Editing UDOs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1590,6 +1623,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes_on_editing_udos" class="md-nav__link">
+    Notes on Editing UDOs
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1605,7 +1655,6 @@
                 
                 
                 <h1 id="user-defined_opcodes_manager">User-Defined Opcodes Manager</h1>
-<p>User-Defined Opcodes Manager</p>
 <p><img alt=" User-Defined Opcodes Manager " src="../../../../images/udoWindow.png" /></p>
 <p>The User-Defined Opcodes Manager contains three main parts:</p>
 <ul>
@@ -1641,17 +1690,24 @@ down.</p>
 <p>To edit the UDO, select one from the table. After selecting a UDO, the
 UDO Editor will be populated with that UDO. This time, no green border
 will show, as that is only done when a Library UDO is being edited.</p>
+<h2 id="notes_on_editing_udos">Notes on Editing UDOs</h2>
 <p>For UDO's, you will need the name of the UDO, the intypes and outtypes,
 and the body of the code itself. For the body of the code, you will not
 need anything from the "opcode" line that normally starts a UDO
 definition (i.e. "opcode myOpcode, a, ak"), as those should be in the
 text fields for Opcode Name, In Types, and Out Types, and you will not
 need an "endop", as Blue will add that itself.</p>
-<p>User-Defined Opcode Repository Browser</p>
-<p><img alt=" User-Defined Opcode Repository Browser " src="../../../../images/udoDB.png" /></p>
-<p>Using the "I" Button will open up the UDO Repository browser. The
+<!--
+
+TODO - add documentation on Importing Blue or Csound UDOs
+
+## User-Defined Opcode Repository Browser
+
+![ User-Defined Opcode Repository Browser ](../../../images/udoDB.png)
+
+Using the "I" Button will open up the UDO Repository browser. The
 browser shows the available UDO's in the repository on Csounds.com and
-allows for importing from the repository straight into your project.</p>
+allows for importing from the repository straight into your project. -->
                 
               
               
@@ -1728,7 +1784,7 @@ allows for importing from the repository straight into your project.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

@@ -818,6 +818,54 @@
     Render Methods
   </a>
   
+    <nav class="md-nav" aria-label="Render Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#render_in_real-time" class="md-nav__link">
+    Render in Real-time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_csd_to_screen" class="md-nav__link">
+    Generate CSD to Screen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_csd_to_disk" class="md-nav__link">
+    Generate CSD to Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render_to_disk" class="md-nav__link">
+    Render to Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render_to_disk_and_play" class="md-nav__link">
+    Render to Disk and Play
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render_to_disk_and_open" class="md-nav__link">
+    Render to Disk and Open
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1648,6 +1696,54 @@
     Render Methods
   </a>
   
+    <nav class="md-nav" aria-label="Render Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#render_in_real-time" class="md-nav__link">
+    Render in Real-time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_csd_to_screen" class="md-nav__link">
+    Generate CSD to Screen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_csd_to_disk" class="md-nav__link">
+    Generate CSD to Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render_to_disk" class="md-nav__link">
+    Render to Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render_to_disk_and_play" class="md-nav__link">
+    Render to Disk and Play
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render_to_disk_and_open" class="md-nav__link">
+    Render to Disk and Open
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1673,20 +1769,24 @@ different purposes you may have. The following section explains the ways
 which Blue is able to render a .blue project file as well as possible
 use-case scenarios to guide you on how that feature may be useful.</p>
 <h2 id="render_methods">Render Methods</h2>
+<h3 id="render_in_real-time">Render in Real-time</h3>
 <p>Rendering in uses the project's Real-Time render settings to render the
 project in realtime to the users soundcard. This is the most common
 rendering one will likely use. To use this, you can press the play
 button at the top of the window, use the "Project->Render/Stop Project"
 menu option, or use the F9 shortcut key.</p>
+<h3 id="generate_csd_to_screen">Generate CSD to Screen</h3>
 <p>Blue's general method of communicating with Csound is by generating a
 CSD file and calling Csound to run it. For debugging purposes, it is
 often useful to see if what you think you are doing inside Blue is
 matching the generated CSD file. You can generate the CSD to screen by
 using the "Project->Generate CSD to Screen" menu option, or by using
 the ctrl-shift-g shortcut.</p>
+<h3 id="generate_csd_to_disk">Generate CSD to Disk</h3>
 <p>If you'd like to generate a CSD from the current project to a file, you
 can do so by using the "Project->Generate CSD to File" menu option, or
 by using the ctrl-g shortcut.</p>
+<h3 id="render_to_disk">Render to Disk</h3>
 <p>The Render to Disk option will use the project's Disk Render Options
 from its project properties to generate a soundfile on disk (format of
 file depends on how user configures commandline options). I've found
@@ -1694,6 +1794,7 @@ this useful for rendering a wav to disk and converting to MP3 to listen
 to on the go so I can review my current work. To render to disk, you can
 do so by using the "File->Render to Disk" menu option or use the
 ctrl-shift-F9 shortcut.</p>
+<h3 id="render_to_disk_and_play">Render to Disk and Play</h3>
 <p>The Render to Disk and play option will use the project's Disk Render
 Options from its project properties to generate a soundfile on disk and
 after finishing, play the generated file using Blue's soundfile player,
@@ -1706,6 +1807,7 @@ quality settings for final project output, as you can occasionally test
 what the output would be like using this feature. To use this option,
 you can use the "File->Render to Disk and Play" menu option or use the
 ctrl-F9 shortcut.</p>
+<h3 id="render_to_disk_and_open">Render to Disk and Open</h3>
 <p>The Render to Disk and Open option will use the project's Disk Render
 Options from its project properties to generate a soundfile on disk and
 after finishing, open the generated file using the configured command
@@ -1788,7 +1890,7 @@ can use the "File->Render to Disk and Open" menu option.</p>
       <script>
         app = initialize({
           base: "../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

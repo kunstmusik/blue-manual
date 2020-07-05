@@ -1610,11 +1610,13 @@ interpret JavaScript scripts.</p>
 <p>After writing your script to generate notes, you'll have to bring back
 into Blue by assigning the variable 'score' the text string of the
 generated JavaScript score.</p>
-<pre><code>[code for generating score]
-...
+<div class="codehilite"><pre><span></span><code><span class="k">[code for generating score]</span>
+<span class="na">...</span>
 
-score = myScoreGenerator();
-</code></pre>
+<span class="na">score</span> <span class="o">=</span> <span class="s">myScoreGenerator();</span>
+</code></pre></div>
+
+
 <p>(where myScoreGenerator() is a function that will generate Csound SCO)</p>
                 
               
@@ -1692,7 +1694,7 @@ score = myScoreGenerator();
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

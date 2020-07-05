@@ -1710,17 +1710,11 @@ entails:</p>
     library) but transposed up a major 3rd, retrograded, and inverted",
     or an idea like "I've got drum pattern A in the library and I have
     instances of it here and here and ...".</p>
-<div class="note">
-
-<div class="title">
-
-<p>Note</p>
-</div>
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>When copying and pasting Instance SoundObjects, they are all
 pointing to the SoundObject in the library.</p>
 </div>
-
 </li>
 <li>
 <p>You can also then make instances of SoundObjects in the library by
@@ -1752,17 +1746,11 @@ pointing to the SoundObject in the library.</p>
 <p>You can also then edit the SoundObject in the library from within
     the SoundObject Library dialog by selecting the SoundObject in the
     list. The editor for the SoundObject will appear below.</p>
-<div class="note">
-
-<div class="title">
-
-<p>Note</p>
-</div>
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Editing the SoundObject in the library will affect all instances of
 that SoundObject.</p>
 </div>
-
 </li>
 </ol>
 <p>The general pattern of usage for the program-wide SoundObject Library
@@ -1860,7 +1848,7 @@ entails:</p>
       <script>
         app = initialize({
           base: "../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

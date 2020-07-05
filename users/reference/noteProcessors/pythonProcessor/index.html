@@ -1625,12 +1625,12 @@ creates a random space variable between the values of -1 and 1, then
 assigns that to pfield 7 of the note. (This example code is used in the
 blue/examples/noteProcessors/pythonProcessor.blue and can be run within
 Blue to hear the example).</p>
-<pre><code>import random
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
-for i in noteList:
-  newVal = str((2 * random.random()) - 1)
-  i.setPField(newVal, 7)
-</code></pre>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">noteList</span><span class="p">:</span>
+  <span class="n">newVal</span> <span class="o">=</span> <span class="nb">str</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="n">i</span><span class="o">.</span><span class="n">setPField</span><span class="p">(</span><span class="n">newVal</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</code></pre></div>
                 
               
               
@@ -1707,7 +1707,7 @@ for i in noteList:
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

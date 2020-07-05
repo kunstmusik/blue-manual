@@ -1614,8 +1614,10 @@ website at: http://www.huygens-fokker.org/scala/ and place them in the
 <p>Base frequency determines what 8.00 should be set to, defaulting to
 middle-C below A440 (same as in Scala). Input for the noteProcessor
 should be:</p>
-<pre><code>oct.scaleDegree
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">oct.scaleDegree</span>
+</code></pre></div>
+
+
 <p>where oct is equal to octave, and scale degree equal to what degree of
 the scale to use. The output will be frequency values, so instruments
 should be set to accept values as frequency.</p>
@@ -1712,7 +1714,7 @@ should be set to accept values as frequency.</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

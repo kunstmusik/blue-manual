@@ -1606,18 +1606,21 @@
 <p>Parameters: pfield, value</p>
 <p>This NoteProcessor flips all values in designated pfield about an axis
 (value). The following score:</p>
-<pre><code>i1 0 2 80
-i1 + . 85
-i1 + . 95
-i1 + . 100
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 80</span>
+<span class="err">i1 + . 85</span>
+<span class="err">i1 + . 95</span>
+<span class="err">i1 + . 100</span>
+</code></pre></div>
+
+
 <p>If processed with an InversionProcessor with value 90 and pfield 4 would
 result in:</p>
-<pre><code>i1  0.0 0.5 100.0
-i1  0.5 0.5 95.0
-i1  1.0 0.5 85.0
-i1  1.5 0.5 80.0    
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1  0.0 0.5 100.0</span>
+<span class="err">i1  0.5 0.5 95.0</span>
+<span class="err">i1  1.0 0.5 85.0</span>
+<span class="err">i1  1.5 0.5 80.0    </span>
+</code></pre></div>
+
 
 <p>(The p2 and p3 times above are post-processing for a 2 second duration
 SoundObject with time behavior set to scale.)</p>
@@ -1697,7 +1700,7 @@ SoundObject with time behavior set to scale.)</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

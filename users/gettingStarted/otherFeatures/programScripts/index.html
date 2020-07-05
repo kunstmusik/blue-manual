@@ -1688,29 +1688,28 @@ contains useful utility functions.</p>
 </ul>
 <p>To use the ScriptingUtils, use an import statement like this at the top
 of your script:</p>
-<pre><code>from ScriptingUtils import *
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ScriptingUtils</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
 
-</code></pre>
 
 <p><strong>Example Scripts</strong></p>
 <p>The following script scales the time of the selected soundObjects by
 multiplying the startTime and duration of each soundObject by a value
 given by the user.</p>
-<pre><code>from javax.swing import JOptionPane
-from ScriptingUtils import *
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">javax.swing</span> <span class="kn">import</span> <span class="n">JOptionPane</span>
+<span class="kn">from</span> <span class="nn">ScriptingUtils</span> <span class="kn">import</span> <span class="o">*</span>
 
-retVal = JOptionPane.showInputDialog(&quot;Enter Time Factor for Stretch&quot;, 1.0)
+<span class="n">retVal</span> <span class="o">=</span> <span class="n">JOptionPane</span><span class="o">.</span><span class="n">showInputDialog</span><span class="p">(</span><span class="s2">&quot;Enter Time Factor for Stretch&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
-try:
-  val = float(retVal)
-  for i in selectedSoundObjects:
-    i.startTime *= val
-    i.subjectiveDuration *= val
-  alert(&quot;Scaled start time and duration of objects by value %f&quot;%val)
-except:
-  alert(&quot;Value entered was not a floating point number&quot;)
-
-</code></pre>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">retVal</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">selectedSoundObjects</span><span class="p">:</span>
+    <span class="n">i</span><span class="o">.</span><span class="n">startTime</span> <span class="o">*=</span> <span class="n">val</span>
+    <span class="n">i</span><span class="o">.</span><span class="n">subjectiveDuration</span> <span class="o">*=</span> <span class="n">val</span>
+  <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;Scaled start time and duration of objects by value </span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">val</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+  <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;Value entered was not a floating point number&quot;</span><span class="p">)</span>
+</code></pre></div>
                 
               
               
@@ -1752,7 +1751,7 @@ except:
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

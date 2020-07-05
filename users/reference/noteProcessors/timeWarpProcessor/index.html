@@ -1625,11 +1625,13 @@ interpolation of the single-beat durations from 60/M1 to 60/M2.</p>
 <p>Beat values for beat/tempo pairs should related to the score
     *before* any time behavior is applied. For example, for the
     following score:</p>
-<pre><code>i1 0 1 2 3 4
-i1 1 1 3 4 5 
-i1 2 1 3 4 5 
-i1 3 1 3 4 5
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1 0 1 2 3 4</span>
+<span class="err">i1 1 1 3 4 5 </span>
+<span class="err">i1 2 1 3 4 5 </span>
+<span class="err">i1 3 1 3 4 5</span>
+</code></pre></div>
+
+
 <p>if it is in a GenericScore SoundObject of duration 20, if you want
 the tempo to decrease in half by the last note, you would enter a
 value for the processor as "0 60 3 30" and not "0 60 20 30"</p>
@@ -1722,7 +1724,7 @@ value for the processor as "0 60 3 30" and not "0 60 20 30"</p>
       <script>
         app = initialize({
           base: "../../../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)

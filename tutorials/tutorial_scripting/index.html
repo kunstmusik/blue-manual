@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#scripting" class="md-skip">
           Skip to content
         </a>
       
@@ -909,9 +909,124 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Scripting
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Scripting" class="md-nav__link md-nav__link--active">
       Scripting
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why_use_scripting" class="md-nav__link">
+    Why Use Scripting?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting_and_blue" class="md-nav__link">
+    Scripting and blue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external_soundobject" class="md-nav__link">
+    External SoundObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_soundobject" class="md-nav__link">
+    Python SoundObject
+  </a>
+  
+    <nav class="md-nav" aria-label="Python SoundObject">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using_python_with_the_external_soundobject_versus_the_python_soundobject" class="md-nav__link">
+    Using Python with the External SoundObject versus the Python SoundObject
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Python with the External SoundObject versus the Python SoundObject">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the_case_for_using_the_external_soundobject" class="md-nav__link">
+    The Case for Using the External SoundObject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the_case_for_using_the_python_soundobject" class="md-nav__link">
+    The Case for Using the Python SoundObject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage_ideas" class="md-nav__link">
+    Usage Ideas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future_enhancements" class="md-nav__link">
+    Future Enhancements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final_thoughts" class="md-nav__link">
+    Final Thoughts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1586,6 +1701,105 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why_use_scripting" class="md-nav__link">
+    Why Use Scripting?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting_and_blue" class="md-nav__link">
+    Scripting and blue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external_soundobject" class="md-nav__link">
+    External SoundObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_soundobject" class="md-nav__link">
+    Python SoundObject
+  </a>
+  
+    <nav class="md-nav" aria-label="Python SoundObject">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using_python_with_the_external_soundobject_versus_the_python_soundobject" class="md-nav__link">
+    Using Python with the External SoundObject versus the Python SoundObject
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Python with the External SoundObject versus the Python SoundObject">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the_case_for_using_the_external_soundobject" class="md-nav__link">
+    The Case for Using the External SoundObject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the_case_for_using_the_python_soundobject" class="md-nav__link">
+    The Case for Using the Python SoundObject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage_ideas" class="md-nav__link">
+    Usage Ideas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future_enhancements" class="md-nav__link">
+    Future Enhancements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final_thoughts" class="md-nav__link">
+    Final Thoughts
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1600,7 +1814,7 @@
                   
                 
                 
-                <h1 id="introduction">Introduction</h1>
+                <h1 id="scripting">Scripting</h1>
 <p>The blue music composition environment entails the use of timelines on
 which SoundObjects are placed. these SoundObjects are basically lists of
 notes, grouped as a single perceived object. These can be as simple as a
@@ -1673,7 +1887,7 @@ Java and add to blue.</p>
 little bit about scripting and how to use it to achieve their musical
 goals, as I've found the experience highly liberating and musically
 rewarding .</p>
-<h1 id="why_use_scripting">Why Use Scripting?</h1>
+<h2 id="why_use_scripting">Why Use Scripting?</h2>
 <p>For some, the use of scripting or programming may never be a factor in
 how they go about creating their music, as the tools they have already
 are enough. But for some, it may be easier to go about expressing their
@@ -1731,7 +1945,7 @@ lines of script, regardless of the size of the orchestra.)</p>
 <p>Those are some of my reasons for the use of script for musical work, and
 I'm sure others have their own reasons. In the end, it's up to you to
 evaluate your situation and see if it will aid in your work or not.</p>
-<h1 id="scripting_and_blue">Scripting and blue</h1>
+<h2 id="scripting_and_blue">Scripting and blue</h2>
 <p>Every once in a while someone releases a new program for score
 generation, a utility they've decided to make for their own benefit that
 they've graciously shared with the community. Often, these musical tools
@@ -1814,14 +2028,14 @@ scripts, or perhaps were using a web server to maintain state data).</p>
 <p>The next two sections below will explain how to use the two different
 SoundObjects, and for the Python programmer, help you determine when you
 might want to use one object verse the other.</p>
-<h1 id="external_soundobject">External SoundObject</h1>
-<p>The external SoundObject is a generic object that allows you to write
+<h2 id="external_soundobject">External SoundObject</h2>
+<p>The External SoundObject is a generic object that allows you to write
 script within blue to be executed outside of blue and have the generated
 score be brought back in. The way this is implemented, blue will read in
 anything that the external program writes to stdout. for most scripting
 languages, this equates to a "print()" command of some sort in your
 script.</p>
-<p>The external SoundObject's editor takes in two inputs, a script and a
+<p>The External SoundObject's editor takes in two inputs, a script and a
 commandline to run on that script. technically, when blue is in the
 score generating pass and comes to an external SoundObject, the external
 SoundObject writes your script to a temp file, then runs the commandline
@@ -1829,15 +2043,20 @@ given, either swapping “$infile” with the name of the temporary file
 generated, or appending the name of the temporary file to the end of the
 commandline if no “$infile” is found.</p>
 <p>Let's say you're writing a simple perl script:</p>
-<pre><code> print &quot;i1 0 2 3 4 5\n&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err"> print &quot;i1 0 2 3 4 5\n&quot;</span>
+</code></pre></div>
+
 
 <p>and you for your commandline you use:</p>
-<pre><code>perl
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">perl</span>
+</code></pre></div>
+
+
 <p>or perhaps:</p>
-<pre><code>/usr/bin/perl $infile
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">/usr/bin/perl $infile</span>
+</code></pre></div>
+
+
 <p>When blue goes to generate a .CSD file and comes across your external
 SoundObject, what will happen is that:</p>
 <ol>
@@ -1850,13 +2069,17 @@ SoundObject, what will happen is that:</p>
 <ol>
 <li>
 <p>For the first commandline, it'll then run:</p>
-<pre><code>perl /tmp/temp4253.txt
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">perl /tmp/temp4253.txt</span>
+</code></pre></div>
+
+
 </li>
 <li>
 <p>For the second commandline, it'll then run:</p>
-<pre><code>/usr/bin/perl /tmp/temp4253.txt
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">/usr/bin/perl /tmp/temp4253.txt</span>
+</code></pre></div>
+
+
 </li>
 </ol>
 </li>
@@ -1893,31 +2116,33 @@ your system and you know they work fine because you've tested them
 outside of blue. Now, let's say you wrote the following Python script
 (which really, was written by Hans Mikelson as a an example for using
 pmask, taken from the CSound Magazine):</p>
-<pre><code>from pmask import *
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pmask</span> <span class="kn">import</span> <span class="o">*</span>
 
 
-     density = Mask(UniformRandom(), PowerSegment([(0.0,
- 0.03),  (20.0, 0.5)], 3.0), PowerSegment([(0.0, 0.08), (20.0, 1.0)], 3.0))
-     duration = Mask(UniformRandom(), PowerSegment([(0.0, 
- 0.4), (20.0, 3.0)], 1.0), PowerSegment([(0.0, 0.8), (20.0, 5.0)], 1.0))
-     frequency_mask = Mask(UniformRandom(), PowerSegment([(0.0,
-  3000.0), (20.0, 90.0)], 1.0), PowerSegment([(0.0, 5000.0), (20.0, 150.0)],
-  1.0))
-     frequency = Quantizer(frequency_mask, LinearSegment([(0.0,
-  400.0), (20.0, 50.0)]), 0.95)
+     <span class="n">density</span> <span class="o">=</span> <span class="n">Mask</span><span class="p">(</span><span class="n">UniformRandom</span><span class="p">(),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span>
+ <span class="mf">0.03</span><span class="p">),</span>  <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)],</span> <span class="mf">3.0</span><span class="p">),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)],</span> <span class="mf">3.0</span><span class="p">))</span>
+     <span class="n">duration</span> <span class="o">=</span> <span class="n">Mask</span><span class="p">(</span><span class="n">UniformRandom</span><span class="p">(),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span> 
+ <span class="mf">0.4</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)],</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)],</span> <span class="mf">1.0</span><span class="p">))</span>
+     <span class="n">frequency_mask</span> <span class="o">=</span> <span class="n">Mask</span><span class="p">(</span><span class="n">UniformRandom</span><span class="p">(),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span>
+  <span class="mf">3000.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">)],</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">5000.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">150.0</span><span class="p">)],</span>
+  <span class="mf">1.0</span><span class="p">))</span>
+     <span class="n">frequency</span> <span class="o">=</span> <span class="n">Quantizer</span><span class="p">(</span><span class="n">frequency_mask</span><span class="p">,</span> <span class="n">LinearSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span>
+  <span class="mf">400.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">)]),</span> <span class="mf">0.95</span><span class="p">)</span>
 
-     index = Mask(UniformRandom(), PowerSegment([(0.0,
-2.0),   (20.0, 3.0)], 1.0), PowerSegment([(0.0, 3.0), (20.0, 5.0)], 1.0))
-     panorama = Range(0, 1)
+     <span class="n">index</span> <span class="o">=</span> <span class="n">Mask</span><span class="p">(</span><span class="n">UniformRandom</span><span class="p">(),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span>
+<span class="mf">2.0</span><span class="p">),</span>   <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)],</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">PowerSegment</span><span class="p">([(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)],</span> <span class="mf">1.0</span><span class="p">))</span>
+     <span class="n">panorama</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-     amplitude = Lorenz('x')
+     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Lorenz</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 
-     ss = ScoreSection(0.0, 20.0, 1, density, duration, 
-frequency,  index, panorama, amplitude)
+     <span class="n">ss</span> <span class="o">=</span> <span class="n">ScoreSection</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> 
+<span class="n">frequency</span><span class="p">,</span>  <span class="n">index</span><span class="p">,</span> <span class="n">panorama</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
 
 
-     print str(ss)
-</code></pre>
+     <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+</code></pre></div>
+
+
 <p>and you tested it outside of blue and it worked fine. Well, now you
 could create an external SoundObject in blue, paste in this script, set
 the commandline to "python", and now have the notes imported into blue.</p>
@@ -1926,60 +2151,64 @@ pattern scoring utility to generate a drum pattern(available at
 http://www.junklight.com). Mark's utility is itself a perl script, but
 it takes in a text file using a scoring language he developed.</p>
 <p>copying in the example drum.pat file into the scripting area:</p>
-<pre><code>instrument1 "i1 $now .2 2000 2.2 0"
-instrument2 "i1 $now .2 2000 2.4 1"
-instrument3 "i1 $now .1 2000 4 1"
-instrument4 "i1 $now .2 2000 1.6 0.5"
+<div class="codehilite"><pre><span></span><code><span class="n">instrument1</span> <span class="ss">&quot;i1 $now .2 2000 2.2 0&quot;</span>
+<span class="n">instrument2</span> <span class="ss">&quot;i1 $now .2 2000 2.4 1&quot;</span>
+<span class="n">instrument3</span> <span class="ss">&quot;i1 $now .1 2000 4 1&quot;</span>
+<span class="n">instrument4</span> <span class="ss">&quot;i1 $now .2 2000 1.6 0.5&quot;</span>
 
-instrument5 "i1 $now .1 2000 4 0"
-pattern1 1 1 1 
-pattern2 1 1
+<span class="n">instrument5</span> <span class="ss">&quot;i1 $now .1 2000 4 0&quot;</span>
+<span class="n">pattern1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> 
+<span class="n">pattern2</span> <span class="mi">1</span> <span class="mi">1</span>
 
-pattern3 1 1 1 1
-pattern4 1 1 1 1 1 1 1 1
-pattern5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-plist1 1 2
-ilist1 3 5
+<span class="n">pattern3</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="n">pattern4</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="n">pattern5</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="n">plist1</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="n">ilist1</span> <span class="mi">3</span> <span class="mi">5</span>
 
-bar length 1 second
-time error .01
-# poly rhythm example
-loop 5
+<span class="n">bar</span> <span class="k">length</span> <span class="mi">1</span> <span class="k">second</span>
+<span class="n">time</span> <span class="n">error</span> <span class="p">.</span><span class="mi">01</span>
+<span class="o">#</span> <span class="n">poly</span> <span class="n">rhythm</span> <span class="n">example</span>
+<span class="n">loop</span> <span class="mi">5</span>
 
- play 1 with 1
- play 2 with 2
+ <span class="n">play</span> <span class="mi">1</span> <span class="k">with</span> <span class="mi">1</span>
+ <span class="n">play</span> <span class="mi">2</span> <span class="k">with</span> <span class="mi">2</span>
 
-endloop
-# straight 4/4
+<span class="n">endloop</span>
+<span class="o">#</span> <span class="n">straight</span> <span class="mi">4</span><span class="o">/</span><span class="mi">4</span>
 
-loop 5  
- play 2 with 1
- play 3 with 3
-
-
-endloop
-
-loop 5 
- play plist 1 with 4
-
- play 4 with ilist 1
-
- play 3 with 1
-endloop
+<span class="n">loop</span> <span class="mi">5</span>  
+ <span class="n">play</span> <span class="mi">2</span> <span class="k">with</span> <span class="mi">1</span>
+ <span class="n">play</span> <span class="mi">3</span> <span class="k">with</span> <span class="mi">3</span>
 
 
-loop 5 
- play plist 1 with 4
- play 5 with ilist 1
+<span class="n">endloop</span>
 
- play 4 with 1
+<span class="n">loop</span> <span class="mi">5</span> 
+ <span class="n">play</span> <span class="n">plist</span> <span class="mi">1</span> <span class="k">with</span> <span class="mi">4</span>
 
-endloop
-</code></pre>
+ <span class="n">play</span> <span class="mi">4</span> <span class="k">with</span> <span class="n">ilist</span> <span class="mi">1</span>
+
+ <span class="n">play</span> <span class="mi">3</span> <span class="k">with</span> <span class="mi">1</span>
+<span class="n">endloop</span>
+
+
+<span class="n">loop</span> <span class="mi">5</span> 
+ <span class="n">play</span> <span class="n">plist</span> <span class="mi">1</span> <span class="k">with</span> <span class="mi">4</span>
+ <span class="n">play</span> <span class="mi">5</span> <span class="k">with</span> <span class="n">ilist</span> <span class="mi">1</span>
+
+ <span class="n">play</span> <span class="mi">4</span> <span class="k">with</span> <span class="mi">1</span>
+
+<span class="n">endloop</span>
+</code></pre></div>
+
+
 <p>Having unzipped the drumscript.zip into my home direcotory, I used the
 following commandline:</p>
-<pre><code>perl /home/steven/drumText/drums.pl -input
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">perl /home/steven/drumText/drums.pl -input</span>
+</code></pre></div>
+
+
 <p>I ran the test button and got... nothing! I got alot of exceptions
 printed to the console. Running the drum script outside of blue, I saw
 that by default, some logging information was being printed (the name of
@@ -1991,7 +2220,7 @@ rebrought back into blue.</p>
 a file. If writing out to a file, care must be taken to use the $outfile
 parameter of the External SoundObject so that after the external program
 finishes, blue will know to grab the file's contents back into blue.</p>
-<h1 id="python_soundobject">Python SoundObject</h1>
+<h2 id="python_soundobject">Python SoundObject</h2>
 <p>The Python SoundObject is a Python-only scripting SoundObject which uses
 the Jython Python interpreter (more information about this all-Java
 Python interpreter is available at http://www.jython.org). Jython is
@@ -2025,7 +2254,7 @@ same files from the standard Python installation and may cause issues
 with locating standard library files. However, I find that just copying
 the library twice into both the PythonLib and my standard Python
 install's directory to be sufficient and easier to manage.</p>
-<h2 id="using_python_with_the_external_soundobject_versus_the_python_soundobject">Using Python with the External SoundObject versus the Python SoundObject</h2>
+<h3 id="using_python_with_the_external_soundobject_versus_the_python_soundobject">Using Python with the External SoundObject versus the Python SoundObject</h3>
 <p>This has been the most often asked question since the addition of the
 external SoundObject blue, and when I initially put in the external
 SoundObject, I thought that the Python SoundObject would become somewhat
@@ -2034,6 +2263,7 @@ unnecessary.</p>
 using Python alot more in conjunction with blue and found that the
 Python SoundObject has a few key benefits which make me use it now
 everyday.</p>
+<h4 id="the_case_for_using_the_external_soundobject">The Case for Using the External SoundObject</h4>
 <p>First of all, performance of the PythonObject is not as fast as using
 the standard Python interpreter with the external SoundObject. For
 simple scripts, the difference in speed isn't that noticeable, but when
@@ -2056,6 +2286,7 @@ Jython.</p>
 <p>So, if the Python SoundObject is slower, if you have to manage another
 set of libraries, and you might not have all of the features of standard
 Python available, why use the Python SoundObject at all?</p>
+<h4 id="the_case_for_using_the_python_soundobject">The Case for Using the Python SoundObject</h4>
 <p>Now, just to let you know, I use exclusively the Python SoundObject when
 I'm doing Python scripts in blue. I haven't come across any of the
 standard libraries I've needed that were't included with Jython, and if
@@ -2101,24 +2332,28 @@ instances of the classes defined in the first PythonObject, and from all
 other PythonObjects, I use the instances from the second PythonObject as
 my generators.</p>
 <p>to better clarify, my first PythonObject has scripts like:</p>
-<pre><code>class Yo(): 
-    def do(self, a,b):
-        print "doing something with " + str(a) + " : " + str(b)
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Yo</span>(): 
+    <span class="n">def</span> <span class="k">do</span>(<span class="k">self</span>, <span class="n">a</span>,<span class="n">b</span>):
+        <span class="nb">print</span> <span class="s">&quot;doing something with &quot;</span> + <span class="n">str</span>(<span class="n">a</span>) + <span class="s">&quot; : &quot;</span> + <span class="n">str</span>(<span class="n">b</span>)
 
-    def yoyo(self, a,b):
-        print "do something with a and b which are instances of Yo()"
-</code></pre>
+    <span class="n">def</span> <span class="n">yoyo</span>(<span class="k">self</span>, <span class="n">a</span>,<span class="n">b</span>):
+        <span class="nb">print</span> <span class="s">&quot;do something with a and b which are instances of Yo()&quot;</span>
+</code></pre></div>
+
+
 <p>while my second PythonObject has script like:</p>
-<pre><code>
-generator1 = Yo()
-generator2 = Yo()
-generator3 = Yo()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">generator1 = Yo()</span>
+<span class="err">generator2 = Yo()</span>
+<span class="err">generator3 = Yo()</span>
+</code></pre></div>
+
 
 <p>while all other PythonObjects in my piece have a minimal amount of
 script, something like:</p>
-<pre><code>generator1.generateNotes(input1, input2, input3)
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">generator1.generateNotes(input1, input2, input3)</span>
+</code></pre></div>
+
+
 <p>I find that it's a nice way to separate the concerns of each object. as
 I'm currently in the middle of working on the piece, I'm finding that
 first PythonObject getting a bit big, so I'm thinking i'll split that
@@ -2157,19 +2392,23 @@ which would have to be reimported into other scripts. not a horrible
 hack, but enough for me to want to avoid, especially when it's not
 necessary. (though, if you're programming in a scripting language
 besides Python, you would hack to work in a manner like this...)</p>
-<h2 id="usage">Usage</h2>
+<h3 id="usage">Usage</h3>
 <p>For the PythonObject, instead of using a print command to stdout to
 bring things back into blue, you simply assign the variable</p>
-<pre><code>score
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+</code></pre></div>
+
+
 <p>to the text string of your generated notes. when the PythonObject is
 done processing, blue gets whatever value is assigned to that variable
 and parses it as a text score, then proceeds to do the standard
 operations of scaling and translating the notes in time, then applying
 any noteProcessors which may have been added to it.</p>
 <p>Also, should you need, the variable</p>
-<pre><code>blueDuration
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">blueDuration</span>
+</code></pre></div>
+
+
 <p>is assigned the value of the subjective duration of the PythonObject on
 the timeline.</p>
 <p>So, within your scripts, you have access to the duration of the
@@ -2179,37 +2418,46 @@ function that depends on duration, maybe if it has less duration it
 produces notes with louder amplitude and than if it has a longer
 duration.</p>
 <p>Let's say you're writing a simple Python script:</p>
-<pre><code> score = &quot;i1 0 2 3 4 5\n&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err"> score = &quot;i1 0 2 3 4 5\n&quot;</span>
+</code></pre></div>
+
 
 <ol>
 <li>
 <p>the first thing blue does is clear the</p>
-<pre><code>score
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+</code></pre></div>
+
+
 <p>variable in the interpreter and assign the variable</p>
-<pre><code>blueDuration
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">blueDuration</span>
+</code></pre></div>
+
+
 <p>the value of the duration of the SoundObject on the timeline. For
 this example, it does not affect the outcome of the score generated</p>
 </li>
 <li>
 <p>Next, blue runs the script. in this case, the only thing that
     happens is that the</p>
-<pre><code>score
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+</code></pre></div>
+
+
 <p>variable is being assigned the text string of a single note, along
 with a newline.</p>
 </li>
 <li>
 <p>At the end of the script's execution, the</p>
-<pre><code>score
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+</code></pre></div>
+
+
 <p>variable is read. the score variable may or may not have anything
 assigned to it, but the script within the PythonObject is still run.
 this allows for the possibility of code that needs to be run but
 doesn't necessary need to generate score text at that time. (as
-mentioned above in <a href="#caseUsingPython">simplesect_title</a>)</p>
+mentioned above in <a href="#the_case_for_using_the_python_soundobject">The Case for Using the Python Object</a>)</p>
 </li>
 <li>
 <p>blue parses the score text, making Note objects for blue to use,
@@ -2222,48 +2470,58 @@ mentioned above in <a href="#caseUsingPython">simplesect_title</a>)</p>
 <p>For the following example, I will make a very simple score generator
 that produces as many notes as I give as an argument. the entire code
 for the script is:</p>
-<pre><code>
-def generateNotes(numOfNotes):
-    scoreText = &quot;&quot;
+<div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">generateNotes</span><span class="p">(</span><span class="n">numOfNotes</span><span class="p">):</span>
+    <span class="n">scoreText</span> <span class="o">=</span> <span class="ss">&quot;&quot;</span>
 
-    for i in range(numOfNotes):
-        scoreText += &quot;i1 &quot; + str(i) + &quot; 2 3 4 5\n&quot;
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">numOfNotes</span><span class="p">):</span>
+        <span class="n">scoreText</span> <span class="o">+=</span> <span class="ss">&quot;i1 &quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="ss">&quot; 2 3 4 5\n&quot;</span>
 
-    return scoreText
+    <span class="k">return</span> <span class="n">scoreText</span>
 
-score = generateNotes(10)
-</code></pre>
+<span class="n">score</span> <span class="o">=</span> <span class="n">generateNotes</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
 
 <p>The function I made,</p>
-<pre><code>generateNotes(numOfNotes)
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">generateNotes(numOfNotes)</span>
+</code></pre></div>
+
+
 <p>, takes in the number of notes I want to generate. for the above, I
 wanted it to generate 10 notes, and if I printed out the above</p>
-<pre><code>generateNotes(10)
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">generateNotes(10)</span>
+</code></pre></div>
+
+
 <p>, I would have gotten the result:</p>
-<pre><code>
-i1 0 2 3 4 5 
-i1 1 2 3 4 5
-i1 2 2 3 4 5
-i1 3 2 3 4 5
-i1 4 2 3 4 5
-i1 5 2 3 4 5
-i1 6 2 3 4 5
-i1 7 2 3 4 5
-i1 8 2 3 4 5
-i1 9 2 3 4 5
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 3 4 5 </span>
+<span class="err">i1 1 2 3 4 5</span>
+<span class="err">i1 2 2 3 4 5</span>
+<span class="err">i1 3 2 3 4 5</span>
+<span class="err">i1 4 2 3 4 5</span>
+<span class="err">i1 5 2 3 4 5</span>
+<span class="err">i1 6 2 3 4 5</span>
+<span class="err">i1 7 2 3 4 5</span>
+<span class="err">i1 8 2 3 4 5</span>
+<span class="err">i1 9 2 3 4 5</span>
+</code></pre></div>
+
 
 <p>This text string above is returned by the</p>
-<pre><code>generateNotes()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">generateNotes()</span>
+</code></pre></div>
+
+
 <p>function and assigned to the</p>
-<pre><code>score
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+</code></pre></div>
+
+
 <p>variable. blue then grabs that text from the</p>
-<pre><code>score
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+</code></pre></div>
+
+
 <p>variable and parses it and the proceeds with compiling out the .CSD
 file.</p>
 <p>Note: this is a very basic example of a note generator. As you work with
@@ -2275,7 +2533,7 @@ the near future in another tutorial which will hopefully help those new
 to scripting and programming learn how to go about analyzing music goals
 in terms of programming and then designing and implementing their
 solutions.</p>
-<h1 id="usage_ideas">Usage Ideas</h1>
+<h2 id="usage_ideas">Usage Ideas</h2>
 <p>Using the external SoundObject and the Python SoundObject, besides their
 general usefulness of allowing scripting in blue, may be considered
 alternative methods of extending blue through script rather than
@@ -2299,7 +2557,7 @@ have a GUI added to it. so if you have a utility script you use often,
 suggesting it to a Java programmer could lead to it's inclusion into
 blue, where it could be remade in a way to have it be usable by
 non-programmers as well.</p>
-<h1 id="future_enhancements">Future Enhancements</h1>
+<h2 id="future_enhancements">Future Enhancements</h2>
 <p>As blue has developed over time, and as the ways to use it are being
 augmented with each new build, I'm always looking for new ways to make
 the process of working with blue easier. My recent work with the Python
@@ -2327,8 +2585,10 @@ the lib directory of blue; with this, I think it should be possible that
 before blue runs any script, it could look for a "&lt;BLUE_SCRIPT_LIB>"
 constant of some sort and do a text replace to put in the absolute path
 to the lib directory. that way, you could do something like:</p>
-<pre><code>from &lt;BLUE_SCRIPT_LIB&gt;.myLibrary import *
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="o">&lt;</span><span class="n">BLUE_SCRIPT_LIB</span><span class="o">&gt;.</span><span class="n">myLibrary</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
+
+
 <p>as well as use a commandline like:</p>
 <p>perl &lt;BLUE_SCRIPT_LIB>/myLibrary/myProgram -input $infile</p>
 <p>Which would make the library accessible from any system. the nice thing
@@ -2350,7 +2610,7 @@ in that would handle things like syntax-hilighting of different
 languages, maybe has some kind of help system for syntax and references,
 etc. I haven't found one I could easily use or modify yet, but hopefully
 something will come along.</p>
-<h1 id="final_thoughts">Final Thoughts</h1>
+<h2 id="final_thoughts">Final Thoughts</h2>
 <p>As time goes on, I'm sure there will be alot of additions to blue to
 help aid scripting and the use of other score generating programs within
 blue. I hope this tutorial has helped to show how to use the external
@@ -2436,7 +2696,7 @@ questions, please feel free to email me at <a href="&#109;&#97;&#105;&#108;&#116
       <script>
         app = initialize({
           base: "../..",
-          features: ["tabs"],
+          features: ["tabs", "instant"],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
