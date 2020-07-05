@@ -511,7 +511,7 @@ Program Options - Disk Render
 ![](../../images/programOptions_midi.png)
 
 These settings are for blue's MIDI input, used with
-[blueLive](#blueLive). The table shows what devices are currently
+[blueLive](../primaryEditors/blueLive). The table shows what devices are currently
 available, and whether they are enabled for use with blueLive or not.
 You can use the "rescan" button to search for devices if you have just
 plugged in a device.

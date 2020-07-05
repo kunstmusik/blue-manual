@@ -82,7 +82,7 @@ API, which is described below.
 
 To use the command-line version, one needs to set up the Csound
 executable option for Realtime and Disk Render settings in [Program
-Options](#programOptions).
+Options](../programOptions).
 
 ### Using Blue with the Csound API
 

@@ -1,4 +1,16 @@
+# Project information
 site_name: Blue Manual 
+site_url: https://kunstmusik.github.io/blue-manual/
+site_author: Steven Yi 
+site_description: >-
+  User Manual for the Blue music composition environment. 
+# Repository
+repo_name: kunstmusik/blue-manual
+repo_url: https://github.com/kunstmusik/blue-manual
+edit_uri: ""
+
+copyright: Copyright &copy; 2000 - 2020 Steven Yi 
+
 markdown_extensions:
     - def_list
     - tables 
@@ -8,6 +20,9 @@ theme:
     name: material
     features: 
       - tabs
+    include_search_page: false
+    search_index_only: true
+
 nav:
     - Home: 'index.md'
     - 'User Guide':

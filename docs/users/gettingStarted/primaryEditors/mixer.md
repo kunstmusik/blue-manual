@@ -219,7 +219,7 @@ Widget values are able to be randomized in the same way as in the
 BlueSynthBuilder, and is available in the usage mode when working with
 Effects in the Effects Library or when using Effects from the mixer.
 Please further information, please see the documentation for
-[BlueSynthBuilder Widget Randomization](#bsbWidgetRandomization).
+[BlueSynthBuilder Widget Randomization](../../../reference/instruments/blueSynthBuilder#randomization).
 
 ## Code Generation Optimization
 
