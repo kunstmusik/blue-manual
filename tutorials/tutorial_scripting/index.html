@@ -2167,7 +2167,7 @@ it takes in a text file using a scoring language he developed.</p>
 <span class="n">ilist1</span> <span class="mi">3</span> <span class="mi">5</span>
 
 <span class="n">bar</span> <span class="k">length</span> <span class="mi">1</span> <span class="k">second</span>
-<span class="n">time</span> <span class="n">error</span> <span class="p">.</span><span class="mi">01</span>
+<span class="k">time</span> <span class="n">error</span> <span class="p">.</span><span class="mi">01</span>
 <span class="o">#</span> <span class="n">poly</span> <span class="n">rhythm</span> <span class="n">example</span>
 <span class="n">loop</span> <span class="mi">5</span>
 
@@ -2333,10 +2333,10 @@ other PythonObjects, I use the instances from the second PythonObject as
 my generators.</p>
 <p>to better clarify, my first PythonObject has scripts like:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Yo</span>(): 
-    <span class="n">def</span> <span class="k">do</span>(<span class="k">self</span>, <span class="n">a</span>,<span class="n">b</span>):
+    <span class="n">def</span> <span class="nb">do</span>(<span class="nb">self</span>, <span class="n">a</span>,<span class="n">b</span>):
         <span class="nb">print</span> <span class="s">&quot;doing something with &quot;</span> + <span class="n">str</span>(<span class="n">a</span>) + <span class="s">&quot; : &quot;</span> + <span class="n">str</span>(<span class="n">b</span>)
 
-    <span class="n">def</span> <span class="n">yoyo</span>(<span class="k">self</span>, <span class="n">a</span>,<span class="n">b</span>):
+    <span class="n">def</span> <span class="n">yoyo</span>(<span class="nb">self</span>, <span class="n">a</span>,<span class="n">b</span>):
         <span class="nb">print</span> <span class="s">&quot;do something with a and b which are instances of Yo()&quot;</span>
 </code></pre></div>
 

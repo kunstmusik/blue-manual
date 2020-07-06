@@ -2077,33 +2077,33 @@ not checked, the next note group will begin immediately after the
 previous note group's last note ends.</p>
 <p>An example would be a PolyObject whose contents are three one-beat notes
 played back-to-back:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0.0 1.0 3 4 5</span>
-<span class="err">i2 1.0 1.0 3 4 5</span>
-<span class="err">i3 2.0 1.0 3 4 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
 
 <p>If one set the Time Behavior to Repeat without using a Repeat Point and
 stretched the length of the actual PolyObject to six beats, six one-beat
 notes would play back-to-back, like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0.0 1.0 3 4 5</span>
-<span class="err">i2 1.0 1.0 3 4 5</span>
-<span class="err">i3 2.0 1.0 3 4 5</span>
-<span class="err">i1 3.0 1.0 3 4 5</span>
-<span class="err">i2 4.0 1.0 3 4 5</span>
-<span class="err">i3 5.0 1.0 3 4 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mf">3.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">4.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
 
 <p>However, if one were to change the PolyObject to use Repeat Points and
 set the repeat point to 2.5, this would be the result:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0.0 1.0 3 4 5</span>
-<span class="err">i2 1.0 1.0 3 4 5</span>
-<span class="err">i3 2.0 1.0 3 4 5</span>
-<span class="err">i1 2.5 1.0 3 4 5</span>
-<span class="err">i2 3.5 1.0 3 4 5</span>
-<span class="err">i3 4.5 1.0 3 4 5</span>
-<span class="err">i1 5.0 1.0 3 4 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mf">2.5</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">3.5</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">4.5</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
 
@@ -2141,23 +2141,23 @@ applied individually to each looped group of notes.</p>
 <p>So, to borrow from the example in Repeat/Looping Time Behavior, our
 group of three notes with no NoteProcessor and no Repeat Point would
 render like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0.0 1.0 3 4 5</span>
-<span class="err">i2 1.0 1.0 3 4 5</span>
-<span class="err">i3 2.0 1.0 3 4 5</span>
-<span class="err">i1 3.0 1.0 3 4 5</span>
-<span class="err">i2 4.0 1.0 3 4 5</span>
-<span class="err">i3 5.0 1.0 3 4 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mf">3.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">4.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
 
 <p>If I add a LineAddProcessor to p-field four, starting from zero and
 going to two, here's what the result would look like:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0.0 1.0 3.0 4 5</span>
-<span class="err">i2 1.0 1.0 4.0 4 5</span>
-<span class="err">i3 2.0 1.0 5.0 4 5</span>
-<span class="err">i1 3.0 1.0 3.0 4 5</span>
-<span class="err">i2 4.0 1.0 4.0 4 5</span>
-<span class="err">i3 5.0 1.0 5.0 4 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mf">3.0</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mf">4.0</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mf">5.0</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mf">3.0</span> <span class="mf">1.0</span> <span class="mf">3.0</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">4.0</span> <span class="mf">1.0</span> <span class="mf">4.0</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mf">5.0</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
 
@@ -2181,12 +2181,12 @@ following steps:</p>
 </ol>
 <p>If one applies the previous steps to the example cited above, the
 rendered notes look like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0.0 1.0 3.0 4 5</span>
-<span class="err">i2 1.0 1.0 3.4 4 5</span>
-<span class="err">i3 2.0 1.0 3.8 4 5</span>
-<span class="err">i1 3.0 1.0 4.2 4 5</span>
-<span class="err">i2 4.0 1.0 4.6 4 5</span>
-<span class="err">i3 5.0 1.0 5.0 4 5</span>
+<div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mf">3.0</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mf">3.4</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mf">3.8</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">1</span> <span class="mf">3.0</span> <span class="mf">1.0</span> <span class="mf">4.2</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">2</span> <span class="mf">4.0</span> <span class="mf">1.0</span> <span class="mf">4.6</span> <span class="mi">4</span> <span class="mi">5</span>
+<span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mf">5.0</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
 

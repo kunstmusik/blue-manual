@@ -1615,30 +1615,26 @@ import the MIDI note information. (Note: Blue will only show information
 for tracks where note data was found.)</p>
 <p><img alt=" MIDI Import Settings " src="../../../../images/midiImportSettings.png" /></p>
 <p>The table column information is as follows:</p>
-<ul>
-<li>
-<p>Track<br />
-    The original MIDI track number to which this setting is to be
-    applied to. This column is not editable is for reference purpose
-    only.</p>
-</li>
-<li>
-<p>Instrument ID<br />
-    The Csound instrument ID to use for this track. This will replace
-    the &lt;INSTR_ID> key within the note template. This value is
-    treated as a string to allow users to assign the track information
-    to Csound named instruments. If one is doing so, one must quote the
-    name, i.e. use "trumpet" instead of trumpet (without quotes),
-    otherwise the output will not be legal Csound SCO. Default value is
-    the number of the MIDI track.</p>
-</li>
-<li>
-<p>Note Template<br />
-    Template note text to use for generating Csound SCO from the MIDI
-    data. The default note template is "i&lt;INSTR_ID> &lt;START> &lt;DUR>
-    &lt;KEY> &lt;VELOCITY>". By having note templates, the user can
-    massage the note information to work with any number of pfields that
-    their instruments require.</p>
+<dl>
+<dt>Track</dt>
+<dd>The original MIDI track number to which this setting is to be
+applied to. This column is not editable is for reference purpose
+only.</dd>
+<dt>Instrument ID</dt>
+<dd>The Csound instrument ID to use for this track. This will replace
+the &lt;INSTR_ID> key within the note template. This value is
+treated as a string to allow users to assign the track information
+to Csound named instruments. If one is doing so, one must quote the
+name, i.e. use "trumpet" instead of trumpet (without quotes),
+otherwise the output will not be legal Csound SCO. Default value is
+the number of the MIDI track.</dd>
+<dt>Note Template</dt>
+<dd>
+<p>Template note text to use for generating Csound SCO from the MIDI
+data. The default note template is "i&lt;INSTR_ID> &lt;START> &lt;DUR>
+&lt;KEY> &lt;VELOCITY>". By having note templates, the user can
+massage the note information to work with any number of pfields that
+their instruments require.</p>
 <p>The following values are allowed in the note template:</p>
 <table>
 <thead>
@@ -1686,19 +1682,16 @@ for tracks where note data was found.)</p>
 </tr>
 </tbody>
 </table>
-<p>Key Values</p>
-<p>The button labelled "Reference" on the dialog will pop open the
+<p>The button labeled "Reference" on the dialog will pop open the
 above information for quick reference of the allowable replacement
 keys for note templates.</p>
-</li>
-<li>
-<p>Trim Time<br />
-    This option will shift the generated SoundObject to the time of the
-    first note and then take the generated notes for the track and shift
-    them all so that the first note starts at time 0 so that there is no
-    empty time at the beginning of the track's note information.</p>
-</li>
-</ul>
+</dd>
+<dt>Trim Time</dt>
+<dd>This option will shift the generated SoundObject to the time of the
+first note and then take the generated notes for the track and shift
+them all so that the first note starts at time 0 so that there is no
+empty time at the beginning of the track's note information.</dd>
+</dl>
 <p>After finishing configuring settings for the imported MIDI data, Blue
 will generate the notes with one SoundLayer per MIDI track, and on each
 SoundLayer it will contain one GenericScore SoundObject containing the

@@ -1771,29 +1771,23 @@ instruments, applying pre- and post-fader effects, and routing and
 mixing of signals through subchannels.</p>
 <h2 id="architecture">Architecture</h2>
 <p>The Mixer system has three panel sections:</p>
-<ul>
-<li>
-<p>Channels<br />
-    Channels are auto-created and bound to Instrument ID's in the
-    Orchestra for a Project. In the Mixer Dialog they are located in the
-    first section on the left within a splitpane that separates them
-    from the SubChannels. Channels can be set to route to either
-    SubChannels or directly to the Master Channel.</p>
-</li>
-<li>
-<p>SubChannels<br />
-    SubChannels are user-created and are located in the center section
-    of the Mixer Dialog, on the right side of the splitpane. Channels
-    can be set to route to SubChannels, and SubChannels can route into
-    other SubChannels or out to the Master Channel.</p>
-</li>
-<li>
-<p>Master Channel<br />
-    The Master Channel is located on the right side of the Mixer Dialog.
-    There is only one master Channel per project which all channel and
-    subchannel signals ultimately route through.</p>
-</li>
-</ul>
+<dl>
+<dt>Channels</dt>
+<dd>Channels are auto-created and bound to Instrument ID's in the
+Orchestra for a Project. In the Mixer Dialog they are located in the
+first section on the left within a splitpane that separates them
+from the SubChannels. Channels can be set to route to either
+SubChannels or directly to the Master Channel.</dd>
+<dt>SubChannels</dt>
+<dd>SubChannels are user-created and are located in the center section
+of the Mixer Dialog, on the right side of the splitpane. Channels
+can be set to route to SubChannels, and SubChannels can route into
+other SubChannels or out to the Master Channel.</dd>
+<dt>Master Channel</dt>
+<dd>The Master Channel is located on the right side of the Mixer Dialog.
+There is only one master Channel per project which all channel and
+subchannel signals ultimately route through.</dd>
+</dl>
 <p>Each channel allows for applying effects to the incoming signal either
 pre- or post-fader.</p>
 <h2 id="using_the_mixer">Using the Mixer</h2>
@@ -1854,7 +1848,7 @@ having to worry about the code details of setting up a Mixer system
 themselves in Csound code.</p>
 <p>There is also a subChannel form of blueMixerOut available that is able
 to target a subchannel by name. This form is used in the following way:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">      blueMixerOut &quot;subChannelName&quot;, asig1, asig2 [, asig3...]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">blueMixerOut &quot;subChannelName&quot;, asig1, asig2 [, asig3...]</span>
 </code></pre></div>
 
 
