@@ -13,13 +13,13 @@ for tracks where note data was found.)
 
 The table column information is as follows:
 
-  - Track  
-    The original MIDI track number to which this setting is to be
+Track  
+:   The original MIDI track number to which this setting is to be
     applied to. This column is not editable is for reference purpose
     only.
 
-  - Instrument ID  
-    The Csound instrument ID to use for this track. This will replace
+Instrument ID  
+:   The Csound instrument ID to use for this track. This will replace
     the <INSTR\_ID\> key within the note template. This value is
     treated as a string to allow users to assign the track information
     to Csound named instruments. If one is doing so, one must quote the
@@ -27,8 +27,8 @@ The table column information is as follows:
     otherwise the output will not be legal Csound SCO. Default value is
     the number of the MIDI track.
 
-  - Note Template  
-    Template note text to use for generating Csound SCO from the MIDI
+Note Template  
+:   Template note text to use for generating Csound SCO from the MIDI
     data. The default note template is "i<INSTR\_ID\> <START\> <DUR\>
     <KEY\> <VELOCITY\>". By having note templates, the user can
     massage the note information to work with any number of pfields that
@@ -47,16 +47,13 @@ The table column information is as follows:
     | <KEY\_CPS\>      | MIDI key number as CPS                            |
     | <VELOCITY\>      | MIDI velocity number                              |
     | <VELOCITY\_AMP\> | MIDI velocity number as amplitude                 |
-    
 
-    Key Values
-    
-    The button labelled "Reference" on the dialog will pop open the
+    The button labeled "Reference" on the dialog will pop open the
     above information for quick reference of the allowable replacement
     keys for note templates.
 
-  - Trim Time  
-    This option will shift the generated SoundObject to the time of the
+Trim Time  
+:   This option will shift the generated SoundObject to the time of the
     first note and then take the generated notes for the track and shift
     them all so that the first note starts at time 0 so that there is no
     empty time at the beginning of the track's note information.

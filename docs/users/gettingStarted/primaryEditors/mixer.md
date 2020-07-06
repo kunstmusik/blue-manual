@@ -10,21 +10,21 @@ mixing of signals through subchannels.
 
 The Mixer system has three panel sections:
 
-  - Channels  
-    Channels are auto-created and bound to Instrument ID's in the
+Channels  
+:   Channels are auto-created and bound to Instrument ID's in the
     Orchestra for a Project. In the Mixer Dialog they are located in the
     first section on the left within a splitpane that separates them
     from the SubChannels. Channels can be set to route to either
     SubChannels or directly to the Master Channel.
 
-  - SubChannels  
-    SubChannels are user-created and are located in the center section
+SubChannels  
+:    SubChannels are user-created and are located in the center section
     of the Mixer Dialog, on the right side of the splitpane. Channels
     can be set to route to SubChannels, and SubChannels can route into
     other SubChannels or out to the Master Channel.
 
-  - Master Channel  
-    The Master Channel is located on the right side of the Mixer Dialog.
+Master Channel  
+:   The Master Channel is located on the right side of the Mixer Dialog.
     There is only one master Channel per project which all channel and
     subchannel signals ultimately route through.
 
@@ -99,7 +99,7 @@ There is also a subChannel form of blueMixerOut available that is able
 to target a subchannel by name. This form is used in the following way:
 
 ``` 
-      blueMixerOut "subChannelName", asig1, asig2 [, asig3...]
+blueMixerOut "subChannelName", asig1, asig2 [, asig3...]
 ```
 
 Using this form, the asig signals will be mixed into the subChannel

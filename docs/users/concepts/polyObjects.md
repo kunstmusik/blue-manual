@@ -137,31 +137,37 @@ previous note group's last note ends.
 An example would be a PolyObject whose contents are three one-beat notes
 played back-to-back:
 
-    i1 0.0 1.0 3 4 5
-    i2 1.0 1.0 3 4 5
-    i3 2.0 1.0 3 4 5
+```csound-sco
+i1 0.0 1.0 3 4 5
+i2 1.0 1.0 3 4 5
+i3 2.0 1.0 3 4 5
+```
 
 If one set the Time Behavior to Repeat without using a Repeat Point and
 stretched the length of the actual PolyObject to six beats, six one-beat
 notes would play back-to-back, like this:
 
-    i1 0.0 1.0 3 4 5
-    i2 1.0 1.0 3 4 5
-    i3 2.0 1.0 3 4 5
-    i1 3.0 1.0 3 4 5
-    i2 4.0 1.0 3 4 5
-    i3 5.0 1.0 3 4 5
+```csound-sco
+i1 0.0 1.0 3 4 5
+i2 1.0 1.0 3 4 5
+i3 2.0 1.0 3 4 5
+i1 3.0 1.0 3 4 5
+i2 4.0 1.0 3 4 5
+i3 5.0 1.0 3 4 5
+```
 
 However, if one were to change the PolyObject to use Repeat Points and
 set the repeat point to 2.5, this would be the result:
 
-    i1 0.0 1.0 3 4 5
-    i2 1.0 1.0 3 4 5
-    i3 2.0 1.0 3 4 5
-    i1 2.5 1.0 3 4 5
-    i2 3.5 1.0 3 4 5
-    i3 4.5 1.0 3 4 5
-    i1 5.0 1.0 3 4 5
+```csound-sco
+i1 0.0 1.0 3 4 5
+i2 1.0 1.0 3 4 5
+i3 2.0 1.0 3 4 5
+i1 2.5 1.0 3 4 5
+i2 3.5 1.0 3 4 5
+i3 4.5 1.0 3 4 5
+i1 5.0 1.0 3 4 5
+```
 
 Note that there are more notes being played this time. Why? Because with
 a Time Behavior of Repeat, blue will try to fit as many notes that it
@@ -205,22 +211,26 @@ So, to borrow from the example in Repeat/Looping Time Behavior, our
 group of three notes with no NoteProcessor and no Repeat Point would
 render like this:
 
-    i1 0.0 1.0 3 4 5
-    i2 1.0 1.0 3 4 5
-    i3 2.0 1.0 3 4 5
-    i1 3.0 1.0 3 4 5
-    i2 4.0 1.0 3 4 5
-    i3 5.0 1.0 3 4 5
+```csound-sco
+i1 0.0 1.0 3 4 5
+i2 1.0 1.0 3 4 5
+i3 2.0 1.0 3 4 5
+i1 3.0 1.0 3 4 5
+i2 4.0 1.0 3 4 5
+i3 5.0 1.0 3 4 5
+```
 
 If I add a LineAddProcessor to p-field four, starting from zero and
 going to two, here's what the result would look like:
 
-    i1 0.0 1.0 3.0 4 5
-    i2 1.0 1.0 4.0 4 5
-    i3 2.0 1.0 5.0 4 5
-    i1 3.0 1.0 3.0 4 5
-    i2 4.0 1.0 4.0 4 5
-    i3 5.0 1.0 5.0 4 5
+```csound-sco
+i1 0.0 1.0 3.0 4 5
+i2 1.0 1.0 4.0 4 5
+i3 2.0 1.0 5.0 4 5
+i1 3.0 1.0 3.0 4 5
+i2 4.0 1.0 4.0 4 5
+i3 5.0 1.0 5.0 4 5
+```
 
 This may be the desired effect, and it may not. In order to apply a
 NoteProcessor after the Time Behavior has been applied, take the
@@ -239,12 +249,14 @@ following steps:
 If one applies the previous steps to the example cited above, the
 rendered notes look like this:
 
-    i1 0.0 1.0 3.0 4 5
-    i2 1.0 1.0 3.4 4 5
-    i3 2.0 1.0 3.8 4 5
-    i1 3.0 1.0 4.2 4 5
-    i2 4.0 1.0 4.6 4 5
-    i3 5.0 1.0 5.0 4 5
+```csound-sco
+i1 0.0 1.0 3.0 4 5
+i2 1.0 1.0 3.4 4 5
+i3 2.0 1.0 3.8 4 5
+i1 3.0 1.0 4.2 4 5
+i2 4.0 1.0 4.6 4 5
+i3 5.0 1.0 5.0 4 5
+```
 
 One thing the user will have to keep in mind, though; when referring to
 beats, those beats will be applicable to the notes as they are after the

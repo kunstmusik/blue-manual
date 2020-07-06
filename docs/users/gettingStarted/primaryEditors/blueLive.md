@@ -40,20 +40,20 @@ desired).
 
 The main toolbar has four buttons for Blue Live:
 
-  - BlueLive  
-    Toggle button that stops and starts BlueLive
+BlueLive  
+:   Toggle button that stops and starts BlueLive
 
-  - Recompile  
-    If BlueLive is running, this button will cause Blue to recompile the
+Recompile  
+:   If BlueLive is running, this button will cause Blue to recompile the
     CSD from your project and restart BlueLive. This is useful if you
     modify your orchestra code and want to quickly recompile and
     continue working with BlueLive.
 
-  - All Notes Off  
-    Turns off any score notes that are actively playing
+All Notes Off  
+:   Turns off any score notes that are actively playing
 
-  - MIDI Input  
-    Toggle button that turns on and off the configured MIDI devices
+MIDI Input  
+:   Toggle button that turns on and off the configured MIDI devices
     setup in Program Options (discussed further below).
 
 The primary Blue Live window is available from the Window Menu, or by
@@ -79,12 +79,12 @@ SoundObjects that are triggered when multi-trigger or repeat is used.
 Once a SoundObject is added to the Live Space, it can be triggered in
 one of two ways:
 
-  - Single Trigger  
-    Trigger the contents of the currently selected SoundObject. This is
+Single Trigger  
+:   Trigger the contents of the currently selected SoundObject. This is
     done by using the keyboard shortcut ctrl-T (cmd-T on OSX).
 
-  - Multi Trigger  
-    Triggers the contents of the currently enabled SoundObjects. This is
+Multi Trigger  
+:   Triggers the contents of the currently enabled SoundObjects. This is
     done either by using the Trigger button, or using the keyboard
     shortcut ctrl-shift-T (cmd-shift-T on OSX).
 

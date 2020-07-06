@@ -75,49 +75,49 @@ this parameter will generate values for, as well as the field name. To
 change things about the Parameter, right-click the panel to show a popup
 menu as shown in the image above. The options are described below:
 
-  - Add Parameter Before  
-    Create a new Parameter and insert it before the Parameter clicked on
+Add Parameter Before  
+:   Create a new Parameter and insert it before the Parameter clicked on
     by mouse. When this option is selected, a dialog will appear with a
     dropdown of options of what type of Parameter to add.
 
-  - Add Parameter After  
-    Create a new Parameter and insert it after the Parameter clicked on
+Add Parameter After  
+:   Create a new Parameter and insert it after the Parameter clicked on
     by mouse. When this option is selected, a dialog will appear with a
     dropdown of options of what type of Parameter to add.
 
-  - Remove Parameter  
-    Remove this Parameter. Will not be allowed if trying to edit
+Remove Parameter  
+:   Remove this Parameter. Will not be allowed if trying to edit
     parameters 1-3 as JMask requires a minimum of 3 pfields.
 
-  - Change Parameter Type  
-    Choose a different type of Parameter and replace the current one
+Change Parameter Type  
+:   Choose a different type of Parameter and replace the current one
     with the selected one. Any edits from the old Parameter will be lost
     once a new parameter type is chosen.
 
-  - Push Up  
-    Move the selected Parameter to before the previous Parameter.
+Push Up  
+:   Move the selected Parameter to before the previous Parameter.
     Example: Push up parameter at pfield 5 to pfield 4, moving what was
     previously at 4 to 5.
 
-  - Push Down  
-    Move the selected Parameter to after the next Parameter. Example:
+Push Down  
+:   Move the selected Parameter to after the next Parameter. Example:
     Push down parameter at pfield 4 to pfield 5, moving what was
     previously at 5 to 4.
 
-  - Mask  
-    Enable/disable using a Mask with this parameter. If enabled, the
+Mask  
+:   Enable/disable using a Mask with this parameter. If enabled, the
     Mask editor will appear, and if disabled, the Mask editor will
     disappear. This menu option will not show for those Parameters that
     do not support Masks.
 
-  - Quantizer  
-    Enable/disable using a Quantizer with this parameter. If enabled,
+Quantizer  
+:   Enable/disable using a Quantizer with this parameter. If enabled,
     the Quantizer editor will appear, and if disabled, the Quantizer
     editor will disappear. This menu option will not show for those
     Parameters that do not support Quantizers.
 
-  - Accumulator  
-    Enable/disable using an Accumulator with this parameter. If enabled,
+Accumulator  
+:   Enable/disable using an Accumulator with this parameter. If enabled,
     the Accumulator editor will appear, and if disabled, the Accumulator
     editor will disappear. This menu option will not show for those
     Parameters which do not support Accumulators.

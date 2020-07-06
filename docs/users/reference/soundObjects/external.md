@@ -51,8 +51,8 @@ Blue. These commandlines assume that the programs being called are on
 the system path. If not on the path, please append the full path to the
 program before the program name.
 
-  - CMask  
-    Homepage: <http://www.bartetzki.de/en/software.html> for the Linux,
+CMask  
+:   Homepage: <http://www.bartetzki.de/en/software.html> for the Linux,
     Windows and old Mac builds,
     <http://www.anthonykozar.net/ports/cmask/> for OSX Author: Andre
     Bartetzki
@@ -61,15 +61,15 @@ program before the program name.
     
         cmask $infile $outfile
 
-  - nGen  
-    Homepage: <http://mikelkuehn.com/index.php/ng> Author: Mikel Kuehn
+nGen  
+:   Homepage: <http://mikelkuehn.com/index.php/ng> Author: Mikel Kuehn
     
     Comandline to use:
     
         ngen $infile $outfile
 
-  - AthenaCL  
-    Homepage: <http://www.flexatone.org/athena.html> Author: Christopher
+AthenaCL  
+:   Homepage: <http://www.flexatone.org/athena.html> Author: Christopher
     Ariza
     
     Comandline to use:

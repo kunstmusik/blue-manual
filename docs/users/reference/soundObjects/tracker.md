@@ -55,13 +55,13 @@ descriptions of the values are listed below.
 
 ##  Track Properties 
 
-  - Name  
-    The name property is used only for reference; editing the name
+Name  
+:   The name property is used only for reference; editing the name
     changes the title shown on the name panel and is for the user's
     reference.
 
-  - Note Template  
-    The note template is used when generating the notes for the track.
+Note Template  
+:   The note template is used when generating the notes for the track.
     Items in the template that are within < and \> tags will be
     replaced by values either from the Tracker (START and DUR), the
     Instrument ID (INSTR\_ID) or values from the columns, using the
@@ -71,12 +71,12 @@ descriptions of the values are listed below.
     will generally follow the form "i <INSTR\_ID\> <START\> <DUR\>"
     and then have tag keys for each column for the track.
 
-  - Instrument  
-    Instrument name or number to be used when replacing <INSTR\_ID\> in
+Instrument  
+:   Instrument name or number to be used when replacing <INSTR\_ID\> in
     Note template strings.
 
-  - Columns  
-    Each track has a minimum of one configurable column (the tied-note
+Columns  
+:   Each track has a minimum of one configurable column (the tied-note
     is a feature of all tracks and is not a part of this editor) and is
     user-configurable to add as many columns as the user needs for the
     values to use in their notes for their instruments. Columns are
@@ -90,14 +90,14 @@ descriptions of the values are listed below.
     that column's type, as well as used when using shortcuts to
     manipulate data in that column.
     
-      - PCH  
-        Csound PCH format. Entering data will verify that data is in the
+    PCH  
+    :   Csound PCH format. Entering data will verify that data is in the
         octave.pitch format. Using the increment and decrement value
         shortcuts will propertly add or subtract one to pitch value,
         i.e. incrementing the value of 8.11 will result in 9.00.
     
-      - Blue PCH  
-        The Blue PCH format is like the Csound PCH format except that
+    Blue PCH  
+    :   The Blue PCH format is like the Csound PCH format except that
         the pitch part is always a whole number integer and is the scale
         degree of the selected Scale. A valid value in Csound PCH such
         as 8.01 is not valid in Blue PCH as 01 is not an integer (the
@@ -122,18 +122,18 @@ descriptions of the values are listed below.
         increment/decrement value options will work in the same way as
         for PCH.
     
-      - MIDI  
-        MIDI will limit the values entered to whole number integers from
+    MIDI  
+    :   MIDI will limit the values entered to whole number integers from
         0-127. Using the increment and decrement value shortcuts will
         add or subtract 1 to the value.
     
-      - String  
-        The String type allows the user to input any value they want. No
+    String  
+    :   The String type allows the user to input any value they want. No
         verification is done on entry and the increment/decrement value
         shortcuts will have no effect.
     
-      - Number  
-        The Number format will limit the values entered to only numbers.
+    Number  
+    :   The Number format will limit the values entered to only numbers.
         Values can be further restricted to a given range as well as to
         only use whole number integers. Using the increment and
         decrement value shortcuts will add or subtract 1 to the value.

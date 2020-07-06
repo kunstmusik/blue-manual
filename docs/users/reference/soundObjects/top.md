@@ -7,20 +7,20 @@ responsible for generating score data.
 
 The following are properties that all SoundObjects share.
 
-  - Name  
-    Name of the Soundobject
+Name  
+:   Name of the Soundobject
 
-  - Subjective Duration  
-    The duration of the soundObject on the timeline (versus the duration
+Subjective Duration  
+:   The duration of the soundObject on the timeline (versus the duration
     of the generated score within the soundObject, which may be
     different). How the duration relates to the generated score contents
     is controlled by the "Time Behavior" property.
 
-  - End Time  
-    Read-Only property that shows the end-time of the soundObject
+End Time  
+:   Read-Only property that shows the end-time of the soundObject
 
-  - Time Behavior  
-    Selects how subjective time should be used on a soundObject. Options
+Time Behavior  
+:   Selects how subjective time should be used on a soundObject. Options
     are:
     
     1.  Scale - The default option, stretches generated score to last

@@ -8,12 +8,8 @@ not clear the environment of the interpreter between runs, the console
 can be useful to interactively inspect objects. Some ways you might use
 the console:
 
-  - Use
-    dir()
-    to inspect objects to see what methods and members they have
-  - Use
-    help()
-    to view the documentation on an object or class.
+  - Use dir() to inspect objects to see what methods and members they have
+  - Use help() to view the documentation on an object or class.
   - After generating a score or using the "Test" button on a
     PythonObject, you can interactively test functions you have written
     by calling it using code in the console.

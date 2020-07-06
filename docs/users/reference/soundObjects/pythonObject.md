@@ -59,11 +59,11 @@ project.
 
 The following variables are avaialable from Blue:
 
-  - blueDuration  
-    Duration of the Python SoundObject
+blueDuration  
+:   Duration of the Python SoundObject
 
-  - blueProjectDir  
-    The location of the current project's directory. Includes path
+blueProjectDir  
+:   The location of the current project's directory. Includes path
     separator at end.
 
 ##  Process at Start

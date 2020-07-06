@@ -4,26 +4,26 @@
 
 ## Realtime Render Settings
 
-  - sr  
-    sr to use when rendering in real-time. Value defaults to value set
+sr  
+:   sr to use when rendering in real-time. Value defaults to value set
     in Program Options.
 
-  - ksmps  
-    ksmps to use when rendering in real-time. Value defaults to value
+ksmps  
+:   ksmps to use when rendering in real-time. Value defaults to value
     set in Program Options.
 
-  - nchnls  
-    nchnls to use when rendering in real-time. Value defaults to value
+nchnls  
+:   nchnls to use when rendering in real-time. Value defaults to value
     set in Program Options.
 
-  - 0dbfs  
-    The checkbox sets whether 0dbfs is used at all in the project. If
+0dbfs  
+:   The checkbox sets whether 0dbfs is used at all in the project. If
     enabled, the value will be assigned to the value in the textfield.
     The default for the value is set ing Program Options, as well as if
     0dbfs is enabled by default or not.
 
-  - Devices  
-    Devices to use when rendering in real-time (Audio In/Out, MIDI
+Devices  
+:   Devices to use when rendering in real-time (Audio In/Out, MIDI
     In/Out). The value of the device is dependent on the values set on
     the Program Options. By delegating the value to use to what is set
     on the Program Options, the project does not have to store settings
@@ -36,12 +36,12 @@
     only needs to be set to use "Audio Out" and when the project goes to
     render, the settings set for that system's audio out will be used.
 
-  - Message Level  
-    Enables what kind of messages Csound should report. The values
+Message Level  
+:   Enables what kind of messages Csound should report. The values
     default to what is set in Program Options.
 
-  - Advanced Settings  
-    Extra flags to append to the commandline that might not be covered
+Advanced Settings  
+:   Extra flags to append to the commandline that might not be covered
     by options in the UI. Pressing the \[?\] button will open the
     documentation for the Csound command flags.
     
@@ -63,26 +63,26 @@
 
 ## Disk Render Settings
 
-  - sr  
-    sr to use when rendering to disk. Value defaults to value set in
+sr  
+:   sr to use when rendering to disk. Value defaults to value set in
     Program Options.
 
-  - ksmps  
-    ksmps to use when rendering to disk. Value defaults to value set in
+ksmps  
+:   ksmps to use when rendering to disk. Value defaults to value set in
     Program Options.
 
-  - nchnls  
-    nchnls to use when rendering to disk. Value defaults to value set in
+nchnls  
+:   nchnls to use when rendering to disk. Value defaults to value set in
     Program Options.
 
-  - 0dbfs  
-    The checkbox sets whether 0dbfs is used at all in the project when
+0dbfs  
+:   The checkbox sets whether 0dbfs is used at all in the project when
     rendering to disk. If enabled, the value will be assigned to the
     value in the textfield. The default for the value is set ing Program
     Options, as well as if 0dbfs is enabled by default or not.
 
-  - Filename  
-    Name to use for the rendered sound file. If a value is not given,
+Filename  
+:   Name to use for the rendered sound file. If a value is not given,
     Blue will ask on each render what to name the file and where to
     render it to.
     
@@ -91,12 +91,12 @@
     useful to enable if temporarily rendering parts of a project or if
     the project is only meant to be used to render small sound samples.
 
-  - Message Level  
-    Enables what kind of messages Csound should report. The values
+Message Level  
+:   Enables what kind of messages Csound should report. The values
     default to what is set in Program Options.
 
-  - Advanced Settings  
-    Extra flags to append to the commandline that might not be covered
+Advanced Settings  
+:   Extra flags to append to the commandline that might not be covered
     by options in the UI. Pressing the \[?\] button will open the
     documentation for the Csound command flags.
     
@@ -117,28 +117,28 @@
 
 ## Project Information
 
-  - Title  
-    Title for this project. For general information purposes; is also
+Title  
+:   Title for this project. For general information purposes; is also
     used when generating header comments in CSD.
 
-  - Author  
-    Author for this project. Defaults to value set in Program Options.
+Author  
+:   Author for this project. Defaults to value set in Program Options.
     For general information purposes; is also used when generating
     header comments in CSD.
 
-  - Notes  
-    Notes for this project. For general information purposes; is also
+Notes  
+:   Notes for this project. For general information purposes; is also
     used when generating header comments in CSD.
 
 ## Media
 
-  - Media Folder
-    Location where to import audio when copying to media folder (e.g., popup menu for BSB Fileselector widgets; when importing audio files 
+Media Folder
+:   Location where to import audio when copying to media folder (e.g., popup menu for BSB Fileselector widgets; when importing audio files 
     onto audio layers or SoundObject layers). Path is recommended to be 
     relative to the project root directory to make the project as a 
     whole encapsulated and easy to move between systems. If relative, 
     all paths for files in the media folder will be generated by Blue 
     using relative paths.
 
-  - Copy audio files to media folder on import 
-    Makes a copy of the imported audio file in the media folder when dragging to the timeline. 
+Copy audio files to media folder on import 
+:   Makes a copy of the imported audio file in the media folder when dragging to the timeline. 

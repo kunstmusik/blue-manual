@@ -50,13 +50,13 @@ from the layer it is currently on to the one being worked with.
 
 The Score timeline has three different modes:
 
-  - Score  
-    This is the primary mode for adding and editing SoundObjects.
+Score  
+:   This is the primary mode for adding and editing SoundObjects.
     Parameter Automations will be drawn but are not editable in this
     mode.
 
-  - Single Line  
-    This is the primary mode for editing line points for Parameter
+Single Line  
+:   This is the primary mode for editing line points for Parameter
     Automations. The user is able to edit a single line at a time per
     SoundLayer, and can enter and remove points, modify points by
     dragging them, as well as selecting a region and move the the points
@@ -65,8 +65,8 @@ The Score timeline has three different modes:
     will not be committed however until the user releases the mouse
     button.
 
-  - Multi Line  
-    This is the mode for selecting and moving line points for all
+Multi Line  
+:   This is the mode for selecting and moving line points for all
     Parameter Automations on a single or multiple SoundLayers. The use
     can click and drag to create a selection region, then click within
     the selection region to move all points from all lines within the

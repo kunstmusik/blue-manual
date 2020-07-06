@@ -54,20 +54,20 @@ entails:
     menu or by using the F4 shortcut key). There you have the following
     options:
     
-      - Copy  
-        This makes a copy of the selected SoundObject and puts it in the
+    Copy  
+    :   This makes a copy of the selected SoundObject and puts it in the
         buffer. This is a copy of the original SoundObject and not an
         Instance. After copying to the buffer, you can paste as normal
         on the timeline.
     
-      - Copy Instance  
-        This makes a Instance of the selected SoundObject and puts it in
+    Copy Instance  
+    :   This makes a Instance of the selected SoundObject and puts it in
         the buffer. This Instance will point to the original
         SoundObject. After copying to the buffer, you can paste as
         normal on the timeline.
     
-      - Remove  
-        This will remove the selected SoundObject from the library.
+    Remove  
+    :   This will remove the selected SoundObject from the library.
 
 5.  You can also then edit the SoundObject in the library from within
     the SoundObject Library dialog by selecting the SoundObject in the

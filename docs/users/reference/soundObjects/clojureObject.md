@@ -104,11 +104,11 @@ particular project.
 
 The following variables are available from Blue:
 
-  - blueDuration  
-    Duration of the Clojure SoundObject
+blueDuration  
+:   Duration of the Clojure SoundObject
 
-  - blueProjectDir  
-    The location of the current project's directory. Includes path
+blueProjectDir  
+:   The location of the current project's directory. Includes path
     separator at end.
 
 ## Process at Start
