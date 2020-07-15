@@ -4,7 +4,7 @@
 
 The Code Repository is where you edit the options that will come up from
 the code popup (the popup menu that is accessible by rt-clicking on most
-of the text areas in blue).
+of the text areas in Blue).
 
 The Code Repository features a tree to organize your code. Rt-clicking
 on a folder will give you options to add a new code group, remove the

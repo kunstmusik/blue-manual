@@ -1,7 +1,7 @@
 # Setting Up Program Options
 
 The first thing you'll want to do is set up your Program Options. Some
-settings are required for features of blue to work (e.g., Render
+settings are required for features of Blue to work (e.g., Render
 Settings), while others are there to help setup your project defaults
 and save you time when creating new projects.
 
@@ -13,7 +13,7 @@ To open up the Program Options dialog, go to the File menu and click on
 ![](../../images/programOptions_general.png)
 
 Work Directory  
-:   The default directory that blue should open when loading/saving blue
+:   The default directory that Blue should open when loading/saving Blue
     project files.
 
 Maintain Last Window State  
@@ -21,7 +21,7 @@ Maintain Last Window State
     starting of program, window states will be restored.
 
 New User Defaults Enabled  
-:   Enables default text for different objects in blue. Curently this
+:   Enables default text for different objects in Blue. Curently this
     affects:
     
       - CodeRepository - when adding new Code Snippet
@@ -40,20 +40,20 @@ Show Csound Output
 :   If this is enabled, output from rendering with Csound will be shown
     in the Csound Output Dialog (accessible from the Window menu or
     available with the F7 shortcut). If disabled, output will be shown
-    in the std.out of the console that opens when blue starts. (If the
-    blue starter script has been modified not to show the console by
+    in the std.out of the console that opens when Blue starts. (If the
+    Blue starter script has been modified not to show the console by
     using javaw instead of java, then the output will not be able to be
     seen). It is recommended to enable this option.
 
 Message Colors Enabled  
 :   Since Csound5, the default for printed messages is to show them with
     colors by using ANSI text modifiers. However, this only works within
-    ANSI-compliant consoles, and does not work within blue's Csound
+    ANSI-compliant consoles, and does not work within Blue's Csound
     Output Dialog. It is recommended to keep this disabled if the "Show
     Csound Output" option is enabled.
 
 Language  
-:   Which language to use for blue. This affects the labels of the User
+:   Which language to use for Blue. This affects the labels of the User
     Interface, messages given to the user in dialog boxes, menu titles,
     etc. (Translation files may not always be up to of date so some UI
     items may not be translated when not in English.)
@@ -63,7 +63,7 @@ Language
 ![](../../images/programOptions_projectDefaults.png)
 
 These settings are used whenever new projects are created as defaults
-for the project, unless a default.blue file is found in the user's blue
+for the project, unless a default.blue file is found in the user's Blue
 home directory, in which case the settings from the default.blue file
 are used.
 
@@ -71,7 +71,7 @@ Author
 :   Default author to use in new projects.
 
 Mixer Enabled  
-:   Enable using the blue Mixer in new projects by default.
+:   Enable using the Blue Mixer in new projects by default.
 
 ## Playback
 
@@ -89,7 +89,7 @@ Latency Correction
     the user's sound playback mechanism. For example, if latency is
     quite bad on your soundcard and there is a delay of .5 seconds
     between when audio is passed to your soundcard and when the audio is
-    actually realized from the DAC, the visual time pointer for blue may
+    actually realized from the DAC, the visual time pointer for Blue may
     appear ahead in time of what is being heard. Using a .5 value for
     latency correction would correct for this.
 
@@ -98,7 +98,7 @@ Latency Correction
 ![ Program Options - Utility ](../../images/programOptions_utility.png)
 
 Csound Executable  
-:   This is the command for what version of Csound to execute when blue
+:   This is the command for what version of Csound to execute when Blue
     uses utilities that depend on Csound (for example, freezing
     SoundObjects, the SoundFont Viewer utility). The default value of
     "csound" works if you have a version of Csound in your path named
@@ -110,7 +110,7 @@ Csound Executable
         to call Csound and no other flags should be added here.
 
 Freeze Flags  
-:   These are the flags for Csound that blue uses when performing
+:   These are the flags for Csound that Blue uses when performing
     SoundObject freezing. Defaults are "-Ado" for Mac and "-Wdo" for all
     other operating systems. Users may wish to modify this value if they
     would their frozen soundObjects to be in a different format, i.e.
@@ -123,7 +123,7 @@ Freeze Flags
 ### Project Settings
 
 Csound Executable  
-:   This is a command for what version of Csound to execute when blue
+:   This is a command for what version of Csound to execute when Blue
     renders the project in realtime. The default value of "csound" works
     if you have a version of Csound in your path named "csound". You may
     use any command here that would call csound that would work as if
@@ -184,9 +184,9 @@ Audio Out
     The value of this setting will be used for all projects that set
     "Audio Out" enabled in the project-level realtime render settings.
     
-    By selecting the \[...\] button to the right of this field, blue
+    By selecting the \[...\] button to the right of this field, Blue
     will try to detect what devices are available for the chosen Audio
-    Driver. If blue is able to find the devices, a popup dialog will
+    Driver. If Blue is able to find the devices, a popup dialog will
     appear with a list of available devices. Selecting from the popup
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
@@ -194,7 +194,7 @@ Audio Out
     !!! note 
     
         If the driver is chosen but not enabled for use via its checkbox,
-        when auto-detecting, blue will check for devices against the default
+        when auto-detecting, Blue will check for devices against the default
         driver and not necessarily what is in the dropdown. Please be sure
         that if you are planning to use the auto-detect feature with a
         particular driver that you also select the driver and enable it with
@@ -212,16 +212,16 @@ Audio In
     The value of this setting will be used for all projects that set
     "Audio In" enabled in the project-level realtime render settings.
     
-    By selecting the \[...\] button to the right of this field, blue
+    By selecting the \[...\] button to the right of this field, Blue
     will try to detect what devices are available for the chosen Audio
-    Driver. If blue is able to find the devices, a popup dialog will
+    Driver. If Blue is able to find the devices, a popup dialog will
     appear with a list of available devices. Selecting from the popup
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
     !!! note 
         If the driver is chosen but not enabled for use via its checkbox,
-        when auto-detecting, blue will check for devices against the default
+        when auto-detecting, Blue will check for devices against the default
         driver and not necessarily what is in the dropdown. Please be sure
         that if you are planning to use the auto-detect feature with a
         particular driver that you also select the driver and enable it with
@@ -246,16 +246,16 @@ MIDI Out
     The value of this setting will be used for all projects that set
     "MIDI Out" enabled in the project-level realtime render settings.
     
-    By selecting the \[...\] button to the right of this field, blue
+    By selecting the \[...\] button to the right of this field, Blue
     will try to detect what devices are available for the chosen MIDI
-    Driver. If blue is able to find the devices, a popup dialog will
+    Driver. If Blue is able to find the devices, a popup dialog will
     appear with a list of available devices. Selecting from the popup
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
 
     !!! note 
     
-        If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, blue will check for devices against the default
+        If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default
         driver and not necessarily what is in the dropdown. Please be sure
         that if you are planning to use the auto-detect feature with a
         particular driver that you also select the driver and enable it with
@@ -272,9 +272,9 @@ MIDI In
     The value of this setting will be used for all projects that set
     "MIDI In" enabled in the project-level realtime render settings.
     
-    By selecting the \[...\] button to the right of this field, blue
+    By selecting the \[...\] button to the right of this field, Blue
     will try to detect what devices are available for the chosen MIDI
-    Driver. If blue is able to find the devices, a popup dialog will
+    Driver. If Blue is able to find the devices, a popup dialog will
     appear with a list of available devices. Selecting from the popup
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
@@ -282,7 +282,7 @@ MIDI In
     !!! note
 
         If the driver is chosen but not enabled for use via its checkbox,
-        when auto-detecting, blue will check for devices against the default
+        when auto-detecting, Blue will check for devices against the default
         driver and not necessarily what is in the dropdown. Please be sure
         that if you are planning to use the auto-detect feature with a
         particular driver that you also select the driver and enable it with
@@ -335,7 +335,7 @@ Advanced Settings
 ### Project Settings
 
 Csound Executable  
-:   This is a command for what version of csound to execute when blue
+:   This is a command for what version of csound to execute when Blue
     renders the project to disk. The default value of "csound" works if
     you have a version of Csound in your path named "csound". You may
     use any command here that would call csound that would work as if
@@ -381,7 +381,7 @@ nchnls
 
 Enabled  
 :   Enable using custom play command when using "Render and Play". If
-    not enabled, blue's built-in audio player will be used once the
+    not enabled, Blue's built-in audio player will be used once the
     project is finished rendering to disk.
 
 Command  
@@ -455,8 +455,8 @@ Advanced Settings
 ![](../../images/programOptions_midi.png)
 
 These settings are for blue's MIDI input, used with
-[blueLive](../primaryEditors/blueLive). The table shows what devices are currently
-available, and whether they are enabled for use with blueLive or not.
+[BlueLive](../primaryEditors/blueLive). The table shows what devices are currently
+available, and whether they are enabled for use with BlueLive or not.
 You can use the "rescan" button to search for devices if you have just
 plugged in a device.
 
@@ -464,9 +464,9 @@ plugged in a device.
 
 ![](../../images/programOptions_osc.png)
 
-This allows you to set what port blue will listen to for incoming OSC
+This allows you to set what port Blue will listen to for incoming OSC
 messages. Defaults to 8000. The following messages are understood by
-blue:
+Blue:
 
   - /score/play
 
