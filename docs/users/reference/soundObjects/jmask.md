@@ -61,7 +61,10 @@ seeding, the seed value will be used to initialize the pseudo-random
 number generator used in randomized operations. This allows the user to
 set a seed and get consistently reproducible results. The default is to
 use the system time to seed the random number generator, thus giving
-different results each render.
+different results each render. Seeding values may be a long (i.e, 64-bit)
+integer value; for more information, see the documentation for Java's
+[Random](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#Random-long-)
+class.
 
 ## Using the JMask Interface
 
