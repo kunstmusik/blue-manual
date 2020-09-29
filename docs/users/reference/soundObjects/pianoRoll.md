@@ -6,74 +6,36 @@ Accepts NoteProcessors: yes
 
 ![ Piano Roll - Notes ](../../../images/pianoRoll_notes.png)
 
-The PianoRoll SoundObject is a graphical tool to enter in notes,
-commonly available in many MIDI sequencer environments. This PianoRoll
-is unique in that it is Microtonal: it supports loading any
-[Scala](http://www.huygens-fokker.org/scala/) scale file and editing of
-notes adapts to that scale. For example, in the picture above, the scale
-loaded is a Bohlen-Pierce scale with 13 tones to the tritave. The
-PianoRoll above has adapted to that scale to show 13 scale degrees per
-octave of its editor. The generated notes can output values as either
-frequency or PCH notation (octave.scaleDegree). But don't worry, if
-you're not interested in alternate tunings, the PianoRoll is set by
-default to use 12-TET tuning, the "standard" tuning system in use today.
+The PianoRoll SoundObject is a graphical tool for quickly drawing in and
+editing notes.  Blue's PianoRoll is unique from those found in other DAWs in
+two ways. Firstly, as Csound's note system is user-extensible (i.e., users may
+define the number of pfields for their instrument), Blue's PianoRoll allows for
+customization for any number of pfields per note.  Secondly, Blue's PianoRoll
+is Microtonal and supports loading any
+[Scala](http://www.huygens-fokker.org/scala/) scale file and editing of notes
+adapts to that scale. (The PianoRoll is pre-set to use 12-TET
+tuning by default, which should cover most use cases out of the box.) 
+ The generated notes can output values as either frequency, Blue PCH notation
+(octave.scaleDegree) or MIDI note numbers. 
 
-##  About Note Template Strings
+## General Usage
 
-The PianoRoll uses Note Template strings as a way to maintain
-flexibility and be able to handle the open-ended nature of Csound's
-instruments. Since the user who builds the instrument designs what each
-pfield will mean(besides p1, p2, and p3), the Note Template string
-should be made to match the instrument the user wants to use the
-PianoRoll with. When the note is generated, certain special text values
-(those enclosed in < and \>) will be replaced by values unique to the
-note.
+The general workflow for the PianoRoll is as follows:
 
-For example, the following Note Template string:
+1. Create a PianoRoll Object
+2. Configure the PianoRoll for your instrument. This involves editing the instrument number, 
+tuning, scale, pitch generation method, and adding any additional fields for notes. The PianoRoll 
+has defaults that generate for frequency as p4 and amplitude in range 0.0-1.0 for p5.
+3. Draw in and edit notes. Edit fields for notes.
+4. Make copies of the configured PianoRoll to use as a template for new musical material. 
 
-``` 
-      i<INSTR_ID> <START> <DUR> <FREQ> 0 1 1
-```
 
-Will have the <INSTR\_ID\> replaced with the value set in the Piano
-Roll properties, <START\> replaced the start time for the note, <DUR\>
-replaced with the duration of the note, and <FREQ\> replaced with
-either a frequency or PCH value, depending on how the Piano Roll is
-configured in its properties. The other values will pass through as part
-of the note.
+##  Configuring Piano Roll Properties
 
-!!! warning
-    Caution should be used when creating a Note Template string to make sure
-    that there are enough spaces allowed between replacement strings. For
-    example, the following:
-
-    ``` 
-    i<INSTR_ID> <START> <DUR> <FREQ> <FREQ> 0 1 1
-    ```
-
-    would result in:
-
-    ``` 
-    i1 0 2 440 440 0 1 1
-    ```
-
-    while the following:
-
-    ``` 
-    i<INSTR_ID> <START> <DUR> <FREQ><FREQ> 0 1 1
-    ```
-
-    which does not have proper space between the two <FREQ\> tags, results
-    in:
-
-    ``` 
-    i1 0 2 440440 0 1 1
-    ```
-
-##  Piano Roll Properties
+### PianoRoll Properties
 
 The PianoRoll requires configuration before using. The
-properties page below shows the properties that should be configure
+properties page below shows the properties that should be configured
 before using the actual note drawing canvas.
 
 ![ Piano Roll - Notes - Properties ](../../../images/pianoRoll_properties.png)
@@ -83,9 +45,10 @@ Instrument ID
     Note template strings.
 
 Note Template  
-:   The default note template when inserting notes. Notes make a copy of
-    this template string when created and edits to the note's string
-    stay with the note. Generally, you'll want to create a template
+:   The default note template when inserting notes. Each note will 
+    use the default template for the PianoRoll unless the user has 
+    elected to have a specific note use its own template. 
+    Generally, you'll want to create a template
     string that will match the instrument this PianoRoll will be used
     with.
 
@@ -93,7 +56,7 @@ Scale
 :   The scale used with this PianoRoll. The PianoRoll defaults to a
     12-TET scale, the "standard" scale in use in Western classical and
     popular music. Pressing the button labeled "..." will open a file
-    browser for selecting Scala scales to use in place of the default.
+    browser for selecting Scala scale files to use in place of the default.
     After selecting a scale, the PianoRoll will adjust the note canvas
     for the number of scale degrees the newly selected scale contains.
 
@@ -131,19 +94,82 @@ Pch Generation
         MIDI note values such as the fluidsynth opcodes as well as
         midiout.
 
-## Time Options
+    Transposition
+    :   Simple tool to transpose all notes within the PianoRoll by a given
+        number of scale degrees.
 
-![ Piano Roll - Notes - Time Options ](../../../images/pianoRoll_notes_snap.png)
+    Additional Fields
+    :   User-definable set of additional fields per note. Use the editor to 
+        add or remove fields, edit the field name, type (DISCRETE or CONTINUOUS, 
+        meaning it only permits whole numbers or allows for decimal numbers), 
+        a min and max value, as well as default value to use for new notes. 
+        The name of each field is used in the template string to replace the 
+        named template key with the value from the note. For example, if a field has 
+        a name of AMP, any instance of <AMP\> in the template string will be replaced 
+        with the value from the AMP field from the parameter editor for that note.
 
-The Time Options in the PianoRoll are accessed and behave very much in
-the same manner as those that are in the main timeline. The button
+###  Further information on Note Template Strings
+
+The PianoRoll uses Note Template strings as a way to maintain
+flexibility and be able to handle the open-ended nature of Csound's
+instruments. Since the user who builds the instrument designs what each
+pfield will mean (with the exception of p1, p2, and p3), the Note Template string
+should be made to match the instrument the user wants to use the
+PianoRoll with. When the PianoRoll generates Csound Score data, certain template strings 
+(those enclosed in < and \>) will be replaced by values unique to the
+note.
+
+For example, the following Note Template string:
+
+``` 
+      i<INSTR_ID> <START> <DUR> <FREQ> 0 1 1
+```
+
+Will have the <INSTR\_ID\> replaced with the value set in the Piano
+Roll properties, <START\> replaced the start time for the note, <DUR\>
+replaced with the duration of the note, and <FREQ\> replaced with
+either a frequency, PCH, or MIDI note number value, depending on how the Piano Roll is
+configured in its properties. The other values will pass through as part
+of the note.
+
+!!! warning
+    Caution should be used when creating a Note Template string to make sure
+    that there are enough spaces allowed between replacement strings. For
+    example, the following:
+
+    ``` 
+    i<INSTR_ID> <START> <DUR> <FREQ> <FREQ> 0 1 1
+    ```
+
+    would result in:
+
+    ``` 
+    i1 0 2 440 440 0 1 1
+    ```
+
+    while the following:
+
+    ``` 
+    i<INSTR_ID> <START> <DUR> <FREQ><FREQ> 0 1 1
+    ```
+
+    which does not have proper space between the two <FREQ\> tags, results
+    in:
+
+    ``` 
+    i1 0 2 440440 0 1 1
+    ```
+
+### Time Options
+
+The Time Options for the PianoRoll are available on the Notes page. The button
 labelled "..." in the upper right corner of the PianoRoll canvas will
 open and close the panel on the right that contains the properties.
 
 Snap Enabled  
 :   Enables snapping behavior on the timeline. If enabled, vertical
     lines will be drawn at snap points, set by the value below it. In
-    the screenshot above, the snap is enabled and set to every 1.0
+    the screenshot above, the snap is enabled and set to every 0.25 
     beats.
 
 Time Display  
@@ -151,34 +177,52 @@ Time Display
     will display. The time value will show as time, while Number display
     will display as integers. The number below show how often to put a
     label. In the screenshot above, the Time Display is set to show a
-    label in units of time and at every 5.0 seconds.
+    label in units of numbers and at every 4.0 beats.
+
+## Editing Notes
 
 To enter notes, hold down the shift key and press the left mouse button
 down on the canvas. A note will be entered where you pressed and will be
-set to resize as you move the mouse around. When you finally release the
-mouse, the note will be finished entering.
+set to resize as you move the mouse around. Insertion of the note ends 
+when you release the mouse button.
 
-After that, you can select notes by clicking on them or drag and
-selecting notes by marquee. You can also press the shift key and click
+Beyond drawing in notes, you may also select notes by clicking on them or drag and
+selecting notes by marquee. You may also press the shift key and click
 on notes to add to the currently selected notes. You can then drag the
 notes around by click a selected note and dragging. To resize a note,
-select a single note, and after hilighted, move the mouse to the right
-edge of the selected now, and then click and drag.
+hover over the edge of one of the selected notes (the mouse cursor will change to a resize cursor),
+click, then drag to resize the selected notes.
 
-##  Using the Note Canvas
+You may also cut or copy and paste notes by:
 
-To remove a note or notes, select the notes, then press the del key.
+1. Select a set of notes
+2. Press ctrl-c (cmd-c on macOS) to copy the notes (or use ctrl-x or cmd-x to cut)
+3. Hold down ctrl and click with the mouse where you would like to paste 
+   the notes.
 
-To cut or copy a note, select a single note (only one note in the buffer
-is currently supported), then press ctrl-x or ctrl-c to cut or copy,
-respectively.
+To remove a note or notes, select the notes, then press the delete key.
 
-To paste, ctrl-click on the PianoNote canvas. (This is the same behavior
-as pasting soundObjects on the main score timeline.)
+To override a note's template, select a single note. After selecting a note,
+the text field for the note's template text will be shown at the top of the Notes editor. 
+Select "Override Note Template" and edit the note template for that individual note.
 
-To edit a note's template, select a single note. After selecting a note,
-the text field for editing the note's template text will be enabled.
-Here you can then edit the note's values.
+### Field Values
+
+Additional Fields configured in the PianoRoll appear as graphically editable values in the area below
+the PianoRoll Note Canvas. The dropdown on the left-hand side allows for switching what active field is being 
+edited for notes.  Newly-created notes will have field values set to the default value configured for each field definition. To change field values for notes, first select some notes then either:
+
+1. Use the handles in the field editor to drag up and down to edit the field values, or
+2. Press ctrl (or cmd on macOS), hover over one of the selected notes on the canvas, then click and drag up/down to edit the field values. (The mouse cursor should change into a horizontal resize cursor when hovering over a selected note with ctrl/cmd down.) 
+
+Note that when editing field definitions in the PianoRoll properties for PianoRolls with existing note data, the following occurs:
+
+* Renamed fields retain their data values
+* If min or max changes, values for fields will be clamped between the new min and max values.
+* If a field definition is removed, the field data for notes will be removed
+* If a new field is added, notes will all get a new field value set the default value for that field definition. 
+
+## Additional Information
 
 !!! note "For more Information"
 
