@@ -90,7 +90,7 @@ Pch Generation
         (0-127, 60 = Middle-C) is used for <FREQ\> and the chosen Scale
         will not be used. The display for the editor will automatically
         switch to show octaves and notes for standard MIDI scale values.
-        Using MIDI note values is useful for instruments that exepct
+        Using MIDI note values is useful for instruments that expect
         MIDI note values such as the fluidsynth opcodes as well as
         midiout.
 
@@ -162,8 +162,8 @@ of the note.
 
 ### Time Options
 
-The Time Options for the PianoRoll are available on the Notes page. The button
-labelled "..." in the upper right corner of the PianoRoll canvas will
+The Time Options for the PianoRoll are available on the Notes page. The triangle arrow button
+in the upper right corner of the PianoRoll canvas will
 open and close the panel on the right that contains the properties.
 
 Snap Enabled  
