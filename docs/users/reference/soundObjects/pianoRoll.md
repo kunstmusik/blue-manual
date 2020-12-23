@@ -222,6 +222,16 @@ Note that when editing field definitions in the PianoRoll properties for PianoRo
 * If a field definition is removed, the field data for notes will be removed
 * If a new field is added, notes will all get a new field value set the default value for that field definition. 
 
+
+## Keyboard Shortcuts
+
+| Shortcut        | Description  |
+| ---------------- | ------------ |
+| alt-s       | Toggle snap on/off  |
+| ctrl-a      | Select all notes |
+| ctrl-z | Undo |
+| ctrl-shift-z          | Redo |
+
 ## Additional Information
 
 !!! note "For more Information"
