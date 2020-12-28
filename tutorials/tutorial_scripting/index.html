@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/tutorials/tutorial_scripting/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -2059,13 +2059,16 @@ commandline if no “$infile” is found.</p>
 <div class="codehilite"><pre><span></span><code><span class="err"> print &quot;i1 0 2 3 4 5\n&quot;</span>
 </code></pre></div>
 
+
 <p>and you for your commandline you use:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">perl</span>
 </code></pre></div>
 
+
 <p>or perhaps:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">/usr/bin/perl $infile</span>
 </code></pre></div>
+
 
 <p>When blue goes to generate a .CSD file and comes across your external
 SoundObject, what will happen is that:</p>
@@ -2082,11 +2085,13 @@ SoundObject, what will happen is that:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">perl /tmp/temp4253.txt</span>
 </code></pre></div>
 
+
 </li>
 <li>
 <p>For the second commandline, it'll then run:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">/usr/bin/perl /tmp/temp4253.txt</span>
 </code></pre></div>
+
 
 </li>
 </ol>
@@ -2150,6 +2155,7 @@ pmask, taken from the CSound Magazine):</p>
      <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
 </code></pre></div>
 
+
 <p>and you tested it outside of blue and it worked fine. Well, now you
 could create an external SoundObject in blue, paste in this script, set
 the commandline to "python", and now have the notes imported into blue.</p>
@@ -2209,10 +2215,12 @@ it takes in a text file using a scoring language he developed.</p>
 <span class="n">endloop</span>
 </code></pre></div>
 
+
 <p>Having unzipped the drumscript.zip into my home direcotory, I used the
 following commandline:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">perl /home/steven/drumText/drums.pl -input</span>
 </code></pre></div>
+
 
 <p>I ran the test button and got... nothing! I got alot of exceptions
 printed to the console. Running the drum script outside of blue, I saw
@@ -2345,16 +2353,19 @@ my generators.</p>
         <span class="nb">print</span> <span class="s">&quot;do something with a and b which are instances of Yo()&quot;</span>
 </code></pre></div>
 
+
 <p>while my second PythonObject has script like:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">generator1 = Yo()</span>
 <span class="err">generator2 = Yo()</span>
 <span class="err">generator3 = Yo()</span>
 </code></pre></div>
 
+
 <p>while all other PythonObjects in my piece have a minimal amount of
 script, something like:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">generator1.generateNotes(input1, input2, input3)</span>
 </code></pre></div>
+
 
 <p>I find that it's a nice way to separate the concerns of each object. as
 I'm currently in the middle of working on the piece, I'm finding that
@@ -2400,6 +2411,7 @@ bring things back into blue, you simply assign the variable</p>
 <div class="codehilite"><pre><span></span><code><span class="err">score</span>
 </code></pre></div>
 
+
 <p>to the text string of your generated notes. when the PythonObject is
 done processing, blue gets whatever value is assigned to that variable
 and parses it as a text score, then proceeds to do the standard
@@ -2408,6 +2420,7 @@ any noteProcessors which may have been added to it.</p>
 <p>Also, should you need, the variable</p>
 <div class="codehilite"><pre><span></span><code><span class="err">blueDuration</span>
 </code></pre></div>
+
 
 <p>is assigned the value of the subjective duration of the PythonObject on
 the timeline.</p>
@@ -2421,15 +2434,18 @@ duration.</p>
 <div class="codehilite"><pre><span></span><code><span class="err"> score = &quot;i1 0 2 3 4 5\n&quot;</span>
 </code></pre></div>
 
+
 <ol>
 <li>
 <p>the first thing blue does is clear the</p>
 <div class="codehilite"><pre><span></span><code><span class="err">score</span>
 </code></pre></div>
 
+
 <p>variable in the interpreter and assign the variable</p>
 <div class="codehilite"><pre><span></span><code><span class="err">blueDuration</span>
 </code></pre></div>
+
 
 <p>the value of the duration of the SoundObject on the timeline. For
 this example, it does not affect the outcome of the score generated</p>
@@ -2440,6 +2456,7 @@ this example, it does not affect the outcome of the score generated</p>
 <div class="codehilite"><pre><span></span><code><span class="err">score</span>
 </code></pre></div>
 
+
 <p>variable is being assigned the text string of a single note, along
 with a newline.</p>
 </li>
@@ -2447,6 +2464,7 @@ with a newline.</p>
 <p>At the end of the script's execution, the</p>
 <div class="codehilite"><pre><span></span><code><span class="err">score</span>
 </code></pre></div>
+
 
 <p>variable is read. the score variable may or may not have anything
 assigned to it, but the script within the PythonObject is still run.
@@ -2476,14 +2494,17 @@ for the script is:</p>
 <span class="n">score</span> <span class="o">=</span> <span class="n">generateNotes</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 
+
 <p>The function I made,</p>
 <div class="codehilite"><pre><span></span><code><span class="err">generateNotes(numOfNotes)</span>
 </code></pre></div>
+
 
 <p>, takes in the number of notes I want to generate. for the above, I
 wanted it to generate 10 notes, and if I printed out the above</p>
 <div class="codehilite"><pre><span></span><code><span class="err">generateNotes(10)</span>
 </code></pre></div>
+
 
 <p>, I would have gotten the result:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 3 4 5 </span>
@@ -2498,17 +2519,21 @@ wanted it to generate 10 notes, and if I printed out the above</p>
 <span class="err">i1 9 2 3 4 5</span>
 </code></pre></div>
 
+
 <p>This text string above is returned by the</p>
 <div class="codehilite"><pre><span></span><code><span class="err">generateNotes()</span>
 </code></pre></div>
+
 
 <p>function and assigned to the</p>
 <div class="codehilite"><pre><span></span><code><span class="err">score</span>
 </code></pre></div>
 
+
 <p>variable. blue then grabs that text from the</p>
 <div class="codehilite"><pre><span></span><code><span class="err">score</span>
 </code></pre></div>
+
 
 <p>variable and parses it and the proceeds with compiling out the .CSD
 file.</p>
@@ -2575,6 +2600,7 @@ constant of some sort and do a text replace to put in the absolute path
 to the lib directory. that way, you could do something like:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="o">&lt;</span><span class="n">BLUE_SCRIPT_LIB</span><span class="o">&gt;.</span><span class="n">myLibrary</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
+
 
 <p>as well as use a commandline like:</p>
 <p>perl &lt;BLUE_SCRIPT_LIB>/myLibrary/myProgram -input $infile</p>

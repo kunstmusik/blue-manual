@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/users/reference/noteProcessors/rotateProcessor/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -1634,6 +1634,7 @@ With a noteIndex of 3, the following score:</p>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">5</span>
 </code></pre></div>
 
+
 <p>will become:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">3</span>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">4</span>
@@ -1641,6 +1642,7 @@ With a noteIndex of 3, the following score:</p>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">1</span>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">2</span>
 </code></pre></div>
+
 
 <p>As the third note now becomes the first. If a negative number is given,
 the number will count backwards as to what note should now become the
@@ -1653,6 +1655,7 @@ end"), the following score:</p>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">5</span>
 </code></pre></div>
 
+
 <p>Will become:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">4</span>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">5</span>
@@ -1660,6 +1663,7 @@ end"), the following score:</p>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">2</span>
 <span class="k">i</span><span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">3</span>
 </code></pre></div>
+
 
 <p>Start times of notes are all modified such that the notes that are
 pushed to the end of list will start at the end time of the last note
@@ -1678,6 +1682,7 @@ as in the following example, where note index of -3 was used:</p>
 <span class="k">i</span><span class="mi">1</span>  <span class="mi">18</span>  <span class="mf">5.0</span> <span class="mi">9</span>   <span class="mi">4</span>   
 </code></pre></div>
 
+
 <p>The resultant scores duration has changed as shown below:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mf">5.0</span> <span class="mi">7</span>   <span class="mi">4</span>   
 <span class="k">i</span><span class="mi">1</span>  <span class="mf">2.0</span> <span class="mf">5.0</span> <span class="mi">8</span>   <span class="mi">4</span>   
@@ -1690,6 +1695,7 @@ as in the following example, where note index of -3 was used:</p>
 <span class="k">i</span><span class="mi">1</span>  <span class="mf">19.0</span>    <span class="mf">5.0</span> <span class="mi">5</span>   <span class="mi">4</span>   
 <span class="k">i</span><span class="mi">1</span>  <span class="mf">21.0</span>    <span class="mf">5.0</span> <span class="mi">6</span>   <span class="mi">4</span>   
 </code></pre></div>
+
 
 <p>Please be aware of this behavior when using this NoteProcessor with
 scores that have overlapping notes.</p>

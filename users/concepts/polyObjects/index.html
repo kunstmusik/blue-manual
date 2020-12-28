@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/users/concepts/polyObjects/">
       
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -2095,6 +2095,7 @@ played back-to-back:</p>
 <span class="k">i</span><span class="mi">3</span> <span class="mf">2.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
+
 <p>If one set the Time Behavior to Repeat without using a Repeat Point and
 stretched the length of the actual PolyObject to six beats, six one-beat
 notes would play back-to-back, like this:</p>
@@ -2106,6 +2107,7 @@ notes would play back-to-back, like this:</p>
 <span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
+
 <p>However, if one were to change the PolyObject to use Repeat Points and
 set the repeat point to 2.5, this would be the result:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
@@ -2116,6 +2118,7 @@ set the repeat point to 2.5, this would be the result:</p>
 <span class="k">i</span><span class="mi">3</span> <span class="mf">4.5</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 <span class="k">i</span><span class="mi">1</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
+
 
 <p>Note that there are more notes being played this time. Why? Because with
 a Time Behavior of Repeat, blue will try to fit as many notes that it
@@ -2159,6 +2162,7 @@ render like this:</p>
 <span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
 
+
 <p>If I add a LineAddProcessor to p-field four, starting from zero and
 going to two, here's what the result would look like:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mf">3.0</span> <span class="mi">4</span> <span class="mi">5</span>
@@ -2168,6 +2172,7 @@ going to two, here's what the result would look like:</p>
 <span class="k">i</span><span class="mi">2</span> <span class="mf">4.0</span> <span class="mf">1.0</span> <span class="mf">4.0</span> <span class="mi">4</span> <span class="mi">5</span>
 <span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mf">5.0</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
+
 
 <p>This may be the desired effect, and it may not. In order to apply a
 NoteProcessor after the Time Behavior has been applied, take the
@@ -2196,6 +2201,7 @@ rendered notes look like this:</p>
 <span class="k">i</span><span class="mi">2</span> <span class="mf">4.0</span> <span class="mf">1.0</span> <span class="mf">4.6</span> <span class="mi">4</span> <span class="mi">5</span>
 <span class="k">i</span><span class="mi">3</span> <span class="mf">5.0</span> <span class="mf">1.0</span> <span class="mf">5.0</span> <span class="mi">4</span> <span class="mi">5</span>
 </code></pre></div>
+
 
 <p>One thing the user will have to keep in mind, though; when referring to
 beats, those beats will be applicable to the notes as they are after the

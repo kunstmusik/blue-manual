@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/users/reference/instruments/blueSynthBuilder/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -2043,6 +2043,7 @@ value is set to 0.5, the following instrument code:</p>
         <span class="n">outs</span> <span class="n">aout</span><span class="p">,</span> <span class="n">aout</span>
 </code></pre></div>
 
+
 <p>will generate the following instrument:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">iamp</span>    <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">0</span><span class="n">dbfs</span>
 
@@ -2050,6 +2051,7 @@ value is set to 0.5, the following instrument code:</p>
 
         <span class="n">outs</span> <span class="n">aout</span><span class="p">,</span> <span class="n">aout</span>
 </code></pre></div>
+
 
 <p>For convenience, the standard code completion popup will auto-complete
 text for replacement keys. When editing code, type "&lt;" then press
@@ -2077,6 +2079,7 @@ intercepted and read by the always-on instrument. To facilitate this
 feature, there is Blue pseudo-opcode called blueMixerIn:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">asig1 [, asig2...] blueMixerIn        </span>
 </code></pre></div>
+
 
 <p>The always-on code should then do processing code, then write out to
 blueMixerOut.</p>

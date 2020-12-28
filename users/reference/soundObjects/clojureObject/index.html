@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/users/reference/soundObjects/clojureObject/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -1766,11 +1766,13 @@ that variable and continue processing.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="k">def </span><span class="nv">score</span> <span class="s">&quot;i1 0 2 3 4 5&quot;</span><span class="p">)</span>
 </code></pre></div>
 
+
 <p>The above example shows the simplest script and will generate a single
 note. If the ClojureObject is set with a start time of 0 and a duration
 of 2, then it will generate the following score:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">i</span><span class="mi">1</span>  <span class="mf">0.0</span> <span class="mi">2</span>   <span class="mi">3</span>   <span class="mi">4</span>   <span class="mi">5</span>
 </code></pre></div>
+
 
 <h2 id="example_2">Example 2</h2>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="nf">use</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">clojure.string</span> <span class="ss">:only</span> <span class="p">(</span><span class="nf">join</span><span class="p">)])</span>
@@ -1790,6 +1792,7 @@ of 2, then it will generate the following score:</p>
 
 <span class="p">(</span><span class="k">def </span><span class="nv">score</span> <span class="p">(</span><span class="nf">arpeggiate</span> <span class="nv">blueDuration</span> <span class="mi">1</span> <span class="mf">0.25</span> <span class="p">[</span><span class="mi">8</span> <span class="mi">0</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">7</span><span class="p">]</span> <span class="mi">-12</span><span class="p">))</span>
 </code></pre></div>
+
 
 <p>The above example is taken from
 blue/examples/soundObjects/clojureSoundObject.blue. This script defines
@@ -1815,6 +1818,7 @@ then it will generate the following score:</p>
 <span class="k">i</span><span class="mi">1</span>  <span class="mf">3.5</span> <span class="mf">0.25</span>    <span class="mf">8.07</span>    <span class="o">-</span><span class="mi">12</span>
 <span class="k">i</span><span class="mi">1</span>  <span class="mf">3.75</span>    <span class="mf">0.25</span>    <span class="mf">8.04</span>    <span class="o">-</span><span class="mi">12</span>
 </code></pre></div>
+
 
 <h2 id="regarding_processing">Regarding Processing</h2>
 <p>Blue processes soundObjects by going through each SoundLayer and
@@ -1861,6 +1865,7 @@ interpreter when you load your projects.</p>
 example, if you use:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="nf">use</span> <span class="ss">&#39;my.script</span><span class="p">)</span>      
 </code></pre></div>
+
 
 <p>This will try to load the script from
 "/Users/me/.blue/script/clojure/my/script.clj" or

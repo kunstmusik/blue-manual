@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/users/reference/instruments/blueX7/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -1682,12 +1682,14 @@ which may answer some of my questions above)</p>
 <div class="codehilite"><pre><span></span><code>    <span class="n">blueMixerOut</span> <span class="kt">a</span><span class="n">out</span><span class="p">,</span> <span class="kt">a</span><span class="n">out</span>
 </code></pre></div>
 
+
 <p>This routes the output of the instrument directly to the stereo output
 of csound. You can include further code to process the 'aout' signal
 produced by the BlueX7, or to route it as needed. For example, if you
 are outputing in mono, you could code such as:</p>
 <div class="codehilite"><pre><span></span><code>    <span class="nb">out</span> <span class="kt">a</span><span class="n">out</span>
 </code></pre></div>
+
 
 <p>To call the BlueX7 instrument in the orchestra, create a GenericScore
 object in the timeline, and call the the BlueX7 instrument. BlueX7

@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/users/reference/soundObjects/pianoRoll/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -1923,6 +1923,7 @@ note.</p>
 <div class="codehilite"><pre><span></span><code><span class="err">      i&lt;INSTR_ID&gt; &lt;START&gt; &lt;DUR&gt; &lt;FREQ&gt; 0 1 1</span>
 </code></pre></div>
 
+
 <p>Will have the &lt;INSTR_ID> replaced with the value set in the Piano
 Roll properties, &lt;START> replaced the start time for the note, &lt;DUR>
 replaced with the duration of the note, and &lt;FREQ> replaced with
@@ -1995,8 +1996,15 @@ edited for notes.  Newly-created notes will have field values set to the default
 <li>Renamed fields retain their data values</li>
 <li>If min or max changes, values for fields will be clamped between the new min and max values.</li>
 <li>If a field definition is removed, the field data for notes will be removed</li>
-<li>If a new field is added, notes will all get a new field value set the default value for that field definition. </li>
+<li>
+<p>If a new field is added, notes will all get a new field value set the default value for that field definition. Because the default value is 1.0 for a new field, all notes will receive that value. If you change the default in the field's definition and want all of the pre-existing notes to use that value, you should:</p>
+<ol>
+<li>Go to the field editor view and use the field selector to choose the new fied.</li>
+<li>Right-click the field editor, then use the popup menu set either select notes or all notes to use the default value for that field. </li>
+</ol>
+</li>
 </ul>
+<p><img alt=" Piano Roll - Field Editor " src="../../../../images/pianoRoll_fieldEditor.png" /></p>
 <h2 id="keyboard_shortcuts">Keyboard Shortcuts</h2>
 <table>
 <thead>
