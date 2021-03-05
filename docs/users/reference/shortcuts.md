@@ -37,6 +37,7 @@
 | spacebar          | Render project using project's real-time render options |
 | ctrl-c            | copy selected soundObject(s)                                                                                                                                                                                    |
 | ctrl-x            | cut selected soundObject(s)                                                                                                                                                                                     |
+| ctrl-z            | Undo last action like re-scaling, moving, copying and pasting as well as deleting ScoreObjects and/or Automation Lines                                                                                                                                                                                     |
 | ctrl-d            | duplicate selected soundObject(s) and place directly after originals                                                                                                                                            |
 | ctrl-r            | the repeat selected SoundObjects by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat) |
 | ctrl-click        | paste soundObject(s) from buffer where clicked                                                                                                                                                                  |
