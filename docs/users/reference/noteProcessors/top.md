@@ -19,3 +19,5 @@ NoteProcessors are applied after the notes of the soundObject are
 generated and before time behavior is applied. Processing starts with
 the first NoteProcessor in the chain and the results of that are passed
 down the chain.
+
+![](../../../images/ScoreProcessTime.png)

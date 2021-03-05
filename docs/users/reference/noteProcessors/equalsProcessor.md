@@ -1,5 +1,7 @@
 # Equals Processor
 
+![](../../../images/EqualsNoteProcessor.png)
+
 Parameters: pfield, value
 
 Sets user-given pField of all notes in soundObject to user-given value,
