@@ -4,6 +4,8 @@
 
 Accepts NoteProcessors: yes
 
+![JMask](../../../images/JMask.png)
+
 JMask is GUI score generating soundObject based on Andre Bartetzki's
 [CMask](http://www.bartetzki.de/en/software.html). JMask currently
 supports all features of CMask except field precision, though support
@@ -55,6 +57,8 @@ below:
 | Random      | No            | Yes                | Yes                  |
 | Probability | Yes           | Yes                | Yes                  |
 | Oscillator  | Yes           | Yes                | Yes                  |
+
+![](../../../images/FlowchartJmask.png)
 
 JMask also supports the use of a seed value. When enabling the use of
 seeding, the seed value will be used to initialize the pseudo-random

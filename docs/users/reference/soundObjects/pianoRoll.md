@@ -220,7 +220,12 @@ Note that when editing field definitions in the PianoRoll properties for PianoRo
 * Renamed fields retain their data values
 * If min or max changes, values for fields will be clamped between the new min and max values.
 * If a field definition is removed, the field data for notes will be removed
-* If a new field is added, notes will all get a new field value set the default value for that field definition. 
+* If a new field is added, notes will all get a new field value set the default value for that field definition. Because the default value is 1.0 for a new field, all notes will receive that value. If you change the default in the field's definition and want all of the pre-existing notes to use that value, you should:
+
+    1. Go to the field editor view and use the field selector to choose the new fied.
+    2. Right-click the field editor, then use the popup menu set either select notes or all notes to use the default value for that field. 
+
+![ Piano Roll - Field Editor ](../../../images/pianoRoll_fieldEditor.png)
 
 
 ## Keyboard Shortcuts

@@ -4,6 +4,8 @@
 
 Accepts NoteProcessors: no
 
+![](../../../images/External.png)
+
 Allows you to write script within Blue and execute an external program
 on that script, bringing in generated notes back into Blue. There is a
 field for 'command line' as well as a text area for your script. When
@@ -70,7 +72,9 @@ nGen
 
 AthenaCL  
 :   Homepage: <http://www.flexatone.org/athena.html> Author: Christopher
-    Ariza
+    Ariza (python 2.7)
+:   GitHub: <https://github.com/ales-tsurko/athenaCL> Author: Ales Tsurko
+    (python 3)
     
     Comandline to use:
     

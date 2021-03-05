@@ -2,9 +2,9 @@
 
 ## Introduction
 
-![ ClojureObject ](../../../images/clojureObject.png)
-
 Accepts NoteProcessors: yes
+
+![ ClojureObject ](../../../images/clojureObject.png)
 
 Allows using the [Clojure](http://www.clojure.org) programming language
 to generate score data. The Clojure interpreter is included with Blue,

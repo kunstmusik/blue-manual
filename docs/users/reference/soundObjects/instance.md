@@ -2,6 +2,8 @@
 
 Accepts NoteProcessors: yes
 
+![Instance](../../../images/Instance.png)
+
 A SoundObject that points to a SoundObject in the SoundObject library.
 The content of the SoundObject is not editable except by editing the
 SoundObject in the library to which the instance is pointing to. If
