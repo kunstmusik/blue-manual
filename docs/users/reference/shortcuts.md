@@ -34,8 +34,7 @@
 
 | Shortcuts         | Description                                                                                                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| spacebar          | Render project using project's real-time render options                                
-                                                                    |
+| spacebar          | Render project using project's real-time render options |
 | ctrl-c            | copy selected soundObject(s)                                                                                                                                                                                    |
 | ctrl-x            | cut selected soundObject(s)                                                                                                                                                                                     |
 | ctrl-d            | duplicate selected soundObject(s) and place directly after originals                                                                                                                                            |
