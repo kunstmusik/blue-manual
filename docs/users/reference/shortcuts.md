@@ -27,12 +27,15 @@
 | F9            | Render project using project's real-time render options                                                       |
 | shift-F9      | Render to Disk and Play using project's disk render options and playing with Blue's builtin sound file player |
 | ctrl-shift-F9 | Render to Disk using project's disk render options                                                            |
+| spacebar      | Render project using project's real-time render options when Score is in focus                                |
 
 
 ## Score Timeline
 
 | Shortcuts         | Description                                                                                                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| spacebar          | Render project using project's real-time render options                                
+                                                                    |
 | ctrl-c            | copy selected soundObject(s)                                                                                                                                                                                    |
 | ctrl-x            | cut selected soundObject(s)                                                                                                                                                                                     |
 | ctrl-d            | duplicate selected soundObject(s) and place directly after originals                                                                                                                                            |
