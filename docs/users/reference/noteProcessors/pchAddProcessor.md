@@ -1,5 +1,7 @@
 # Pch Add Processor
 
+![Pch Add](../../../images/PchAdd.png)
+
 Parameters: pfield, value
 
 The PchAddProcessor works like the AddProcessor, but is used with

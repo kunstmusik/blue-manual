@@ -1,5 +1,7 @@
 # Random Add Processor
 
+![Rnd Add](../../../images/RndAdd.png)
+
 Parameters: pfield, min, max, seedUsed, seed
 
 The RandomAddProcessor generates a random value between min and max and

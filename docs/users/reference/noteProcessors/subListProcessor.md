@@ -1,5 +1,7 @@
 # SubList Processor
 
+![Sublist](../../../images/Sublist.png)
+
 Parameters: start, end
 
 The SubListProcessor will cut out notes from the soundObject's generated

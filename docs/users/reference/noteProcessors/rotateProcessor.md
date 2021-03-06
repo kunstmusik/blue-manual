@@ -1,5 +1,7 @@
 # Rotate Processor
 
+![Rotate](../../../images/Rotate.png)
+
 parameters: noteIndex
 
 The RotateProcessor rotates the order of the notes, making the noteIndex

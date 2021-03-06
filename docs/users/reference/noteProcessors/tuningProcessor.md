@@ -1,10 +1,10 @@
 # Tuning Processor
 
-## Introduction
+![](../../../images/TuningProcessor.png)
 
 Parameters: pfield, baseFrequency, scalaFile
 
-![](../../../images/TuningProcessor.png)
+## Introduction
 
 Converts Blue PCH notation to frequency according to scale values in a
 Scala scale file. The scale will default to 12TET when TuningProcessor

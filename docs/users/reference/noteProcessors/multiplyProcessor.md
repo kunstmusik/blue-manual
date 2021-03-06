@@ -1,5 +1,7 @@
 # Multiply Processor
 
+![Multiply](../../../images/Multiply.png)
+
 Parameters: value, pfield
 
 The MultiplyProcessor works like the addProcessor, but multiplies the
