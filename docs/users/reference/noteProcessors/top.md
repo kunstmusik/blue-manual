@@ -23,16 +23,21 @@ down the chain.
 
 ![](../../../images/ScoreProcessTime.png)
 
-## Note Processors on several levels
+## Note Processors windows on several levels
 
 Note Processors are available on different levels in the Score. 
 
-- a Note Processor for every ScoreObject Layer Group
+- rigth clicking on 'root' opens a Note Processor window for the entire score
 
-    ![root](../../../images/rootAsterix.png)
+    ![entire](../../../images/EntireScore.png)
+
+- rigth clicking on 'root/SoundObject Layer Group' opens a Note Processor 
+    window for that ScoreObject Layer Group
  
     if a Note Processor is present on a ScoreObject Layer Group, an asterix is 
 shown.
+
+    ![root](../../../images/rootAsterix.png)
 
 - a Note Processor for the individual Layer by pressing the 'N' button of
 that Layer
