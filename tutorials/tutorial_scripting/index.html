@@ -15,8 +15,8 @@
       
         <link rel="canonical" href="https://kunstmusik.github.io/blue-manual/tutorials/tutorial_scripting/">
       
-      <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -37,7 +37,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -57,8 +57,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -75,26 +76,24 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://kunstmusik.github.io/blue-manual/" title="Blue Manual" class="md-header-nav__button md-logo" aria-label="Blue Manual">
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Blue Manual" class="md-header__button md-logo" aria-label="Blue Manual" data-md-component="logo">
       
   <img src="../../images/blueIcon.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             Blue Manual
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               Scripting
@@ -104,8 +103,10 @@
       </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -114,11 +115,11 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -135,12 +136,12 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/kunstmusik/blue-manual" title="Go to repository" class="md-source">
+<a href="https://github.com/kunstmusik/blue-manual" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     kunstmusik/blue-manual
@@ -161,17 +162,15 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://kunstmusik.github.io/blue-manual/" title="Blue Manual" class="md-nav__button md-logo" aria-label="Blue Manual">
+    <a href="../.." title="Blue Manual" class="md-nav__button md-logo" aria-label="Blue Manual" data-md-component="logo">
       
   <img src="../../images/blueIcon.png" alt="logo">
 
@@ -181,10 +180,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/kunstmusik/blue-manual" title="Go to repository" class="md-source">
+<a href="https://github.com/kunstmusik/blue-manual" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     kunstmusik/blue-manual
@@ -198,709 +197,666 @@
       
       
 
-
-
-  <li class="md-nav__item">
-    <a href="../.." class="md-nav__link">
-      Home
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-    
-    <label class="md-nav__link" for="nav-2">
-      User Guide
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="User Guide" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         User Guide
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../preface/" class="md-nav__link">
-      Preface
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Getting Started
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preface/" class="md-nav__link">
+        Preface
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Getting Started
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/usersIntro/" class="md-nav__link">
-      Introduction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/installation/" class="md-nav__link">
-      Installation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/programOptions/" class="md-nav__link">
-      Program Options
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2-4" type="checkbox" id="nav-2-2-4" >
-    
-    <label class="md-nav__link" for="nav-2-2-4">
-      Primary Editors
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Primary Editors" data-md-level="3">
-      <label class="md-nav__title" for="nav-2-2-4">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/usersIntro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/programOptions/" class="md-nav__link">
+        Program Options
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_2_4">
         Primary Editors
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/scoreTimeline/" class="md-nav__link">
-      Score Timeline
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/orchestraManager/" class="md-nav__link">
-      Orchestra Manager
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/udoManager/" class="md-nav__link">
-      UDO Manager
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/projectProperties/" class="md-nav__link">
-      Project Properties
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/mixer/" class="md-nav__link">
-      Mixer
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/blueLive/" class="md-nav__link">
-      Blue Live
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/tablesManager/" class="md-nav__link">
-      Tables Manager
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/primaryEditors/globalsManager/" class="md-nav__link">
-      Globals Manager
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2-5" type="checkbox" id="nav-2-2-5" >
-    
-    <label class="md-nav__link" for="nav-2-2-5">
-      Tools
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Tools" data-md-level="3">
-      <label class="md-nav__title" for="nav-2-2-5">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Primary Editors" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Primary Editors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/scoreTimeline/" class="md-nav__link">
+        Score Timeline
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/orchestraManager/" class="md-nav__link">
+        Orchestra Manager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/udoManager/" class="md-nav__link">
+        UDO Manager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/projectProperties/" class="md-nav__link">
+        Project Properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/mixer/" class="md-nav__link">
+        Mixer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/blueLive/" class="md-nav__link">
+        Blue Live
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/tablesManager/" class="md-nav__link">
+        Tables Manager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/primaryEditors/globalsManager/" class="md-nav__link">
+        Globals Manager
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" type="checkbox" id="__nav_2_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_2_5">
         Tools
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/codeEditor/" class="md-nav__link">
-      Code Editor
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/blueShare/" class="md-nav__link">
-      Blue Share
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/codeRepository/" class="md-nav__link">
-      Code Repository
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/effectsLibrary/" class="md-nav__link">
-      Effects Library
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/csoundrcEditor/" class="md-nav__link">
-      .csoundrc Editor
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/scannedMatrix/" class="md-nav__link">
-      Scanned Matrix
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/soundFontViewer/" class="md-nav__link">
-      SoundFont Viewer
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/ftableConverter/" class="md-nav__link">
-      FTable Converter
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/tools/pythonConsole/" class="md-nav__link">
-      Python Console
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2-6" type="checkbox" id="nav-2-2-6" >
-    
-    <label class="md-nav__link" for="nav-2-2-6">
-      Other Features
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Other Features" data-md-level="3">
-      <label class="md-nav__title" for="nav-2-2-6">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/codeEditor/" class="md-nav__link">
+        Code Editor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/blueShare/" class="md-nav__link">
+        Blue Share
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/codeRepository/" class="md-nav__link">
+        Code Repository
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/effectsLibrary/" class="md-nav__link">
+        Effects Library
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/csoundrcEditor/" class="md-nav__link">
+        .csoundrc Editor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/scannedMatrix/" class="md-nav__link">
+        Scanned Matrix
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/soundFontViewer/" class="md-nav__link">
+        SoundFont Viewer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/ftableConverter/" class="md-nav__link">
+        FTable Converter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/tools/pythonConsole/" class="md-nav__link">
+        Python Console
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_6" type="checkbox" id="__nav_2_2_6" >
+      
+      <label class="md-nav__link" for="__nav_2_2_6">
         Other Features
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/autoBackup/" class="md-nav__link">
-      Auto Backup
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/soundObjectFreezing/" class="md-nav__link">
-      SoundObject Freezing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/auditionSoundObjects/" class="md-nav__link">
-      Audition SoundObjects
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/importCSD/" class="md-nav__link">
-      Import CSD
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/importMIDI/" class="md-nav__link">
-      Import MIDI
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/blueVariables/" class="md-nav__link">
-      Blue Variables
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/gettingStarted/otherFeatures/commandLine/" class="md-nav__link">
-      Commandline
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
-    
-    <label class="md-nav__link" for="nav-2-3">
-      Concepts
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Concepts" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-3">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Other Features" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Other Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/autoBackup/" class="md-nav__link">
+        Auto Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/soundObjectFreezing/" class="md-nav__link">
+        SoundObject Freezing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/auditionSoundObjects/" class="md-nav__link">
+        Audition SoundObjects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/importCSD/" class="md-nav__link">
+        Import CSD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/importMIDI/" class="md-nav__link">
+        Import MIDI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/blueVariables/" class="md-nav__link">
+        Blue Variables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/gettingStarted/otherFeatures/commandLine/" class="md-nav__link">
+        Commandline
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
         Concepts
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/rendering/" class="md-nav__link">
-      Rendering
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/soundObjects/" class="md-nav__link">
-      Sound Objects
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/polyObjects/" class="md-nav__link">
-      PolyObjects
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/noteProcessors/" class="md-nav__link">
-      Note Processors
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/soundObjectLibrary/" class="md-nav__link">
-      SoundObject Library
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/parameterAutomation/" class="md-nav__link">
-      Parameter Automation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/concepts/commandBlocks/" class="md-nav__link">
-      Command Blocks
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  
-
-
-  
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Tutorials
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Concepts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/rendering/" class="md-nav__link">
+        Rendering
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/soundObjects/" class="md-nav__link">
+        Sound Objects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/polyObjects/" class="md-nav__link">
+        PolyObjects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/noteProcessors/" class="md-nav__link">
+        Note Processors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/soundObjectLibrary/" class="md-nav__link">
+        SoundObject Library
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/parameterAutomation/" class="md-nav__link">
+        Parameter Automation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/concepts/commandBlocks/" class="md-nav__link">
+        Command Blocks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
         Tutorials
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../tutorial_first_project/" class="md-nav__link">
-      First Project
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Scripting
         <span class="md-nav__icon md-icon"></span>
       </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_first_project/" class="md-nav__link">
+        First Project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Scripting
-    </a>
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Scripting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Scripting
+      </a>
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -910,7 +866,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#why_use_scripting" class="md-nav__link">
@@ -1004,701 +960,654 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial_sound_soundObject/" class="md-nav__link">
+        Sound SoundObject
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../tutorial_sound_soundObject/" class="md-nav__link">
-      Sound SoundObject
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-    
-    <label class="md-nav__link" for="nav-4">
-      Reference
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Reference" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Reference
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
-    
-    <label class="md-nav__link" for="nav-4-1">
-      SoundObjects
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="SoundObjects" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      <label class="md-nav__link" for="__nav_4_1">
         SoundObjects
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/top/" class="md-nav__link">
-      Introduction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/audioFileObject/" class="md-nav__link">
-      AudioFile
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/comment/" class="md-nav__link">
-      Comment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/clojureObject/" class="md-nav__link">
-      Clojure
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/external/" class="md-nav__link">
-      External
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/genericScore/" class="md-nav__link">
-      GenericScore
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/instance/" class="md-nav__link">
-      Instance
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/javaScriptObject/" class="md-nav__link">
-      Javascript
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/jmask/" class="md-nav__link">
-      JMask
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/lineObject/" class="md-nav__link">
-      LineObject
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/objectBuilder/" class="md-nav__link">
-      ObjectBuilder
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/patternObject/" class="md-nav__link">
-      Pattern
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/pianoRoll/" class="md-nav__link">
-      PianoRoll
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/polyObject/" class="md-nav__link">
-      PolyObject
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/pythonObject/" class="md-nav__link">
-      Python
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/sound/" class="md-nav__link">
-      Sound
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/tracker/" class="md-nav__link">
-      Tracker
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/soundObjects/zakLineObject/" class="md-nav__link">
-      ZakLineObject
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
-    
-    <label class="md-nav__link" for="nav-4-2">
-      Note Processors
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Note Processors" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="SoundObjects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          SoundObjects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/top/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/audioFileObject/" class="md-nav__link">
+        AudioFile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/comment/" class="md-nav__link">
+        Comment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/clojureObject/" class="md-nav__link">
+        Clojure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/external/" class="md-nav__link">
+        External
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/genericScore/" class="md-nav__link">
+        GenericScore
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/instance/" class="md-nav__link">
+        Instance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/javaScriptObject/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/jmask/" class="md-nav__link">
+        JMask
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/lineObject/" class="md-nav__link">
+        LineObject
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/objectBuilder/" class="md-nav__link">
+        ObjectBuilder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/patternObject/" class="md-nav__link">
+        Pattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/pianoRoll/" class="md-nav__link">
+        PianoRoll
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/polyObject/" class="md-nav__link">
+        PolyObject
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/pythonObject/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/sound/" class="md-nav__link">
+        Sound
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/tracker/" class="md-nav__link">
+        Tracker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/soundObjects/zakLineObject/" class="md-nav__link">
+        ZakLineObject
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
         Note Processors
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/top/" class="md-nav__link">
-      Introduction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/addProcessor/" class="md-nav__link">
-      AddProcessor
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/equalsProcessor/" class="md-nav__link">
-      EqualsProcessor
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/inversionProcessor/" class="md-nav__link">
-      InversionProcessor
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/lineAddProcessor/" class="md-nav__link">
-      LineAdd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/lineMultiplyProcessor/" class="md-nav__link">
-      LineMultiply
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/multiplyProcessor/" class="md-nav__link">
-      Multiply
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/pchAddProcessor/" class="md-nav__link">
-      PchAdd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/pchInversionProcessor/" class="md-nav__link">
-      PchInversion
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/pythonProcessor/" class="md-nav__link">
-      Python
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/randomAddProcessor/" class="md-nav__link">
-      RandomAdd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/randomMultiplyProcessor/" class="md-nav__link">
-      RandomMultiply
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/retrogradeProcessor/" class="md-nav__link">
-      Retrograde
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/rotateProcessor/" class="md-nav__link">
-      Rotate
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/subListProcessor/" class="md-nav__link">
-      SubList
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/switchProcessor/" class="md-nav__link">
-      Switch
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/timeWarpProcessor/" class="md-nav__link">
-      TimeWarp
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/noteProcessors/tuningProcessor/" class="md-nav__link">
-      Tuning
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
-    
-    <label class="md-nav__link" for="nav-4-3">
-      Instruments
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Instruments" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon"></span>
-        Instruments
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Note Processors" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Note Processors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/top/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/addProcessor/" class="md-nav__link">
+        AddProcessor
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/equalsProcessor/" class="md-nav__link">
+        EqualsProcessor
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/instruments/top/" class="md-nav__link">
-      Introduction
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/inversionProcessor/" class="md-nav__link">
+        InversionProcessor
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/lineAddProcessor/" class="md-nav__link">
+        LineAdd
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/lineMultiplyProcessor/" class="md-nav__link">
+        LineMultiply
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/instruments/genericInstrument/" class="md-nav__link">
-      GenericInstrument
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/multiplyProcessor/" class="md-nav__link">
+        Multiply
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/pchAddProcessor/" class="md-nav__link">
+        PchAdd
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/pchInversionProcessor/" class="md-nav__link">
+        PchInversion
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/instruments/pythonInstrument/" class="md-nav__link">
-      Python
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/pythonProcessor/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/randomAddProcessor/" class="md-nav__link">
+        RandomAdd
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/randomMultiplyProcessor/" class="md-nav__link">
+        RandomMultiply
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/instruments/javaScriptInstrument/" class="md-nav__link">
-      Javascript
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/retrogradeProcessor/" class="md-nav__link">
+        Retrograde
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/rotateProcessor/" class="md-nav__link">
+        Rotate
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/subListProcessor/" class="md-nav__link">
+        SubList
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/instruments/blueX7/" class="md-nav__link">
-      BlueX7
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/switchProcessor/" class="md-nav__link">
+        Switch
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/timeWarpProcessor/" class="md-nav__link">
+        TimeWarp
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/noteProcessors/tuningProcessor/" class="md-nav__link">
+        Tuning
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../users/reference/instruments/blueSynthBuilder/" class="md-nav__link">
-      BlueSynthBuilder
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
           
+        </ul>
+      </nav>
+    </li>
+  
+
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Instruments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Instruments" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Instruments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/instruments/top/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/instruments/genericInstrument/" class="md-nav__link">
+        GenericInstrument
+      </a>
+    </li>
+  
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/instruments/pythonInstrument/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../../users/reference/shortcuts/" class="md-nav__link">
-      Shortcuts
-    </a>
-  </li>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/instruments/javaScriptInstrument/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/instruments/blueX7/" class="md-nav__link">
+        BlueX7
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/instruments/blueSynthBuilder/" class="md-nav__link">
+        BlueSynthBuilder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users/reference/shortcuts/" class="md-nav__link">
+        Shortcuts
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -1709,11 +1618,12 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1723,7 +1633,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#why_use_scripting" class="md-nav__link">
@@ -1822,7 +1732,7 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -2056,19 +1966,16 @@ given, either swapping “$infile” with the name of the temporary file
 generated, or appending the name of the temporary file to the end of the
 commandline if no “$infile” is found.</p>
 <p>Let's say you're writing a simple perl script:</p>
-<div class="codehilite"><pre><span></span><code><span class="err"> print &quot;i1 0 2 3 4 5\n&quot;</span>
+<div class="codehilite"><pre><span></span><code> print &quot;i1 0 2 3 4 5\n&quot;
 </code></pre></div>
-
 
 <p>and you for your commandline you use:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">perl</span>
+<div class="codehilite"><pre><span></span><code>perl
 </code></pre></div>
-
 
 <p>or perhaps:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">/usr/bin/perl $infile</span>
+<div class="codehilite"><pre><span></span><code>/usr/bin/perl $infile
 </code></pre></div>
-
 
 <p>When blue goes to generate a .CSD file and comes across your external
 SoundObject, what will happen is that:</p>
@@ -2082,16 +1989,14 @@ SoundObject, what will happen is that:</p>
 <ol>
 <li>
 <p>For the first commandline, it'll then run:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">perl /tmp/temp4253.txt</span>
+<div class="codehilite"><pre><span></span><code>perl /tmp/temp4253.txt
 </code></pre></div>
-
 
 </li>
 <li>
 <p>For the second commandline, it'll then run:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">/usr/bin/perl /tmp/temp4253.txt</span>
+<div class="codehilite"><pre><span></span><code>/usr/bin/perl /tmp/temp4253.txt
 </code></pre></div>
-
 
 </li>
 </ol>
@@ -2152,9 +2057,8 @@ pmask, taken from the CSound Magazine):</p>
 <span class="n">frequency</span><span class="p">,</span>  <span class="n">index</span><span class="p">,</span> <span class="n">panorama</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">)</span>
 
 
-     <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+     <span class="nb">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>and you tested it outside of blue and it worked fine. Well, now you
 could create an external SoundObject in blue, paste in this script, set
@@ -2164,63 +2068,61 @@ pattern scoring utility to generate a drum pattern(available at
 http://www.junklight.com). Mark's utility is itself a perl script, but
 it takes in a text file using a scoring language he developed.</p>
 <p>copying in the example drum.pat file into the scripting area:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">instrument1</span> <span class="ss">&quot;i1 $now .2 2000 2.2 0&quot;</span>
-<span class="n">instrument2</span> <span class="ss">&quot;i1 $now .2 2000 2.4 1&quot;</span>
-<span class="n">instrument3</span> <span class="ss">&quot;i1 $now .1 2000 4 1&quot;</span>
-<span class="n">instrument4</span> <span class="ss">&quot;i1 $now .2 2000 1.6 0.5&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">instrument1</span> <span class="s2">&quot;</span><span class="s">i1 $now .2 2000 2.2 0</span><span class="s2">&quot;</span>
+<span class="nv">instrument2</span> <span class="s2">&quot;</span><span class="s">i1 $now .2 2000 2.4 1</span><span class="s2">&quot;</span>
+<span class="nv">instrument3</span> <span class="s2">&quot;</span><span class="s">i1 $now .1 2000 4 1</span><span class="s2">&quot;</span>
+<span class="nv">instrument4</span> <span class="s2">&quot;</span><span class="s">i1 $now .2 2000 1.6 0.5</span><span class="s2">&quot;</span>
 
-<span class="n">instrument5</span> <span class="ss">&quot;i1 $now .1 2000 4 0&quot;</span>
-<span class="n">pattern1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> 
-<span class="n">pattern2</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="nv">instrument5</span> <span class="s2">&quot;</span><span class="s">i1 $now .1 2000 4 0</span><span class="s2">&quot;</span>
+<span class="nv">pattern1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> 
+<span class="nv">pattern2</span> <span class="mi">1</span> <span class="mi">1</span>
 
-<span class="n">pattern3</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
-<span class="n">pattern4</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
-<span class="n">pattern5</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
-<span class="n">plist1</span> <span class="mi">1</span> <span class="mi">2</span>
-<span class="n">ilist1</span> <span class="mi">3</span> <span class="mi">5</span>
+<span class="nv">pattern3</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="nv">pattern4</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="nv">pattern5</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="nv">plist1</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="nv">ilist1</span> <span class="mi">3</span> <span class="mi">5</span>
 
-<span class="n">bar</span> <span class="k">length</span> <span class="mi">1</span> <span class="k">second</span>
-<span class="k">time</span> <span class="n">error</span> <span class="p">.</span><span class="mi">01</span>
-<span class="o">#</span> <span class="n">poly</span> <span class="n">rhythm</span> <span class="n">example</span>
-<span class="n">loop</span> <span class="mi">5</span>
+<span class="nv">bar</span> <span class="nv">length</span> <span class="mi">1</span> <span class="nv">second</span>
+<span class="nv">time</span> <span class="nv">error</span> .<span class="mi">01</span>
+# <span class="nv">poly</span> <span class="nv">rhythm</span> <span class="nv">example</span>
+<span class="k">loop</span> <span class="mi">5</span>
 
- <span class="n">play</span> <span class="mi">1</span> <span class="k">with</span> <span class="mi">1</span>
- <span class="n">play</span> <span class="mi">2</span> <span class="k">with</span> <span class="mi">2</span>
+ <span class="nv">play</span> <span class="mi">1</span> <span class="nv">with</span> <span class="mi">1</span>
+ <span class="nv">play</span> <span class="mi">2</span> <span class="nv">with</span> <span class="mi">2</span>
 
-<span class="n">endloop</span>
-<span class="o">#</span> <span class="n">straight</span> <span class="mi">4</span><span class="o">/</span><span class="mi">4</span>
+<span class="nv">endloop</span>
+# <span class="nv">straight</span> <span class="mi">4</span><span class="o">/</span><span class="mi">4</span>
 
-<span class="n">loop</span> <span class="mi">5</span>  
- <span class="n">play</span> <span class="mi">2</span> <span class="k">with</span> <span class="mi">1</span>
- <span class="n">play</span> <span class="mi">3</span> <span class="k">with</span> <span class="mi">3</span>
-
-
-<span class="n">endloop</span>
-
-<span class="n">loop</span> <span class="mi">5</span> 
- <span class="n">play</span> <span class="n">plist</span> <span class="mi">1</span> <span class="k">with</span> <span class="mi">4</span>
-
- <span class="n">play</span> <span class="mi">4</span> <span class="k">with</span> <span class="n">ilist</span> <span class="mi">1</span>
-
- <span class="n">play</span> <span class="mi">3</span> <span class="k">with</span> <span class="mi">1</span>
-<span class="n">endloop</span>
+<span class="k">loop</span> <span class="mi">5</span>  
+ <span class="nv">play</span> <span class="mi">2</span> <span class="nv">with</span> <span class="mi">1</span>
+ <span class="nv">play</span> <span class="mi">3</span> <span class="nv">with</span> <span class="mi">3</span>
 
 
-<span class="n">loop</span> <span class="mi">5</span> 
- <span class="n">play</span> <span class="n">plist</span> <span class="mi">1</span> <span class="k">with</span> <span class="mi">4</span>
- <span class="n">play</span> <span class="mi">5</span> <span class="k">with</span> <span class="n">ilist</span> <span class="mi">1</span>
+<span class="nv">endloop</span>
 
- <span class="n">play</span> <span class="mi">4</span> <span class="k">with</span> <span class="mi">1</span>
+<span class="k">loop</span> <span class="mi">5</span> 
+ <span class="nv">play</span> <span class="nv">plist</span> <span class="mi">1</span> <span class="nv">with</span> <span class="mi">4</span>
 
-<span class="n">endloop</span>
+ <span class="nv">play</span> <span class="mi">4</span> <span class="nv">with</span> <span class="nv">ilist</span> <span class="mi">1</span>
+
+ <span class="nv">play</span> <span class="mi">3</span> <span class="nv">with</span> <span class="mi">1</span>
+<span class="nv">endloop</span>
+
+
+<span class="k">loop</span> <span class="mi">5</span> 
+ <span class="nv">play</span> <span class="nv">plist</span> <span class="mi">1</span> <span class="nv">with</span> <span class="mi">4</span>
+ <span class="nv">play</span> <span class="mi">5</span> <span class="nv">with</span> <span class="nv">ilist</span> <span class="mi">1</span>
+
+ <span class="nv">play</span> <span class="mi">4</span> <span class="nv">with</span> <span class="mi">1</span>
+
+<span class="nv">endloop</span>
 </code></pre></div>
-
 
 <p>Having unzipped the drumscript.zip into my home direcotory, I used the
 following commandline:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">perl /home/steven/drumText/drums.pl -input</span>
+<div class="codehilite"><pre><span></span><code>perl /home/steven/drumText/drums.pl -input
 </code></pre></div>
-
 
 <p>I ran the test button and got... nothing! I got alot of exceptions
 printed to the console. Running the drum script outside of blue, I saw
@@ -2353,19 +2255,16 @@ my generators.</p>
         <span class="nb">print</span> <span class="s">&quot;do something with a and b which are instances of Yo()&quot;</span>
 </code></pre></div>
 
-
 <p>while my second PythonObject has script like:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">generator1 = Yo()</span>
-<span class="err">generator2 = Yo()</span>
-<span class="err">generator3 = Yo()</span>
+<div class="codehilite"><pre><span></span><code>generator1 = Yo()
+generator2 = Yo()
+generator3 = Yo()
 </code></pre></div>
-
 
 <p>while all other PythonObjects in my piece have a minimal amount of
 script, something like:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">generator1.generateNotes(input1, input2, input3)</span>
+<div class="codehilite"><pre><span></span><code>generator1.generateNotes(input1, input2, input3)
 </code></pre></div>
-
 
 <p>I find that it's a nice way to separate the concerns of each object. as
 I'm currently in the middle of working on the piece, I'm finding that
@@ -2408,9 +2307,8 @@ besides Python, you would hack to work in a manner like this...)</p>
 <h3 id="usage">Usage</h3>
 <p>For the PythonObject, instead of using a print command to stdout to
 bring things back into blue, you simply assign the variable</p>
-<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+<div class="codehilite"><pre><span></span><code>score
 </code></pre></div>
-
 
 <p>to the text string of your generated notes. when the PythonObject is
 done processing, blue gets whatever value is assigned to that variable
@@ -2418,9 +2316,8 @@ and parses it as a text score, then proceeds to do the standard
 operations of scaling and translating the notes in time, then applying
 any noteProcessors which may have been added to it.</p>
 <p>Also, should you need, the variable</p>
-<div class="codehilite"><pre><span></span><code><span class="err">blueDuration</span>
+<div class="codehilite"><pre><span></span><code>blueDuration
 </code></pre></div>
-
 
 <p>is assigned the value of the subjective duration of the PythonObject on
 the timeline.</p>
@@ -2431,21 +2328,18 @@ function that depends on duration, maybe if it has less duration it
 produces notes with louder amplitude and than if it has a longer
 duration.</p>
 <p>Let's say you're writing a simple Python script:</p>
-<div class="codehilite"><pre><span></span><code><span class="err"> score = &quot;i1 0 2 3 4 5\n&quot;</span>
+<div class="codehilite"><pre><span></span><code> score = &quot;i1 0 2 3 4 5\n&quot;
 </code></pre></div>
-
 
 <ol>
 <li>
 <p>the first thing blue does is clear the</p>
-<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+<div class="codehilite"><pre><span></span><code>score
 </code></pre></div>
-
 
 <p>variable in the interpreter and assign the variable</p>
-<div class="codehilite"><pre><span></span><code><span class="err">blueDuration</span>
+<div class="codehilite"><pre><span></span><code>blueDuration
 </code></pre></div>
-
 
 <p>the value of the duration of the SoundObject on the timeline. For
 this example, it does not affect the outcome of the score generated</p>
@@ -2453,18 +2347,16 @@ this example, it does not affect the outcome of the score generated</p>
 <li>
 <p>Next, blue runs the script. in this case, the only thing that
     happens is that the</p>
-<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+<div class="codehilite"><pre><span></span><code>score
 </code></pre></div>
-
 
 <p>variable is being assigned the text string of a single note, along
 with a newline.</p>
 </li>
 <li>
 <p>At the end of the script's execution, the</p>
-<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+<div class="codehilite"><pre><span></span><code>score
 </code></pre></div>
-
 
 <p>variable is read. the score variable may or may not have anything
 assigned to it, but the script within the PythonObject is still run.
@@ -2483,57 +2375,50 @@ mentioned above in <a href="#the_case_for_using_the_python_soundobject">The Case
 <p>For the following example, I will make a very simple score generator
 that produces as many notes as I give as an argument. the entire code
 for the script is:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">generateNotes</span><span class="p">(</span><span class="n">numOfNotes</span><span class="p">):</span>
-    <span class="n">scoreText</span> <span class="o">=</span> <span class="ss">&quot;&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">generateNotes</span><span class="ss">(</span><span class="nv">numOfNotes</span><span class="ss">)</span>:
+    <span class="nv">scoreText</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">numOfNotes</span><span class="p">):</span>
-        <span class="n">scoreText</span> <span class="o">+=</span> <span class="ss">&quot;i1 &quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="ss">&quot; 2 3 4 5\n&quot;</span>
+    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="nv">numOfNotes</span><span class="ss">)</span>:
+        <span class="nv">scoreText</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="s">i1 </span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nv">str</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="s"> 2 3 4 5</span><span class="se">\n</span><span class="s2">&quot;</span>
 
-    <span class="k">return</span> <span class="n">scoreText</span>
+    <span class="k">return</span> <span class="nv">scoreText</span>
 
-<span class="n">score</span> <span class="o">=</span> <span class="n">generateNotes</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nv">score</span> <span class="o">=</span> <span class="nv">generateNotes</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>
 </code></pre></div>
-
 
 <p>The function I made,</p>
-<div class="codehilite"><pre><span></span><code><span class="err">generateNotes(numOfNotes)</span>
+<div class="codehilite"><pre><span></span><code>generateNotes(numOfNotes)
 </code></pre></div>
-
 
 <p>, takes in the number of notes I want to generate. for the above, I
 wanted it to generate 10 notes, and if I printed out the above</p>
-<div class="codehilite"><pre><span></span><code><span class="err">generateNotes(10)</span>
+<div class="codehilite"><pre><span></span><code>generateNotes(10)
 </code></pre></div>
-
 
 <p>, I would have gotten the result:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">i1 0 2 3 4 5 </span>
-<span class="err">i1 1 2 3 4 5</span>
-<span class="err">i1 2 2 3 4 5</span>
-<span class="err">i1 3 2 3 4 5</span>
-<span class="err">i1 4 2 3 4 5</span>
-<span class="err">i1 5 2 3 4 5</span>
-<span class="err">i1 6 2 3 4 5</span>
-<span class="err">i1 7 2 3 4 5</span>
-<span class="err">i1 8 2 3 4 5</span>
-<span class="err">i1 9 2 3 4 5</span>
+<div class="codehilite"><pre><span></span><code>i1 0 2 3 4 5 
+i1 1 2 3 4 5
+i1 2 2 3 4 5
+i1 3 2 3 4 5
+i1 4 2 3 4 5
+i1 5 2 3 4 5
+i1 6 2 3 4 5
+i1 7 2 3 4 5
+i1 8 2 3 4 5
+i1 9 2 3 4 5
 </code></pre></div>
-
 
 <p>This text string above is returned by the</p>
-<div class="codehilite"><pre><span></span><code><span class="err">generateNotes()</span>
+<div class="codehilite"><pre><span></span><code>generateNotes()
 </code></pre></div>
-
 
 <p>function and assigned to the</p>
-<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+<div class="codehilite"><pre><span></span><code>score
 </code></pre></div>
-
 
 <p>variable. blue then grabs that text from the</p>
-<div class="codehilite"><pre><span></span><code><span class="err">score</span>
+<div class="codehilite"><pre><span></span><code>score
 </code></pre></div>
-
 
 <p>variable and parses it and the proceeds with compiling out the .CSD
 file.</p>
@@ -2601,7 +2486,6 @@ to the lib directory. that way, you could do something like:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="o">&lt;</span><span class="n">BLUE_SCRIPT_LIB</span><span class="o">&gt;.</span><span class="n">myLibrary</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
 
-
 <p>as well as use a commandline like:</p>
 <p>perl &lt;BLUE_SCRIPT_LIB>/myLibrary/myProgram -input $infile</p>
 <p>Which would make the library accessible from any system. the nice thing
@@ -2643,45 +2527,44 @@ questions, please feel free to email me at <a href="&#109;&#97;&#105;&#108;&#116
             </article>
           </div>
         </div>
+        
       </main>
       
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../tutorial_first_project/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../tutorial_first_project/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              First Project
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                First Project
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../tutorial_sound_soundObject/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Sound SoundObject
             </div>
-          </a>
-        
-        
-          <a href="../tutorial_sound_soundObject/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Sound SoundObject
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2695,6 +2578,7 @@ questions, please feel free to email me at <a href="&#109;&#97;&#105;&#108;&#116
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
     </div>
@@ -2702,19 +2586,13 @@ questions, please feel free to email me at <a href="&#109;&#97;&#105;&#108;&#116
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs", "instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['tabs', 'instant'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.a1609d9a.min.js"></script>
       
     
   </body>
