@@ -1,5 +1,7 @@
 # LineAdd Processor
 
+![Line Add](../../../images/LineAdd.png)
+
 Parameters: pfield, LineAdd String
 
 The LineAdd Processor adds values to a user-defined pfield. This
@@ -34,3 +36,7 @@ how much should be added. The user should be careful to remember that
 SoundObjects do not apply scaling of score until after processing with
 noteProcessors. Therefore, the beat values given in the LineAddString
 were to be applied against the beat values of the original score.
+
+!!! note
+Line Addinging is done over the objective duration of the Object, so the 
+length of the Object as if Time Behavior would have been set to None.

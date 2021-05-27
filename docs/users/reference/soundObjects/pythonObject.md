@@ -4,6 +4,8 @@
 
 Accepts NoteProcessors: yes
 
+![Python](../../../images/PythonObject.png)
+
 Allows for using of the Python programming language to generate score
 data, using the Jython interpreter to interpret Python scripts. You may
 add your own python classes to the library for use with "import"

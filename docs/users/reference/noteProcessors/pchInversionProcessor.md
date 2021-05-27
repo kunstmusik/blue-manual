@@ -1,5 +1,7 @@
 # Pch Inversion Processor
 
+![Pch Inv](../../../images/PchInversion.png)
+
 Parameters: value, pfield
 
 This noteProcessor flips all values in designated pfield about an axis

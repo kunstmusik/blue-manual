@@ -1,5 +1,7 @@
 # Python Processor
 
+![Python](../../../images/PythonCode.png)
+
 Parameters: code
 
 Allows user to write python code to process NoteList. The code is run

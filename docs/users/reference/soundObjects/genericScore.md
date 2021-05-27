@@ -2,6 +2,8 @@
 
 Accepts NoteProcessors: yes
 
+![Generic](../../../images/Generic.png)
+
 Contains a block of Csound score text. The objective time within the
 GenericScore starts at time 0, and notes within the genericScore are
 written relative to 0. The start time of the GenericScore object within
@@ -27,3 +29,9 @@ i1 6 2 2 3 4 5
 !!! note
     Score blocks support only a subset of the Csound Score Syntax. Using "+"
     in p2 and "." in pfields, as well as "<" and "\>" is supported.
+
+The option Set Subjective Time to Objective Time (right click on Object) 
+adjusts the duration of the object to match the duration of the contents. 
+So if score was 4 beats total, you had dragged the box to make it 8 beats, 
+you could use that option of subjective time to objective time to bring it 
+back to 4 beats.

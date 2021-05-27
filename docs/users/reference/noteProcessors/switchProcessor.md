@@ -1,5 +1,7 @@
 # Switch Processor
 
+![Switch](../../../images/Switch.png)
+
 parameters: pfield1, pfield2
 
 A Switch Processor switches pfield1 with pfield2 for all notes in

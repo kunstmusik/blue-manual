@@ -2,6 +2,8 @@
 
 # Introduction
 
+![Time Warp](../../../images/TimeWarp.png)
+
 parameters: TimeWarpString
 
 Warps time in the same way as Csound t-statement, but does not require
@@ -48,3 +50,11 @@ The first tempo given must be for beat 0.
   - Time Warping, when used with a time behavior of "Scale", be aware
     that estimating the final tempo of the object may be tricky, as the
     scaling will alter the duration of notes.
+    If you use Time Warping without scaled, it should act more of a local 
+    time change. 
+    If you are using it with scaled, you might find it easier to think 
+    of percentage and can use pairs like 0 1 5 2 10 1 where the second part
+    of the pair is more like a multiple.
+
+  - Time Warping is done over the objective duration of the Object, so the 
+    length of the Object as if Time Behavior would have been set to None.

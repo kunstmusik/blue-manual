@@ -2,6 +2,8 @@
 
 Accepts NoteProcessors: Yes
 
+![Object Builder](../../../images/ObjectBuilder.png)
+
 This SoundObject allows users to build their own SoundObjects by using
 the same widgets and features as the
 [BlueSynthBuilder](../../instruments/blueSynthBuilder) for creating user interfaces, as

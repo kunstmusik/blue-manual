@@ -1,5 +1,7 @@
 # Random Multiply Processor
 
+![Rnd Mult](../../../images/RndMultiply.png)
+
 Parameters: pfield, min, max
 
 The RandomMultiplyProcessor takes a pfield to apply the random multiply

@@ -2,6 +2,8 @@
 
 Accepts NoteProcessors: no
 
+![Sound Sound](../../../images/SoundSoundObject.png)
+
 The Sound SoundObject allows one to develop solitary sounds by using
 Csound Orchestra code and graphical user interfaces. It uses the same
 GUI and coding system as found in [BlueSynthBuilder](../../instruments/blueSynthBuilder).

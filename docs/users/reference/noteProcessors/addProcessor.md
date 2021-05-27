@@ -1,5 +1,7 @@
 # Add Processor
 
+![](../../../images/AddNoteProcessor.png)
+
 Parameters: pfield, value
 
 The AddProcessor takes two parameters, one for pfield (positive integer

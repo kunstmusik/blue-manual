@@ -1,5 +1,8 @@
 # Inversion Processor
 
+
+![](../../../images/InversionNoteProcessor.png)
+
 Parameters: pfield, value
 
 This NoteProcessor flips all values in designated pfield about an axis

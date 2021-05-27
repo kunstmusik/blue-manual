@@ -4,6 +4,8 @@
 
 Accepts NoteProcessors: yes
 
+![JavaScript](../../../images/JavaScript.png)
+
 Allows for the use of the JavaScript programming language to create
 score data. Uses the built-in JavaScript interpreter (Nashorn) to
 interpret JavaScript scripts.

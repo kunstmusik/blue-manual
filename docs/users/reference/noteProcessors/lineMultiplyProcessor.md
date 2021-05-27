@@ -1,5 +1,7 @@
 # LineMultiply Processor
 
+![Line Mult](../../../images/LineMultiply.png)
+
 Parameters: pfield, LineMultiply String
 
 The LineMultiply Processor multiplies values in a user-defined pfield.
@@ -37,3 +39,8 @@ be careful to remember that SoundObjects do not apply scaling of score
 until after processing with noteProcessors. Therefore, the beat values
 given in the LineMultiplyString were to be applied against the beat
 values of the original score.
+
+!!! note
+Line Multiplying is done over the objective duration of the Object, so 
+the length of the Object as if Time Behavior would have been set to None.
+
