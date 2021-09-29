@@ -50,6 +50,19 @@ definition (i.e. "opcode myOpcode, a, ak"), as those should be in the
 text fields for Opcode Name, In Types, and Out Types, and you will not
 need an "endop", as Blue will add that itself.
 
+## A few places to find UDOs
+
+These are a few places where you may find UDOs:
+
+  - by Jeanette: http://juliencoder.de/sound/index.html
+  - by Menno Knevel: https://github.com/tjingboem/UDOs
+  - by the Csound community: https://www.csounds.com/community/user-defined-opcode-database/
+  - by Joacim Heintz: https://sourceforge.net/p/csudo/code/ci/master/tree/csudo.udo
+  - by Iain McCurdy: http://iainmccurdy.org/csound.html
+  - by Steven Yi: https://github.com/kunstmusik/libsyi
+
+
+
 <!-- 
 
 TODO - add documentation on Importing Blue or Csound UDOs
