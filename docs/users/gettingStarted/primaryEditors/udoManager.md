@@ -57,7 +57,7 @@ These are a few places where you may find UDOs:
   - by Jeanette: http://juliencoder.de/sound/index.html
   - by Menno Knevel: https://github.com/tjingboem/UDOs
   - by the Csound community: https://www.csounds.com/community/user-defined-opcode-database/
-  - by Joacim Heintz: https://sourceforge.net/p/csudo/code/ci/master/tree/csudo.udo
+  - by Joachim Heintz: https://sourceforge.net/p/csudo/code/ci/master/tree/csudo.udo
   - by Iain McCurdy: http://iainmccurdy.org/csound.html
   - by Steven Yi: https://github.com/kunstmusik/libsyi
 
