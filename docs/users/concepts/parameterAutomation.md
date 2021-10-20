@@ -153,3 +153,37 @@ parameters with resolution, every value is a discrete jump, so the
 instrument for resolution based parameters will on it's i-time run will
 simply set the new value and then turn the instrument instance off to
 save CPU cycles.
+
+## Shortcuts for Automation Lines and Automation Line Points
+
+AL = Automation Line, AL Point = the point on the Automation Line
+
+Single Line  
+
+| Action    | Result                                                                                                                                                                                                |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leftclick on AL       | on active AL, create AL point at mouse pointer                                                                                                                                                                               |
+| rightclick on AL point      | delete specific AL point                                                                                                                                                                                |
+| rightclick in Layer   | show submenu of active AL: Select Parameter, Edit Points, Import BPF, Export BPF                                                                                                                                                           |
+| Alt+leftclick on AL  | create new AL point but without disturbing the Y axis. AL does not move                                                                                                                                             |
+| Ctrl+leftclick on AL Point  | move AL point up and down on same X-axis position OR Move AL point to left of right on same Y-axis position                                                                                                         |
+| double-click | if selecting on timeline, select all soundObjects on layer where mouse clicked                                                                                                                              |
+| create marquee (= selection window), SHIFT+drag     | marquee selects one or more adjacent AL points. All AL points in it can be moved to left or right                                                                                                                             |
+| change position of AL points inside marquee      | marquee selects one or more adjacent AL points. Inside marquee, by pressing Ctrl the selected AL points can be moved to up/down (y values) |
+| copy AL points inside marquee    | Ctrl+C to copy, then click with mouse pointer somewhere to deselect, then Ctrl+ (on the same Layer!) use mouse pointer where you want to paste the marquee AL points and click on that spot to paste                                                                      |
+| delete AL points inside marquee      | press Delete key on keyboard                                                                                                                                                             |
+| ctrl-z       | undo last action                                                                                                     |
+| resize AL| leftclick and drag to select the AL Points. Hover mouse pointer over left or right side of Marquee, the cursor changes, then drag to re-scale                                                                                |                                                                                                                                                              |
+
+Multi Line  
+
+| Action    | Result                                                                                                                                                                                                |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leftclick+drag      | the marquee selects all the ALs and AL points inside Marquee                                                                                                                                                                           |
+| leftclick+drag     | the marquee selects everything that is inside: all ALs and AL Points                                                                                                                                                                             |
+| leftclick+SHIFT+drag  | the marquee selects everything that is inside: AL points + Objects                                                                                                                                                           |
+| move marquee  | leftclick and move to the left or right                                                                                                                                           |
+| copy all inside marquee (Ctr+c)  | to paste, deselect, then Ctrl+click to paste at mouse pointer                                                                                                   |
+| delete everything inside Marquee | press Delete key on keyboard
+| ctrl-z       | undo last action                                                                                                     |
+                                                                                        |
