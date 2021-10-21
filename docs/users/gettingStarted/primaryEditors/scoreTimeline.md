@@ -41,6 +41,9 @@ notes generated within that LayerGroup. Editing the LayerGroup's
 NoteProcessors can be done by right clicking on the root Score node in
 the [Score Bar](#score_bar), described below.
 
+More information on the different NoteProcessor can be found 
+[here](../../../reference/noteProcessors/top).
+
 Regarding the design, a Layer Group is primarily responsible for
 generating Csound Score notes. However, they are also able to generate
 tables, instruments, and anything else that is usable in Csound. It is
@@ -102,6 +105,9 @@ which will set the editor for the SoundObject in the Editor window as
 well as focus the SoundObject Editor window. (If the Editor window is
 docked, double-clicking the SoundObject will cause the editor to show
 the docked window.)
+
+More information on the different SoundObjects can be found 
+[here](../../../reference/soundObjects/top).
 
 ### Patterns
 
