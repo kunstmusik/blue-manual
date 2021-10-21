@@ -42,7 +42,7 @@ NoteProcessors can be done by right clicking on the root Score node in
 the [Score Bar](#score_bar), described below.
 
 More information on the different NoteProcessor can be found 
-[here](../../../reference/noteProcessors).
+[here](../../../reference/noteProcessors/top).
 
 Regarding the design, a Layer Group is primarily responsible for
 generating Csound Score notes. However, they are also able to generate
@@ -107,7 +107,7 @@ docked, double-clicking the SoundObject will cause the editor to show
 the docked window.)
 
 More information on the different SoundObjects can be found 
-[here](../../../reference/soundObjects).
+[here](../../../reference/soundObjects/top).
 
 ### Patterns
 
