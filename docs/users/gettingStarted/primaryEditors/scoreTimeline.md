@@ -72,9 +72,6 @@ would like to the LayerGroup. You can then edit the names of the layers
 using the ScoreManager Dialog, or back in the main Score area by
 double-clicking the area on the left of the Layer's panel on the left.
 
-More information on the different SoundObjects can be found 
-[here](../../../reference/soundObjects).
-
 On the timeline, rt-clicking on any soundLayer will show menu options
 for adding different types of SoundObjects, pasting a SoundObject from
 the buffer if any SoundObjects in the buffer are available, as well as
@@ -108,6 +105,9 @@ which will set the editor for the SoundObject in the Editor window as
 well as focus the SoundObject Editor window. (If the Editor window is
 docked, double-clicking the SoundObject will cause the editor to show
 the docked window.)
+
+More information on the different SoundObjects can be found 
+[here](../../../reference/soundObjects).
 
 ### Patterns
 
