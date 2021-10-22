@@ -188,5 +188,5 @@ Multi Line
 | ctrl-z       | undo last action                                                                                                     |
                                                                                         |
 
-A tutorial video on Parameter Automation can be found 
-![here](https://www.youtube.com/watch?v=ODaL3N24_Dk).
+A tutorial video on Parameter Automation can be found on the website:
+<https://www.youtube.com/watch?v=ODaL3N24_Dk>.
