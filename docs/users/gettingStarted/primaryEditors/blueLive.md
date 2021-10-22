@@ -201,3 +201,6 @@ ways you could explore ideas are:
 
   - Using Cmask, nGen, Common Music, and other programs with the
     external soundObject to try out things live
+
+A tutorial video on BlueLive can be found 
+![here](https://www.youtube.com/watch?v=uO_FJssTS8o).
