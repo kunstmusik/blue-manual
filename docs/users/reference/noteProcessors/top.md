@@ -54,5 +54,5 @@ Note Processors, but also most ScoreObjects inside the PolyObject.
     
     
     
-A tutorial video on NoteProcessors can be found 
-![here](https://www.youtube.com/watch?v=CS3Fszd460w). 
+A tutorial video on NoteProcessors can be found here:
+<https://www.youtube.com/watch?v=CS3Fszd460w> 
