@@ -840,6 +840,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shortcuts_for_automation_lines_and_automation_line_points" class="md-nav__link">
+    Shortcuts for Automation Lines and Automation Line Points
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -886,77 +893,11 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        Tutorials
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorials
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/tutorial_first_project/" class="md-nav__link">
-        First Project
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/tutorial_scripting/" class="md-nav__link">
-        Scripting
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tutorials/tutorial_sound_soundObject/" class="md-nav__link">
-        Sound SoundObject
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
         Reference
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Reference" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Reference
         </label>
@@ -970,14 +911,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
       
-      <label class="md-nav__link" for="__nav_4_1">
+      <label class="md-nav__link" for="__nav_3_1">
         SoundObjects
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="SoundObjects" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
+        <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           SoundObjects
         </label>
@@ -1213,14 +1154,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
-      <label class="md-nav__link" for="__nav_4_2">
+      <label class="md-nav__link" for="__nav_3_2">
         Note Processors
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Note Processors" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Note Processors
         </label>
@@ -1456,14 +1397,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
-      <label class="md-nav__link" for="__nav_4_3">
+      <label class="md-nav__link" for="__nav_3_3">
         Instruments
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Instruments" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Instruments
         </label>
@@ -1632,6 +1573,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shortcuts_for_automation_lines_and_automation_line_points" class="md-nav__link">
+    Shortcuts for Automation Lines and Automation Line Points
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1791,6 +1739,112 @@ parameters with resolution, every value is a discrete jump, so the
 instrument for resolution based parameters will on it's i-time run will
 simply set the new value and then turn the instrument instance off to
 save CPU cycles.</p>
+<h2 id="shortcuts_for_automation_lines_and_automation_line_points">Shortcuts for Automation Lines and Automation Line Points</h2>
+<p>AL = Automation Line, AL Point = the point on the Automation Line</p>
+<p>Single Line  </p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leftclick on AL</td>
+<td>on active AL, create AL point at mouse pointer</td>
+</tr>
+<tr>
+<td>rightclick on AL point</td>
+<td>delete specific AL point</td>
+</tr>
+<tr>
+<td>rightclick in Layer</td>
+<td>show submenu of active AL: Select Parameter, Edit Points, Import BPF, Export BPF</td>
+</tr>
+<tr>
+<td>Alt+leftclick on AL</td>
+<td>create new AL point but without disturbing the Y axis. AL does not move</td>
+</tr>
+<tr>
+<td>Ctrl+leftclick on AL Point</td>
+<td>move AL point up and down on same X-axis position OR Move AL point to left of right on same Y-axis position</td>
+</tr>
+<tr>
+<td>double-click</td>
+<td>if selecting on timeline, select all soundObjects on layer where mouse clicked</td>
+</tr>
+<tr>
+<td>create marquee (= selection window), SHIFT+drag</td>
+<td>marquee selects one or more adjacent AL points. All AL points in it can be moved to left or right</td>
+</tr>
+<tr>
+<td>change position of AL points inside marquee</td>
+<td>marquee selects one or more adjacent AL points. Inside marquee, by pressing Ctrl the selected AL points can be moved to up/down (y values)</td>
+</tr>
+<tr>
+<td>copy AL points inside marquee</td>
+<td>Ctrl+C to copy, then click with mouse pointer somewhere to deselect, then Ctrl+ (on the same Layer!) use mouse pointer where you want to paste the marquee AL points and click on that spot to paste</td>
+</tr>
+<tr>
+<td>delete AL points inside marquee</td>
+<td>press Delete key on keyboard</td>
+</tr>
+<tr>
+<td>ctrl-z</td>
+<td>undo last action</td>
+</tr>
+<tr>
+<td>resize AL</td>
+<td>leftclick and drag to select the AL Points. Hover mouse pointer over left or right side of Marquee, the cursor changes, then drag to re-scale</td>
+</tr>
+</tbody>
+</table>
+<p>Multi Line  </p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leftclick+drag</td>
+<td>the marquee selects all the ALs and AL points inside Marquee</td>
+</tr>
+<tr>
+<td>leftclick+drag</td>
+<td>the marquee selects everything that is inside: all ALs and AL Points</td>
+</tr>
+<tr>
+<td>leftclick+SHIFT+drag</td>
+<td>the marquee selects everything that is inside: AL points + Objects</td>
+</tr>
+<tr>
+<td>move marquee</td>
+<td>leftclick and move to the left or right</td>
+</tr>
+<tr>
+<td>copy all inside marquee (Ctr+c)</td>
+<td>to paste, deselect, then Ctrl+click to paste at mouse pointer</td>
+</tr>
+<tr>
+<td>delete everything inside Marquee</td>
+<td>press Delete key on keyboard</td>
+</tr>
+<tr>
+<td>ctrl-z</td>
+<td>undo last action</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>A tutorial video on Parameter Automation can be found on the website:
+<a href="https://www.youtube.com/watch?v=ODaL3N24_Dk">https://www.youtube.com/watch?v=ODaL3N24_Dk</a>.</p>
                 
               
               
