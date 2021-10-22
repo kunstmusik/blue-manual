@@ -9,9 +9,10 @@ Parameters: pfield, baseFrequency, scalaFile
 Converts Blue PCH notation to frequency according to scale values in a
 Scala scale file. The scale will default to 12TET when TuningProcessor
 is initially created. The file selector for choosing a Scala .scl file
-will default to user's .blue directory, under the scl subdirectory. It
-is advised that users download the 3000+ scale archive from the Scala
-website at: http://www.huygens-fokker.org/scala/ and place them in the
+will default to user's .blue directory. Here, the user can create 
+the scl subdirectory. It is advised that users download the 3000+ scale 
+archive from the Scala website 
+at: http://www.huygens-fokker.org/scala/ and place them in the
 .blue/scl directory or whever they find convenient. An online Scala 
 workshop can be found at: https://sevish.com/scaleworkshop/
 

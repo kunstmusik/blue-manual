@@ -51,3 +51,8 @@ Note Processors, but also most ScoreObjects inside the PolyObject.
     ![poly](../../../images/NPpoly.png) 
 
     An asterix is shown to indicate an active Note Processor.
+    
+    
+    
+A tutorial video on NoteProcessors can be found here:
+<https://www.youtube.com/watch?v=CS3Fszd460w> 
