@@ -149,4 +149,5 @@ omitted for each Parameter's GUI as they correspond in feature and
 parameters as CMask, and the user is encouraged to consult the CMask
 manual for more information on editing each Parameter.
 
-A tutorial video on JMask can be found here: <https://www.youtube.com/watch?v=CS3Fszd460w>
+_A tutorial video on JMask can be found [here](https://www.youtube.com/watch?v=CS3Fszd460w)._
+
