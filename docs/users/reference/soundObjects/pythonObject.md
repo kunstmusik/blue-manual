@@ -86,4 +86,4 @@ the "Test" button to have that evaluated, or use "Process at Start" and
 have Blue ensure it is loaded into the python interpreter when you load
 your projects.
 
-_A tutorial video on the PythonObject can be found [here](https://www.youtube.com/watch?v=O2QkPMP0Rrc&t=319s)._
+_An introduction video on the PythonObject can be found [here](https://www.youtube.com/watch?v=O2QkPMP0Rrc&t=319s)._
