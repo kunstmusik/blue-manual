@@ -35,6 +35,9 @@ within a Layer Group.
     in the main score area by right-clicking the Layer panels on the right
     and selecting the options from the popup menu.
 
+A tutorial video on the Layer Groups can be found 
+[here](https://www.youtube.com/watch?v=O2QkPMP0Rrc&t=319s).
+
 Also, all LayerGroups support having [NoteProcessors](../../../reference/noteProcessors/top)
 used with them. Using a NoteProcessor on a LayerGroup will affect all
 notes generated within that LayerGroup. Editing the LayerGroup's
