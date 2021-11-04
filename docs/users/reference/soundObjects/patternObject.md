@@ -111,3 +111,6 @@ mutliple triggers.
     take the generated score and repeat it after the duration of the
     last note. To prevent this, either use the ghost note technique
     above or set a repeat point.
+
+_A tutorial video on JMask can be found [here](https://www.youtube.com/watch?v=O2QkPMP0Rrc&t=319s)._
+
