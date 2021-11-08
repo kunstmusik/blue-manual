@@ -38,5 +38,5 @@ noteProcessors. Therefore, the beat values given in the LineAddString
 were to be applied against the beat values of the original score.
 
 !!! note
-Line Addinging is done over the objective duration of the Object, so the 
+Line Adding is done over the objective duration of the Object, so the 
 length of the Object as if Time Behavior would have been set to None.
