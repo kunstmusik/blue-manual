@@ -485,3 +485,6 @@ Blue:
   - /blueLive/allNotesOff
 
   - /blueLive/toggleMidiInput
+
+!!! note
+    When you want to use the OSC protocol for sending OSC data to control an external DAW or another program capable of handling OSC data, be sure that the Server Port of Blue will not conflict with this particular port. 
