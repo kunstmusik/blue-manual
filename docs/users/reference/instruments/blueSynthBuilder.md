@@ -147,7 +147,7 @@ the instrument itself. While one can always add always-on effects to a
 mixer channel, having the capability to add these features to an
 instrument can be useful as part of the instrument's design.
 
-To use this, one writes code in teh Always-On code tab. The code from
+To use this, one writes code in the Always-On code tab. The code from
 this tab will be used to generate an instrument that will be run after
 the primary instrument code, and will have a single instace of the
 generated instrument running for the duration of the instrument. The
