@@ -352,6 +352,19 @@ SoundObjects. Snap is measured in beats. Time Display allows setting how
 the time bar shows numbers, i.e. every 4 beats, rendered as a number or
 as a time value.
 
+### Navigator
+
+![](../../../images/Navigator.png)
+
+The Navigator shows all Objects of the composition. The rectangle in the
+Navigator can be dragged around to quickly go to the spot you'd like to 
+inspect.
+
+The Navigator window pops up when you click on the magnifying glass next
+to the + and - zoom signs.
+
+![](../../../images/magnifyingglass.png)
+
 ### Shortcuts for SoundObject Layer Groups
 
 | Shortcuts    | Description                                                                                                                                                                                                 |
