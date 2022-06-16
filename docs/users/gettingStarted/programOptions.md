@@ -393,6 +393,14 @@ Command
     
         open -a VLC $outfile
 
+:   In Linux the command line could be:
+
+        cvlc $outfile
+
+    or even using the minimalistic sox player (if installed):
+
+        play $outfile
+
 ###  File Output Settings 
 
 File Format  
