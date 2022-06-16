@@ -19,3 +19,7 @@ Dave Seidel
 Kevin Welsh
 
 :   PHP work on blueShare server, Java code
+
+Menno Knevel
+
+:   Documentation, Tutorials, and Ideas
