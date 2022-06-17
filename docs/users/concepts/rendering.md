@@ -11,11 +11,12 @@ use-case scenarios to guide you on how that feature may be useful.
 
 ### Render in Real-time
 
-Rendering in uses the project's Real-Time render settings to render the
-project in realtime to the users soundcard. This is the most common
-rendering one will likely use. To use this, you can press the play
+This type of rendering uses the project's Real-Time render settings to 
+render the project in realtime to the users soundcard. This is the most 
+common rendering one will likely use. To use this, you can press the play
 button at the top of the window, use the "Project-\>Render/Stop Project"
-menu option, or use the F9 shortcut key.
+menu option, hit the space bar when the score is in focus, or use the F9 
+shortcut key.
 
 ### Generate CSD to Screen 
 
