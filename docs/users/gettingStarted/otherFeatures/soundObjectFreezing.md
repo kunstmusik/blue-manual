@@ -9,6 +9,8 @@ in, so can be moved from computer to computer without problem. Frozen
 soundObjects can be unfrozen at anytime, returning the original
 soundObject and removing the frozen wave file.
 
+![ Frozen Object ](../../../images/FrozenObject.png)
+
 To freeze a soundObject, select one or many soundObjects on the
 timeline, rt-click on a selected soundObject, and then select
 "Freeze/Unfreeze SoundObjects". To unfreeze, select one or many frozen
@@ -70,12 +72,12 @@ versions will be more polished.
     due to global processing instruments (like reverb, echo, etc.) This
     is taken into account.
 
-  - The freezing system does \*not\* work for all graph toplogies. If
+  - The freezing system does \*not\* work for all graph topologies. If
     you're using soundObjects with instruments used as control signals,
     this won't work unless the notes for the instruments they are
-    controlling are alsoin the same soundObject. I.e. I have one
+    controlling are also in the same soundObject. I.e. I have one
     soundObject that has only notes that affect global variables, while
-    I have one instrument thatuses those global variables. This could
+    I have one instrument that uses those global variables. This could
     work though if you repackage the set of soundObjects into a
     polyObject. Probably best to generalize as:
     
