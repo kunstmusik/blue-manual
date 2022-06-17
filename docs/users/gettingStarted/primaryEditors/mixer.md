@@ -61,7 +61,7 @@ mixer channel's settings will be maintained for the new instrument as it
 is bound by ID.
 
 Channels in themselves can not be created or removed directly by the
-user, but are automatically added or removed depending on how how
+user, but are automatically added or removed depending on how
 instruments are added and removed from the project's orchestra. For
 cases of when an instrument has an ID and a user wishes to change the
 ID, if the new ID already exists and a channel is already created, the
@@ -126,12 +126,7 @@ The workflow for using Effects with your Mixer channels is:
     shows effects that are currently in your library from which to
     choose to insert.
 
-3.  In the Mixer, choose either the pre-fader or post-fader effects bin
-    to add effects. Right click on the bins to open up a popup menu that
-    shows effects that are currently in your library from which to
-    choose to insert.
-
-4.  Configure your effect by double-clicking it in the effects bin.
+3.  Configure your effect by double-clicking it in the effects bin.
     Double-clicking the effect will open up a dialog that shows the
     effect's graphical user interface.
 
