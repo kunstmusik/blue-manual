@@ -13,7 +13,7 @@ parts or minimalist-style musical ideas.
 
 ## Usage
 
-For the general workflow of using the PatternObject, users will liked
+For the general workflow of using the PatternObject, users will
 likely want to:
 
 1.  Setup the PatternObject Properties (number of beats and
