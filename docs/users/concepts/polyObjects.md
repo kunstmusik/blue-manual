@@ -49,6 +49,8 @@ blue score. That's because the main score is just one big container for
 notes, like PolyObjects (in fact, in the code, the main score IS a
 PolyObject).
 
+![](../../../images/root.png)
+
 You can see which container you are currently editing by looking at the
 buttons just underneath the tabs for "score," "orchestra," etc. When
 you're editing the main score, there will only be one button there
@@ -236,7 +238,7 @@ This may be the desired effect, and it may not. In order to apply a
 NoteProcessor after the Time Behavior has been applied, take the
 following steps:
 
-1.  Apply the Time Behavior to you PolyObject, with no NoteProcessor on
+1.  Apply the Time Behavior to your PolyObject, with no NoteProcessor on
     it.
 
 2.  Right-click on the PolyObject and select "Convert to PolyObject."
