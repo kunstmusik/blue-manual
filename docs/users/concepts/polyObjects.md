@@ -49,7 +49,7 @@ blue score. That's because the main score is just one big container for
 notes, like PolyObjects (in fact, in the code, the main score IS a
 PolyObject).
 
-![](../../../images/root.png)
+![](../../images/root.png)
 
 You can see which container you are currently editing by looking at the
 buttons just underneath the tabs for "score," "orchestra," etc. When
