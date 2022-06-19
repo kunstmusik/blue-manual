@@ -31,6 +31,10 @@ BlueSynthBuilder instruments and Mixer Effects:
 
   - Checkbox
 
+  - Line Object
+
+  - Value (hidden)
+
 ## Assigning Parameters
 
 Automations for Parameters are assignable to SoundObject LayerGroup
