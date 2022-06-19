@@ -32,8 +32,8 @@ Since there are many ways to express musical ideas, to fully allow the
 range of expression that Csound offers, Blue's SoundObjects are capable
 of generating different things that Csound will use. Although most often
 they are used mostly for generating Csound SCO text, SoundObjects may
-also generate ftables, instruments, user-defined opcodes, and everything
-else that would be needed to express a musical idea in Csound.
+also generate ftables, instruments, user-defined opcodes, Audiofiles, and 
+everything else that would be needed to express a musical idea in Csound.
 
 Beyond each SoundObject's unique capabilities, SoundObjects do share
 common qualities: name, start time, duration, end time. Most will also
