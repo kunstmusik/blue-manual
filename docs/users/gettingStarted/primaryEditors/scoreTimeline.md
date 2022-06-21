@@ -256,22 +256,30 @@ then be editing "phrase 1"'s timeline. by clicking on the "root" button
 of the timeline, you would then return out of the PolyObject's timeline
 and back in the root's timeline.
 
-### SoundLayer Editor
+### Score Manager
 
-Below the polyObject bar on the left, you will see the soundLayer
-editor. here you can change the name of the soundLayer, as well as mute
-the layer (all soundObject's on muted layers will not be used to
-generate notes when creating .CSD files).
+Below the polyObject bar on the left, you will see the Score Manager. 
+Here you can change the name of the Layer Group, names for
+individual SoundLayers and set a default Layer height.
 
-On the bottom of the soundLayer editor are four buttons, "^", "V", "+",
-and "-". "^" and "V" will push up or push down soundLayers. (HINT: You
-can move multiple soundLayers by clicking on one soundLayer, then
-holding down shift and clicking on the last of the soundLayers you want
-to move, then using the "^" and "V" buttons.) the "+" will add a
-soundLayer after the currently selected soundLayer. if no soundLayers
-are selected, then it will add one to the end of the list. the "-"
-button will remove any selected soundLayers. it should ask for a
-confirmation before removing any layers.
+![](../../../images/ScoreManager_button.png)
+
+On the top left of the Score Manager are four buttons, "^", "V", "+",
+and "-". "^" and "V" will push up or push down Layers Groups. (HINT: 
+You can move multiple Layer Groups by clicking on one Layer Group, then
+holding down shift and clicking on the last of the Layer Groups you want
+to move, then using the "^" and "V" buttons). The "+" will add a
+Layer Group after the currently selected Layer Group. 
+3 different Layer groups are available: SoundObject Layer Group, Patterns 
+Layer group and Audio layer groups.
+If no Layer Groups are selected, then it will add one to the end of the 
+list. the "-" button will remove any selected Layer Groups. it should ask 
+for a confirmation before removing any Layer Groups.
+
+On the top right of the Score Manager are also four buttons, "^", "V", "+",
+and "-". Workings are as mentioned above for the Layer Groups, but now for 
+the individual Layers in a Group. 
+In Propeties you can set the default Layer height.
 
 ### The Timeline
 
@@ -365,27 +373,42 @@ to the + and - zoom signs.
 
 ![](../../../images/magnifyingglass.png)
 
-### Shortcuts for SoundObject Layer Groups
+### Score Timeline Shortcuts 
 
 | Shortcuts    | Description                                                                                                                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ctrl-c       | copy selected soundObject(s)                                                                                                                                                                                |
-| ctrl-x       | cut selected soundObject(s)                                                                                                                                                                                 |
-| ctrl-click   | paste soundObject(s) from buffer where clicked                                                                                                                                                              |
-| shift-click  | paste soundObject(s) from buffer as a PolyObject where clicked                                                                                                                                              |
-| shift-click  | when selecting soundObjects, adds soundObject to selected if not currently selected and vice-versa                                                                                                          |
-| double-click | if selecting on timeline, select all soundObjects on layer where mouse clicked                                                                                                                              |
-| ctrl-d       | duplicate selected SoundObjects and place immediately after the originals                                                                                                                                   |
-| ctrl-r       | repeat selected SoundObjects by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat) |
-| ctrl-drag    | if ctrl is held down when drag is initiated of selected SoundObjects, a copy of the originals is made and left at their original times                                                                      |
-| ctrl-t       | show quick time dialog of selected soundObject                                                                                                                                                              |
-| 1            | switch to Score mode                                                                                                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+| 1            | switch to Score mode                                                                                                                                                                                  |
 | 2            | switch to Single Line mode                                                                                                                                                                                  |
 | 3            | switch to Multi Line mode                                                                                                                                                                                   |
 | space        | Start/stop rendering of project                                                                                                                                                                             |
-| space        |                                                                                                                                                                                                             |
 | G            | Scroll score view to location of render start time (green line)                                                                                                                                             |
 | Y            | Scroll score view to location of render end time (yellow line)                                                                                                                                              |
-| Alt-S        | Toggle Snap                                                                                                                                                                                                 |
-| \[           | Set render start time to previous marker (or beginning of project) and scroll view to new time                                                                                                              |
-| \]           | Set render start time to next marker (or end of project) and scroll view to new time                                                                                                                        |
+| Alt-S        | Toggle Snap (Grid)                                                                                                                                                                                                |
+| \[           | Set render start time (Green locator) to previous marker (or beginning of project) and scroll view to new time                                                                                                              |
+| \]           | Set render start time (Green locator) to next marker (or end of project) and scroll view to new time                           |
+
+### General Shortcuts for all Objects on the Score Timeline
+
+| Shortcuts    | Description                                                                                                                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+| ctrl-c       | copy selected soundObject(s), Audio Clip(s)                                                                                                                                                                                |
+| ctrl-x       | cut selected soundObject(s), Audio Clip(s)                                                                                                                                                                                |
+| ctrl-z            | Undo last action like re-scaling, moving, copying and pasting as well as deleting ScoreObjects, Audio Clip(s) and/or Automation Lines                                                                                                                                                                                     |
+| ctrl-shift-z      | redo any undo last actions like re-scaling, moving, copying and pasting as well as deleting ScoreObjects, Audio Clip(s) and/or Automation Lines                                                                                                                                                                                     |
+| ctrl-click   | paste soundObject(s), Audio Clip(s) from buffer where clicked                                                                                                                                                              |
+| shift-click  | when selecting soundObjects, Audio Clip(s), adds soundObject, Audio Clip to selected if not currently selected and vice-versa                                                                                                          |
+| ctrl-d       | duplicate selected SoundObjects, Audio Clip(s) and place immediately after the originals                                                                                                                                   |
+| shift-click  | paste soundObject(s) from buffer as a PolyObject where clicked NOT WORKING YET                                                                                                                                              |
+| double-click | if selecting on timeline, select all soundObjects on layer where mouse clicked NOT WORKING YET                                                                                                                              |
+| ctrl-drag    | if ctrl is held down when drag is initiated of selected SoundObjects, a copy of the originals is made and left at their original times NOT WORKING YET                                                                      |
+| ctrl-r       | repeat selected SoundObjects, Audio Clip(s) by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat) |
+| ctrl-t       | show quick time dialog of selected soundObject, Audio Clip                                                                                                                                                              |
+
+
+### Shortcuts for Audio Layer Groups only
+
+| Shortcuts    | Description                                                                                                                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shift-alt-click    | press within an Audio Clip, at that spot it will split the Audio Clip into parts                                                 |
+| alt-drag    | move/reposition the audio content within the Audio Clip, to the left or to the right                                                |
+

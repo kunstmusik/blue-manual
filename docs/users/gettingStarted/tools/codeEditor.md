@@ -12,5 +12,7 @@ are common features shared. Some things which are available are:
 
   - Popup Menu (use right-mouse click) with additional options
 
+![ Code editor ](../../../images/CodeEditor.png)
+
 You can adjust colors, fonts, and other settings within Blue's Program
 Options.

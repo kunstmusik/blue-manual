@@ -2,7 +2,7 @@
 
 ![ Sound Font Viewer ](../../../images/soundFontViewer.png)
 
-The Sound Font Viewer allows you to select SoundFonts from the file
+The Sound Font Viewer allows you to inspect SoundFonts from the file
 selection panel (on the left) and get a listing of the instruments and
 presets within that SoundFont.
 

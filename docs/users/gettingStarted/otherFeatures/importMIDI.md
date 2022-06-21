@@ -2,7 +2,9 @@
 
 Blue is able to import MIDI files and set up a Blue project file from
 the note information in the MIDI file, using the settings given by the
-user. To import a MIDI file, choose the "Import MIDI File" option from
+user. Importing a MIDI file will open a new Project.
+
+To import a MIDI file, choose the "Import MIDI File" option from
 the File menu. Next, using the file dialog to locate the MIDI file to
 import. After selecting the desired file, Blue will show the following
 MIDI Import Settings dialog for you to configure how you would like to
