@@ -373,6 +373,20 @@ to the + and - zoom signs.
 
 ![](../../../images/magnifyingglass.png)
 
+### Score Timeline Shortcuts 
+
+| Shortcuts    | Description                                                                                                                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+| 1            | switch to Score mode                                                                                                                                                                                  |
+| 2            | switch to Single Line mode                                                                                                                                                                                  |
+| 3            | switch to Multi Line mode                                                                                                                                                                                   |
+| space        | Start/stop rendering of project                                                                                                                                                                             |
+| G            | Scroll score view to location of render start time (green line)                                                                                                                                             |
+| Y            | Scroll score view to location of render end time (yellow line)                                                                                                                                              |
+| Alt-S        | Toggle Snap (Grid)                                                                                                                                                                                                |
+| \[           | Set render start time (Green locator) to previous marker (or beginning of project) and scroll view to new time                                                                                                              |
+| \]           | Set render start time (Green locator) to next marker (or end of project) and scroll view to new time                           |
+
 ### General Shortcuts for all Objects on the Score Timeline
 
 | Shortcuts    | Description                                                                                                                                                                                                 |
@@ -389,16 +403,7 @@ to the + and - zoom signs.
 | ctrl-drag    | if ctrl is held down when drag is initiated of selected SoundObjects, a copy of the originals is made and left at their original times NOT WORKING YET                                                                      |
 | ctrl-r       | repeat selected SoundObjects, Audio Clip(s) by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat) |
 | ctrl-t       | show quick time dialog of selected soundObject, Audio Clip                                                                                                                                                              |
-|
-| 1            | switch to Score mode                                                                                                                                                                                  |
-| 2            | switch to Single Line mode                                                                                                                                                                                  |
-| 3            | switch to Multi Line mode                                                                                                                                                                                   |
-| space        | Start/stop rendering of project                                                                                                                                                                             |
-| G            | Scroll score view to location of render start time (green line)                                                                                                                                             |
-| Y            | Scroll score view to location of render end time (yellow line)                                                                                                                                              |
-| Alt-S        | Toggle Snap (Grid)                                                                                                                                                                                                |
-| \[           | Set render start time (Green locator) to previous marker (or beginning of project) and scroll view to new time                                                                                                              |
-| \]           | Set render start time (Green locator) to next marker (or end of project) and scroll view to new time                           |
+
 
 ### Shortcuts for Audio Layer Groups only
 
