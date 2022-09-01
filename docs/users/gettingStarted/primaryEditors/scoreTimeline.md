@@ -218,6 +218,11 @@ and releasing to update the fade's duration. The fade type may also be
 modified by right clicking within a fade area and choosing the fade type
 using the popup menu.
 
+!!! note
+
+    At the moment, 8-bit and 16-bit audio data, in mono and stereo, 
+    with sample rates from 8 kHz to 48 kHz are supported.
+
 For more information about Fades, please see Ardour's manual entry on
 [Region Fades and
 Crossfades](http://manual.ardour.org/editing-and-arranging/create-region-fades-and-crossfades/).
