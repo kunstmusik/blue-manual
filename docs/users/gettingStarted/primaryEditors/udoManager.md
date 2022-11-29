@@ -37,6 +37,18 @@ top-down. To shift the order of the opcodes up and down, select an
 opcode in the table and use the "^" and "V" buttons to push up and push
 down.
 
+| Shortcuts    | Description                                                                                                                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+| +           |add a blueUDO or a regular (Csound)UDO                                                                                                                                                                                   |
+| I            |import a blueUDO or a regulaer (Csound) UDO                                                                                                                                                                                   |
+| -           |remove selected blueUDO or regular (Csound) UDO                                                                                                                                                                                  |
+| ^            |push UDO up                                                                                                                                                                                   |
+| V           |push UDO down                                                                                                                                                                                   |
+
+Two types of UDO's may be imported or exported: the blueUDO and the regular 
+Csound UDO. The blueUDO has the option of adding comments and information
+in a separate tab.
+
 To edit the UDO, select one from the table. After selecting a UDO, the
 UDO Editor will be populated with that UDO. This time, no green border
 will show, as that is only done when a Library UDO is being edited.
@@ -52,7 +64,7 @@ need an "endop", as Blue will add that itself.
 
 ## A few places to find UDOs
 
-These are a few places where you may find UDOs:
+These are a few places where you may find UDO's:
 
   - by Jeanette: http://juliencoder.de/sound/index.html
   - by Menno Knevel: https://github.com/tjingboem/UDOs
