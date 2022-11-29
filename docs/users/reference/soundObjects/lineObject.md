@@ -19,3 +19,9 @@ selection dialog will appear for the user to choose their desired color.
 
 The name of the signal will be prepended with "gk" when outputing a
 signal, i.e. a line name of "cutoff" will become "gkcutoff".
+
+!!! note
+    When rendering to a CSD file, every Line in the LineObject creates 
+    its own instrument. 
+    For the LineObject to work properly, be sure to give all Instruments
+    concerned a higher Instrument ID. Or else, an error will occur.
