@@ -39,9 +39,10 @@ down.
 
 ![ User-Defined Opcodes Manager ](../../../images/udoButtons.png)
 
-Two types of UDO's may be imported or exported: the blueUDO and the regular 
-Csound UDO. The blueUDO has the option of adding comments and information
-in a separate tab.
+Two types of UDO's may be imported or exported using the Import/Export button 
+(second button from the top): 
+the blueUDO and the regular Csound UDO. The blueUDO has the option of 
+adding comments and information in a separate tab.
 
 To edit the UDO, select one from the table. After selecting a UDO, the
 UDO Editor will be populated with that UDO. This time, no green border
