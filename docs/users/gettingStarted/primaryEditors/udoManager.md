@@ -66,12 +66,11 @@ need an "endop", as Blue will add that itself.
 
 These are a few places where you may find UDO's:
 
-  - by Jeanette: http://juliencoder.de/sound/index.html
-  - by Menno Knevel: https://github.com/tjingboem/UDOs
-  - by the Csound community: https://www.csounds.com/community/user-defined-opcode-database/
-  - by Joachim Heintz: https://sourceforge.net/p/csudo/code/ci/master/tree/csudo.udo
-  - by Iain McCurdy: http://iainmccurdy.org/csound.html
-  - by Steven Yi: https://github.com/kunstmusik/libsyi
+  - http://juliencoder.de/sound/index.html (JeanetteC)
+  - https://github.com/tjingboem/UDOs (Menno Knevel)
+  - https://github.com/csudo/csudo (Csound community)
+  - http://iainmccurdy.org/csound.html (Iain McCurdy)
+  - https://github.com/kunstmusik/libsyi (Steven Yi)
 
 
 
