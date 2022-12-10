@@ -25,7 +25,7 @@ new project and multiple new instrument designs might be using a
 developing UDO.
 
 UDO's can be created in the project-wide list by using the "+" button,
-and removed by using the "-" button to the left the table on top. UDO's
+and removed by using the bin button to the left the table on top. UDO's
 can also be dragged into this list from the library. You can also drag
 in a folder of UDO's from the library into this list, or copy/paste them
 using the popup menu. Dragging a folder is useful if you have a set of
@@ -34,16 +34,10 @@ UDO's you commonly use in all of your instrument designs.
 As UDO's may depend on other UDO's, the order in which they are
 generated can be significant. The UDO's in the table are generated from
 top-down. To shift the order of the opcodes up and down, select an
-opcode in the table and use the "^" and "V" buttons to push up and push
+opcode in the table and use the "arrow up" and "arrow down" buttons to push up and push
 down.
 
-| Shortcuts    | Description                                                                                                                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-| +           |add a blueUDO or a regular (Csound)UDO                                                                                                                                                                                   |
-| I            |import a blueUDO or a regulaer (Csound) UDO                                                                                                                                                                                   |
-| -           |remove selected blueUDO or regular (Csound) UDO                                                                                                                                                                                  |
-| ^            |push UDO up                                                                                                                                                                                   |
-| V           |push UDO down                                                                                                                                                                                   |
+![ User-Defined Opcodes Manager ](../../../images/udoButtons.png)
 
 Two types of UDO's may be imported or exported: the blueUDO and the regular 
 Csound UDO. The blueUDO has the option of adding comments and information
