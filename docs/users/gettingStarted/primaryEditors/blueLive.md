@@ -167,7 +167,7 @@ take the incoming note data, map it according to the values configured
 in the MIDI Input Panel window (available from the Windows Menu), and
 then generate notes and pass them to Csound.
 
-For a MIDI note on, Blue will the channel number of the note and map it
+For a MIDI note on, Blue will use the channel number of the note and map it
 to the instrument in the orchestra manager by index. For example, if you
 have three instruments numbered 1, 3, and 5, notes for MIDI channel 1
 will generate with instr 1, notes for MIDI channel 2 will generate with
