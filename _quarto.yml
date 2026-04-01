@@ -1,0 +1,142 @@
+project:
+  type: book
+  output-dir: _build/html
+
+book:
+  title: "Blue Manual"
+  author: "Steven Yi"
+  favicon: images/favicon.ico
+  repo-url: https://github.com/kunstmusik/blue-manual
+  repo-branch: master
+  repo-actions: [edit, issue]
+  
+  search: true
+  
+  sidebar:
+    style: "docked"
+    collapse-level: 1
+    
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - part: "Getting Started"
+      chapters:
+        - gettingStarted/usersIntro.qmd
+        - gettingStarted/installation.qmd
+        - gettingStarted/programOptions.qmd
+    - part: "Primary Editors"
+      chapters:
+        - gettingStarted/primaryEditors/scoreTimeline.qmd
+        - gettingStarted/primaryEditors/orchestraManager.qmd
+        - gettingStarted/primaryEditors/udoManager.qmd
+        - gettingStarted/primaryEditors/projectProperties.qmd
+        - gettingStarted/primaryEditors/mixer.qmd
+        - gettingStarted/primaryEditors/blueLive.qmd
+        - gettingStarted/primaryEditors/tablesManager.qmd
+        - gettingStarted/primaryEditors/globalsManager.qmd
+    - part: "Tools"
+      chapters:
+        - gettingStarted/tools/codeEditor.qmd
+        - gettingStarted/tools/blueShare.qmd
+        - gettingStarted/tools/codeRepository.qmd
+        - gettingStarted/tools/effectsLibrary.qmd
+        - gettingStarted/tools/csoundrcEditor.qmd
+        - gettingStarted/tools/scannedMatrix.qmd
+        - gettingStarted/tools/soundFontViewer.qmd
+        - gettingStarted/tools/ftableConverter.qmd
+        - gettingStarted/tools/pythonConsole.qmd
+        - gettingStarted/tools/userTools.qmd
+    - part: "Other Features"
+      chapters:
+        - gettingStarted/otherFeatures/autoBackup.qmd
+        - gettingStarted/otherFeatures/soundObjectFreezing.qmd
+        - gettingStarted/otherFeatures/auditionSoundObjects.qmd
+        - gettingStarted/otherFeatures/importCSD.qmd
+        - gettingStarted/otherFeatures/importMIDI.qmd
+        - gettingStarted/otherFeatures/blueVariables.qmd
+        - gettingStarted/otherFeatures/commandLine.qmd
+        - gettingStarted/otherFeatures/programScripts.qmd
+    - part: "Concepts"
+      chapters:
+        - concepts/rendering.qmd
+        - concepts/soundObjects.qmd
+        - concepts/polyObjects.qmd
+        - concepts/noteProcessors.qmd
+        - concepts/soundObjectLibrary.qmd
+        - concepts/parameterAutomation.qmd
+        - concepts/commandBlocks.qmd
+    - part: "Reference - SoundObjects"
+      chapters:
+        - reference/soundObjects/top.qmd
+        - reference/soundObjects/audioFileObject.qmd
+        - reference/soundObjects/comment.qmd
+        - reference/soundObjects/clojureObject.qmd
+        - reference/soundObjects/external.qmd
+        - reference/soundObjects/genericScore.qmd
+        - reference/soundObjects/instance.qmd
+        - reference/soundObjects/javaScriptObject.qmd
+        - reference/soundObjects/jmask.qmd
+        - reference/soundObjects/lineObject.qmd
+        - reference/soundObjects/objectBuilder.qmd
+        - reference/soundObjects/patternObject.qmd
+        - reference/soundObjects/pianoRoll.qmd
+        - reference/soundObjects/polyObject.qmd
+        - reference/soundObjects/pythonObject.qmd
+        - reference/soundObjects/sound.qmd
+        - reference/soundObjects/tracker.qmd
+        - reference/soundObjects/zakLineObject.qmd
+    - part: "Reference - Note Processors"
+      chapters:
+        - reference/noteProcessors/top.qmd
+        - reference/noteProcessors/addProcessor.qmd
+        - reference/noteProcessors/equalsProcessor.qmd
+        - reference/noteProcessors/inversionProcessor.qmd
+        - reference/noteProcessors/lineAddProcessor.qmd
+        - reference/noteProcessors/lineMultiplyProcessor.qmd
+        - reference/noteProcessors/multiplyProcessor.qmd
+        - reference/noteProcessors/pchAddProcessor.qmd
+        - reference/noteProcessors/pchInversionProcessor.qmd
+        - reference/noteProcessors/pythonProcessor.qmd
+        - reference/noteProcessors/randomAddProcessor.qmd
+        - reference/noteProcessors/randomMultiplyProcessor.qmd
+        - reference/noteProcessors/retrogradeProcessor.qmd
+        - reference/noteProcessors/rotateProcessor.qmd
+        - reference/noteProcessors/subListProcessor.qmd
+        - reference/noteProcessors/switchProcessor.qmd
+        - reference/noteProcessors/timeWarpProcessor.qmd
+        - reference/noteProcessors/tuningProcessor.qmd
+    - part: "Reference - Instruments"
+      chapters:
+        - reference/instruments/top.qmd
+        - reference/instruments/genericInstrument.qmd
+        - reference/instruments/pythonInstrument.qmd
+        - reference/instruments/javaScriptInstrument.qmd
+        - reference/instruments/blueX7.qmd
+        - reference/instruments/blueSynthBuilder.qmd
+    - reference/shortcuts.qmd
+    - part: "Tasks"
+      chapters:
+        - tasks/addSoundFiles.qmd
+        - tasks/createEncapsulatedInstruments.qmd
+    - appendixA.qmd
+    - appendixB.qmd
+    - bestPractices.qmd
+    - glossary.qmd
+    - credits.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    code-copy: true
+    code-overflow: scroll
+    toc: true
+    number-sections: false
+    
+  pdf:
+    documentclass: book
+    toc: true
+    number-sections: false
+    colorlinks: true
+    geometry: margin=1in
