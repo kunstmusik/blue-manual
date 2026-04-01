@@ -105,9 +105,10 @@ Csound Executable
     "csound". You may use any command here that would call Csound that
     would work as if you were running csound from a terminal.
     
-    !!! note 
-        The value defined for Csound Executable should only be the command
-        to call Csound and no other flags should be added here.
+    ::: {.callout-note}
+    The value defined for Csound Executable should only be the command
+    to call Csound and no other flags should be added here.
+    :::
 
 Freeze Flags  
 :   These are the flags for Csound that Blue uses when performing
@@ -136,9 +137,10 @@ Csound Executable
     If you are using the API, you still need to have something set here.
     You can set it to "csound" in that case.
     
-    !!! note 
-        The value defined for Csound Executable should only be the command
-        to call Csound and no other flags should be added here.
+    ::: {.callout-note}
+    The value defined for Csound Executable should only be the command
+    to call Csound and no other flags should be added here.
+    :::
     
 
 Render Method  
@@ -191,14 +193,14 @@ Audio Out
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
-    !!! note 
-    
-        If the driver is chosen but not enabled for use via its checkbox,
-        when auto-detecting, Blue will check for devices against the default
-        driver and not necessarily what is in the dropdown. Please be sure
-        that if you are planning to use the auto-detect feature with a
-        particular driver that you also select the driver and enable it with
-        the checkbox.
+    ::: {.callout-note}
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, Blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -219,13 +221,14 @@ Audio In
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
-    !!! note 
-        If the driver is chosen but not enabled for use via its checkbox,
-        when auto-detecting, Blue will check for devices against the default
-        driver and not necessarily what is in the dropdown. Please be sure
-        that if you are planning to use the auto-detect feature with a
-        particular driver that you also select the driver and enable it with
-        the checkbox.
+    ::: {.callout-note}
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, Blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -253,13 +256,13 @@ MIDI Out
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
 
-    !!! note 
-    
-        If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default
-        driver and not necessarily what is in the dropdown. Please be sure
-        that if you are planning to use the auto-detect feature with a
-        particular driver that you also select the driver and enable it with
-        the checkbox.
+    ::: {.callout-note}
+    If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -279,14 +282,14 @@ MIDI In
     will then populate the textfield with the correct device string that
     Csound will use to choose the device requested.
     
-    !!! note
-
-        If the driver is chosen but not enabled for use via its checkbox,
-        when auto-detecting, Blue will check for devices against the default
-        driver and not necessarily what is in the dropdown. Please be sure
-        that if you are planning to use the auto-detect feature with a
-        particular driver that you also select the driver and enable it with
-        the checkbox.
+    ::: {.callout-note}
+    If the driver is chosen but not enabled for use via its checkbox,
+    when auto-detecting, Blue will check for devices against the default
+    driver and not necessarily what is in the dropdown. Please be sure
+    that if you are planning to use the auto-detect feature with a
+    particular driver that you also select the driver and enable it with
+    the checkbox.
+    :::
     
     Enabling the checkbox determines if this device will be enabled by
     default for new projects.
@@ -345,10 +348,10 @@ Csound Executable
     dialog so that you can find and select the csound executable to use
     to run Csound.
 
-    !!! note 
-    
-        The value defined for Csound Executable should only be the command
-        to call Csound and no other flags should be added here.
+    ::: {.callout-note}
+    The value defined for Csound Executable should only be the command
+    to call Csound and no other flags should be added here.
+    :::
     
 Render Method  
 :   Choose which render service to use for rendering the project. When
@@ -494,5 +497,6 @@ Blue:
 
   - /blueLive/toggleMidiInput
 
-!!! note
-    When you want to use the OSC protocol for sending OSC data to control an external DAW or another program capable of handling OSC data, be sure that the Server Port of Blue will not conflict with this particular port. 
+::: {.callout-note}
+When you want to use the OSC protocol for sending OSC data to control an external DAW or another program capable of handling OSC data, be sure that the Server Port of Blue will not conflict with this particular port. 
+:::

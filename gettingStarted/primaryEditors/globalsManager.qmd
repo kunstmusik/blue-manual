@@ -43,8 +43,9 @@ regardless of when the score starts. If the the Blue variable was note
 used and was put as a note in the Score timeline, the reverb may not
 run.
 
-!!! note
-    When Blue variables were created, Blue did not have a Mixer system
-    implemented. The above system continues to function, the practice of
-    using the Mixer is highly recommended. This feature is left in for
-    legacy projects.
+::: {.callout-note}
+When Blue variables were created, Blue did not have a Mixer system
+implemented. The above system continues to function, the practice of
+using the Mixer is highly recommended. This feature is left in for
+legacy projects.
+:::

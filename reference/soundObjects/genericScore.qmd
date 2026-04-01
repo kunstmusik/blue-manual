@@ -26,9 +26,10 @@ i1 4 2 2 3 4 5
 i1 6 2 2 3 4 5
 ```
 
-!!! note
-    Score blocks support only a subset of the Csound Score Syntax. Using "+"
-    in p2 and "." in pfields, as well as "<" and "\>" is supported.
+::: {.callout-note}
+Score blocks support only a subset of the Csound Score Syntax. Using "+"
+in p2 and "." in pfields, as well as "<" and "\>" is supported.
+:::
 
 The option Set Subjective Time to Objective Time (right click on Object) 
 adjusts the duration of the object to match the duration of the contents. 

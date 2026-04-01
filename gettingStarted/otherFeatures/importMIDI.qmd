@@ -65,11 +65,12 @@ will generate the notes with one SoundLayer per MIDI track, and on each
 SoundLayer it will contain one GenericScore SoundObject containing the
 converted MIDI score.
 
-!!! note
-    The current implementation does not handle cases where there are
-    overlapping notes of the same MIDI note number within the same track and
-    results are unpredictable. Also, only MIDI files where time is PPQ is
-    supported at the moment (non-SMPTE). Users wanting support for either of
-    these cases or have other ideas they would like implemented are
-    requested to make feature requests on the Blue mailing list or to use
-    the help menu "Request a Feature" option.
+::: {.callout-note}
+The current implementation does not handle cases where there are
+overlapping notes of the same MIDI note number within the same track and
+results are unpredictable. Also, only MIDI files where time is PPQ is
+supported at the moment (non-SMPTE). Users wanting support for either of
+these cases or have other ideas they would like implemented are
+requested to make feature requests on the Blue mailing list or to use
+the help menu "Request a Feature" option.
+:::

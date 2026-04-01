@@ -1,7 +1,8 @@
 # Introduction to Csound
 
-Currently, this section is not yet written.
+If you are new to Csound, I suggest the following resources:
 
-For more information on Csound, please read Dr. Richard Boulanger's
-wonderful TOOTS for Csound, available at
-[here](http://csounds.com/toots/).
+1. [Csound FLOSS Manual](https://flossmanual.csound.com/)
+2. [Csound Documentation](https://csound.com/docs/manual/)
+
+For additional resources (forums, Discord, mailing lists), please visit the [Csound](https://csound.com) home page.

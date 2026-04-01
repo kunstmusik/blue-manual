@@ -28,6 +28,7 @@ i1  1.5 0.5 7.00
 (The p2 and p3 times above are post-processing for a 2 second duration
 SoundObject with time behavior set to scale.)
 
-!!! tip
-    One can use this NoteProcessor to quickly try testing a score with
-    another insturment. To do this, use this NoteProcessor to reassign p1.
+::: {.callout-tip}
+One can use this NoteProcessor to quickly try testing a score with
+another insturment. To do this, use this NoteProcessor to reassign p1.
+:::

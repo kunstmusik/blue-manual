@@ -30,10 +30,11 @@ push up and down Layer Groups to reorganize them. The same
 add/remove/push up/push down actions are also available for Layers
 within a Layer Group.
 
-!!! note
-    Add/Remove/Push Up/Push Down for layers is also available while working
-    in the main score area by right-clicking the Layer panels on the right
-    and selecting the options from the popup menu.
+::: {.callout-note}
+Add/Remove/Push Up/Push Down for layers is also available while working
+in the main score area by right-clicking the Layer panels on the right
+and selecting the options from the popup menu.
+:::
 
 A tutorial video on the Layer Groups can be found 
 [here](https://www.youtube.com/watch?v=O2QkPMP0Rrc&t=319s).
@@ -218,10 +219,10 @@ and releasing to update the fade's duration. The fade type may also be
 modified by right clicking within a fade area and choosing the fade type
 using the popup menu.
 
-!!! note
-
-    At the moment, 8-bit and 16-bit audio data, in mono and stereo, 
-    with sample rates from 8 kHz to 48 kHz are supported.
+::: {.callout-note}
+At the moment, 8-bit and 16-bit audio data, in mono and stereo, 
+with sample rates from 8 kHz to 48 kHz are supported.
+:::
 
 For more information about Fades, please see Ardour's manual entry on
 [Region Fades and

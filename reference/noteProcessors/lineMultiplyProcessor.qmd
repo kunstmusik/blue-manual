@@ -40,7 +40,8 @@ until after processing with noteProcessors. Therefore, the beat values
 given in the LineMultiplyString were to be applied against the beat
 values of the original score.
 
-!!! note
+::: {.callout-note}
 Line Multiplying is done over the objective duration of the Object, so 
 the length of the Object as if Time Behavior would have been set to None.
+:::
 

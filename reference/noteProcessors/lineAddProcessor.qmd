@@ -37,6 +37,7 @@ SoundObjects do not apply scaling of score until after processing with
 noteProcessors. Therefore, the beat values given in the LineAddString
 were to be applied against the beat values of the original score.
 
-!!! note
+::: {.callout-note}
 Line Adding is done over the objective duration of the Object, so the 
 length of the Object as if Time Behavior would have been set to None.
+:::

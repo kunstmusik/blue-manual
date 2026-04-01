@@ -7,5 +7,5 @@ out of blue.
 
 ## Encapsulate your instruments
 
-add information here and link to task section regarding instrument
+TODO: add information here and link to task section regarding instrument
 encapsulation

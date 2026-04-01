@@ -97,25 +97,26 @@ Csound. Blue should work out-of-the-box with the API if Csound is
 installed using the installers provided on Github, or installed via a
 package manager if on Linux.
 
-!!! note
-    Blue currently only works with the API if the version of Csound used is
-    compiled using 64-bit doubles. (The float version is not supported when
-    using the API.) There are technical difficulties in supporting two
-    different versions of Csound API in the same build and it is not known
-    if or when the float build will be supported. For users interested in
-    using the float build of Csound with Blue, you will need to run Blue
-    using the command-line Csound mode.
+::: {.callout-note}
+Blue currently only works with the API if the version of Csound used is
+compiled using 64-bit doubles. (The float version is not supported when
+using the API.) There are technical difficulties in supporting two
+different versions of Csound API in the same build and it is not known
+if or when the float build will be supported. For users interested in
+using the float build of Csound with Blue, you will need to run Blue
+using the command-line Csound mode.
 
-    Additionally, the architecture that Csound is compiled for must match
-    the architecture of the Java runtime you are using. For example, on
-    Windows, Csound is currently only built for x86\_64/amd64 CPU (i.e.
-    64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
-    will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
-    an issue as Csound is compiled as a universal binary for both i386 and
-    x86\_64. On Linux, it is likely that the version of Csound you
-    install/compile and the Java Runtime that you install will likely be the
-    same, but if the API does not show as available it may be something to
-    check.
+Additionally, the architecture that Csound is compiled for must match
+the architecture of the Java runtime you are using. For example, on
+Windows, Csound is currently only built for x86\_64/amd64 CPU (i.e.
+64-bit Windows) and not x86 (i.e. 32-bit Windows). In this case, you
+will need to run Blue using a 64-bit Java Runtime. For OSX, this is not
+an issue as Csound is compiled as a universal binary for both i386 and
+x86\_64. On Linux, it is likely that the version of Csound you
+install/compile and the Java Runtime that you install will likely be the
+same, but if the API does not show as available it may be something to
+check.
+:::
 
 Blue uses the CsoundJNI Java binding for Csound. This requires that Blue
 can find your installed version of Csound but is configured to do so for

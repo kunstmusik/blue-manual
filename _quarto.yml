@@ -14,7 +14,7 @@ book:
   
   sidebar:
     style: "docked"
-    collapse-level: 2
+    collapse-level: 1
     
   chapters:
     - index.qmd
@@ -122,12 +122,6 @@ book:
     - appendixB.qmd
     - bestPractices.qmd
     - glossary.qmd
-    - part: "Developers"
-      chapters:
-        - developers/top.qmd
-        - developers/extending.qmd
-        - developers/core/top.qmd
-        - developers/core/building.qmd
     - credits.qmd
 
 format:

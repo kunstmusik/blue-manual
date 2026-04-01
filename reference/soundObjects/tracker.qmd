@@ -245,9 +245,9 @@ By default, the base octave starts at middle-c.
 | 0        | 10.03     | 10.3           | 87         |
 | p        | 10.04     | 10.4           | 88         |
 
+::: {.callout-note}
+## For More Information
 
-!!! note "For More Information"
-
-    See the tracker.blue example file in the blue/examples/soundObjects
-    folder.
-
+See the tracker.blue example file in the blue/examples/soundObjects
+folder.
+:::

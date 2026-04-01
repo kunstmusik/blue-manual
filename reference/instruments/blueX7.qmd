@@ -1,7 +1,8 @@
 # BlueX7
 
-!!! note
-    This instrument is currently undergoing re-implementation.
+::: {.callout-note}
+This instrument is currently undergoing re-implementation.
+:::
 
 A 6 Operator Phase Modulation instrument using Russell Pinkston's DX7
 Emulation Patches.

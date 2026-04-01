@@ -34,10 +34,11 @@ hide or show the properties panel on the right, as shown below:
 
 ![Pattern Object Properties](/images/patternObject2.png)
 
-!!! note
-    Editing the time values will clear out any pattern triggers that the
-    user has entered. It is recommended that one first decide the pattern
-    time properties before working with the PatternObject.
+::: {.callout-note}
+Editing the time values will clear out any pattern triggers that the
+user has entered. It is recommended that one first decide the pattern
+time properties before working with the PatternObject.
+:::
 
 ##  Adding Patterns
 

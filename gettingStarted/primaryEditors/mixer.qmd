@@ -172,9 +172,10 @@ Values from the widgets follow the same principles as BlueSynthBuilder,
 and code completion for opcodes (ctrl-space) and BSB widgets
 (ctrl-shift-space) work within the code editor.
 
-!!! note
-    Blue currently expects Effects to have nchnls number of channels in and
-    out where nchnls is the number set by the project.
+::: {.callout-note}
+Blue currently expects Effects to have nchnls number of channels in and
+out where nchnls is the number set by the project.
+:::
 
 ## Other Notes
 

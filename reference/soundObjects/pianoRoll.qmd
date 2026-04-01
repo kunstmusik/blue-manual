@@ -132,33 +132,34 @@ either a frequency, PCH, or MIDI note number value, depending on how the Piano R
 configured in its properties. The other values will pass through as part
 of the note.
 
-!!! warning
-    Caution should be used when creating a Note Template string to make sure
-    that there are enough spaces allowed between replacement strings. For
-    example, the following:
+::: {.callout-warning}
+Caution should be used when creating a Note Template string to make sure
+that there are enough spaces allowed between replacement strings. For
+example, the following:
 
-    ``` 
-    i<INSTR_ID> <START> <DUR> <FREQ> <FREQ> 0 1 1
-    ```
+``` 
+i<INSTR_ID> <START> <DUR> <FREQ> <FREQ> 0 1 1
+```
 
-    would result in:
+would result in:
 
-    ``` 
-    i1 0 2 440 440 0 1 1
-    ```
+``` 
+i1 0 2 440 440 0 1 1
+```
 
-    while the following:
+while the following:
 
-    ``` 
-    i<INSTR_ID> <START> <DUR> <FREQ><FREQ> 0 1 1
-    ```
+``` 
+i<INSTR_ID> <START> <DUR> <FREQ><FREQ> 0 1 1
+```
 
-    which does not have proper space between the two <FREQ\> tags, results
-    in:
+which does not have proper space between the two <FREQ\> tags, results
+in:
 
-    ``` 
-    i1 0 2 440440 0 1 1
-    ```
+``` 
+i1 0 2 440440 0 1 1
+```
+:::
 
 ### Time Options
 
@@ -239,7 +240,8 @@ Note that when editing field definitions in the PianoRoll properties for PianoRo
 
 ## Additional Information
 
-!!! note "For more Information"
+::: {.callout-note}
+## For more Information
 
-    See the example .blue file in the blue/examples/soundObjects folder.
-
+See the example .blue file in the blue/examples/soundObjects folder.
+:::
