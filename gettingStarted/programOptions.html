@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Setting Up Program Options – Blue Manual</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../gettingStarted/primaryEditors/scoreTimeline.html" rel="next">
+<link href="../gettingStarted/installation.html" rel="prev">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-02e807870d3c38ee225cc8ff2e1b2aa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gettingStarted/usersIntro.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../gettingStarted/programOptions.html"><span class="chapter-title">Setting Up Program Options</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Blue Manual</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/kunstmusik/blue-manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Blue Manual</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/usersIntro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/installation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Installation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/programOptions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Setting Up Program Options</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Primary Editors</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/scoreTimeline.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Score Timeline</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/orchestraManager.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Orchestra Manager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/udoManager.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">User-Defined Opcodes Manager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/projectProperties.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Properties</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/mixer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Mixer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/blueLive.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Blue Live</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/tablesManager.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tables Manager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/primaryEditors/globalsManager.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Globals Manager</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/codeEditor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Code Editor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/blueShare.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">BlueShare</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/codeRepository.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Code Repository</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/effectsLibrary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Effects Library</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/csoundrcEditor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">.csoundrc Editor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/scannedMatrix.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Scanned Synthesis Matrix Editor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/soundFontViewer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sound Font Viewer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/ftableConverter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">FTable Converter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/pythonConsole.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Console</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/tools/userTools.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">User-Defined Tools</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Other Features</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/autoBackup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">AutoBackup and Recovery</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/soundObjectFreezing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sound Object Freezing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/auditionSoundObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Auditioning SoundObjects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/importCSD.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Importing ORC/SCO and CSD Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/importMIDI.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Importing MIDI Files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/blueVariables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Blue Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/commandLine.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Command Line Options for Blue</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gettingStarted/otherFeatures/programScripts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Program Scripts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Concepts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/rendering.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Rendering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/soundObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">SoundObjects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/polyObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/noteProcessors.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NoteProcessors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/soundObjectLibrary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">SoundObject Library</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/parameterAutomation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Parameter Automation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../concepts/commandBlocks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Command Blocks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference - SoundObjects</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/top.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sound Objects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/audioFileObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">AudioFile</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/comment.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Comment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/clojureObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ClojureObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/external.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">External SoundObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/genericScore.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">GenericScore</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/instance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Instance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/javaScriptObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JavaScriptObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/jmask.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JMask</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/lineObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">LineObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/objectBuilder.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ObjectBuilder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/patternObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PatternObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/pianoRoll.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PianoRoll</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/polyObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PolyObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/pythonObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PythonObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/sound.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sound SoundObject</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/tracker.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tracker</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/soundObjects/zakLineObject.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">ZakLineObject</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference - Note Processors</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/top.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NoteProcessors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/addProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Add Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/equalsProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Equals Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/inversionProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Inversion Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/lineAddProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">LineAdd Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/lineMultiplyProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">LineMultiply Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/multiplyProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Multiply Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/pchAddProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pch Add Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/pchInversionProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pch Inversion Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/pythonProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/randomAddProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Random Add Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/randomMultiplyProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Random Multiply Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/retrogradeProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Retrograde Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/rotateProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Rotate Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/subListProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">SubList Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/switchProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Switch Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/timeWarpProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Time Warp Processor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/noteProcessors/tuningProcessor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tuning Processor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference - Instruments</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/instruments/top.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Instruments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/instruments/genericInstrument.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Generic Instrument</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/instruments/pythonInstrument.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Instrument</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/instruments/javaScriptInstrument.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JavaScript Instrument</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/instruments/blueX7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">BlueX7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/instruments/blueSynthBuilder.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">BlueSynthBuilder</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/shortcuts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Shortcuts</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tasks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tasks/addSoundFiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Add Sound Files to Your Project</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tasks/createEncapsulatedInstruments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Create Encapsulated Instruments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendixA.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction to Csound</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendixB.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Breaks in Backwards Compatibility</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bestPractices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Best Practices</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Glossary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../credits.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Credits</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a></li>
+  <li><a href="#project-defaults" id="toc-project-defaults" class="nav-link" data-scroll-target="#project-defaults">Project Defaults</a></li>
+  <li><a href="#playback" id="toc-playback" class="nav-link" data-scroll-target="#playback">Playback</a></li>
+  <li><a href="#utility" id="toc-utility" class="nav-link" data-scroll-target="#utility">Utility</a></li>
+  <li><a href="#realtime" id="toc-realtime" class="nav-link" data-scroll-target="#realtime">Realtime</a>
+  <ul class="collapse">
+  <li><a href="#project-settings" id="toc-project-settings" class="nav-link" data-scroll-target="#project-settings">Project Settings</a></li>
+  <li><a href="#devices" id="toc-devices" class="nav-link" data-scroll-target="#devices">Devices</a></li>
+  <li><a href="#buffer-settings" id="toc-buffer-settings" class="nav-link" data-scroll-target="#buffer-settings">Buffer Settings</a></li>
+  <li><a href="#message-level" id="toc-message-level" class="nav-link" data-scroll-target="#message-level">Message Level</a></li>
+  <li><a href="#advanced-settings" id="toc-advanced-settings" class="nav-link" data-scroll-target="#advanced-settings">Advanced Settings</a></li>
+  </ul></li>
+  <li><a href="#disk-render" id="toc-disk-render" class="nav-link" data-scroll-target="#disk-render">Disk Render</a>
+  <ul class="collapse">
+  <li><a href="#project-settings-1" id="toc-project-settings-1" class="nav-link" data-scroll-target="#project-settings-1">Project Settings</a></li>
+  <li><a href="#render-and-play-command" id="toc-render-and-play-command" class="nav-link" data-scroll-target="#render-and-play-command">Render and Play Command</a></li>
+  <li><a href="#file-output-settings" id="toc-file-output-settings" class="nav-link" data-scroll-target="#file-output-settings">File Output Settings</a></li>
+  <li><a href="#message-level-1" id="toc-message-level-1" class="nav-link" data-scroll-target="#message-level-1">Message Level</a></li>
+  <li><a href="#advanced-settings-1" id="toc-advanced-settings-1" class="nav-link" data-scroll-target="#advanced-settings-1">Advanced Settings</a></li>
+  </ul></li>
+  <li><a href="#midi" id="toc-midi" class="nav-link" data-scroll-target="#midi">MIDI</a></li>
+  <li><a href="#osc" id="toc-osc" class="nav-link" data-scroll-target="#osc">OSC</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/kunstmusik/blue-manual/edit/master/gettingStarted/programOptions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kunstmusik/blue-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../gettingStarted/usersIntro.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../gettingStarted/programOptions.html"><span class="chapter-title">Setting Up Program Options</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Setting Up Program Options</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The first thing you’ll want to do is set up your Program Options. Some settings are required for features of Blue to work (e.g., Render Settings), while others are there to help setup your project defaults and save you time when creating new projects.</p>
+<p>To open up the Program Options dialog, go to the File menu and click on “Program Options”.</p>
+<section id="general" class="level2">
+<h2 class="anchored" data-anchor-id="general">General</h2>
+<p><img src="../images/programOptions_general.png" class="img-fluid"></p>
+<dl>
+<dt>Work Directory</dt>
+<dd>
+The default directory that Blue should open when loading/saving Blue project files.
+</dd>
+<dt>Maintain Last Window State</dt>
+<dd>
+Enables saving of window location and size. If enabled, upon starting of program, window states will be restored.
+</dd>
+<dt>New User Defaults Enabled</dt>
+<dd>
+Enables default text for different objects in Blue. Curently this affects:
+<ul>
+<li>CodeRepository - when adding new Code Snippet</li>
+</ul>
+</dd>
+<dt>Draw Flat SoundObject Borders</dt>
+<dd>
+Enables older flat drawing style of SoundObject borders on the score timeline.
+</dd>
+<dt>Draw Alpha Background on Marquee</dt>
+<dd>
+If this is enabled, when selecting a group of SoundObjects on the Score Timeline the marquee that is drawn to show the selection area will paint with an alpha-transparent white background. (May slow down performance when enabled.)
+</dd>
+<dt>Show Csound Output</dt>
+<dd>
+If this is enabled, output from rendering with Csound will be shown in the Csound Output Dialog (accessible from the Window menu or available with the F7 shortcut). If disabled, output will be shown in the std.out of the console that opens when Blue starts. (If the Blue starter script has been modified not to show the console by using javaw instead of java, then the output will not be able to be seen). It is recommended to enable this option.
+</dd>
+<dt>Message Colors Enabled</dt>
+<dd>
+Since Csound5, the default for printed messages is to show them with colors by using ANSI text modifiers. However, this only works within ANSI-compliant consoles, and does not work within Blue’s Csound Output Dialog. It is recommended to keep this disabled if the “Show Csound Output” option is enabled.
+</dd>
+<dt>Language</dt>
+<dd>
+Which language to use for Blue. This affects the labels of the User Interface, messages given to the user in dialog boxes, menu titles, etc. (Translation files may not always be up to of date so some UI items may not be translated when not in English.)
+</dd>
+</dl>
+</section>
+<section id="project-defaults" class="level2">
+<h2 class="anchored" data-anchor-id="project-defaults">Project Defaults</h2>
+<p><img src="../images/programOptions_projectDefaults.png" class="img-fluid"></p>
+<p>These settings are used whenever new projects are created as defaults for the project, unless a default.blue file is found in the user’s Blue home directory, in which case the settings from the default.blue file are used.</p>
+<dl>
+<dt>Author</dt>
+<dd>
+Default author to use in new projects.
+</dd>
+<dt>Mixer Enabled</dt>
+<dd>
+Enable using the Blue Mixer in new projects by default.
+</dd>
+</dl>
+</section>
+<section id="playback" class="level2">
+<h2 class="anchored" data-anchor-id="playback">Playback</h2>
+<p><img src="../images/programOptions_playBack.png" class="img-fluid"></p>
+<dl>
+<dt>Time Pointer Animation Rate</dt>
+<dd>
+Rate of animation for time pointer to update when playing back in realtime, expressed in frames per second. For example, the default value of 20 means the time pointer is updated 20 times per second, giving a smooth animation rate. Slower values may be desirable on slower computers if the playback pointer is affecting performance.
+</dd>
+<dt>Latency Correction</dt>
+<dd>
+Float value in seconds to use as a correction for audio latency in the user’s sound playback mechanism. For example, if latency is quite bad on your soundcard and there is a delay of .5 seconds between when audio is passed to your soundcard and when the audio is actually realized from the DAC, the visual time pointer for Blue may appear ahead in time of what is being heard. Using a .5 value for latency correction would correct for this.
+</dd>
+</dl>
+</section>
+<section id="utility" class="level2">
+<h2 class="anchored" data-anchor-id="utility">Utility</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/programOptions_utility.png" class="img-fluid figure-img"></p>
+<figcaption>Program Options - Utility</figcaption>
+</figure>
+</div>
+<dl>
+<dt>Csound Executable</dt>
+<dd>
+This is the command for what version of Csound to execute when Blue uses utilities that depend on Csound (for example, freezing SoundObjects, the SoundFont Viewer utility). The default value of “csound” works if you have a version of Csound in your path named “csound”. You may use any command here that would call Csound that would work as if you were running csound from a terminal.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The value defined for Csound Executable should only be the command to call Csound and no other flags should be added here.</p>
+</div>
+</div>
+</dd>
+<dt>Freeze Flags</dt>
+<dd>
+These are the flags for Csound that Blue uses when performing SoundObject freezing. Defaults are “-Ado” for Mac and “-Wdo” for all other operating systems. Users may wish to modify this value if they would their frozen soundObjects to be in a different format, i.e. 32-bit float soundfiles.
+</dd>
+</dl>
+</section>
+<section id="realtime" class="level2">
+<h2 class="anchored" data-anchor-id="realtime">Realtime</h2>
+<p><img src="../images/programOptions_realtime.png" class="img-fluid"></p>
+<section id="project-settings" class="level3">
+<h3 class="anchored" data-anchor-id="project-settings">Project Settings</h3>
+<dl>
+<dt>Csound Executable</dt>
+<dd>
+This is a command for what version of Csound to execute when Blue renders the project in realtime. The default value of “csound” works if you have a version of Csound in your path named “csound”. You may use any command here that would call csound that would work as if you were running csound from a terminal.
+Using the button marked “…” on the right will open up a file dialog so that you can find and select the Csound executable to use to run Csound.
+If you are using the API, you still need to have something set here. You can set it to “csound” in that case.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The value defined for Csound Executable should only be the command to call Csound and no other flags should be added here.</p>
+</div>
+</div>
+</dd>
+<dt>Render Method</dt>
+<dd>
+Choose which render service to use for rendering the project. When the program loads, Blue will first try to see if the Csound 6 API is available and if so, show that option here. If it can not find the Csound 6 API, it will search for the Csound 5 API and show that option here instead if it is found. If neither is found, the Commandline Runner option will always be available to use.
+Note: If you have both Csound 5 and Csound 6 installed, you can force Blue to ignore Csound 6 on load by adding “-J-DDISABLE_CSOUND=true” to the blue/etc/blue.conf file in the default_options section. On OSX, this will be in blue.app/Contents/Resources/blue/etc/blue.conf.
+</dd>
+<dt>sr</dt>
+<dd>
+Default sr to use for realtime settings in new projects.
+</dd>
+<dt>ksmps</dt>
+<dd>
+Default ksmps to use for realtime settings in new projects.
+</dd>
+<dt>0dbfs</dt>
+<dd>
+Default value to use for 0dbfs. Also, the checkbox denotes whether projects should use 0dbfs by default or not.
+</dd>
+</dl>
+</section>
+<section id="devices" class="level3">
+<h3 class="anchored" data-anchor-id="devices">Devices</h3>
+<dl>
+<dt>Audio Driver</dt>
+<dd>
+Driver to use for audio input and output. This is equivalent to using the –rtaudio= flag setting on the commandline.
+Enabling the checkbox determines if this value will be used at all when rendering, and if so, will use the value from the dropdown as the driver setting.
+</dd>
+<dt>Audio Out</dt>
+<dd>
+Audio output device to use. Equivalent to using -o flag setting on the commandline. This setting is dependent on the setting used on the audio driver setting. Using a value of “dac” will use the default device for the driver.
+The value of this setting will be used for all projects that set “Audio Out” enabled in the project-level realtime render settings.
+By selecting the […] button to the right of this field, Blue will try to detect what devices are available for the chosen Audio Driver. If Blue is able to find the devices, a popup dialog will appear with a list of available devices. Selecting from the popup will then populate the textfield with the correct device string that Csound will use to choose the device requested.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default driver and not necessarily what is in the dropdown. Please be sure that if you are planning to use the auto-detect feature with a particular driver that you also select the driver and enable it with the checkbox.</p>
+</div>
+</div>
+Enabling the checkbox determines if this device will be enabled by default for new projects.
+</dd>
+<dt>Audio In</dt>
+<dd>
+Audio input device to use. Equivalent to using -i flag setting on the commandline. This setting is dependent on the setting used on the audio driver setting. Using a value of “adc” will use the default device for the driver.
+The value of this setting will be used for all projects that set “Audio In” enabled in the project-level realtime render settings.
+By selecting the […] button to the right of this field, Blue will try to detect what devices are available for the chosen Audio Driver. If Blue is able to find the devices, a popup dialog will appear with a list of available devices. Selecting from the popup will then populate the textfield with the correct device string that Csound will use to choose the device requested.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default driver and not necessarily what is in the dropdown. Please be sure that if you are planning to use the auto-detect feature with a particular driver that you also select the driver and enable it with the checkbox.</p>
+</div>
+</div>
+Enabling the checkbox determines if this device will be enabled by default for new projects.
+</dd>
+<dt>MIDI Driver</dt>
+<dd>
+Driver to use for MIDI input and output. This is equivalent to using the –rtmidi= flag setting on the commandline.
+Enabling the checkbox determines if this value will be used at all when rendering, and if so, will use the value from the dropdown as the driver setting.
+</dd>
+<dt>MIDI Out</dt>
+<dd>
+MIDI output device to use. Equivalent to using -Q flag setting on the commandline. This setting is dependent on the setting used on the MIDI driver setting.
+The value of this setting will be used for all projects that set “MIDI Out” enabled in the project-level realtime render settings.
+By selecting the […] button to the right of this field, Blue will try to detect what devices are available for the chosen MIDI Driver. If Blue is able to find the devices, a popup dialog will appear with a list of available devices. Selecting from the popup will then populate the textfield with the correct device string that Csound will use to choose the device requested.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default driver and not necessarily what is in the dropdown. Please be sure that if you are planning to use the auto-detect feature with a particular driver that you also select the driver and enable it with the checkbox.</p>
+</div>
+</div>
+Enabling the checkbox determines if this device will be enabled by default for new projects.
+</dd>
+<dt>MIDI In</dt>
+<dd>
+MIDI input device to use. Equivalent to using -M flag setting on the commandline. This setting is dependent on the setting used on the audio driver setting.
+The value of this setting will be used for all projects that set “MIDI In” enabled in the project-level realtime render settings.
+By selecting the […] button to the right of this field, Blue will try to detect what devices are available for the chosen MIDI Driver. If Blue is able to find the devices, a popup dialog will appear with a list of available devices. Selecting from the popup will then populate the textfield with the correct device string that Csound will use to choose the device requested.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the driver is chosen but not enabled for use via its checkbox, when auto-detecting, Blue will check for devices against the default driver and not necessarily what is in the dropdown. Please be sure that if you are planning to use the auto-detect feature with a particular driver that you also select the driver and enable it with the checkbox.</p>
+</div>
+</div>
+Enabling the checkbox determines if this device will be enabled by default for new projects.
+</dd>
+</dl>
+</section>
+<section id="buffer-settings" class="level3">
+<h3 class="anchored" data-anchor-id="buffer-settings">Buffer Settings</h3>
+<dl>
+<dt>Software Buffer</dt>
+<dd>
+Size of software sample buffer to use (-b). For more information, see CommandFlags section of Csound manual for settings.
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+<dt>Hardware Buffer</dt>
+<dd>
+Size of hardware sample buffer to use (-B). For more information, see CommandFlags section of Csound manual for settings.
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+</dl>
+</section>
+<section id="message-level" class="level3">
+<h3 class="anchored" data-anchor-id="message-level">Message Level</h3>
+<dl>
+<dt>Note Amplitudes</dt>
+<dd>
+Enables note amplitude messages from Csound (-m1)
+</dd>
+<dt>Out-of-Range Messages</dt>
+<dd>
+Enables samples out of range messages from Csound (-m2)
+</dd>
+<dt>Warnings</dt>
+<dd>
+Enables warning messages from Csound (-m4)
+</dd>
+<dt>Benchmark Information</dt>
+<dd>
+Enables benchmark information from Csound (-m128)
+</dd>
+</dl>
+</section>
+<section id="advanced-settings" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-settings">Advanced Settings</h3>
+<dl>
+<dt>Advanced Settings</dt>
+<dd>
+Extra flags to append to the commandline that might not be covered by options in the UI. Pressing the [?] button will open the documentation for the Csound command flags.
+</dd>
+</dl>
+</section>
+</section>
+<section id="disk-render" class="level2">
+<h2 class="anchored" data-anchor-id="disk-render">Disk Render</h2>
+<p><img src="../images/programOptions_diskRender.png" class="img-fluid"></p>
+<section id="project-settings-1" class="level3">
+<h3 class="anchored" data-anchor-id="project-settings-1">Project Settings</h3>
+<dl>
+<dt>Csound Executable</dt>
+<dd>
+This is a command for what version of csound to execute when Blue renders the project to disk. The default value of “csound” works if you have a version of Csound in your path named “csound”. You may use any command here that would call csound that would work as if you were running csound from a terminal.
+Using the button marked “…” on the right will open up a file dialog so that you can find and select the csound executable to use to run Csound.
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The value defined for Csound Executable should only be the command to call Csound and no other flags should be added here.</p>
+</div>
+</div>
+</dd>
+<dt>Render Method</dt>
+<dd>
+Choose which render service to use for rendering the project. When the program loads, Blue will first try to see if the Csound 6 API is available and if so, show that option here. If it can not find the Csound 6 API, it will search for the Csound 5 API and show that option here instead if it is found. If neither is found, the Commandline Runner option will always be available to use.
+Note: If you have both Csound 5 and Csound 6 installed, you can force Blue to ignore Csound 6 on load by adding “-J-DDISABLE_CSOUND=true” to the blue/etc/blue.conf file in the default_options section. On OSX, this will be in blue.app/Contents/Resources/blue/etc/blue.conf.
+</dd>
+<dt>sr</dt>
+<dd>
+Default sr to use for disk render settings in new projects.
+</dd>
+<dt>ksmps</dt>
+<dd>
+Default ksmps to use for disk render settings in new projects.
+</dd>
+<dt>nchnls</dt>
+<dd>
+Default nchnls to use for disk render settings in new projects.
+</dd>
+<dt>0dbfs</dt>
+<dd>
+Default value to use for 0dbfs. Also, the checkbox denotes whether projects should use 0dbfs by default or not.
+</dd>
+</dl>
+</section>
+<section id="render-and-play-command" class="level3">
+<h3 class="anchored" data-anchor-id="render-and-play-command">Render and Play Command</h3>
+<dl>
+<dt>Enabled</dt>
+<dd>
+Enable using custom play command when using “Render and Play”. If not enabled, Blue’s built-in audio player will be used once the project is finished rendering to disk.
+</dd>
+<dt>Command</dt>
+<dd>
+Command to call after finished rendering a project. The command line given should use the $outfile property where the name of the generated audio file should be passed to the program. For example, to open the rendered audio with VLC on Mac OSX, you can use this command line:
+<pre><code>open -a VLC $outfile</code></pre>
+</dd>
+<dd>
+In Linux the command line could be:
+<pre><code>cvlc $outfile</code></pre>
+or even using the minimalistic sox player (if installed):
+<pre><code>play $outfile</code></pre>
+</dd>
+</dl>
+</section>
+<section id="file-output-settings" class="level3">
+<h3 class="anchored" data-anchor-id="file-output-settings">File Output Settings</h3>
+<dl>
+<dt>File Format</dt>
+<dd>
+File format to use (i.e.&nbsp;WAV, AIFF, AU, etc.)
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+<dt>Sample Format</dt>
+<dd>
+Sample format to use. The default of SHORT is the same as 16-bit integer audio (the same as used for CD’s). Other formats are available in the dropdown to use.
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+<dt>Save Peak Information in Header</dt>
+<dd>
+Save the peak information in the file header.
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+<dt>Dither Output</dt>
+<dd>
+Use dither on output.
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+<dt>Rewrite Header while Rendering</dt>
+<dd>
+Rewrite the file header while rendering. This makes it possible to play the audio file in the middle of a render and is useful when the rendering of the project will take a very long time. However, it does slow down overall render time.
+Enabling the checkbox determines if this value will be used at all when rendering.
+</dd>
+</dl>
+</section>
+<section id="message-level-1" class="level3">
+<h3 class="anchored" data-anchor-id="message-level-1">Message Level</h3>
+<dl>
+<dt>Note Amplitudes</dt>
+<dd>
+Enables note amplitude messages from Csound (-m1)
+</dd>
+<dt>Out-of-Range Messages</dt>
+<dd>
+Enables samples out of range messages from Csound (-m2)
+</dd>
+<dt>Warnings</dt>
+<dd>
+Enables warning messages from Csound (-m4)
+</dd>
+<dt>Benchmark Information</dt>
+<dd>
+Enables benchmark information from Csound (-m128)
+</dd>
+</dl>
+</section>
+<section id="advanced-settings-1" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-settings-1">Advanced Settings</h3>
+<dl>
+<dt>Advanced Settings</dt>
+<dd>
+Extra flags to append to the commandline that might not be covered by options in the UI. Pressing the [?] button will open the documentation for the Csound command flags.
+</dd>
+</dl>
+</section>
+</section>
+<section id="midi" class="level2">
+<h2 class="anchored" data-anchor-id="midi">MIDI</h2>
+<p><img src="../images/programOptions_midi.png" class="img-fluid"></p>
+<p>These settings are for blue’s MIDI input, used with <a href="../primaryEditors/blueLive">BlueLive</a>. The table shows what devices are currently available, and whether they are enabled for use with BlueLive or not. You can use the “rescan” button to search for devices if you have just plugged in a device.</p>
+</section>
+<section id="osc" class="level2">
+<h2 class="anchored" data-anchor-id="osc">OSC</h2>
+<p><img src="../images/programOptions_osc.png" class="img-fluid"></p>
+<p>This allows you to set what port Blue will listen to for incoming OSC messages. Defaults to 8000. The following messages are understood by Blue:</p>
+<ul>
+<li><p>/score/play</p></li>
+<li><p>/score/stop</p></li>
+<li><p>/score/rewind</p></li>
+<li><p>/score/markerNext</p></li>
+<li><p>/score/markerPrevious</p></li>
+<li><p>/blueLive/onOff</p></li>
+<li><p>/blueLive/recompile</p></li>
+<li><p>/blueLive/allNotesOff</p></li>
+<li><p>/blueLive/toggleMidiInput</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you want to use the OSC protocol for sending OSC data to control an external DAW or another program capable of handling OSC data, be sure that the Server Port of Blue will not conflict with this particular port.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../gettingStarted/installation.html" class="pagination-link" aria-label="Installation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Installation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../gettingStarted/primaryEditors/scoreTimeline.html" class="pagination-link" aria-label="Score Timeline">
+        <span class="nav-page-text"><span class="chapter-title">Score Timeline</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/kunstmusik/blue-manual/edit/master/gettingStarted/programOptions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/kunstmusik/blue-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
