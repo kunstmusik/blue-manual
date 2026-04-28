@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../concepts/polyObjects.html" rel="next">
+<link href="../concepts/timeSystem.html" rel="next">
 <link href="../concepts/rendering.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-02e807870d3c38ee225cc8ff2e1b2aa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-533ebda9bb23b14835d92b13bda271ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -502,6 +502,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../concepts/timeSystem.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Time System</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../concepts/polyObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
@@ -868,7 +873,10 @@ ul.task-list li input[type="checkbox"] {
 <p>SoundObjects in Blue represent a <em>perceived sound idea, whether it be a single atomic sound event or aggregate of other sound objects</em>. A SoundObject on the timeline can represent many things, whether it is a single sound, a melody, a rhythm, a phrase, a section involving phrases and multiple lines, a gesture, or anything else that is a perceived sound idea.</p>
 <p>Just as there are many ways to think about music, each with their own model for describing sound and vocabulary for explaining music, there are a number of different SoundObjects in Blue. Each SoundObject in Blue is useful for different purposes, with some being more appropriate for expressing certain musical ideas than others. For example, using a scripting object like the PythonObject or JavaScriptObject would service a user who is trying to express a musical idea that may require an algorithmic basis, while the PianoRoll would be useful for those interested in notating melodic and harmonic ideas. The variety of different SoundObjects allows for users to choose what tool will be the most appropriate to express their musical ideas.</p>
 <p>Since there are many ways to express musical ideas, to fully allow the range of expression that Csound offers, Blue’s SoundObjects are capable of generating different things that Csound will use. Although most often they are used mostly for generating Csound SCO text, SoundObjects may also generate ftables, instruments, user-defined opcodes, Audiofiles, and everything else that would be needed to express a musical idea in Csound.</p>
-<p>Beyond each SoundObject’s unique capabilities, SoundObjects do share common qualities: name, start time, duration, end time. Most will also support a Time Behavior (Scale, Repeat, or None) which affects how the notes generated by the SoundObject will be adjusted–if at all–to the duration of the SoundObject. Most will also support NoteProcessors, another key tool in Csound for manipulating notes generated from a SoundObject. All SoundObjects also support a background color property, used strictly for visual purposes on the timeline.</p>
+<p>Beyond each SoundObject’s unique capabilities, SoundObjects do share common qualities: name, start time, subjective duration, and end time. In current versions of Blue, start time is edited as a <code>TimePosition</code> and duration is edited as a <code>TimeDuration</code>. In practice, this means that the timeline can preserve whether a value was entered as beats, bars and beats, clock time, SMPTE, seconds, or samples.</p>
+<p>Most SoundObjects also support a Time Behavior (<code>Scale</code>, <code>Repeat</code>, or <code>None</code>) which affects how the notes generated by the SoundObject will be adjusted, if at all, to the duration of the SoundObject. When a SoundObject uses a repeat-based time behavior, its repeat point is also edited as a duration-aware value rather than as a plain number.</p>
+<p>Most SoundObjects support NoteProcessors, another key tool in Csound for manipulating notes generated from a SoundObject. All SoundObjects also support a background color property, used strictly for visual purposes on the timeline.</p>
+<p>For a detailed explanation of ruler formats, time bases, and the difference between positions and durations, see <a href="../concepts/timeSystem.html">Time System</a>.</p>
 
 
 </section>
@@ -1294,8 +1302,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../concepts/polyObjects.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../concepts/timeSystem.html" class="pagination-link" aria-label="Time System">
+        <span class="nav-page-text"><span class="chapter-title">Time System</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

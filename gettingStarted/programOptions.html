@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-02e807870d3c38ee225cc8ff2e1b2aa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-533ebda9bb23b14835d92b13bda271ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -502,6 +502,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../concepts/timeSystem.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Time System</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../concepts/polyObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
@@ -832,7 +837,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a></li>
-  <li><a href="#project-defaults" id="toc-project-defaults" class="nav-link" data-scroll-target="#project-defaults">Project Defaults</a></li>
+  <li><a href="#project-defaults" id="toc-project-defaults" class="nav-link" data-scroll-target="#project-defaults">Project Defaults</a>
+  <ul class="collapse">
+  <li><a href="#timeline-defaults" id="toc-timeline-defaults" class="nav-link" data-scroll-target="#timeline-defaults">Timeline Defaults</a></li>
+  </ul></li>
   <li><a href="#playback" id="toc-playback" class="nav-link" data-scroll-target="#playback">Playback</a></li>
   <li><a href="#utility" id="toc-utility" class="nav-link" data-scroll-target="#utility">Utility</a></li>
   <li><a href="#realtime" id="toc-realtime" class="nav-link" data-scroll-target="#realtime">Realtime</a>
@@ -935,7 +943,42 @@ Default author to use in new projects.
 <dd>
 Enable using the Blue Mixer in new projects by default.
 </dd>
+<dt>Layer Height</dt>
+<dd>
+Default layer height for new SoundObject layers and other new layer groups that use the shared layer-height setting.
+</dd>
 </dl>
+<section id="timeline-defaults" class="level3">
+<h3 class="anchored" data-anchor-id="timeline-defaults">Timeline Defaults</h3>
+<p>The lower part of the Project Defaults panel sets the default timeline state for newly created projects. These values become the initial ruler, snap, and SMPTE settings for the new score. They can still be changed later from within the project.</p>
+<p>For more detail on ruler formats and snap behavior, see <a href="../concepts/timeSystem.html">Time System</a> and <a href="../gettingStarted/primaryEditors/scoreTimeline.html">Score Timeline</a>.</p>
+<dl>
+<dt>Primary Ruler</dt>
+<dd>
+Sets the initial primary ruler format for new projects. The default is <code>Beats</code>.
+</dd>
+<dt>Secondary Ruler</dt>
+<dd>
+Enables or disables the secondary ruler for new projects. The default is off.
+</dd>
+<dt>Secondary Format</dt>
+<dd>
+Sets the format used by the secondary ruler when it is enabled. The default is <code>Time</code>.
+</dd>
+<dt>Snap</dt>
+<dd>
+Enables or disables snap for new projects. The default is off.
+</dd>
+<dt>Snap Value</dt>
+<dd>
+Sets the initial snap value used when snap is enabled. The default is <code>Beat</code>.
+</dd>
+<dt>SMPTE Frame Rate</dt>
+<dd>
+Sets the default SMPTE frame rate for new projects. The default is <code>24 fps</code>.
+</dd>
+</dl>
+</section>
 </section>
 <section id="playback" class="level2">
 <h2 class="anchored" data-anchor-id="playback">Playback</h2>

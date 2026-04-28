@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-02e807870d3c38ee225cc8ff2e1b2aa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-533ebda9bb23b14835d92b13bda271ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -498,6 +498,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../concepts/soundObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">SoundObjects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../concepts/timeSystem.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Time System</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -977,17 +982,27 @@ Warning
 </section>
 <section id="time-options" class="level3">
 <h3 class="anchored" data-anchor-id="time-options">Time Options</h3>
-<p>The Time Options for the PianoRoll are available on the Notes page. The triangle arrow button in the upper right corner of the PianoRoll canvas will open and close the panel on the right that contains the properties.</p>
+<p>The PianoRoll has a <code>Ruler</code> button for configuring how the timeline is displayed. This dialog is separate from the note and field editing controls and operates similarly to the ruler controls in the main Score Timeline.</p>
+<p><img src="../../images/pianoRoll_ruler_config.png" class="img-fluid"></p>
 <dl>
 <dt>Snap Enabled</dt>
 <dd>
-Enables snapping behavior on the timeline. If enabled, vertical lines will be drawn at snap points, set by the value below it. In the screenshot above, the snap is enabled and set to every 0.25 beats.
+Enables snapping behavior on the timeline. If snap is enabled, vertical guide lines are drawn at the current snap positions. Snapping is controlled independently from ruler display, so you can keep one ruler format visible while snapping to a different musical or time-based division. (Right-click the button to configure snap settings.)
 </dd>
-<dt>Time Display</dt>
+<dt>Use Global Ruler Settings</dt>
 <dd>
-Controls how the time in the time bar above the PianoRoll canvas will display. The time value will show as time, while Number display will display as integers. The number below show how often to put a label. In the screenshot above, the Time Display is set to show a label in units of numbers and at every 4.0 beats.
+When enabled, the PianoRoll inherits the Score Timeline’s current ruler settings.
+</dd>
+<dt>Local Primary Ruler</dt>
+<dd>
+When global ruler settings are disabled, you can choose the PianoRoll’s own primary ruler format. The available formats match the main Score Timeline, including beat-based measure formats, clock time, SMPTE, seconds, and samples.
+</dd>
+<dt>Local Secondary Ruler</dt>
+<dd>
+The PianoRoll can also show an optional secondary ruler. This is useful when, for example, you want to edit notes in bars and beats while keeping a time-based reference visible above the canvas.
 </dd>
 </dl>
+<p>For a broader explanation of the supported time formats and how Blue now separates stored time bases from ruler display, see <a href="../../concepts/timeSystem.html">Time System</a>.</p>
 </section>
 </section>
 <section id="editing-notes" class="level2">

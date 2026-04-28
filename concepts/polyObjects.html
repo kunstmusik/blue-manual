@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../concepts/noteProcessors.html" rel="next">
-<link href="../concepts/soundObjects.html" rel="prev">
+<link href="../concepts/timeSystem.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-02e807870d3c38ee225cc8ff2e1b2aa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-533ebda9bb23b14835d92b13bda271ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -502,6 +502,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../concepts/timeSystem.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Time System</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../concepts/polyObjects.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
@@ -891,7 +896,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The way it works is, you create a PolyObject in a SoundLayer like you would any other SoundObject; by right-clicking on the SoundLayer and selecting “Add New PolyObject;” it should be at the very top. After doing this, the PolyObject is empty and will not generate any notes in its current state. You have to double-click on it in order to edit the contents of the PolyObject. Once you’re editing the empty PolyObject, the score editor looks a lot like it does when you’re editing an empty blue score. That’s because the main score is just one big container for notes, like PolyObjects (in fact, in the code, the main score IS a PolyObject).</p>
 <p><img src="../images/root.png" class="img-fluid"></p>
 <p>You can see which container you are currently editing by looking at the buttons just underneath the tabs for “score,” “orchestra,” etc. When you’re editing the main score, there will only be one button there called “root;” you’re editing the root container. When you’re editing a PolyObject called “Group A,” you’ll see two buttons; “root” and “Group A.” Pressing any of these buttons will change the view to edit that container.</p>
-<p>Once a PolyObject has been created, you can add and arrange SoundObject on it just like you do in the main score. Each PolyObject is going to have its own Snap and Time Display settings too, so you may want to set those accordingly. Add SoundLayers just as you would in the main score too.</p>
+<p>Once a PolyObject has been created, you can add and arrange SoundObject on it just like you do in the main score. Each PolyObject is going to have its own timeline state too, including ruler display settings and snap configuration, so you may want to set those according to the local editing task. A PolyObject can therefore be edited with a different primary or secondary ruler display than the root score while still remaining synchronized to the same musical material. Add SoundLayers just as you would in the main score too.</p>
 <p>After you’ve added all of the notes you wish to the PolyObject, click on the “root” button and feel free to move the PolyObject around in the main score, just as you would any other SoundObject. Add NoteProcessors too, or alter the Time Behavior; these changes, in turn, will be applied to the contents of the PolyObject.</p>
 </section>
 </section>
@@ -908,7 +913,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="repeatlooping-time-behavior" class="level4">
 <h4 class="anchored" data-anchor-id="repeatlooping-time-behavior">Repeat/Looping Time Behavior</h4>
-<p>One can lay down a series of sounds in a PolyObject and setup the PolyObject to loop them. The Time Behavior of the PolyObject itself needs to be set to Repeat, and the notes will loop for as long as the PolyObject’s length. When the PolyObject’s contents actually start looping in relationship to each other is determined by the Repeat Point; one can edit the Repeat settings in the property box of any SoundObject. The Repeat Point specifies the beat at which the group of notes will begin after the previous note group begins. If the Use Repeat Point is not checked, the next note group will begin immediately after the previous note group’s last note ends.</p>
+<p>One can lay down a series of sounds in a PolyObject and setup the PolyObject to loop them. The Time Behavior of the PolyObject itself needs to be set to Repeat, and the notes will loop for as long as the PolyObject’s length. When the PolyObject’s contents actually start looping in relationship to each other is determined by the Repeat Point; one can edit the Repeat settings in the property box of any SoundObject. The Repeat Point specifies the time span between loop starts, and it may be entered using any supported duration time base. If the Use Repeat Point is not checked, the next note group will begin immediately after the previous note group’s last note ends.</p>
 <p>An example would be a PolyObject whose contents are three one-beat notes played back-to-back:</p>
 <pre class="csound-sco"><code>i1 0.0 1.0 3 4 5
 i2 1.0 1.0 3 4 5
@@ -920,7 +925,7 @@ i3 2.0 1.0 3 4 5
 i1 3.0 1.0 3 4 5
 i2 4.0 1.0 3 4 5
 i3 5.0 1.0 3 4 5</code></pre>
-<p>However, if one were to change the PolyObject to use Repeat Points and set the repeat point to 2.5, this would be the result:</p>
+<p>However, if one were to change the PolyObject to use Repeat Points and set the repeat point to <code>2.5</code> beats, this would be the result:</p>
 <pre class="csound-sco"><code>i1 0.0 1.0 3 4 5
 i2 1.0 1.0 3 4 5
 i3 2.0 1.0 3 4 5
@@ -929,6 +934,7 @@ i2 3.5 1.0 3 4 5
 i3 4.5 1.0 3 4 5
 i1 5.0 1.0 3 4 5</code></pre>
 <p>Note that there are more notes being played this time. Why? Because with a Time Behavior of Repeat, blue will try to fit as many notes that it can into the PolyObject using the repeat settings given, without violating the order and length of the PolyObject’s note arrangement. With the previous example, blue played the second group of three notes at beat 2.5, and realized it could squeeze in a partial third loop. This third loop begins at beat five, since that is equivalent to beat 2.5 in the second loop, which is our Repeat Point. It inserted the first note there and realized it couldn’t fit any more notes, since the next note would begin at beat six and play until beat seven; that’s longer than the length of our PolyObject, which is six.</p>
+<p>If you prefer to think in bars and beats rather than raw beat counts, you can enter the repeat point using the same time-aware duration editor used elsewhere in the Score. For the broader rules around ruler formats, stored time bases, and duration entry, see <a href="../concepts/timeSystem.html">Time System</a>.</p>
 </section>
 </section>
 <section id="noteprocessors-and-polyobjects" class="level3">
@@ -1424,8 +1430,8 @@ i3 5.0 1.0 5.0 4 5</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../concepts/soundObjects.html" class="pagination-link" aria-label="SoundObjects">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">SoundObjects</span></span>
+      <a href="../concepts/timeSystem.html" class="pagination-link" aria-label="Time System">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Time System</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

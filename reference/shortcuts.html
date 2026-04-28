@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-02e807870d3c38ee225cc8ff2e1b2aa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-32e440aa7e087d1381c103017c598345.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-533ebda9bb23b14835d92b13bda271ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -502,6 +502,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../concepts/timeSystem.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Time System</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../concepts/polyObjects.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
@@ -833,7 +838,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#general-shortcuts" id="toc-general-shortcuts" class="nav-link active" data-scroll-target="#general-shortcuts">General Shortcuts</a></li>
   <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering">Rendering</a></li>
-  <li><a href="#score-timeline" id="toc-score-timeline" class="nav-link" data-scroll-target="#score-timeline">Score Timeline</a></li>
+  <li><a href="#score-timeline" id="toc-score-timeline" class="nav-link" data-scroll-target="#score-timeline">Score Timeline</a>
+  <ul class="collapse">
+  <li><a href="#audio-layer-groups" id="toc-audio-layer-groups" class="nav-link" data-scroll-target="#audio-layer-groups">Audio Layer Groups</a></li>
+  </ul></li>
   <li><a href="#orchestra-manager" id="toc-orchestra-manager" class="nav-link" data-scroll-target="#orchestra-manager">Orchestra Manager</a></li>
   <li><a href="#in-a-text-box" id="toc-in-a-text-box" class="nav-link" data-scroll-target="#in-a-text-box">In a text box</a></li>
   <li><a href="#editing-genericscore-pythonobject-javascriptobject" id="toc-editing-genericscore-pythonobject-javascriptobject" class="nav-link" data-scroll-target="#editing-genericscore-pythonobject-javascriptobject">Editing GenericScore, PythonObject, JavaScriptObject</a></li>
@@ -989,102 +997,152 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>spacebar</td>
-<td>Render project using project’s real-time render options</td>
-</tr>
-<tr class="even">
-<td>ctrl-c</td>
-<td>copy selected soundObject(s)</td>
-</tr>
-<tr class="odd">
-<td>ctrl-x</td>
-<td>cut selected soundObject(s)</td>
-</tr>
-<tr class="even">
-<td>ctrl-z</td>
-<td>Undo last action like re-scaling, moving, copying and pasting as well as deleting ScoreObjects and/or Automation Lines</td>
-</tr>
-<tr class="odd">
-<td>ctrl-d</td>
-<td>duplicate selected soundObject(s) and place directly after originals</td>
-</tr>
-<tr class="even">
-<td>ctrl-r</td>
-<td>the repeat selected SoundObjects by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat)</td>
-</tr>
-<tr class="odd">
-<td>ctrl-click</td>
-<td>paste soundObject(s) from buffer where clicked</td>
-</tr>
-<tr class="even">
-<td>shift-click</td>
-<td>on timeline, paste soundObjects from buffer as a PolyObject where clicked, if only one sound object is in the buffer it will be pasted as the type it is and not a PolyObject</td>
-</tr>
-<tr class="odd">
-<td>shift-click</td>
-<td>when selecting soundObjects, adds soundObject to selected if not currently selected and vice-versa</td>
-</tr>
-<tr class="even">
-<td>double-click</td>
-<td>if selecting on timeline, select all soundObjects on layer where mouse clicked</td>
-</tr>
-<tr class="odd">
-<td>ctrl-t</td>
-<td>show quick time dialog</td>
-</tr>
-<tr class="even">
-<td>right click</td>
-<td>pops up a popup menu for adding soundObjects and other tasks</td>
-</tr>
-<tr class="odd">
-<td>left click + drag</td>
-<td>creates a selection marquee for selecting multiple soundObjects (when Score mode)</td>
+<td>Render project using the project’s real-time render options</td>
 </tr>
 <tr class="even">
 <td>1</td>
-<td>switch to Score mode</td>
+<td>Switch to Score mode</td>
 </tr>
 <tr class="odd">
 <td>2</td>
-<td>switch to Single Line mode</td>
+<td>Switch to Single Line mode</td>
 </tr>
 <tr class="even">
 <td>3</td>
-<td>switch to Mult Line mode</td>
+<td>Switch to Multi Line mode</td>
+</tr>
+<tr class="odd">
+<td>alt-s</td>
+<td>Toggle snap on or off</td>
+</tr>
+<tr class="even">
+<td>g</td>
+<td>Scroll the score view to the render start time</td>
+</tr>
+<tr class="odd">
+<td>y</td>
+<td>Scroll the score view to the render end time</td>
+</tr>
+<tr class="even">
+<td>[</td>
+<td>Move render start time to the previous marker or project start</td>
+</tr>
+<tr class="odd">
+<td>]</td>
+<td>Move render start time to the next marker or project end</td>
+</tr>
+<tr class="even">
+<td>ctrl-c</td>
+<td>Copy selected score objects</td>
+</tr>
+<tr class="odd">
+<td>ctrl-x</td>
+<td>Cut selected score objects</td>
+</tr>
+<tr class="even">
+<td>ctrl-z</td>
+<td>Undo</td>
+</tr>
+<tr class="odd">
+<td>ctrl-shift-z</td>
+<td>Redo</td>
+</tr>
+<tr class="even">
+<td>delete / backspace</td>
+<td>Remove selected score objects</td>
+</tr>
+<tr class="odd">
+<td>ctrl-d</td>
+<td>Duplicate selected score objects and place the copies immediately after the originals</td>
+</tr>
+<tr class="even">
+<td>ctrl-r</td>
+<td>Repeat selected score objects by entering a repeat count</td>
+</tr>
+<tr class="odd">
+<td>ctrl-click</td>
+<td>Paste copied score objects at the clicked time</td>
+</tr>
+<tr class="even">
+<td>shift-click</td>
+<td>Add or remove a score object from the current selection</td>
+</tr>
+<tr class="odd">
+<td>ctrl-t</td>
+<td>Open the Quick Time dialog for the selected score object</td>
+</tr>
+<tr class="even">
+<td>f3</td>
+<td>Open the Sound Object Properties window</td>
+</tr>
+<tr class="odd">
+<td>right click</td>
+<td>Open the context menu for the item under the pointer</td>
+</tr>
+<tr class="even">
+<td>left click + drag</td>
+<td>Create a marquee selection in Score mode</td>
 </tr>
 <tr class="odd">
 <td>left</td>
-<td>nudge selected soundObjects one pixel to the left</td>
+<td>Nudge selected score objects one pixel to the left</td>
 </tr>
 <tr class="even">
 <td>right</td>
-<td>nudge selected soundObject one pixel to the right</td>
+<td>Nudge selected score objects one pixel to the right</td>
 </tr>
 <tr class="odd">
 <td>shift-left</td>
-<td>nudge selected soundObjects ten pixels to the left</td>
+<td>Nudge selected score objects ten pixels to the left</td>
 </tr>
 <tr class="even">
 <td>shift-right</td>
-<td>nudge selected soundObjects ten pixels to the right</td>
+<td>Nudge selected score objects ten pixels to the right</td>
 </tr>
 <tr class="odd">
 <td>up</td>
-<td>move selected soundObjects up one layer</td>
+<td>Move selected score objects up one layer</td>
 </tr>
 <tr class="even">
 <td>down</td>
-<td>move selected soundObjects down one layer</td>
+<td>Move selected score objects down one layer</td>
 </tr>
 <tr class="odd">
 <td>ctrl-left</td>
-<td>decrease horizontal zoom</td>
+<td>Decrease horizontal zoom</td>
 </tr>
 <tr class="even">
 <td>ctrl-right</td>
-<td>incrase horizontal zoom</td>
+<td>Increase horizontal zoom</td>
 </tr>
 </tbody>
 </table>
+<p>When a layer-header panel has focus, <code>up</code> and <code>down</code> move the layer selection within that panel, and <code>shift-up</code> / <code>shift-down</code> extend the selection.</p>
+<section id="audio-layer-groups" class="level3">
+<h3 class="anchored" data-anchor-id="audio-layer-groups">Audio Layer Groups</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shortcuts</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>shift-alt-click</td>
+<td>Split the Audio Clip at the clicked point</td>
+</tr>
+<tr class="even">
+<td>alt-drag</td>
+<td>Move the audio content within the Audio Clip without moving the clip start</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="orchestra-manager" class="level2">
 <h2 class="anchored" data-anchor-id="orchestra-manager">Orchestra Manager</h2>
