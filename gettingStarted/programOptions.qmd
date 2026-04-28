@@ -67,11 +67,49 @@ for the project, unless a default.blue file is found in the user's Blue
 home directory, in which case the settings from the default.blue file
 are used.
 
-Author  
+Author
 :   Default author to use in new projects.
 
-Mixer Enabled  
+Mixer Enabled
 :   Enable using the Blue Mixer in new projects by default.
+
+Layer Height
+:   Default layer height for new SoundObject layers and other new layer
+    groups that use the shared layer-height setting.
+
+### Timeline Defaults
+
+The lower part of the Project Defaults panel sets the default timeline
+state for newly created projects. These values become the initial ruler,
+snap, and SMPTE settings for the new score. They can still be changed
+later from within the project.
+
+For more detail on ruler formats and snap behavior, see
+[Time System](../concepts/timeSystem.qmd) and
+[Score Timeline](./primaryEditors/scoreTimeline.qmd).
+
+Primary Ruler
+:   Sets the initial primary ruler format for new projects. The default
+    is `Beats`.
+
+Secondary Ruler
+:   Enables or disables the secondary ruler for new projects. The
+    default is off.
+
+Secondary Format
+:   Sets the format used by the secondary ruler when it is enabled. The
+    default is `Time`.
+
+Snap
+:   Enables or disables snap for new projects. The default is off.
+
+Snap Value
+:   Sets the initial snap value used when snap is enabled. The default
+    is `Beat`.
+
+SMPTE Frame Rate
+:   Sets the default SMPTE frame rate for new projects. The default is
+    `24 fps`.
 
 ## Playback
 

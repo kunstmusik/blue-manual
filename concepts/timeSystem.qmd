@@ -1,0 +1,162 @@
+# Time System
+
+## Overview
+
+Blue separates three related ideas:
+
+- the time base used to store a value
+- the format used to display time on a ruler or status readout
+- the snap value used while placing or editing material
+
+Because these are separate settings, the same timeline can be viewed in
+different formats without forcing every stored value to change.
+
+## Core Terms
+
+### TimeBase
+
+`TimeBase` is the format used to store or enter a time value. A ruler, a
+marker, a sound object's start time, and a sound object's duration may
+each use their own time base.
+
+### TimePosition
+
+`TimePosition` is used for values that answer *where does this happen?*
+Examples include:
+
+- a sound object's start time
+- a marker location
+- a tempo point location
+
+### TimeDuration
+
+`TimeDuration` is used for values that answer *how long does this last?*
+Examples include:
+
+- a sound object's subjective duration
+- a repeat point
+
+Position fields and duration fields accept many of the same formats, but
+measure-based values are interpreted differently depending on whether
+the field expects a position or a duration.
+
+## Supported Formats
+
+| Format | Typical use | Example |
+| --- | --- | --- |
+| Beats | Simple beat count | `12.5` |
+| `BBT` | Bar, beat, ticks | `5.3.120` |
+| `BBST` | Bar, beat, sixteenth, ticks | `5.3.2.60` |
+| `BBF` | Bar, beat, fraction | `5.3.50` |
+| Time | Clock time | `0:01:23.450` |
+| `SMPTE` | Timecode | `00:01:23:12` |
+| Seconds | Decimal seconds | `83.45` |
+| Samples | Sample frame count | `4000000` |
+
+Beat-based measure formats depend on the project's meter map. Time,
+seconds, and SMPTE depend on the tempo map. Sample positions depend on
+the project sample rate.
+
+## Positions and Durations
+
+The same text entry format can mean different things depending on
+whether Blue expects a position or a duration.
+
+### Position entry
+
+Positions are absolute locations on a timeline. When using measure-based
+formats, the values refer to musical locations in the project. For
+example, a `BBT` position of `3.1.0` means bar 3, beat 1, tick 0.
+
+### Duration entry
+
+Durations are spans. In duration fields, measure-based formats are
+interpreted as lengths rather than absolute score locations. A duration
+entered as `1.0.0` in a measure-based format means *one full bar*, not
+*bar 1*.
+
+This distinction applies to:
+
+- Sound Object Properties
+- the Quick Time dialog
+- repeat point editing
+- audio clip time and duration fields
+
+## Rulers
+
+The Score Timeline uses the **Ruler Configuration** dialog to control
+how time is displayed.
+
+### Primary ruler
+
+The primary ruler sets the main display format for the active timeline.
+Newly added score objects and newly imported audio clips use the
+selected primary ruler's time base as their default start-time type.
+
+### Secondary ruler
+
+The secondary ruler is optional. When enabled, it shows the same
+timeline in a second format.
+
+This is useful when, for example, you want to work in bars and beats
+while also keeping clock time or SMPTE visible.
+
+### SMPTE frame rate
+
+If you use `SMPTE`, the ruler configuration also sets the frame rate.
+The selected frame rate affects both formatting and parsing of SMPTE
+values.
+
+## Updating Existing Data from the Ruler
+
+Changing the primary ruler changes the ruler display for the timeline.
+The same dialog also lets you choose whether existing values should be
+converted to the new primary time base.
+
+The ruler dialog lets you choose whether to update:
+
+- `ScoreObjects`
+- `Markers`
+
+For each, you can choose:
+
+- `Update All TimeBases`
+- `Update Matching TimeBases`
+
+Use `Update All TimeBases` when you want existing positions and
+durations to be rewritten into the new primary time base. Use `Update
+Matching TimeBases` when you only want values that already use the old
+primary time base to be converted.
+
+## Snap
+
+Snap is configured independently from ruler display.
+
+The toolbar's `Snap` button has two actions:
+
+- left-click toggles snap on and off
+- right-click opens the snap configuration menu
+
+Available snap values include musical divisions, triplets, time-based
+values, SMPTE-based values, sample-based values, and auto mode.
+
+You can therefore display the ruler in `BBT` while snapping to
+milliseconds, or display the ruler in seconds while snapping to quarter
+notes.
+
+## Where These Settings Appear
+
+Time fields and ruler settings appear throughout Blue. Common places
+include:
+
+- the Score Timeline ruler and status displays
+- the Quick Time dialog
+- Sound Object Properties
+- the tempo point editor
+- the audio clip editor
+- the PianoRoll ruler configuration dialog
+
+The Score Timeline chapter covers timeline workflow in detail. For
+sound-object properties and timing behavior, also see
+[SoundObjects](./soundObjects.qmd) and
+[Sound Objects](../reference/soundObjects/top.qmd).

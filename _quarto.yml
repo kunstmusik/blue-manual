@@ -60,6 +60,7 @@ book:
       chapters:
         - concepts/rendering.qmd
         - concepts/soundObjects.qmd
+        - concepts/timeSystem.qmd
         - concepts/polyObjects.qmd
         - concepts/noteProcessors.qmd
         - concepts/soundObjectLibrary.qmd

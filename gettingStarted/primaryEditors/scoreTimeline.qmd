@@ -4,417 +4,423 @@
 
 ## Overview
 
-The Score is the tool in Blue for working with musical material in time.
-It is a canvas upon which to create and organize musical ideas. The
-Score features a modular timeline, where each [Layer
-Group](#layer_groups) within the Score is a module. These modules are a
-plug-in point that can be extended with other plug-ins. Each Layer Group
-in turn may be broken down into layers.
+The Score is Blue's main editor for arranging material in time. It is a
+modular timeline built from *Layer Groups*. Each Layer Group provides a
+timeline view on the right and layer controls on the left.
 
-The image above shows a Score with three Layer Groups. The first two are
-Patterns LayerGroups, while the last is a SoundObject Layer Group. Also
-shown is the ScoreManager dialog (accessible from the Manage button on
-the left part of the Score).
+For positions, durations, rulers, and snap formats, see
+[Time System](../../concepts/timeSystem.qmd).
+
+## User-Interface Walkthrough
+
+### Main toolbar
+
+The toolbar above the Score includes the transport controls used while
+working on the timeline:
+
+- previous marker and next marker buttons for navigating between
+  markers
+- a rewind button that returns the render start to the beginning of the
+  score and clears the render end
+- play and stop buttons for starting and stopping realtime rendering
+- an `F` button for toggling follow-playback scrolling
+- a loop button for repeating playback between the render start and
+  render end
+
+### Playhead display
+
+The **Playhead** display shows the current playback position. It can
+show one or two simultaneous readouts.
+
+- The primary readout follows the primary ruler by default.
+- The secondary readout follows the secondary ruler by default.
+- Right-click the display to choose whether each readout syncs to the
+  ruler or uses its own display format.
+- The secondary readout can be turned off from the same menu.
+
+This makes it possible to keep the timeline ruler in one format while
+watching playback in another.
+
+### Selection display
+
+The **Selection** display shows the current render selection:
+
+- render start
+- render end
+- selection duration
+
+By default it follows the primary ruler. Right-click the display to
+choose another format if needed. If no render end is set, the display
+shows `-` values.
+
+### BlueLive controls
+
+Blue also provides a **BlueLive** toolbar for live performance and
+testing:
+
+- `blueLive` starts or stops BlueLive rendering
+- `Recompile` recompiles and restarts the current BlueLive render
+- `All Notes Off` sends an all-notes-off event to stop hanging notes
+- `MIDI Input` enables or disables Blue's MIDI input for BlueLive
+
+### Score Bar
+
+The Score Bar shows which container you are editing. At the root score
+you will only see `root`. When you edit a PolyObject, the bar shows the
+path back to the root score so you can move in and out of nested
+timelines.
 
 ## Layer Groups
 
-A Score is divided into Layer Groups. Each Layer Group has a
-user-interface for the main timeline area, as well as a header interface
-that shows on the left-hand side. The header area usually shows
-meta-information and controls for each of the Layer Group's layers, such
-as layer name, muting, soloing, and other features.
+A Score is divided into Layer Groups. The header area shows the controls
+for the group's layers, while the timeline area shows the material that
+belongs to that group.
 
-By using the Score Manager Dialog, you can add as many Layer Groups as
-you like, as well as many layers to each group as you like. You can also
-push up and down Layer Groups to reorganize them. The same
-add/remove/push up/push down actions are also available for Layers
-within a Layer Group.
+Layer Groups can be managed directly in the timeline or through the
+Score Manager. All Layer Groups also support
+[NoteProcessors](../../reference/noteProcessors/top.qmd). A
+NoteProcessor applied to a Layer Group affects all notes generated
+inside that group.
 
-::: {.callout-note}
-Add/Remove/Push Up/Push Down for layers is also available while working
-in the main score area by right-clicking the Layer panels on the right
-and selecting the options from the popup menu.
-:::
+### SoundObject Layer Groups
 
-A tutorial video on the Layer Groups can be found 
-[here](https://www.youtube.com/watch?v=O2QkPMP0Rrc&t=319s).
+SoundObject Layer Groups are the most general timeline type. They hold
+SoundObjects of any supported kind and are also where
+[Parameter Automation](../../concepts/parameterAutomation.qmd) is drawn.
 
-Also, all LayerGroups support having [NoteProcessors](../../../reference/noteProcessors/top)
-used with them. Using a NoteProcessor on a LayerGroup will affect all
-notes generated within that LayerGroup. Editing the LayerGroup's
-NoteProcessors can be done by right clicking on the root Score node in
-the [Score Bar](#score_bar), described below.
+Each SoundLayer can contain different kinds of SoundObjects. A layer is
+not tied to a single instrument or mixer channel, so one layer can hold
+material that generates different kinds of Csound data.
 
-More information on the different NoteProcessor can be found 
-[here](../../../reference/noteProcessors/top).
+Right-click a SoundLayer to add a SoundObject, paste from the buffer, or
+open other layer commands. Once a SoundObject is on the timeline, you
+can select it, move it, resize it, copy it, duplicate it, and open it
+for editing. Double-click a SoundObject to open its editor. Use `F3` to
+open Sound Object Properties and `Ctrl-T` to open Quick Time.
 
-Regarding the design, a Layer Group is primarily responsible for
-generating Csound Score notes. However, they are also able to generate
-tables, instruments, and anything else that is usable in Csound. It is
-up to the developer to choose what features the Layer Group will use.
+For more information on the different SoundObjects, see
+[Sound Objects](../../reference/soundObjects/top.qmd).
 
-### SoundObject 
+### Pattern Layer Groups
 
-SoundObject Layer Groups are one of the primary Layer Group types. They
-support the SoundObject system in Blue for scoring them in time on the
-timeline. They also are the canvas on which
-[automations](../../../concepts/parameterAutomation) are drawn.
+Pattern Layer Groups use the SoundObject system in a grid-based
+workflow. Each Pattern layer holds one source SoundObject, and the grid
+determines where that material is triggered.
 
-SoundObject Layer Groups are divided into SoundLayers. Each SoundLayer
-can contain SoundObjects of any type as well as have automations
-assigned to the layer. Unlike MIDI-based studio software, where layers
-are bound to a single instrument or channel in a mixer, Blue's
-SoundLayers are free to hold SoundObjects that generate any data for any
-instrument. This design choice allows freedoms for you to design your
-project as you wish, though at the expense of being able to implement
-some things which may be commonly found in MIDI-based studio software.
-
-To use the SoundObject system, first create a SoundObject Layer Group
-using the Score Manager Dialog. (By default, new projects in Blue start
-with a single SoundObject Layer Group.) Next, add as many layers as you
-would like to the LayerGroup. You can then edit the names of the layers
-using the ScoreManager Dialog, or back in the main Score area by
-double-clicking the area on the left of the Layer's panel on the left.
-
-On the timeline, rt-clicking on any soundLayer will show menu options
-for adding different types of SoundObjects, pasting a SoundObject from
-the buffer if any SoundObjects in the buffer are available, as well as
-other commands. (Copying and pasting of SoundObjects can also be done
-using ctrl-c and ctrl-click on a layer.)
-
-Once you have SoundObjects on the timeline, you can click on them to
-select it, or click in an empty area and drag to show a selection
-rectangle. You can also add and remove SoundObjects to/from the
-selectionn by holding shift when clicking.
-
-Once selected, you can move selected SoundObjects by pressing the mouse
-down on one of the selected SoundObjects, then drag to move them in time
-as well as up and down layers. If you press shift down when you click,
-once you drag you will create clones of the original material and move
-them in time. If you move the mouse to the right-side of a SoundObject,
-the cursor will change to a resize cursor, and clicking and dragging
-will allow you to change the duration of the SoundObject. (Note you can
-only resize one SoundObject at a time.)
-
-If you have a single SoundObject selected, you can edit the properties
-of the SoundObject by using the SoundObject Property Window. This window
-can be opened from the menu "Windows -\> Sound Object Properties" or by
-using the shortcut "F3". From this window you can change the name of the
-SoundObject, its start time and subjective duration, as well as add and
-remove NoteProcessors (if the SoundObject supports it).
-
-To edit a SoundObject, select a single SoundObject and open the
-SoundObject Editor window. You can also double-click a SoundObject,
-which will set the editor for the SoundObject in the Editor window as
-well as focus the SoundObject Editor window. (If the Editor window is
-docked, double-clicking the SoundObject will cause the editor to show
-the docked window.)
-
-More information on the different SoundObjects can be found 
-[here](../../../reference/soundObjects/top).
-
-### Patterns
-
-Patterns Layer Groups are based upon the same SoundObject system as the
-SoundObject Layer Groups, but presents a different way to working with
-these objects. At a high-level, each Pattern layer has one SoundObject
-assigned to it. The SoundObject is the source score material for a
-Pattern Layer. Selecting boxes in the grid that shows for the Patter
-Layer determines where that score material will be used to generate
-notes. For music projects that rely on patterns and regular metered
-time, using the Pattern Layer Groups can be more efficient for creating
-a piece than using SoundObject Layer Groups.
-
-The grid of time for Pattern Layers is currently hardcoded to repeat
-every four beats, or one measure at 4/4 time. However, a SoundObject is
-not constrained to generate score for only one measure. For example, you
-can create a PianoRoll that has a time behavior of "None", and have it
-last sixteen beats (four measures). Everywhere that the pattern grid is
-selected for the Pattern Layer that uses that SoundObject will then
-create that sixteen beat score and start it at the time of the grid box.
+This makes Pattern Layer Groups useful when you want repeated or
+regularly spaced material without placing each event separately on the
+Score. The layer determines the playback position for each enabled cell,
+while the source SoundObject defines the generated material.
 
 Patterns Layer Menu Options
 
 ![Patterns Layer Menu Options](/images/patternLayerMenu.png)
 
-By default, new Pattern Layers will use a GenericScore SoundObject that
-is set to a duration of four beats, and use a time behavior of "None".
-This means that the score will generate "as-is". In the layer's popup
-menu options, you can replace the SoundObject that is being used for the
-layer with one from the SoundObject buffer (i.e. copied from BlueLive or
-from a SoundObject Layer). Also, you can switch to a different type of
-SoundObject using the menu.
+New Pattern layers use a `GenericScore` SoundObject with a duration of
+four beats and a `None` time behavior. From the layer popup menu, you
+can replace the source SoundObject from the buffer, switch it to another
+SoundObject type, or open the source object for editing.
 
-SoundObjects will generate accordingly to the values set in the
-SoundObject Properties dialog, with the exception of the start time.
-Blue will reassign the start time to 0 when it generates the notes for
-the layer. On the whole this behavior will not affect most users, but is
-worth noting.
+Click a grid cell to toggle it on or off. Click and drag across multiple
+cells to apply the same change across a range. You can also click the
+layer panel on the left to bring the source SoundObject into the editor.
 
-To edit the SoundObject for a Pattern Layer, you can either use the
-popup menu option for "Edit SoundObject", or you can also click the
-layer panel on the left. A single click will bring up the SoundObject
-editor.
+### Audio Layer Groups
 
-To edit the layer's patterns, click on a grid box to toggle between on
-and off for that box. You can also press down and drag along to set
-multiple boxes. The value that is set for the multiple boxes will depend
-on the action of the first box selected. For example, if the first box
-when the initial mouse down is on, the mouse down will turn it off, and
-dragging will turn off all boxes that the mouse extends through.
+Audio Layer Groups provide DAW-style audio clip editing. Each Audio
+Layer maps to a channel in Blue's mixer, and automation for effect
+parameters is available on the layer.
 
-### Audio 
+You can drag audio files from the operating system or Blue File Manager
+onto an Audio Layer. Layer names also appear under their corresponding
+mixer channels.
 
-Audio Layer Groups provide standard Digital Audio Workstation (DAW)
-functionality. Users can use Audio Layers to drag-and-drop Audio files
-onto the timeline. Each Audio Layer maps to a channel in Blue's mixer,
-where effects can be added for the audio layer. Automation for effect
-parameters is available on the audio layer.
+Once a clip is on the timeline, drag the clip body to move it in time.
+Drag the left edge to move the clip start and the file start together.
+Drag the right edge to change the clip duration. Double-click a clip to
+open its editor, or use `F3` to open the Properties window.
 
-To use the Audio layers, first create an Audio Layer Group using the
-Score Manager Dialog. Next, add as many layers as you would like to the
-LayerGroup. You can then edit the names of the layers using the
-ScoreManager Dialog, or back in the main Score area by double-clicking
-the area on the left of the Layer's panel on the left. The name of the
-Audio layer will also show under its corresponding mixer channel.
+Audio clips support fades. Fade handles appear when the pointer is over
+a clip. Drag a fade handle to change the fade duration, and right-click
+within a fade area to choose the fade type. Like Ardour, upon which much of the audio
+layer system is based, Blue uses crossfades for clip fades.
 
-To add Audio files to a layer, you can either drag and drop a file from
-the operating system's file mananger, or you can use the Blue File
-Manager to locate a file, then drag and drop it to an Audio layer.
-
-Once an audio clip is on the timeline, you can modify its properties in
-a few ways. First, you can click and drag it to move it in time. If you
-click and drag from the left hand side, you will alter both the audio
-clip's start time, as well as the audio clip's file start time. For
-example, if a clip was added that started at time 0.0 and had an audio
-file start of 0.0, if you drag from the left hand side to time 3.0, both
-the start of the clip and audio file start will be set to 3.0. This
-means that 3.0 beats into the project, the audio clip will start
-rendering from 3.0 seconds into the file. If you drag from the right
-hand side, it will alter the duration of the audio clip. If you hold
-down alt+shift, then press within an AudioClip, you will split the
-AudioClip into parts. If you hold down the alt key, then press and drag
-the mouse, you can alter just the file start time.
-
-If you have a single Audio clip selected, you can edit the properties of
-the clip by using the ScoreObject Property Window. This window can be
-opened from the menu "Windows -\> Sound Object Properties" or by using
-the shortcut "F3".
-
-Additionally, if a single Audio clip is selected, additional properties
-are available to edit using the ScoreObject Editor window. You can also
-double-click an Audio clip, which will set the editor for the clip in
-the Editor window as well as focus the ScoreObject Editor window. (If
-the Editor window is docked, double-clicking the clip will cause the
-editor to show the docked window.)
-
-Audio clips support fades. Like Ardour, upon which much of the audio
-layer system is based, all fades are crossfades. Clips will crossfade
-with signals that are already in the bus, with the first clip
-crossfading with silence. Fade types and durations may be set within the
-clip's editor panel. The clip duration may be visually modified by
-mousing over the clip, pressing with the mouse on either the fade-in or
-fade-out handle that appears after mousing over the clip, then dragging
-and releasing to update the fade's duration. The fade type may also be
-modified by right clicking within a fade area and choosing the fade type
-using the popup menu.
+For more information about fades, see Ardour's manual entry on
+[Region Fades and Crossfades](http://manual.ardour.org/editing-and-arranging/create-region-fades-and-crossfades/).
 
 ::: {.callout-note}
 At the moment, 8-bit and 16-bit audio data, in mono and stereo, 
 with sample rates from 8 kHz to 48 kHz are supported.
 :::
 
-For more information about Fades, please see Ardour's manual entry on
-[Region Fades and
-Crossfades](http://manual.ardour.org/editing-and-arranging/create-region-fades-and-crossfades/).
 
-## User-Interface Walkthrough
+## Working with Layers Inline
 
-### Play Bar
+Many day-to-day layer operations can be done directly in the timeline.
 
-The play bar at the top has:
+### Adding and moving layer groups
 
-  - time to start playing from
-  - what time to play to (if the render end time is set)
-  - the current play time
-  - Loop checkbox to have render looping from render start time to
-    render end time
-  - Forward/Back buttons for jumping between markers
-  - Back button to start from beginning of Score
-  - Play/Stop buttons to start/stop rendering
-  - BlueLive buttons:
-      - BlueLive toggle button to turn on/off BlueLive
-      - Recompile button that will stop the current BlueLive run,
-        recompile the project, and start BlueLive again
-      - All Notes Off Button to turn off any hanging notes in a BlueLive
-        run
-      - MIDI Input toggle button enabled/disables Blue MIDI input into
-        BlueLive
+![](/images/layer_group_spacer_menu.png)
 
-### Score Bar
+Between layer groups you will find a spacer panel. When you hover it, a
+small `+` indicator appears.
 
-The PolyObject bar (shown above with only one PolyObject, "root") shows
-what PolyObject you are currently editing. if you were to add a
-PolyObject named "phrase 1" to the main timeline shown above, then
-double click that PolyObject to edit it, the PolyObject bar would have
-two buttons on it, one for "root", and one for "phrase 1". you would
-then be editing "phrase 1"'s timeline. by clicking on the "root" button
-of the timeline, you would then return out of the PolyObject's timeline
-and back in the root's timeline.
+- Double-click the spacer to add a new layer to the group above it.
+- Right-click the spacer to open a menu with `Add Layer`, `Move Layer
+  Group Up`, and `Move Layer Group Down`.
 
-### Score Manager
+### Layer selection in headers
 
-Below the polyObject bar on the left, you will see the Score Manager. 
-Here you can change the name of the Layer Group, names for
-individual SoundLayers and set a default Layer height.
+Layer headers support selection within a group and across groups:
+
+- Click a layer header to select it.
+- Shift-click within a group to extend the selection.
+- Shift-click in another group to create a cross-group selection.
+
+When a selection spans multiple groups, Blue keeps that selection
+coordinated across the visible header panels.
+
+### Deleting layers across groups
+
+Layer header context menus support deleting selections that span
+multiple groups. If deleting the selected layers would empty one or more
+groups, Blue offers a `Delete empty Layer Groups` option in the
+confirmation dialog.
+
+![](/images/cross_group_delete_dialog.png)
+
+Add-above, add-below, and push-up or push-down remain single-group
+operations. When a cross-group selection is active, the context menu
+shows only the actions that apply to that selection.
+
+### Renaming layers
+
+Double-click the layer name in the header area to rename it in place.
+
+## Score Manager
 
 ![](/images/ScoreManager_button.png)
 
-On the top left of the Score Manager are four buttons, "^", "V", "+",
-and "-". "^" and "V" will push up or push down Layers Groups. (HINT: 
-You can move multiple Layer Groups by clicking on one Layer Group, then
-holding down shift and clicking on the last of the Layer Groups you want
-to move, then using the "^" and "V" buttons). The "+" will add a
-Layer Group after the currently selected Layer Group. 
-3 different Layer groups are available: SoundObject Layer Group, Patterns 
-Layer group and Audio layer groups.
-If no Layer Groups are selected, then it will add one to the end of the 
-list. the "-" button will remove any selected Layer Groups. it should ask 
-for a confirmation before removing any Layer Groups.
+The `Manage` button opens the Score Manager. At the root score it
+manages the root Layer Group list. Inside a nested timeline such as a
+PolyObject, it manages the Layer Groups for that container.
 
-On the top right of the Score Manager are also four buttons, "^", "V", "+",
-and "-". Workings are as mentioned above for the Layer Groups, but now for 
-the individual Layers in a Group. 
-In Propeties you can set the default Layer height.
+Use the manager when you want to:
 
-### The Timeline
+- add or remove Layer Groups
+- add, remove, or reorder layers within a group
+- move multiple Layer Groups together
+- rename groups or layers
+- change default layer heights
 
-Below the polyObject bar on the right is the main time line. it shows
-the time line for the currently edited polyObject. The +/- buttons next
-to the scrollbars are used to zoom in on the time line, and those
-settings will be maintained between work sessions.
+The controls on the left side of the dialog apply to Layer Groups. The
+controls on the right side apply to layers in the selected group.
 
-### Tempo Editor
+## Time, Rulers, and Snap
 
-![](/images/tempo_editor.png)
+### Ruler configuration
 
-The tempo editor is an optional use feature that allows editing of
-overall tempo for a project using a line editor. This feature starts off
-as disabled and closed. When in this state, whatever tempo values are
-saved will show as dark gray line that is uneditable. To enable the use
-of the tempo editor, select the checkbox marked "Use Tempo". Selecting
-this will redraw the tempo line in green. To open up the tempo editor
-for a larger view and for editing, select the down arrow button next to
-the "Use Tempo" checkbox.
+![](/images/ruler_config_dialog.png)
 
-Like other line editor objects in Blue, left-clicking on an area where
-there is no point will insert a new point, while hovering over an
-existing point and pressing down, then dragging will allow moving of
-that point. Right-clicking a point will delete a point.
+The Score uses the **Ruler Configuration** dialog to set:
 
-If right-clicking the tempo editor when not on a point, the following
-popup menu will appear:
+- the primary ruler format
+- an optional secondary ruler format
+- SMPTE frame rate
+- whether existing ScoreObjects and Markers are converted when the
+  primary ruler changes
 
-![](/images/tempo_editor_popup.png)
+The primary ruler also determines the default time base for newly added
+score objects and newly imported audio clips.
 
-The first option will allow editing of the values of the points entered
-into the line editor by use of a table with two columns: the first
-column being the beat on which the tempo change occurs and the right
-column being the tempo value that it should have. One may find using the
-table editor easier to use to fine-tune values.
+### Secondary ruler
 
-The second option will allow changing the boundary min and max tempo
-values for the line editor, as well as the option for what to do for
-points that fall outside of the new range. The options here are
-"Truncate" which will set any points' values that lie outside the new
-range to the closest boundary value, or "Scale" which will take all
-point values from the old range and scale them to the new range.
+The secondary ruler is optional and can show a second representation of
+the same timeline at the same time. For example, you can keep bars and
+beats visible on the primary ruler while also showing clock time or
+SMPTE on the secondary ruler.
 
-Use of the tempo editor is completely optional and users familiar with
-Csound's t-statement for controlling global tempo may opt to disable
-using Blue's tempo editor and to use a t-statement in the global orc
-section of the globals tab. Also, older Blue projects that existed from
-before Blue's tempo editor was developed can count on their projects
-loading and running correctly even if opened with versions of Blue that
-do have a tempo editor, due to Blue's default to disable the Blue tempo
-editor. Regardless of which tempo system is chosen by the user, one
-should be careful not to use both at the same time as this will cause
-two t-statements to exist in the generated CSD (the hand-entered one and
-the one generated by Blue), causing unexpected performance results.
-
-### Quick Time Dialog
-
-![](/images/quickTimeDialog.png)
-
-While in the main timeline area, pressing ctrl-t when a soundObject is
-selected will bring up the quick time dialog. Here you can edit the
-start time and duration of the currently selected soundObject. When the
-dialog is first popped up the start time field is automatically focused
-for editing. You can press tab to switch between the two fields.
-Pressing enter will update the properties. Pressing escape, closing the
-dialog, or clicking anywhere outside of the dialog will cancel any
-changes and close the dialog.
-
-### Score Time Properties
+### Snap
 
 ![](/images/snap.png)
 
-In the upper right of the Score window is an arrow button; pressing this
-reveals the time properties for the Score. The two options here are Snap
-and Time Display. Snap provides a grid by which to line up your
-SoundObjects. Snap is measured in beats. Time Display allows setting how
-the time bar shows numbers, i.e. every 4 beats, rendered as a number or
-as a time value.
+Snap is configured independently from ruler display.
 
-### Navigator
+- Left-click the `Snap` button to turn snap on or off.
+- Right-click the `Snap` button to choose the snap value.
+
+Snap values are available in musical, triplet, time-based, SMPTE-based,
+sample-based, and auto categories.
+
+## Timeline Rows
+
+![](/images/row_visibility_popup.png)
+
+The left header area includes visibility controls for the timeline rows
+that sit above the layer groups.
+
+Right-click the left-side row labels or the secondary-ruler spacer to
+show a popup with:
+
+- `Show Tempo Row`
+- `Show Meter Row`
+- `Show Markers Row`
+
+This visibility is stored with the timeline state, so you can keep only
+the rows you need visible while working.
+
+### Tempo row
+
+![](/images/tempo_editor.png)
+
+The tempo row has two parts:
+
+- a compact control row on the left with `Use Tempo` and the expand or
+  collapse control
+- a tempo region bar and optional expanded line editor on the right
+
+The region bar gives an overview of the tempo map. Each region shows
+its tempo and gives visual feedback for constant or linear tempo
+changes.
+
+Common tempo-row actions:
+
+- Double-click the tempo region bar to add a new tempo point or edit an
+  existing one.
+- Right-click a tempo region to edit the point, switch between constant
+  and linear curve types, or delete the point.
+- Use the edit dialog to position tempo points with the same time
+  fields used elsewhere in Blue.
+
+![](/images/tempo_editor_popup.png)
+
+If you prefer to manage tempo with Csound `t` statements, you can leave
+Blue's tempo system disabled. Avoid using both at the same time.
+
+### Meter row
+
+![](/images/meter_region_bar.png)
+
+The meter row shows the project's time-signature map as regions. You
+can:
+
+- double-click a region area to add a new time-signature change or edit
+  an existing one
+- right-click a region to edit or delete the time-signature change
+
+Measure-based ruler formats such as `BBT`, `BBST`, and `BBF` depend on
+this map, so editing the meter row directly affects how those rulers and
+time entries are interpreted.
+
+### Markers row
+
+The markers row provides navigation and structural reference points.
+Marker times use the same time-entry rules as other timeline objects,
+and the ruler configuration dialog can update marker time bases when the
+primary ruler changes.
+
+## Working with SoundObjects and Audio Clips
+
+### SoundObjects
+
+SoundObjects can be selected, dragged, resized, copied, cut,
+duplicated, and repeated directly on the timeline.
+
+If you select a single SoundObject, you can edit it in two especially
+useful places:
+
+- `F3` opens **Sound Object Properties**
+- `Ctrl-T` opens the **Quick Time** dialog
+
+In both places, start time, subjective duration, and repeat point use
+the same time fields described in
+[Time System](../../concepts/timeSystem.qmd).
+
+![](/images/quickTimeDialog.png)
+
+The Quick Time dialog is useful when you want to make timing edits
+without opening the full properties window. Position and duration fields
+follow the same rules used elsewhere in Blue.
+
+### Audio clips
+
+Audio clips follow the same time-system conventions as SoundObjects.
+When you import or drag in an audio file, the clip's initial start time
+uses the selected primary ruler's time base.
+
+Audio clip properties use the same time fields for:
+
+- clip start time
+- clip duration
+
+## Audio Layer Gestures
+
+These gestures are specific to Audio Layer Groups:
+
+| Gesture | Description |
+| --- | --- |
+| Drag the clip body | Move the clip in time |
+| Drag the left edge | Move the clip start and the file start together |
+| Drag the right edge | Change the clip duration |
+| `Alt-drag` inside a clip | Move the file start offset without moving the clip start |
+| `Shift-Alt-click` inside a clip | Split the clip at the clicked point |
+| Drag a fade handle | Adjust fade duration |
+| Right-click within a fade area | Choose fade type |
+
+## Navigator
 
 ![](/images/Navigator.png)
 
-The Navigator shows all Objects of the composition. The rectangle in the
-Navigator can be dragged around to quickly go to the spot you'd like to 
-inspect.
+The Navigator shows the overall structure of the current score view. The
+visible rectangle can be dragged to jump quickly to another area of the
+timeline.
 
-The Navigator window pops up when you click on the magnifying glass next
-to the + and - zoom signs.
+## Layer Header Actions
 
-![](/images/magnifyingglass.png)
+| Action | Result |
+| --- | --- |
+| Hover the spacer between groups | Shows the inline `+` indicator |
+| Double-click the spacer | Adds a layer to the group above |
+| Right-click the spacer | Opens `Add Layer`, `Move Layer Group Up`, and `Move Layer Group Down` |
+| Click a layer header | Selects that layer |
+| Shift-click another layer header | Extends the selection, including across groups |
+| Right-click selected layer headers | Opens the layer-operation menu for the current selection |
+| Double-click a layer name | Renames the layer |
 
-### Score Timeline Shortcuts 
+## Score Timeline Shortcuts
 
-| Shortcuts    | Description                                                                                                                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-| 1            | switch to Score mode                                                                                                                                                                                  |
-| 2            | switch to Single Line mode                                                                                                                                                                                  |
-| 3            | switch to Multi Line mode                                                                                                                                                                                   |
-| space        | Start/stop rendering of project                                                                                                                                                                             |
-| G            | Scroll score view to location of render start time (green line)                                                                                                                                             |
-| Y            | Scroll score view to location of render end time (yellow line)                                                                                                                                              |
-| Alt-S        | Toggle Snap (Grid)                                                                                                                                                                                                |
-| \[           | Set render start time (Green locator) to previous marker (or beginning of project) and scroll view to new time                                                                                                              |
-| \]           | Set render start time (Green locator) to next marker (or end of project) and scroll view to new time                           |
+| Shortcut | Description |
+| --- | --- |
+| `spacebar` | Render project using the project's real-time render options |
+| `1` | Switch to Score mode |
+| `2` | Switch to Single Line mode |
+| `3` | Switch to Multi Line mode |
+| `alt-s` | Toggle snap on or off |
+| `g` | Scroll to the render start time |
+| `y` | Scroll to the render end time |
+| `[` | Move render start time to the previous marker or project start |
+| `]` | Move render start time to the next marker or project end |
+| `right click` | Open the context menu for the item under the pointer |
+| `left click + drag` | Create a marquee selection in Score mode |
+| `ctrl-c` | Copy selected score objects or audio clips |
+| `ctrl-x` | Cut selected score objects or audio clips |
+| `ctrl-z` | Undo |
+| `ctrl-shift-z` | Redo |
+| `delete` / `backspace` | Remove selected score objects or audio clips |
+| `ctrl-d` | Duplicate selected score objects or audio clips |
+| `ctrl-r` | Repeat selected score objects or audio clips by entering a repeat count |
+| `ctrl-click` | Paste copied score objects or audio clips at the clicked time |
+| `shift-click` | Add or remove a score object or audio clip from the current selection |
+| `ctrl-t` | Open the Quick Time dialog for the selected score object or audio clip |
+| `f3` | Open the Sound Object Properties window |
+| `left` / `right` | Nudge selected score objects one pixel |
+| `shift-left` / `shift-right` | Nudge selected score objects ten pixels |
+| `up` / `down` | Move selected score objects up or down one layer |
+| `ctrl-left` / `ctrl-right` | Decrease or increase horizontal zoom |
 
-### General Shortcuts for all Objects on the Score Timeline
+When a layer-header panel has focus, `up` and `down` move the layer
+selection within that panel, and `shift-up` / `shift-down` extend the
+selection.
 
-| Shortcuts    | Description                                                                                                                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-| ctrl-c       | copy selected soundObject(s), Audio Clip(s)                                                                                                                                                                                |
-| ctrl-x       | cut selected soundObject(s), Audio Clip(s)                                                                                                                                                                                |
-| ctrl-z            | Undo last action like re-scaling, moving, copying and pasting as well as deleting ScoreObjects, Audio Clip(s) and/or Automation Lines                                                                                                                                                                                     |
-| ctrl-shift-z      | redo any undo last actions like re-scaling, moving, copying and pasting as well as deleting ScoreObjects, Audio Clip(s) and/or Automation Lines                                                                                                                                                                                     |
-| ctrl-click   | paste soundObject(s), Audio Clip(s) from buffer where clicked                                                                                                                                                              |
-| shift-click  | when selecting soundObjects, Audio Clip(s), adds soundObject, Audio Clip to selected if not currently selected and vice-versa                                                                                                          |
-| ctrl-d       | duplicate selected SoundObjects, Audio Clip(s) and place immediately after the originals                                                                                                                                   |
-| shift-click  | paste soundObject(s) from buffer as a PolyObject where clicked NOT WORKING YET                                                                                                                                              |
-| double-click | if selecting on timeline, select all soundObjects on layer where mouse clicked NOT WORKING YET                                                                                                                              |
-| ctrl-drag    | if ctrl is held down when drag is initiated of selected SoundObjects, a copy of the originals is made and left at their original times NOT WORKING YET                                                                      |
-| ctrl-r       | repeat selected SoundObjects, Audio Clip(s) by copying and placing one after the other n number of times where n is a number value entered by the user (user is prompted with a dialog to enter number of times to repeat) |
-| ctrl-t       | show quick time dialog of selected soundObject, Audio Clip                                                                                                                                                              |
-
-
-### Shortcuts for Audio Layer Groups only
-
-| Shortcuts    | Description                                                                                                                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shift-alt-click    | press within an Audio Clip, at that spot it will split the Audio Clip into parts                                                 |
-| alt-drag    | move/reposition the audio content within the Audio Clip, to the left or to the right                                                |
-
+For the full application shortcut reference, see
+[Shortcuts](../../reference/shortcuts.qmd).

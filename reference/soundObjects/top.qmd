@@ -9,31 +9,48 @@ responsible for generating score data.
 
 The following are properties that all SoundObjects share.
 
-Name  
-:   Name of the Soundobject
+Name
+:   Name of the SoundObject.
 
-Subjective Duration  
-:   The duration of the soundObject on the timeline (versus the duration
-    of the generated score within the soundObject, which may be
-    different). How the duration relates to the generated score contents
-    is controlled by the "Time Behavior" property.
+Start Time
+:   The position of the SoundObject on the timeline. In current
+    versions of Blue, this is edited as a typed time position rather
+    than only as a beat value. The start time can therefore be stored
+    and entered in beats, measure-based formats, clock time, SMPTE,
+    seconds, or samples.
 
-End Time  
-:   Read-Only property that shows the end-time of the soundObject
+Subjective Duration
+:   The duration of the SoundObject on the timeline, as distinct from
+    the duration of the generated score inside the SoundObject. This value may use beat-based or time-based values. 
+    How the subjective duration relates to generated score contents is
+    controlled by the `Time Behavior` property.
 
-Time Behavior  
-:   Selects how subjective time should be used on a soundObject. Options
+End Time
+:   Read-only property that shows the end time of the SoundObject. Blue
+    calculates this from the start time and subjective duration and
+    formats it using the SoundObject's current start-time base.
+
+Repeat Point
+:   Available on SoundObjects that support repeat-based time behavior.
+    The repeat point may be beat-based or time-based, just like
+    subjective duration.
+
+Time Behavior
+:   Selects how subjective time should be used on a SoundObject. Options
     are:
     
-    1.  Scale - The default option, stretches generated score to last
-        the duration of the soundObject
+    1.  Scale - The default option. Stretches generated score to last
+        the duration of the SoundObject.
     
-    2.  Repeat - repeats generated score up to the duration of the
-        soundObject
+    2.  Repeat - Repeats generated score up to the duration of the
+        SoundObject.
     
-    3.  None - Passes the score data as-is (When using Time-Behavior of
-        None, width of soundObject no longer visually corresponds to
-        duration of the soundObject's score.)
+    3.  None - Passes the score data as-is. When using `None`, the
+        width of a SoundObject no longer visually corresponds to
+        the duration of the score it generates.
+
+For more detail on the new ruler formats and time-entry rules, see
+[Time System](../../concepts/timeSystem.qmd).
 
 ##  About Note Generation
 

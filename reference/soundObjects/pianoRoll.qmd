@@ -163,22 +163,38 @@ i1 0 2 440440 0 1 1
 
 ### Time Options
 
-The Time Options for the PianoRoll are available on the Notes page. The triangle arrow button
-in the upper right corner of the PianoRoll canvas will
-open and close the panel on the right that contains the properties.
+The PianoRoll has a `Ruler` button for configuring how the
+timeline is displayed. This dialog is separate from the note and field
+editing controls and operates similarly to the ruler controls in the main
+Score Timeline.
 
-Snap Enabled  
-:   Enables snapping behavior on the timeline. If enabled, vertical
-    lines will be drawn at snap points, set by the value below it. In
-    the screenshot above, the snap is enabled and set to every 0.25 
-    beats.
+![](/images/pianoRoll_ruler_config.png)
 
-Time Display  
-:   Controls how the time in the time bar above the PianoRoll canvas
-    will display. The time value will show as time, while Number display
-    will display as integers. The number below show how often to put a
-    label. In the screenshot above, the Time Display is set to show a
-    label in units of numbers and at every 4.0 beats.
+Snap Enabled
+:   Enables snapping behavior on the timeline. If snap is enabled,
+    vertical guide lines are drawn at the current snap positions.
+    Snapping is controlled independently from ruler display, so you can
+    keep one ruler format visible while snapping to a different musical
+    or time-based division. (Right-click the button to configure snap settings.)
+
+Use Global Ruler Settings
+:   When enabled, the PianoRoll inherits the Score Timeline's current
+    ruler settings. 
+
+Local Primary Ruler
+:   When global ruler settings are disabled, you can choose the
+    PianoRoll's own primary ruler format. The available formats match
+    the main Score Timeline, including beat-based measure formats,
+    clock time, SMPTE, seconds, and samples.
+
+Local Secondary Ruler
+:   The PianoRoll can also show an optional secondary ruler. This is
+    useful when, for example, you want to edit notes in bars and beats
+    while keeping a time-based reference visible above the canvas.
+
+For a broader explanation of the supported time formats and how Blue now
+separates stored time bases from ruler display, see
+[Time System](../../concepts/timeSystem.qmd).
 
 ## Editing Notes
 
