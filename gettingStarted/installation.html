@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-533ebda9bb23b14835d92b13bda271ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0c9d99e33a159ed907cc4f01215e895c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-20535abe842dc49c293df2721d15c881.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5152ae61c493d77141c570e0f7d30bad.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-20535abe842dc49c293df2721d15c881.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -874,10 +874,15 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
-<p>Blue requires Java 11 or greater JVM (Java Virtual Machine) to be installed on your system, as well as Csound. Java installations usually come in two flavors: a JRE (Java Runtime Environment) which contains just a JVM for running applications, and a JDK (Java Development Kit) which contains the JVM as well as development tools. Because Blue comes with scripting tools that use JDK features, it is recommended to install the full JDK, and not just the JRE.</p>
+<p>Blue requires Java 25 or greater JDK (Java Developer Kit) to be installed on your system, as well as Csound. Windows and macOS builds of Blue include JDKs with them and run out-of-the-box. Linux users will have to find a Java 25 installation.</p>
 <p>To test to see if you have a JVM installed and what version, at a command prompt type “java -version”. If you see something along the lines of “command not found” then you need to install a Java Virtual Machine.</p>
-<p>If you do not have Java installed, the recommended JDK to install is AdoptOpenJDK, available at:</p>
-<p><a href="https://adoptopenjdk.net/" class="uri">https://adoptopenjdk.net/</a></p>
+<p>If you do not have Java installed, the recommended JDK to install is Temurin, available at:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://adoptium.net/.png" class="img-fluid figure-img"></p>
+<figcaption>https://adoptium.net/</figcaption>
+</figure>
+</div>
 <p>On this page, look for the download link for your platform. Be sure to choose the version of JDK that matches your CPU type and Csound version (choose 64-bit if in doubt).</p>
 </section>
 <section id="installing-blue" class="level2">
