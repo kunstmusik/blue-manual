@@ -15,7 +15,7 @@ Machine.
 If you do not have Java installed, the recommended JDK to install is
 Temurin, available at:
 
-![https://adoptium.net/](https://adoptium.net/)
+<https://adoptium.net/>
 
 On this page, look for the download link for your platform. Be sure to
 choose the version of JDK that matches your CPU type and Csound version
